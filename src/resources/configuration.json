@@ -1,0 +1,21 @@
+{
+    "home_page": "index",
+    "primary_language": "en",
+    "libraries": {
+        "Example": {
+            "directory_name": "Example",
+            "autoloader": "ExampleLibrary.php",
+            "check_class_exists": true,
+            "namespace": "Example",
+            "main_class": "ExampleLibrary"
+        }
+    },
+    "runtime_scripts": {
+        "initialize": [],
+        "on_page_load": [],
+        "page_loaded": ["engine_information.php"],
+        "after_request": [],
+        "on_request": ["custom_headers.php"],
+        "on_import": []
+    }
+}
