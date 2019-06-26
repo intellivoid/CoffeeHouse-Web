@@ -10,32 +10,29 @@
 <!doctype html>
 <html lang="<?PHP HTML::print(APP_LANGUAGE_ISO_639); ?>">
     <head>
-        <?PHP HTML::importSection('header'); ?>
-        <title><?PHP HTML::print(TEXT_PAGE_TITLE); ?></title>
+        <?PHP HTML::importSection('landing_headers'); ?>
     </head>
 
-    <body>
+    <body data-spy="scroll" data-target="#navbar-example" data-offset="20">
+        <?PHP HTML::importSection('landing_nav'); ?>
 
-        <header>
-            <?PHP HTML::importSection('navigation'); ?>
-        </header>
+        <!--START HOME-->
+        <section class="section home" id="home">
+            <div class="bg-overlay"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 offset-md-2 text-white text-center">
+                        <h1 class="home-title">A Responsive Bootstrap 4 Admin Dashboard</h1>
+                        <p class="mt-4 home-subtitle">Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit. Porttitor sagittis, nascetur molestie, venenatis mus id dapibus tempus, mus nam faucibus.</p>
+                        <a href="#" class="btn btn-custom mt-4">Purchase Now</a>
 
-        <main role="main" class="container">
-            <h1 class="mt-5"><?PHP HTML::print(TEXT_HEADER); ?></h1>
-            <p class="lead"><?PHP HTML::print(TEXT_CONTENT); ?></p>
+                        <img src="/assets/images/showcase.png" alt="" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--END HOME-->
 
-            <hr/>
-            <?PHP HTML::importMarkdown('example'); ?>
-            <?PHP
-                $ExampleLibrary = DynamicalWeb::setMemoryObject('example_library', new ExampleLibrary());
-                $ExampleLibrary->getPrintFunctions()->SayName('John Smith');
-                $ExampleLibrary->getPrintFunctions()->sayAge(12);
-            ?>
-        </main>
-
-        <?PHP HTML::importSection('footer'); ?>
-
-        <?PHP HTML::importSection('js_scripts'); ?>
-
+        <?PHP HTML::importSection('landing_js'); ?>
     </body>
 </html>
