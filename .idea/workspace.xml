@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8238003d-8aea-43a7-ad32-d30cdb7afd72" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/resources/pages/login/scripts/callbacks.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/shared/scripts/login_account.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/languages/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/languages/en.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/resources/pages/login/contents.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/pages/login/contents.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/pages/register/contents.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/pages/register/contents.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -64,14 +62,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/resources/pages/login/contents.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
-              <caret line="4" column="40" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="40" />
+            <state relative-caret-position="384">
+              <caret line="51" column="34" selection-start-line="51" selection-start-column="34" selection-end-line="51" selection-end-column="34" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/resources/pages/register/contents.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="487">
+              <caret line="72" column="18" lean-forward="true" selection-start-line="67" selection-end-line="72" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -121,11 +128,11 @@
         <option value="$PROJECT_DIR$/src/resources/pages/register/scripts/callbacks.php" />
         <option value="$PROJECT_DIR$/src/resources/shared/scripts/alert.php" />
         <option value="$PROJECT_DIR$/src/resources/shared/scripts/register_account.php" />
-        <option value="$PROJECT_DIR$/src/resources/pages/register/contents.php" />
         <option value="$PROJECT_DIR$/src/resources/pages/login/scripts/callbacks.php" />
         <option value="$PROJECT_DIR$/src/resources/languages/en.json" />
         <option value="$PROJECT_DIR$/src/resources/shared/scripts/login_account.php" />
         <option value="$PROJECT_DIR$/src/resources/pages/login/contents.php" />
+        <option value="$PROJECT_DIR$/src/resources/pages/register/contents.php" />
       </list>
     </option>
   </component>
@@ -263,12 +270,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1561581667313</updated>
-      <workItem from="1561581668860" duration="10421000" />
+      <workItem from="1561581668860" duration="10575000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10421000" />
+    <option name="totallyTimeSpent" value="10575000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -516,13 +523,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/pages/register/contents.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="9" column="10" lean-forward="true" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/resources/pages/login/scripts/callbacks.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="672">
@@ -549,11 +549,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/resources/pages/login/contents.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="4" column="40" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="40" />
+        <state relative-caret-position="384">
+          <caret line="51" column="34" selection-start-line="51" selection-start-column="34" selection-end-line="51" selection-end-column="34" />
           <folding>
             <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/pages/register/contents.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="487">
+          <caret line="72" column="18" lean-forward="true" selection-start-line="67" selection-end-line="72" selection-end-column="18" />
         </state>
       </provider>
     </entry>

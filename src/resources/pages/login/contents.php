@@ -41,14 +41,14 @@
                                 <input type="password" class="form-control" name="password" id="password" placeholder="Enter password">
                             </div>
 
+                            <div class="form-group">
+                                <?PHP HTML::print(re_render(), false); ?>
+                            </div>
+
                             <div class="form-group row m-t-20">
                                 <div class="col-sm-12 text-right">
                                     <button class="btn btn-primary w-md waves-effect waves-light" type="submit">Log In</button>
                                 </div>
-                            </div>
-
-                            <div class="form-group">
-                                <?PHP HTML::print(re_render(), false); ?>
                             </div>
 
                         </form>
