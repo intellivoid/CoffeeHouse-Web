@@ -4,20 +4,19 @@
         "iso_639-1": "en"
     },
     "pages": {
-        "index": {
-            "PAGE_TITLE": "DynamicalWeb",
-            "HEADER": "DynamicalWeb Example",
-            "CONTENT": "This example contains various uses for Dynamical Web with Bootstrap"
+        "register": {
+            "CALLBACK_100": "There was an issue with your request, please make sure your browser is up to date",
+            "CALLBACK_101": "The given Username is invalid",
+            "CALLBACK_102": "The given E-Mail is invalid",
+            "CALLBACK_103": "The given password is invalid, it should be greater than 8 characters but no greater than 128",
+            "CALLBACK_104": "The given Username is already taken",
+            "CALLBACK_105": "The given E-Mail is already used",
+            "CALLBACK_106": "There was an issue while trying to create your account, please contact support",
+            "CALLBACK_107": "Your account has been created!",
+            "CALLBACK_108": "Captcha verification failed, please solve the captcha correctly"
         }
     },
     "sections": {
-        "navigation": {
-            "NAVBAR_BRAND": "DynamicalWeb",
-            "NAVBAR_LANGUAGE_DROPDOWN": "Language",
-            "NAVBAR_PAGE_HOME": "Home"
-        },
-        "footer": {
-            "FOOTER_TEXT": "DynamicalWeb Version 1.0.0.0 | Written by Zi Xing Narrakas"
-        }
+
     }
 }

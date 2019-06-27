@@ -1,8 +1,9 @@
 <?PHP
     use DynamicalWeb\HTML;
 
-
     HTML::importScript('recaptcha');
+    HTML::importScript('register_account');
+    HTML::importScript('alert');
 ?>
 <!doctype html>
 <html lang="<?PHP HTML::print(APP_LANGUAGE_ISO_639); ?>">
@@ -18,7 +19,6 @@
 
             <div class="card">
                 <div class="card-body">
-
                     <h3 class="text-center m-0">
                         <a href="index.html" class="logo logo-admin"><img src="/assets/images/logo.png" height="30" alt="logo"></a>
                     </h3>
@@ -26,7 +26,8 @@
                     <div class="p-3">
                         <p class="text-muted text-center">Create a new Intellivoid Account</p>
 
-                        <form class="form-horizontal m-t-30" action="index.html">
+                        <?PHP HTML::importScript('callbacks'); ?>
+                        <form class="form-horizontal m-t-30" action="/register" method="POST">
 
                             <div class="form-group">
                                 <label for="email">Email</label>
