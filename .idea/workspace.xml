@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8238003d-8aea-43a7-ad32-d30cdb7afd72" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/runtime_scripts/cache.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/runtime_scripts/check_auth.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/shared/scripts/alert.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/configuration.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/configuration.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -46,14 +43,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/resources/runtime_scripts/cache.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="113">
-              <caret line="21" column="64" selection-start-line="21" selection-start-column="64" selection-end-line="21" selection-end-column="64" />
+            <state relative-caret-position="17">
+              <caret line="20" column="2" lean-forward="true" selection-start-line="20" selection-start-column="2" selection-end-line="20" selection-end-column="2" />
               <folding>
                 <element signature="e#11#41#0#PHP" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/resources/shared/scripts/alert.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="17" column="39" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -90,6 +96,7 @@
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/b536fae0-6c60-45c2-9993-ba10209b3ac1/console.sql" />
         <option value="$PROJECT_DIR$/src/resources/runtime_scripts/check_auth.php" />
         <option value="$PROJECT_DIR$/src/resources/runtime_scripts/cache.php" />
+        <option value="$PROJECT_DIR$/src/resources/shared/scripts/alert.php" />
       </list>
     </option>
   </component>
@@ -157,7 +164,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/resources/runtime_scripts" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/resources/shared/scripts" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
@@ -168,10 +175,10 @@
       <recent name="C:\Users\Netkas\Documents\gits\CoffeeHouse-Web\src\assets\css" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Netkas\Documents\gits\CoffeeHouse-Web\src\resources\shared\scripts" />
       <recent name="C:\Users\Netkas\Documents\gits\CoffeeHouse-Web\src\resources\runtime_scripts" />
       <recent name="C:\Users\Netkas\Documents\gits\CoffeeHouse-Web\src\resources\libraries" />
       <recent name="C:\Users\Netkas\Documents\gits\CoffeeHouse-Web\src\resources\pages" />
-      <recent name="C:\Users\Netkas\Documents\gits\CoffeeHouse-Web\src\resources\shared\scripts" />
       <recent name="C:\Users\Netkas\Documents\gits\CoffeeHouse-Web\src\resources\shared" />
     </key>
   </component>
@@ -197,12 +204,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1561581667313</updated>
-      <workItem from="1561581668860" duration="8321000" />
+      <workItem from="1561581668860" duration="8661000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8321000" />
+    <option name="totallyTimeSpent" value="8661000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -435,11 +442,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/resources/runtime_scripts/cache.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="21" column="64" selection-start-line="21" selection-start-column="64" selection-end-line="21" selection-end-column="64" />
+        <state relative-caret-position="17">
+          <caret line="20" column="2" lean-forward="true" selection-start-line="20" selection-start-column="2" selection-end-line="20" selection-end-column="2" />
           <folding>
             <element signature="e#11#41#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/shared/scripts/alert.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="17" column="39" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
         </state>
       </provider>
     </entry>
