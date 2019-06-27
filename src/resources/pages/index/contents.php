@@ -1,38 +1,38 @@
 <?PHP
-    use DynamicalWeb\DynamicalWeb;
     use DynamicalWeb\HTML;
-    use DynamicalWeb\Runtime;
-    use Example\ExampleLibrary;
-
-    Runtime::import('Example');
-
 ?>
 <!doctype html>
 <html lang="<?PHP HTML::print(APP_LANGUAGE_ISO_639); ?>">
     <head>
-        <?PHP HTML::importSection('landing_headers'); ?>
+        <?PHP HTML::importSection('header'); ?>
+        <title>CoffeeHouse - Dashboard</title>
     </head>
+    <body>
+        <?PHP HTML::importSection('navigation'); ?>
 
-    <body data-spy="scroll" data-target="#navbar-example" data-offset="20">
-        <?PHP HTML::importSection('landing_nav'); ?>
+        <div class="wrapper">
+            <div class="container-fluid">
 
-        <!--START HOME-->
-        <section class="section home" id="home">
-            <div class="bg-overlay"></div>
-            <div class="container">
+                <!-- Page-Title -->
                 <div class="row">
-                    <div class="col-md-8 offset-md-2 text-white text-center">
-                        <h1 class="home-title">A Responsive Bootstrap 4 Admin Dashboard</h1>
-                        <p class="mt-4 home-subtitle">Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit. Porttitor sagittis, nascetur molestie, venenatis mus id dapibus tempus, mus nam faucibus.</p>
-                        <a href="#" class="btn btn-custom mt-4">Purchase Now</a>
-
-                        <img src="/assets/images/showcase.png" alt="" class="img-fluid">
+                    <div class="col-sm-12">
+                        <div class="page-title-box">
+                            <div class="btn-group pull-right">
+                                <ol class="breadcrumb hide-phone p-0 m-0">
+                                    <li class="breadcrumb-item"><a href="#">Admiria</a></li>
+                                    <li class="breadcrumb-item active">Starter</li>
+                                </ol>
+                            </div>
+                            <h4 class="page-title">Starter</h4>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
-        <!--END HOME-->
+                <!-- end page title end breadcrumb -->
 
-        <?PHP HTML::importSection('landing_js'); ?>
+            </div> <!-- end container -->
+        </div>
+
+        <?PHP HTML::importSection('footer'); ?>
     </body>
+    <?PHP HTML::importSection('jquery'); ?>
 </html>
