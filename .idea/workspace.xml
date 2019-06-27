@@ -2,53 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8238003d-8aea-43a7-ad32-d30cdb7afd72" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/resources/libraries/sws/Abstracts/DefaultValues.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/libraries/sws/Abstracts/ExceptionCodes.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/libraries/sws/AutoConfig.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/libraries/sws/Classes/CookieManager.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/libraries/sws/Classes/Crypto.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/libraries/sws/Classes/ObjectLoader.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/libraries/sws/Classes/Utilities.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/libraries/sws/Classes/WebManager.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/libraries/sws/Exceptions/DatabaseException.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/libraries/sws/Exceptions/IPAutoDetectException.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/libraries/sws/Exceptions/InvalidCookieException.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/libraries/sws/Exceptions/InvalidIPException.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/libraries/sws/Objects/Cookie.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/libraries/sws/ZiProto/Abstracts/Options.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/libraries/sws/ZiProto/Abstracts/Regex.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/libraries/sws/ZiProto/BufferStream.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/libraries/sws/ZiProto/DecodingOptions.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/libraries/sws/ZiProto/EncodingOptions.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/libraries/sws/ZiProto/Exception/DecodingFailedException.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/libraries/sws/ZiProto/Exception/EncodingFailedException.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/libraries/sws/ZiProto/Exception/InsufficientDataException.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/libraries/sws/ZiProto/Exception/IntegerOverflowException.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/libraries/sws/ZiProto/Exception/InvalidOptionException.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/libraries/sws/ZiProto/Ext.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/libraries/sws/ZiProto/Packet.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/libraries/sws/ZiProto/Type/Binary.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/libraries/sws/ZiProto/Type/Map.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/libraries/sws/ZiProto/TypeTransformer/BinaryTransformer.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/libraries/sws/ZiProto/TypeTransformer/Extension.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/libraries/sws/ZiProto/TypeTransformer/MapTransformer.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/libraries/sws/ZiProto/TypeTransformer/Validator.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/libraries/sws/ZiProto/ZiProto.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/libraries/sws/ZiProto/ziproto.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/libraries/sws/acm/Abstracts/ExceptionCodes.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/libraries/sws/acm/CommandLine.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/libraries/sws/acm/Exceptions/LocalConfigurationException.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/libraries/sws/acm/Exceptions/NoConfigurationFoundException.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/libraries/sws/acm/Objects/Schema.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/libraries/sws/acm/acm.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/libraries/sws/acm/acm.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/libraries/sws/configuration.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/libraries/sws/sws.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/libraries/sws/sws.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/configuration.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/configuration.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/libraries/Example/Classes/PrintFunctions.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/libraries/Example/ExampleLibrary.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/libraries/sws/AutoConfig.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/libraries/sws/AutoConfig.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/libraries/sws/sws.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/libraries/sws/sws.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -111,11 +66,34 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/resources/configuration.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="10" column="9" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
+            <state relative-caret-position="264">
+              <caret line="11" column="6" lean-forward="true" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/resources/libraries/sws/configuration.ini">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/resources/libraries/sws/AutoConfig.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="10" column="43" selection-start-line="10" selection-start-column="43" selection-end-line="10" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/resources/libraries/sws/sws.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="370">
+              <caret line="109" column="48" lean-forward="true" selection-start-line="109" selection-start-column="48" selection-end-line="109" selection-end-column="48" />
             </state>
           </provider>
         </entry>
@@ -138,6 +116,8 @@
         <option value="$PROJECT_DIR$/src/resources/pages/index/contents.php" />
         <option value="$PROJECT_DIR$/src/resources/sections/navigation.php" />
         <option value="$PROJECT_DIR$/src/resources/configuration.json" />
+        <option value="$PROJECT_DIR$/src/resources/libraries/sws/AutoConfig.php" />
+        <option value="$PROJECT_DIR$/src/resources/libraries/sws/sws.php" />
       </list>
     </option>
   </component>
@@ -176,6 +156,14 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="libraries" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CoffeeHouse-Web" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CoffeeHouse-Web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="libraries" type="462c0819:PsiDirectoryNode" />
+              <item name="sws" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -228,12 +216,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1561581667313</updated>
-      <workItem from="1561581668860" duration="6089000" />
+      <workItem from="1561581668860" duration="6145000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6089000" />
+    <option name="totallyTimeSpent" value="6145000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -362,8 +350,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/resources/configuration.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="10" column="9" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
+        <state relative-caret-position="264">
+          <caret line="11" column="6" lean-forward="true" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/libraries/sws/configuration.ini">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/libraries/sws/AutoConfig.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="10" column="43" selection-start-line="10" selection-start-column="43" selection-end-line="10" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/libraries/sws/sws.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="370">
+          <caret line="109" column="48" lean-forward="true" selection-start-line="109" selection-start-column="48" selection-end-line="109" selection-end-column="48" />
         </state>
       </provider>
     </entry>
