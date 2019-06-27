@@ -19,7 +19,7 @@
     },
     "runtime_scripts": {
         "initialize": [],
-        "on_page_load": ["check_auth.php", "cache.php"],
+        "on_page_load": ["check_auth.php", "cache.php", "require_auth.php"],
         "page_loaded": [],
         "after_request": [],
         "on_request": [],

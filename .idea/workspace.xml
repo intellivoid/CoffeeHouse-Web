@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8238003d-8aea-43a7-ad32-d30cdb7afd72" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/resources/shared/scripts/auto_redirect.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/pages/login/contents.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/pages/login/contents.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/pages/register/contents.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/pages/register/contents.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/runtime_scripts/require_auth.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/configuration.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/configuration.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -54,11 +52,38 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/resources/pages/login/contents.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
+            <state relative-caret-position="257">
               <caret line="24" column="39" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/resources/runtime_scripts/require_auth.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="10" column="23" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/resources/configuration.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="288">
+              <caret line="21" column="73" selection-start-line="21" selection-start-column="73" selection-end-line="21" selection-end-column="73" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/resources/DynamicalWeb/Page.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="114">
+              <caret line="62" column="44" selection-start-line="62" selection-start-column="28" selection-end-line="62" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -98,7 +123,6 @@
         <option value="$PROJECT_DIR$/src/resources/libraries/sws/sws.php" />
         <option value="$PROJECT_DIR$/src/resources/shared/scripts/recaptcha.php" />
         <option value="$PROJECT_DIR$/src/resources/shared/recaptcha.json" />
-        <option value="$PROJECT_DIR$/src/resources/configuration.json" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/b536fae0-6c60-45c2-9993-ba10209b3ac1/console.sql" />
         <option value="$PROJECT_DIR$/src/resources/runtime_scripts/check_auth.php" />
         <option value="$PROJECT_DIR$/src/resources/runtime_scripts/cache.php" />
@@ -108,9 +132,10 @@
         <option value="$PROJECT_DIR$/src/resources/pages/login/scripts/callbacks.php" />
         <option value="$PROJECT_DIR$/src/resources/languages/en.json" />
         <option value="$PROJECT_DIR$/src/resources/shared/scripts/login_account.php" />
-        <option value="$PROJECT_DIR$/src/resources/shared/scripts/require_auth.php" />
         <option value="$PROJECT_DIR$/src/resources/pages/register/contents.php" />
         <option value="$PROJECT_DIR$/src/resources/pages/login/contents.php" />
+        <option value="$PROJECT_DIR$/src/resources/shared/scripts/require_auth.php" />
+        <option value="$PROJECT_DIR$/src/resources/configuration.json" />
       </list>
     </option>
   </component>
@@ -142,6 +167,13 @@
               <item name="CoffeeHouse-Web" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CoffeeHouse-Web" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CoffeeHouse-Web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="DynamicalWeb" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="CoffeeHouse-Web" type="b2602c69:ProjectViewProjectNode" />
@@ -215,6 +247,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Netkas\Documents\gits\CoffeeHouse-Web\src\resources\runtime_scripts" />
       <recent name="C:\Users\Netkas\Documents\gits\CoffeeHouse-Web\src\assets" />
       <recent name="C:\Users\Netkas\Documents\gits\CoffeeHouse-Web\src\assets\css" />
     </key>
@@ -248,12 +281,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1561581667313</updated>
-      <workItem from="1561581668860" duration="10749000" />
+      <workItem from="1561581668860" duration="10840000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10749000" />
+    <option name="totallyTimeSpent" value="10840000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -422,13 +455,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/configuration.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="21" column="25" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/resources/libraries/IntellivoidAccounts/acm/acm.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="48">
@@ -539,10 +565,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/DynamicalWeb/Page.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="62" column="44" selection-start-line="62" selection-start-column="28" selection-end-line="62" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/resources/pages/login/contents.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
+        <state relative-caret-position="257">
           <caret line="24" column="39" selection-start-line="24" selection-start-column="39" selection-end-line="24" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/runtime_scripts/require_auth.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="10" column="23" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/configuration.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="21" column="73" selection-start-line="21" selection-start-column="73" selection-end-line="21" selection-end-column="73" />
         </state>
       </provider>
     </entry>
