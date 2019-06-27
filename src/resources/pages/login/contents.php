@@ -1,8 +1,9 @@
 <?PHP
     use DynamicalWeb\HTML;
 
-
     HTML::importScript('recaptcha');
+    HTML::importScript('login_account');
+    HTML::importScript('alert');
 ?>
 <!doctype html>
 <html lang="<?PHP HTML::print(APP_LANGUAGE_ISO_639); ?>">
@@ -26,8 +27,9 @@
                     <div class="p-3">
                         <h4 class="font-18 m-b-5 text-center">Welcome to CoffeeHouse</h4>
                         <p class="text-muted text-center">Sign in using a Intellivoid Account</p>
+                        <?PHP HTML::importScript('callbacks'); ?>
 
-                        <form class="form-horizontal m-t-30" action="index.html">
+                        <form class="form-horizontal m-t-30" action="/login" method="POST">
 
                             <div class="form-group">
                                 <label for="username_email">Username or Email</label>

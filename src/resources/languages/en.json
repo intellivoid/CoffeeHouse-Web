@@ -14,6 +14,16 @@
             "CALLBACK_106": "There was an issue while trying to create your account, please contact support",
             "CALLBACK_107": "Your account has been created!",
             "CALLBACK_108": "Captcha verification failed, please solve the captcha correctly"
+        },
+        "login": {
+            "CALLBACK_100": "There was an issue with your request, please make sure your browser is up to date",
+            "CALLBACK_101": "The login information is incorrect",
+            "CALLBACK_102": "Your account has been suspended",
+            "CALLBACK_103": "There was an issue while trying to verify your login details, please contact support",
+            "CALLBACK_104": "Captcha verification failed, please solve the captcha correctly",
+            "CALLBACK_105": "The server cannot verify your client, please restart the application and try again",
+            "CALLBACK_106": "There was an issue while trying to verify your client, please contact support.",
+            "CALLBACK_107": "There was an issue while trying to retrieve your account, please contact support."
         }
     },
     "sections": {
