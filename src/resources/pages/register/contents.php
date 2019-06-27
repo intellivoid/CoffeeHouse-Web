@@ -1,6 +1,7 @@
 <?PHP
     use DynamicalWeb\HTML;
 
+    HTML::importScript('auto_redirect');
     HTML::importScript('recaptcha');
     HTML::importScript('register_account');
     HTML::importScript('alert');
@@ -20,7 +21,7 @@
             <div class="card">
                 <div class="card-body">
                     <h3 class="text-center m-0">
-                        <a href="index.html" class="logo logo-admin"><img src="/assets/images/logo.png" height="30" alt="logo"></a>
+                        <a href="/register" class="logo logo-admin"><img src="/assets/images/logo.png" height="30" alt="logo"></a>
                     </h3>
 
                     <div class="p-3">
