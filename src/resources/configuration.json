@@ -1,7 +1,15 @@
 {
     "home_page": "index",
     "primary_language": "en",
-    "libraries": {},
+    "libraries": {
+        "SecuredWebSessions": {
+            "directory_name": "sws",
+            "autoloader": "sws.php",
+            "check_class_exists": true,
+            "namespace": "sws",
+            "main_class": "sws"
+        }
+    },
     "runtime_scripts": {
         "initialize": [],
         "on_page_load": [],

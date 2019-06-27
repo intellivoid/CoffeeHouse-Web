@@ -2,1535 +2,53 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8238003d-8aea-43a7-ad32-d30cdb7afd72" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/assets/css/bootstrap.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/css/icons.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/css/icons.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/css/style.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/css/typicons.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/css/typicons.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/fonts/FontAwesome.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/fonts/dripicons-v2.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/fonts/dripicons-v2.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/fonts/dripicons-v2.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/fonts/dripicons-v2.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/fonts/fontawesome-webfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/fonts/fontawesome-webfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/fonts/fontawesome-webfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/fonts/fontawesome-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/fonts/fontawesome-webfont.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/fonts/ionicons.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/fonts/ionicons.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/fonts/ionicons.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/fonts/ionicons.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/fonts/themify.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/fonts/themify.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/fonts/themify.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/fonts/themify.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/fonts/typicons.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/fonts/typicons.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/fonts/typicons.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/fonts/typicons.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/fonts/typicons.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/fonts/weathericons-regular-webfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/fonts/weathericons-regular-webfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/fonts/weathericons-regular-webfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/fonts/weathericons-regular-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/fonts/weathericons-regular-webfont.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/css/dripicons.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/css/dripicons.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/css/materialdesignicons.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/css/materialdesignicons.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/css/mobirise.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/css/mobirise.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/css/themify-icons.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/css/themify-icons.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/css/typicons.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/css/typicons.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/dripicons/dripicons.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/dripicons/fonts/dripicons-v2.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/dripicons/fonts/dripicons-v2.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/dripicons/fonts/dripicons-v2.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/dripicons/fonts/dripicons-v2.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/font-awesome/HELP-US-OUT.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/font-awesome/css/font-awesome.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/font-awesome/css/font-awesome.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/font-awesome/css/font-awesome.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/font-awesome/css/mixins.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/font-awesome/css/variables.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/font-awesome/fonts/FontAwesome.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/font-awesome/fonts/fontawesome-webfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/font-awesome/fonts/fontawesome-webfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/font-awesome/fonts/fontawesome-webfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/font-awesome/fonts/fontawesome-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/font-awesome/fonts/fontawesome-webfont.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/font-awesome/less/animated.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/font-awesome/less/bordered-pulled.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/font-awesome/less/core.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/font-awesome/less/fixed-width.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/font-awesome/less/font-awesome.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/font-awesome/less/icons.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/font-awesome/less/larger.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/font-awesome/less/list.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/font-awesome/less/mixins.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/font-awesome/less/path.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/font-awesome/less/rotated-flipped.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/font-awesome/less/screen-reader.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/font-awesome/less/stacked.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/font-awesome/less/variables.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/font-awesome/scss/_animated.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/font-awesome/scss/_bordered-pulled.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/font-awesome/scss/_core.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/font-awesome/scss/_fixed-width.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/font-awesome/scss/_icons.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/font-awesome/scss/_larger.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/font-awesome/scss/_list.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/font-awesome/scss/_mixins.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/font-awesome/scss/_path.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/font-awesome/scss/_rotated-flipped.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/font-awesome/scss/_screen-reader.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/font-awesome/scss/_stacked.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/font-awesome/scss/_variables.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/font-awesome/scss/font-awesome.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/css/_ionicons-variables.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/css/ionicons.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/css/ionicons.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/css/ionicons.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/fonts/ionicons.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/fonts/ionicons.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/fonts/ionicons.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/fonts/ionicons.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/less/_ionicons-animation.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/less/_ionicons-font.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/less/_ionicons-icons.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/less/_ionicons-variables.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/less/ionicons.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/alert-circled.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/alert.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/android-add-contact.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/android-add.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/android-alarm.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/android-archive.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/android-arrow-back.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/android-arrow-down-left.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/android-arrow-down-right.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/android-arrow-up-left.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/android-arrow-up-right.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/android-battery.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/android-book.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/android-calendar.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/android-call.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/android-camera.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/android-chat.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/android-checkmark.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/android-clock.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/android-close.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/android-contact.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/android-contacts.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/android-data.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/android-developer.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/android-display.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/android-download.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/android-dropdown.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/android-earth.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/android-folder.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/android-forums.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/android-friends.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/android-hand.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/android-image.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/android-inbox.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/android-information.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/android-keypad.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/android-lightbulb.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/android-locate.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/android-location.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/android-mail.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/android-microphone.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/android-mixer.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/android-more.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/android-note.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/android-playstore.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/android-printer.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/android-promotion.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/android-reminder.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/android-remove.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/android-search.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/android-send.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/android-settings.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/android-share.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/android-social-user.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/android-social.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/android-sort.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/android-star.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/android-stopwatch.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/android-storage.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/android-system-back.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/android-system-home.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/android-system-windows.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/android-timer.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/android-trash.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/android-volume.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/android-wifi.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/archive.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/arrow-down-a.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/arrow-down-b.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/arrow-down-c.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/arrow-expand.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/arrow-graph-down-left.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/arrow-graph-down-right.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/arrow-graph-up-left.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/arrow-graph-up-right.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/arrow-left-a.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/arrow-left-b.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/arrow-left-c.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/arrow-move.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/arrow-resize.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/arrow-return-left.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/arrow-return-right.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/arrow-right-a.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/arrow-right-b.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/arrow-right-c.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/arrow-shrink.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/arrow-swap.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/arrow-up-a.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/arrow-up-b.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/arrow-up-c.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/at.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/bag.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/battery-charging.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/battery-empty.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/battery-full.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/battery-half.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/battery-low.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/beaker.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/beer.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/bluetooth.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/bookmark.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/briefcase.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/bug.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/calculator.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/calendar.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/camera.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/card.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/chatbox-working.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/chatbox.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/chatboxes.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/chatbubble-working.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/chatbubble.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/chatbubbles.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/checkmark-circled.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/checkmark-round.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/checkmark.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/chevron-down.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/chevron-left.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/chevron-right.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/chevron-up.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/clipboard.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/clock.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/close-circled.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/close-round.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/close.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/cloud.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/code-download.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/code-working.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/code.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/coffee.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/compass.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/compose.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/connection-bars.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/contrast.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/disc.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/document-text.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/document.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/drag.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/earth.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/edit.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/egg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/eject.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/email.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/eye-disabled.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/eye.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/female.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/filing.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/film-marker.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/flag.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/flash-off.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/flash.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/flask.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/folder.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/fork-repo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/fork.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/forward.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/game-controller-a.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/game-controller-b.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/gear-a.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/gear-b.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/grid.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/hammer.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/headphone.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/heart.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/help-buoy.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/help-circled.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/help.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/home.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/icecream.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/icon-social-google-plus-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/icon-social-google-plus.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/image.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/images.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/information-circled.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/information.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ionic.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-alarm-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-alarm.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-albums-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-albums.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-arrow-back.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-arrow-down.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-arrow-forward.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-arrow-left.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-arrow-right.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-arrow-thin-down.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-arrow-thin-left.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-arrow-thin-right.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-arrow-thin-up.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-arrow-up.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-at-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-at.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-bell-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-bell.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-bolt-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-bolt.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-bookmarks-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-bookmarks.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-box-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-box.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-briefcase-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-briefcase.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-browsers-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-browsers.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-calculator-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-calculator.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-calendar-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-calendar.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-camera-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-camera.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-cart-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-cart.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-chatboxes-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-chatboxes.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-chatbubble-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-chatbubble.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-checkmark-empty.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-checkmark-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-checkmark.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-circle-filled.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-circle-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-clock-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-clock.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-close-empty.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-close-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-close.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-cloud-download-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-cloud-download.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-cloud-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-cloud-upload-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-cloud-upload.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-cloud.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-cloudy-night-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-cloudy-night.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-cloudy-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-cloudy.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-cog-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-cog.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-compose-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-compose.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-contact-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-contact.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-copy-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-copy.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-download-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-download.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-drag.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-email-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-email.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-eye-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-eye.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-fastforward-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-fastforward.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-filing-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-filing.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-film-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-film.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-flag-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-flag.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-folder-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-folder.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-gear-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-gear.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-glasses-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-glasses.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-heart-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-heart.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-help-empty.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-help-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-help.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-infinite-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-infinite.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-information-empty.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-information-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-information.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-ionic-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-keypad-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-keypad.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-lightbulb-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-lightbulb.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-location-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-location.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-locked-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-locked.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-medkit-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-medkit.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-mic-off.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-mic-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-mic.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-minus-empty.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-minus-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-minus.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-monitor-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-monitor.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-moon-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-moon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-more-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-more.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-musical-note.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-musical-notes.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-navigate-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-navigate.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-paperplane-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-paperplane.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-partlysunny-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-partlysunny.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-pause-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-pause.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-people-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-people.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-person-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-person.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-personadd-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-personadd.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-photos-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-photos.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-pie-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-pie.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-play-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-play.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-plus-empty.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-plus-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-plus.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-pricetag-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-pricetag.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-printer-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-printer.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-rainy-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-rainy.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-recording-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-recording.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-redo-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-redo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-refresh-empty.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-refresh-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-refresh.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-reload.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-rewind-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-rewind.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-search-strong.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-search.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-skipbackward-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-skipbackward.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-skipforward-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-skipforward.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-snowy.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-speedometer-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-speedometer.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-star-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-star.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-stopwatch-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-stopwatch.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-sunny-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-sunny.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-telephone-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-telephone.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-thunderstorm-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-thunderstorm.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-time-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-time.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-timer-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-timer.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-trash-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-trash.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-undo-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-undo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-unlocked-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-unlocked.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-upload-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-upload.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-videocam-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-videocam.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-volume-high.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-volume-low.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-wineglass-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-wineglass.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-world-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ios7-world.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ipad.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/iphone.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/ipod.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/jet.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/key.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/knife.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/laptop.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/leaf.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/levels.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/lightbulb.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/link.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/load-a.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/load-b.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/load-c.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/load-d.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/location.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/locked.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/log-in.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/log-out.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/loop.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/magnet.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/male.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/man.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/map.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/medkit.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/mic-a.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/mic-b.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/mic-c.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/minus-circled.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/minus-round.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/minus.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/model-s.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/monitor.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/more.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/music-note.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/navicon-round.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/navicon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/navigate.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/no-smoking.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/nuclear.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/paper-airplane.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/paperclip.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/pause.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/person-add.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/person-stalker.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/person.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/pie-graph.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/pin.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/pinpoint.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/pizza.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/plane.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/play.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/playstation.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/plus-circled.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/plus-round.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/plus.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/pound.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/power.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/pricetag.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/pricetags.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/printer.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/radio-waves.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/record.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/refresh.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/reply-all.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/reply.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/search.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/settings.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/share.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/shuffle.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/skip-backward.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/skip-forward.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/social-android-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/social-android.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/social-apple-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/social-apple.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/social-bitcoin-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/social-bitcoin.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/social-buffer-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/social-buffer.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/social-designernews-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/social-designernews.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/social-dribbble-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/social-dribbble.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/social-dropbox-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/social-dropbox.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/social-facebook-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/social-facebook.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/social-freebsd-devil.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/social-github-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/social-github.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/social-googleplus-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/social-googleplus.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/social-hackernews-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/social-hackernews.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/social-linkedin-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/social-linkedin.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/social-pinterest-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/social-pinterest.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/social-reddit-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/social-reddit.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/social-rss-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/social-rss.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/social-skype-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/social-skype.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/social-tumblr-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/social-tumblr.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/social-tux.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/social-twitter-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/social-twitter.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/social-vimeo-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/social-vimeo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/social-windows-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/social-windows.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/social-wordpress-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/social-wordpress.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/social-yahoo-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/social-yahoo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/social-youtube-outline.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/social-youtube.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/speakerphone.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/speedometer.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/spoon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/star.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/stats-bars.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/steam.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/stop.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/thermometer.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/thumbsdown.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/thumbsup.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/trash-a.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/trash-b.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/umbrella.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/unlocked.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/upload.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/usb.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/videocamera.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/volume-high.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/volume-low.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/volume-medium.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/volume-mute.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/waterdrop.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/wifi.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/wineglass.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/woman.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/wrench.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/png/512/xbox.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/scss/_ionicons-animation.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/scss/_ionicons-font.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/scss/_ionicons-icons.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/scss/_ionicons-variables.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/scss/ionicons.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/alert-circled.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/alert.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/android-add-contact.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/android-add.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/android-alarm.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/android-archive.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/android-arrow-back.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/android-arrow-down-left.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/android-arrow-down-right.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/android-arrow-forward.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/android-arrow-up-left.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/android-arrow-up-right.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/android-battery.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/android-book.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/android-calendar.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/android-call.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/android-camera.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/android-chat.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/android-checkmark.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/android-clock.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/android-close.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/android-contact.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/android-contacts.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/android-data.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/android-developer.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/android-display.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/android-download.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/android-drawer.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/android-dropdown.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/android-earth.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/android-folder.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/android-forums.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/android-friends.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/android-hand.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/android-image.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/android-inbox.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/android-information.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/android-keypad.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/android-lightbulb.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/android-locate.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/android-location.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/android-mail.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/android-microphone.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/android-mixer.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/android-more.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/android-note.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/android-playstore.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/android-printer.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/android-promotion.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/android-reminder.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/android-remove.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/android-search.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/android-send.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/android-settings.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/android-share.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/android-social-user.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/android-social.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/android-sort.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/android-stair-drawer.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/android-star.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/android-stopwatch.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/android-storage.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/android-system-back.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/android-system-home.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/android-system-windows.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/android-timer.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/android-trash.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/android-user-menu.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/android-volume.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/android-wifi.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/aperture.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/archive.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/arrow-down-a.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/arrow-down-b.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/arrow-down-c.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/arrow-expand.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/arrow-graph-down-left.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/arrow-graph-down-right.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/arrow-graph-up-left.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/arrow-graph-up-right.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/arrow-left-a.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/arrow-left-b.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/arrow-left-c.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/arrow-move.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/arrow-resize.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/arrow-return-left.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/arrow-return-right.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/arrow-right-a.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/arrow-right-b.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/arrow-right-c.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/arrow-shrink.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/arrow-swap.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/arrow-up-a.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/arrow-up-b.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/arrow-up-c.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/asterisk.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/at.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/bag.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/battery-charging.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/battery-empty.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/battery-full.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/battery-half.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/battery-low.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/beaker.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/beer.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/bluetooth.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/bonfire.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/bookmark.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/briefcase.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/bug.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/calculator.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/calendar.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/camera.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/card.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/cash.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/chatbox-working.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/chatbox.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/chatboxes.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/chatbubble-working.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/chatbubble.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/chatbubbles.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/checkmark-circled.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/checkmark-round.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/checkmark.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/chevron-down.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/chevron-left.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/chevron-right.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/chevron-up.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/clipboard.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/clock.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/close-circled.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/close-round.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/close.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/closed-captioning.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/cloud.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/code-download.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/code-working.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/code.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/coffee.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/compass.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/compose.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/connection-bars.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/contrast.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/cube.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/disc.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/document-text.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/document.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/drag.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/earth.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/edit.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/egg.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/eject.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/email.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/eye-disabled.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/eye.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/female.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/filing.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/film-marker.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/fireball.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/flag.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/flame.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/flash-off.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/flash.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/flask.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/folder.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/fork-repo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/fork.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/forward.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/funnel.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/game-controller-a.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/game-controller-b.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/gear-a.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/gear-b.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/grid.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/hammer.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/happy.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/headphone.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/heart-broken.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/heart.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/help-buoy.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/help-circled.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/help.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/home.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/icecream.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/icon-social-google-plus-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/icon-social-google-plus.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/image.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/images.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/information-circled.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/information.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ionic.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-alarm-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-alarm.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-albums-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-albums.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-americanfootball-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-americanfootball.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-analytics-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-analytics.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-arrow-back.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-arrow-down.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-arrow-forward.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-arrow-left.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-arrow-right.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-arrow-thin-down.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-arrow-thin-left.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-arrow-thin-right.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-arrow-thin-up.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-arrow-up.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-at-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-at.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-barcode-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-barcode.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-baseball-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-baseball.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-basketball-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-basketball.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-bell-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-bell.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-bolt-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-bolt.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-bookmarks-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-bookmarks.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-box-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-box.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-briefcase-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-briefcase.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-browsers-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-browsers.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-calculator-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-calculator.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-calendar-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-calendar.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-camera-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-camera.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-cart-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-cart.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-chatboxes-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-chatboxes.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-chatbubble-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-chatbubble.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-checkmark-empty.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-checkmark-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-checkmark.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-circle-filled.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-circle-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-clock-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-clock.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-close-empty.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-close-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-close.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-cloud-download-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-cloud-download.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-cloud-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-cloud-upload-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-cloud-upload.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-cloud.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-cloudy-night-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-cloudy-night.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-cloudy-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-cloudy.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-cog-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-cog.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-compose-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-compose.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-contact-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-contact.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-copy-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-copy.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-download-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-download.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-drag.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-email-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-email.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-expand.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-eye-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-eye.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-fastforward-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-fastforward.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-filing-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-filing.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-film-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-film.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-flag-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-flag.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-folder-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-folder.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-football-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-football.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-gear-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-gear.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-glasses-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-glasses.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-heart-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-heart.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-help-empty.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-help-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-help.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-home-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-home.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-infinite-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-infinite.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-information-empty.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-information-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-information.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-ionic-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-keypad-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-keypad.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-lightbulb-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-lightbulb.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-location-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-location.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-locked-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-locked.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-loop-strong.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-loop.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-medkit-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-medkit.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-mic-off.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-mic-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-mic.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-minus-empty.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-minus-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-minus.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-monitor-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-monitor.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-moon-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-moon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-more-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-more.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-musical-note.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-musical-notes.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-navigate-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-navigate.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-paper-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-paper.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-paperplane-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-paperplane.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-partlysunny-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-partlysunny.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-pause-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-pause.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-paw-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-paw.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-people-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-people.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-person-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-person.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-personadd-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-personadd.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-photos-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-photos.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-pie-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-pie.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-play-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-play.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-plus-empty.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-plus-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-plus.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-pricetag-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-pricetag.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-pricetags-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-pricetags.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-printer-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-printer.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-pulse-strong.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-pulse.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-rainy-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-rainy.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-recording-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-recording.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-redo-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-redo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-refresh-empty.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-refresh-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-refresh.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-reload.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-reverse-camera-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-reverse-camera.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-rewind-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-rewind.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-search-strong.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-search.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-settings-strong.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-settings.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-shrink.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-skipbackward-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-skipbackward.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-skipforward-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-skipforward.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-snowy.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-speedometer-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-speedometer.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-star-half.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-star-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-star.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-stopwatch-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-stopwatch.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-sunny-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-sunny.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-telephone-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-telephone.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-tennisball-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-tennisball.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-thunderstorm-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-thunderstorm.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-time-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-time.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-timer-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-timer.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-toggle-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-toggle.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-trash-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-trash.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-undo-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-undo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-unlocked-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-unlocked.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-upload-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-upload.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-videocam-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-videocam.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-volume-high.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-volume-low.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-wineglass-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-wineglass.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-world-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ios7-world.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ipad.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/iphone.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ipod.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/jet.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/key.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/knife.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/laptop.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/leaf.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/levels.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/lightbulb.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/link.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/load-a.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/load-b.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/load-c.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/load-d.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/location.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/locked.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/log-in.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/log-out.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/loop.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/magnet.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/male.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/man.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/map.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/medkit.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/merge.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/mic-a.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/mic-b.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/mic-c.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/minus-circled.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/minus-round.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/minus.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/model-s.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/monitor.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/more.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/mouse.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/music-note.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/navicon-round.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/navicon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/navigate.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/network.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/no-smoking.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/nuclear.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/outlet.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/paper-airplane.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/paperclip.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/pause.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/person-add.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/person-stalker.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/person.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/pie-graph.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/pin.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/pinpoint.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/pizza.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/plane.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/planet.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/play.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/playstation.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/plus-circled.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/plus-round.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/plus.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/podium.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/pound.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/power.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/pricetag.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/pricetags.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/printer.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/pull-request.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/qr-scanner.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/quote.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/radio-waves.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/record.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/refresh.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/reply-all.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/reply.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ribbon-a.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/ribbon-b.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/sad.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/scissors.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/search.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/settings.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/share.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/shuffle.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/skip-backward.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/skip-forward.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/social-android-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/social-android.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/social-apple-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/social-apple.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/social-bitcoin-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/social-bitcoin.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/social-buffer-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/social-buffer.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/social-designernews-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/social-designernews.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/social-dribbble-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/social-dribbble.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/social-dropbox-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/social-dropbox.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/social-facebook-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/social-facebook.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/social-foursquare-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/social-foursquare.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/social-freebsd-devil.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/social-github-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/social-github.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/social-google-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/social-google.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/social-googleplus-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/social-googleplus.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/social-hackernews-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/social-hackernews.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/social-instagram-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/social-instagram.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/social-linkedin-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/social-linkedin.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/social-pinterest-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/social-pinterest.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/social-reddit-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/social-reddit.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/social-rss-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/social-rss.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/social-skype-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/social-skype.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/social-tumblr-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/social-tumblr.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/social-tux.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/social-twitter-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/social-twitter.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/social-usd-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/social-usd.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/social-vimeo-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/social-vimeo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/social-windows-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/social-windows.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/social-wordpress-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/social-wordpress.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/social-yahoo-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/social-yahoo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/social-youtube-outline.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/social-youtube.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/speakerphone.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/speedometer.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/spoon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/star.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/stats-bars.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/steam.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/stop.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/thermometer.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/thumbsdown.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/thumbsup.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/toggle-filled.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/toggle.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/trash-a.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/trash-b.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/trophy.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/umbrella.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/university.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/unlocked.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/upload.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/usb.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/videocamera.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/volume-high.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/volume-low.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/volume-medium.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/volume-mute.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/wand.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/waterdrop.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/wifi.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/wineglass.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/woman.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/wrench.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/ionicons/src/xbox.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/material-design/css/materialdesignicons.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/material-design/css/materialdesignicons.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/material-design/css/materialdesignicons.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/material-design/css/materialdesignicons.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/material-design/fonts/materialdesignicons-webfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/material-design/fonts/materialdesignicons-webfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/material-design/fonts/materialdesignicons-webfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/material-design/fonts/materialdesignicons-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/material-design/fonts/materialdesignicons-webfont.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/material-design/materialdesignicons.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/themify-icons/fonts/themify.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/themify-icons/fonts/themify.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/themify-icons/fonts/themify.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/themify-icons/fonts/themify.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/themify-icons/ie7/ie7.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/themify-icons/ie7/ie7.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/themify-icons/themify-icons.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/themify-icons/themify-icons.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/typicons/typicons.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/typicons/typicons.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/typicons/typicons.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/typicons/typicons.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/typicons/typicons.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/typicons/typicons.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/css/weather-icons-core.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/css/weather-icons-core.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/css/weather-icons-variables.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/css/weather-icons-variables.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/css/weather-icons-wind.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/css/weather-icons-wind.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/css/weather-icons-wind.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/css/weather-icons-wind.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/css/weather-icons.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/css/weather-icons.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/css/weather-icons.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/css/weather-icons.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/font/weathericons-regular-webfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/font/weathericons-regular-webfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/font/weathericons-regular-webfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/font/weathericons-regular-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/font/weathericons-regular-webfont.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/less/css/variables-beaufort.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/less/css/variables-day.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/less/css/variables-direction.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/less/css/variables-misc.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/less/css/variables-moon.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/less/css/variables-neutral.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/less/css/variables-night.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/less/css/variables-time.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/less/css/variables-wind-names.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/less/icon-classes/classes-beaufort.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/less/icon-classes/classes-day.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/less/icon-classes/classes-direction.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/less/icon-classes/classes-misc.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/less/icon-classes/classes-moon-aliases.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/less/icon-classes/classes-moon.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/less/icon-classes/classes-neutral.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/less/icon-classes/classes-night.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/less/icon-classes/classes-time.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/less/icon-classes/classes-wind-aliases.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/less/icon-classes/classes-wind-degrees.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/less/icon-classes/classes-wind.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/less/icon-variables/variables-beaufort.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/less/icon-variables/variables-day.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/less/icon-variables/variables-direction.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/less/icon-variables/variables-misc.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/less/icon-variables/variables-moon.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/less/icon-variables/variables-neutral.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/less/icon-variables/variables-night.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/less/icon-variables/variables-time.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/less/icon-variables/variables-wind-names.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/less/mappings/wi-forecast-io.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/less/mappings/wi-owm.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/less/mappings/wi-wmo4680.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/less/mappings/wi-yahoo.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/less/weather-icons-classes.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/less/weather-icons-core.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/less/weather-icons-variables.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/less/weather-icons-wind.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/less/weather-icons-wind.min.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/less/weather-icons.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/less/weather-icons.min.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/sass/css/classes-wind-aliases.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/sass/css/classes-wind-aliases.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/sass/css/variables-beaufort.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/sass/css/variables-beaufort.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/sass/css/variables-day.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/sass/css/variables-day.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/sass/css/variables-direction.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/sass/css/variables-direction.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/sass/css/variables-misc.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/sass/css/variables-misc.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/sass/css/variables-moon.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/sass/css/variables-moon.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/sass/css/variables-neutral.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/sass/css/variables-neutral.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/sass/css/variables-night.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/sass/css/variables-night.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/sass/css/variables-time.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/sass/css/variables-time.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/sass/css/variables-wind-names.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/sass/css/variables-wind-names.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/sass/icon-classes/classes-beaufort.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/sass/icon-classes/classes-day.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/sass/icon-classes/classes-direction.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/sass/icon-classes/classes-misc.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/sass/icon-classes/classes-moon-aliases.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/sass/icon-classes/classes-moon.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/sass/icon-classes/classes-neutral.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/sass/icon-classes/classes-night.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/sass/icon-classes/classes-time.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/sass/icon-classes/classes-wind-aliases.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/sass/icon-classes/classes-wind-degrees.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/sass/icon-classes/classes-wind.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/sass/icon-variables/variables-beaufort.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/sass/icon-variables/variables-day.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/sass/icon-variables/variables-direction.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/sass/icon-variables/variables-misc.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/sass/icon-variables/variables-moon.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/sass/icon-variables/variables-neutral.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/sass/icon-variables/variables-night.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/sass/icon-variables/variables-time.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/sass/icon-variables/variables-wind-names.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/sass/mappings/wi-forecast-io.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/sass/mappings/wi-owm.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/sass/mappings/wi-wmo4680.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/sass/mappings/wi-yahoo.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/sass/weather-icons-classes.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/sass/weather-icons-core.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/sass/weather-icons-variables.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/sass/weather-icons-wind.min.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/sass/weather-icons-wind.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/sass/weather-icons.min.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/icons/weather-icons/sass/weather-icons.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/bg-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/bg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/flags/french_flag.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/flags/germany_flag.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/flags/italy_flag.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/flags/russia_flag.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/flags/spain_flag.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/flags/us_flag.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/gallery/work-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/gallery/work-10.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/gallery/work-11.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/gallery/work-12.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/gallery/work-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/gallery/work-3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/gallery/work-4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/gallery/work-5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/gallery/work-6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/gallery/work-7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/gallery/work-8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/gallery/work-9.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/logo-sm-dark.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/logo-sm.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/products/1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/products/2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/products/3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/products/4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/products/5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/products/6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/products/7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/products/8.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/small/img-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/small/img-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/small/img-3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/small/img-4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/small/img-5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/small/img-6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/small/img-7.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/stardust.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/users/avatar-1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/users/avatar-2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/users/avatar-3.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/users/avatar-4.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/users/avatar-5.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/users/avatar-6.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/js/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/js/detect.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/js/fastclick.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/js/jquery.blockUI.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/js/jquery.nicescroll.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/js/jquery.scrollTo.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/js/jquery.slimscroll.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/js/modernizr.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/js/waves.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/pages/alertify-init.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/pages/animate-init.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/pages/c3-chart-init.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/pages/calendar-init.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/pages/chartist.init.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/pages/chartjs.init.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/pages/dashboard.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/pages/dashborad-2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/pages/datatables.init.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/pages/directory.init.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/pages/flot.init.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/pages/form-advanced.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/pages/gmaps.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/pages/jvectormap.init.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/pages/lightbox.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/pages/morris.init.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/pages/nestable-init.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/pages/peity.init.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/pages/rangeslider-init.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/pages/rating-init.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/pages/sparklines.init.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/pages/sweet-alert.init.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/pages/widget-init.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/pages/xeditable.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/scss/_account-pages.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/scss/_alertify.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/scss/_alerts.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/scss/_bootstrap-custom.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/scss/_buttons.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/scss/_calendar.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/scss/_card.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/scss/_charts.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/scss/_coming-soon.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/scss/_demo-only.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/scss/_ecommerce.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/scss/_email.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/scss/_form-advanced.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/scss/_form-editor.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/scss/_form-elements.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/scss/_form-upload.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/scss/_form-validation.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/scss/_form-wizard.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/scss/_gallery.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/scss/_general.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/scss/_helper.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/scss/_invoice.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/scss/_loader.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/scss/_maps.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/scss/_menu.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/scss/_nestable.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/scss/_pagination.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/scss/_popover-tooltips.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/scss/_pricing.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/scss/_print.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/scss/_progressbar.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/scss/_range-slider.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/scss/_responsive.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/scss/_session-timeout.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/scss/_summernote.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/scss/_sweet-alert.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/scss/_tables.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/scss/_tabs.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/scss/_timeline.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/scss/_variables.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/scss/_waves.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/scss/_widgets.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/scss/icons.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/scss/style.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/sections/footer.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/sections/header.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/sections/jquery.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/sections/navigation.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/libraries/sws/Abstracts/DefaultValues.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/libraries/sws/Abstracts/ExceptionCodes.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/libraries/sws/AutoConfig.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/libraries/sws/Classes/CookieManager.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/libraries/sws/Classes/Crypto.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/libraries/sws/Classes/ObjectLoader.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/libraries/sws/Classes/Utilities.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/libraries/sws/Classes/WebManager.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/libraries/sws/Exceptions/DatabaseException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/libraries/sws/Exceptions/IPAutoDetectException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/libraries/sws/Exceptions/InvalidCookieException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/libraries/sws/Exceptions/InvalidIPException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/libraries/sws/Objects/Cookie.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/libraries/sws/ZiProto/Abstracts/Options.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/libraries/sws/ZiProto/Abstracts/Regex.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/libraries/sws/ZiProto/BufferStream.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/libraries/sws/ZiProto/DecodingOptions.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/libraries/sws/ZiProto/EncodingOptions.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/libraries/sws/ZiProto/Exception/DecodingFailedException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/libraries/sws/ZiProto/Exception/EncodingFailedException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/libraries/sws/ZiProto/Exception/InsufficientDataException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/libraries/sws/ZiProto/Exception/IntegerOverflowException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/libraries/sws/ZiProto/Exception/InvalidOptionException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/libraries/sws/ZiProto/Ext.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/libraries/sws/ZiProto/Packet.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/libraries/sws/ZiProto/Type/Binary.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/libraries/sws/ZiProto/Type/Map.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/libraries/sws/ZiProto/TypeTransformer/BinaryTransformer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/libraries/sws/ZiProto/TypeTransformer/Extension.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/libraries/sws/ZiProto/TypeTransformer/MapTransformer.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/libraries/sws/ZiProto/TypeTransformer/Validator.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/libraries/sws/ZiProto/ZiProto.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/libraries/sws/ZiProto/ziproto.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/libraries/sws/acm/Abstracts/ExceptionCodes.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/libraries/sws/acm/CommandLine.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/libraries/sws/acm/Exceptions/LocalConfigurationException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/libraries/sws/acm/Exceptions/NoConfigurationFoundException.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/libraries/sws/acm/Objects/Schema.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/libraries/sws/acm/acm.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/libraries/sws/acm/acm.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/libraries/sws/configuration.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/libraries/sws/sws.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resources/libraries/sws/sws.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/css/landing/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/css/bootstrap.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/css/landing/magnific-popup.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/css/landing/materialdesignicons.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/css/landing/mobirise.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/icons/mobirise/mobirise.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/css/landing/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/favicon/android-chrome-192x192.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/favicon/android-chrome-512x512.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/favicon/apple-touch-icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/favicon/browserconfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/favicon/favicon-16x16.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/favicon/favicon-32x32.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/favicon/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/favicon/mstile-150x150.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/favicon/safari-pinned-tab.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/favicon/site.webmanifest" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/fonts/materialdesignicons-webfont.eot" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/fonts/materialdesignicons-webfont.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/fonts/materialdesignicons-webfont.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/fonts/materialdesignicons-webfont.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/fonts/materialdesignicons-webfont.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/fonts/materialdesignicons-webfont.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/fonts/materialdesignicons-webfont.woff" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/fonts/materialdesignicons-webfont.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/fonts/materialdesignicons-webfont.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/fonts/materialdesignicons-webfont.woff2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/images/showcase.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/js/landing/bootstrap.bundle.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/js/bootstrap.bundle.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/js/landing/jquery.app.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/js/landing/jquery.easing.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/js/landing/jquery.magnific-popup.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/js/landing/jquery.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/js/jquery.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/js/landing/jquery.sticky.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/pages/index/contents.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/pages/index/contents.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/sections/landing_footer.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/sections/landing_headers.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/sections/landing_js.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/sections/landing_nav.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/configuration.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/configuration.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/libraries/Example/Classes/PrintFunctions.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/libraries/Example/ExampleLibrary.php" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -1544,7 +62,7 @@
         <entry file="file://$PROJECT_DIR$/src/resources/sections/header.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="144">
-              <caret line="6" column="32" lean-forward="true" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
+              <caret line="6" column="32" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -1562,7 +80,7 @@
         <entry file="file://$PROJECT_DIR$/src/resources/sections/jquery.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="48">
-              <caret line="2" column="11" lean-forward="true" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
+              <caret line="2" column="11" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -1571,19 +89,33 @@
         <entry file="file://$PROJECT_DIR$/src/resources/sections/footer.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="144">
-              <caret line="6" column="14" lean-forward="true" selection-end-line="8" selection-end-column="9" />
+              <caret line="6" column="14" selection-end-line="8" selection-end-column="9" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/resources/sections/navigation.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="30" column="71" lean-forward="true" selection-start-line="30" selection-start-column="71" selection-end-line="31" selection-end-column="106" />
+            <state relative-caret-position="-93">
+              <caret line="31" column="61" selection-start-line="31" selection-start-column="61" selection-end-line="31" selection-end-column="61" />
               <folding>
                 <element signature="e#8815#8820#0#HTML" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/resources/libraries/sws/acm/acm.php">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/resources/configuration.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="10" column="9" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -1599,13 +131,13 @@
         <option value="$PROJECT_DIR$/src/resources/sections/landing_headers.php" />
         <option value="$PROJECT_DIR$/src/resources/sections/landing_js.php" />
         <option value="$PROJECT_DIR$/src/resources/sections/landing_footer.php" />
-        <option value="$PROJECT_DIR$/src/resources/configuration.json" />
         <option value="$PROJECT_DIR$/src/resources/sections/landing_nav.php" />
         <option value="$PROJECT_DIR$/src/resources/sections/header.php" />
         <option value="$PROJECT_DIR$/src/resources/sections/jquery.php" />
         <option value="$PROJECT_DIR$/src/resources/sections/footer.php" />
         <option value="$PROJECT_DIR$/src/resources/pages/index/contents.php" />
         <option value="$PROJECT_DIR$/src/resources/sections/navigation.php" />
+        <option value="$PROJECT_DIR$/src/resources/configuration.json" />
       </list>
     </option>
   </component>
@@ -1636,12 +168,6 @@
               <item name="CoffeeHouse-Web" type="b2602c69:ProjectViewProjectNode" />
               <item name="CoffeeHouse-Web" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CoffeeHouse-Web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CoffeeHouse-Web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -1649,22 +175,7 @@
               <item name="CoffeeHouse-Web" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CoffeeHouse-Web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CoffeeHouse-Web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="index" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CoffeeHouse-Web" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CoffeeHouse-Web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="sections" type="462c0819:PsiDirectoryNode" />
+              <item name="libraries" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -1677,7 +188,7 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/assets/images" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/resources/libraries" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
@@ -1688,11 +199,11 @@
       <recent name="C:\Users\Netkas\Documents\gits\CoffeeHouse-Web\src\assets\css" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Netkas\Documents\gits\CoffeeHouse-Web\src\resources\libraries" />
       <recent name="C:\Users\Netkas\Documents\gits\CoffeeHouse-Web\src\assets\images" />
       <recent name="C:\Users\Netkas\Documents\gits\CoffeeHouse-Web\src\assets" />
       <recent name="C:\Users\Netkas\Documents\gits\CoffeeHouse-Web\src\assets\js\landing" />
       <recent name="C:\Users\Netkas\Documents\gits\CoffeeHouse-Web\src\assets\css\landing" />
-      <recent name="C:\Users\Netkas\Documents\gits\CoffeeHouse-Web\src" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -1717,12 +228,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1561581667313</updated>
-      <workItem from="1561581668860" duration="5561000" />
+      <workItem from="1561581668860" duration="6089000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5561000" />
+    <option name="totallyTimeSpent" value="6089000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -1794,13 +305,6 @@
     <entry file="file://$PROJECT_DIR$/src/resources/runtime_scripts/custom_headers.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/configuration.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/resources/sections/landing_nav.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
@@ -1818,21 +322,21 @@
     <entry file="file://$PROJECT_DIR$/src/resources/sections/jquery.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="48">
-          <caret line="2" column="11" lean-forward="true" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
+          <caret line="2" column="11" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/resources/sections/footer.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
-          <caret line="6" column="14" lean-forward="true" selection-end-line="8" selection-end-column="9" />
+          <caret line="6" column="14" selection-end-line="8" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/resources/sections/header.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
-          <caret line="6" column="32" lean-forward="true" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
+          <caret line="6" column="32" selection-start-line="6" selection-start-column="32" selection-end-line="6" selection-end-column="32" />
         </state>
       </provider>
     </entry>
@@ -1845,11 +349,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/resources/sections/navigation.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="30" column="71" lean-forward="true" selection-start-line="30" selection-start-column="71" selection-end-line="31" selection-end-column="106" />
+        <state relative-caret-position="-93">
+          <caret line="31" column="61" selection-start-line="31" selection-start-column="61" selection-end-line="31" selection-end-column="61" />
           <folding>
             <element signature="e#8815#8820#0#HTML" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/libraries/sws/acm/acm.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/configuration.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="10" column="9" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
         </state>
       </provider>
     </entry>
