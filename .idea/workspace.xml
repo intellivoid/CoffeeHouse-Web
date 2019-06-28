@@ -2,19 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8238003d-8aea-43a7-ad32-d30cdb7afd72" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/assets/vendors/morris/morris.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/vendors/morris/morris.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/vendors/morris/morris.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/vendors/raphael/raphael-min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/pages/index/scripts/determine_billing.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/pages/index/scripts/determine_total_usage.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/pages/index/scripts/render_charts_js.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/pages/index/scripts/render_widgets.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/resources/pages/index/contents.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/pages/index/contents.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/sections/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/sections/footer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/sections/navigation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/sections/navigation.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/shared/scripts/check_plan.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/shared/scripts/check_plan.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -54,7 +42,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/resources/pages/index/scripts/render_charts_js.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
@@ -63,11 +51,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/resources/pages/index/contents.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-192">
-              <caret line="37" column="10" selection-start-line="37" selection-start-column="10" selection-end-line="37" selection-end-column="10" />
+            <state relative-caret-position="271">
+              <caret line="77" column="122" selection-start-line="77" selection-start-column="122" selection-end-line="77" selection-end-column="122" />
               <folding>
                 <element signature="e#11#54#0#PHP" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -123,8 +111,8 @@
         <option value="$PROJECT_DIR$/src/resources/pages/index/scripts/determine_billing.php" />
         <option value="$PROJECT_DIR$/src/resources/sections/navigation.php" />
         <option value="$PROJECT_DIR$/src/resources/pages/index/scripts/render_widgets.php" />
-        <option value="$PROJECT_DIR$/src/resources/pages/index/contents.php" />
         <option value="$PROJECT_DIR$/src/resources/pages/index/scripts/render_charts_js.php" />
+        <option value="$PROJECT_DIR$/src/resources/pages/index/contents.php" />
       </list>
     </option>
   </component>
@@ -257,12 +245,12 @@
       <updated>1561581667313</updated>
       <workItem from="1561581668860" duration="11451000" />
       <workItem from="1561652644899" duration="1411000" />
-      <workItem from="1561683673056" duration="7830000" />
+      <workItem from="1561683673056" duration="8438000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20692000" />
+    <option name="totallyTimeSpent" value="21300000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -633,21 +621,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/pages/index/contents.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-192">
-          <caret line="37" column="10" selection-start-line="37" selection-start-column="10" selection-end-line="37" selection-end-column="10" />
-          <folding>
-            <element signature="e#11#54#0#PHP" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/resources/pages/index/scripts/render_charts_js.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="9" column="67" selection-start-line="9" selection-start-column="67" selection-end-line="9" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/pages/index/contents.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="77" column="122" selection-start-line="77" selection-start-column="122" selection-end-line="77" selection-end-column="122" />
+          <folding>
+            <element signature="e#11#54#0#PHP" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

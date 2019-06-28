@@ -58,7 +58,7 @@
                 <?PHP HTML::importScript('render_widgets'); ?>
 
                 <div class="row">
-                    <div class="col-xl-9">
+                    <div class="col-xl-8">
                         <div class="card m-b-20">
                             <div class="card-body">
                                 <h4 class="header-title">Usage Analytics</h4>
@@ -66,10 +66,17 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-xl-3">
+                    <div class="col-xl-4">
                         <div class="card m-b-20">
                             <div class="card-body">
-                                <h4 class="header-title">Test1</h4>
+                                <div class="form-group m-b-0">
+                                    <label for="api_key">API Key</label>
+                                    <input class="form-control" type="text" value="<?PHP HTML::print($AccessKey->PublicKey); ?>" id="api_key" name="api_key" readonly>
+                                </div>
+                                <div class="form-group m-b-0">
+                                    <label for="certificate">Certificate</label>
+                                    <textarea class="form-control" type="text" id="certificate" name="certificate" rows="8" readonly><?PHP HTML::print($AccessKey->Signatures->createCertificate()); ?></textarea>
+                                </div>
                             </div>
                         </div>
                     </div>
