@@ -16,6 +16,16 @@
             "CALLBACK_108": "Captcha verification failed, please solve the captcha correctly"
         },
         "login": {
+            "PAGE_TITLE": "CoffeeHouse Dashboard - Login",
+            "CARD_HEADER": "Welcome to CoffeeHouse",
+            "CARD_SUB_HEADER": "Sign in using a Intellivoid Account",
+            "USERNAME_EMAIL_LABEL": "Username or Email",
+            "USERNAME_EMAIL_PLACEHOLDER": "Enter Username or Email",
+            "PASSWORD_LABEL": "Password",
+            "PASSWORD_PLACEHOLDER": "Enter password",
+            "SUBMIT_BUTTON": "Login",
+            "LABEL_NO_ACCOUNT": "Don't have an account?",
+            "LABEL_CREATE_ACCOUNT": "Create one",
             "CALLBACK_100": "There was an issue with your request, please make sure your browser is up to date",
             "CALLBACK_101": "The login information is incorrect",
             "CALLBACK_102": "Your account has been suspended",

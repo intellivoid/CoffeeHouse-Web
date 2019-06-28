@@ -5,26 +5,18 @@
 <link href="/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 <link href="/assets/css/icons.css" rel="stylesheet" type="text/css" />
 <link href="/assets/css/style.css" rel="stylesheet" type="text/css" />
-
-<!-- Primary Meta Tags -->
-<title>CoffeeHouse API Dashboard</title>
 <meta name="title" content="CoffeeHouse API Dashboard">
 <meta name="description" content="Advanced Natrual Language Processing and Machine Learning chat dialog engine, powered by Intellivoid Cloud">
-
-<!-- Open Graph / Facebook -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://coffeehouse.intellivoid.info/">
 <meta property="og:title" content="CoffeeHouse API Dashboard">
 <meta property="og:description" content="Advanced Natrual Language Processing and Machine Learning chat dialog engine, powered by Intellivoid Cloud">
 <meta property="og:image" content="">
-
-<!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image">
 <meta property="twitter:url" content="https://coffeehouse.intellivoid.info/">
 <meta property="twitter:title" content="CoffeeHouse API Dashboard">
 <meta property="twitter:description" content="Advanced Natrual Language Processing and Machine Learning chat dialog engine, powered by Intellivoid Cloud">
 <meta property="twitter:image" content="">
-
 <link rel="apple-touch-icon" sizes="120x120" href="/assets/favicon/apple-touch-icon.png?v=YAmlY5waqg">
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png?v=YAmlY5waqg">
 <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png?v=YAmlY5waqg">
