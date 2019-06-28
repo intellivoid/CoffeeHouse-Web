@@ -80,7 +80,7 @@
                     </li>
 
                     <li>
-                        <a href="#">
+                        <a href="https://gist.github.com/Netkas/d3617e5b5b66c7851c728d3c0073529a" target="_blank">
                             <i class="mdi mdi-book"></i> API Documentation
                         </a>
                     </li>
