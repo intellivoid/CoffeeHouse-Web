@@ -1,0 +1,79 @@
+{
+    "language": {
+        "name": "chinese",
+        "iso_639-1": "zh"
+    },
+    "pages": {
+        "index": {
+            "PAGE_TITLE": "CoffeeHouse Dashboard",
+            "WIDGET_MONTHLY_CALLS": "本月打电话",
+            "WIDGET_MONTHLY_CALLS_SUB": "上个月打电话：%s",
+            "WIDGET_BILLING_DETAILS": "每月电话会议",
+            "WIDGET_BILLING_DETAILS_SUB": "下一个结算周期：%s",
+            "WIDGET_SUBSCRIPTION": "API订阅",
+            "WIDGET_SUBSCRIPTION_SUB": "结算价格：%s",
+            "PLAN_TYPE_FREE": "自由",
+            "PLAN_TYPE_BASIC": "基本",
+            "PLAN_TYPE_ENTERPRISE": "企业",
+            "PLAN_TYPE_UNKNOWN": "未知",
+            "MONTHLY_CALLS_UNLIMITED": "无限",
+            "MONTHLY_CALLS_UNKNOWN": "未知",
+            "USAGE_CURRENT_MONTH_LABEL": "这个月",
+            "USAGE_LAST_MONTH_LABEL": "上个月",
+            "ANALYTICS_CARD_HEADER": "用法分析",
+            "AUTH_API_KEY_HEADER": "API密钥",
+            "AUTH_CERTIFICATE_KEY_HEADER": "证书"
+        },
+        "register": {
+            "PAGE_TITLE": "CoffeeHouse Dashboard - 寄存器",
+            "CARD_SUB_HEADER": "创建一个新的Intellivoid Account",
+            "EMAIL_LABEL": "电子邮件地址",
+            "EMAIL_PLACEHOLDER": "输入电子邮件地址",
+            "USERNAME_LABEL": "用户名",
+            "USERNAME_PLACEHOLDER": "输入用户名",
+            "PASSWORD_LABEL": "密码",
+            "PASSWORD_PLACEHOLDER": "输入密码",
+            "SUBMIT_BUTTON": "寄存器",
+            "EXISTING_ACCOUNT_LABEL": "已经有账号？",
+            "LOGIN_LABEL": "登录",
+            "CALLBACK_100": "您的请求存在问题，请确保您的浏览器是最新的",
+            "CALLBACK_101": "给定的用户名无效",
+            "CALLBACK_102": "给定的电子邮件无效",
+            "CALLBACK_103": "给定的密码无效，应大于8个字符但不大于128",
+            "CALLBACK_104": "给定的用户名已被占用",
+            "CALLBACK_105": "已使用给定的电子邮件",
+            "CALLBACK_106": "尝试创建帐户时出现问题，请与支持小组联系",
+            "CALLBACK_107": "您的帐号已经建立！",
+            "CALLBACK_108": "验证码验证失败，请正确解决验证码"
+        },
+        "login": {
+            "PAGE_TITLE": "CoffeeHouse Dashboard - 登录",
+            "CARD_HEADER": "欢迎来到CoffeeHouse",
+            "CARD_SUB_HEADER": "使用Intellivoid帐户登录",
+            "USERNAME_EMAIL_LABEL": "用户名或电子邮件",
+            "USERNAME_EMAIL_PLACEHOLDER": "输入用户名或电子邮件",
+            "PASSWORD_LABEL": "密码",
+            "PASSWORD_PLACEHOLDER": "输入密码",
+            "SUBMIT_BUTTON": "登录",
+            "LABEL_NO_ACCOUNT": "没有帐户？",
+            "LABEL_CREATE_ACCOUNT": "创建一个",
+            "CALLBACK_100": "您的请求存在问题，请确保您的浏览器是最新的",
+            "CALLBACK_101": "登录信息不正确",
+            "CALLBACK_102": "您的帐户已被暂停",
+            "CALLBACK_103": "在尝试验证您的登录详细信息时出现问题，请与支持小组联系",
+            "CALLBACK_104": "验证码验证失败，请正确解决验证码",
+            "CALLBACK_105": "服务器无法验证您的客户端，请重新启动该应用程序，然后重试",
+            "CALLBACK_106": "尝试验证您的客户时出现问题，请联系支持部门。",
+            "CALLBACK_107": "尝试检索您的帐户时出现问题，请与支持小组联系。",
+            "CALLBACK_108": "您没有任何与CoffeeHouse有效的订阅来访问此仪表板"
+        }
+    },
+    "sections": {
+        "navigation": {
+            "LOGOUT_BUTTON": "登出",
+            "NAV_UPDATE_SIGNATURES": "更新签名",
+            "NAV_DOWNLOAD_CERTIFICATE": "下载证书",
+            "NAV_API_DOCUMENTATION": "API文档"
+        }
+    }
+}
