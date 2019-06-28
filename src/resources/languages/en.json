@@ -5,6 +5,17 @@
     },
     "pages": {
         "register": {
+            "PAGE_TITLE": "CoffeeHouse Dashboard - Register",
+            "CARD_SUB_HEADER": "Create a new Intellivoid Account",
+            "EMAIL_LABEL": "Email Address",
+            "EMAIL_PLACEHOLDER": "Enter a Email Address",
+            "USERNAME_LABEL": "Username",
+            "USERNAME_PLACEHOLDER": "Enter a Username",
+            "PASSWORD_LABEL": "Password",
+            "PASSWORD_PLACEHOLDER": "Enter a Password",
+            "SUBMIT_BUTTON": "Register",
+            "EXISTING_ACCOUNT_LABEL": "Already have an account?",
+            "LOGIN_LABEL": "Login",
             "CALLBACK_100": "There was an issue with your request, please make sure your browser is up to date",
             "CALLBACK_101": "The given Username is invalid",
             "CALLBACK_102": "The given E-Mail is invalid",

@@ -11,7 +11,7 @@
     <head>
         <?PHP HTML::importSection('header'); ?>
         <?PHP HTML::print(re_import(), false); ?>
-        <title>CoffeeHouse - Register</title>
+        <title><?PHP HTML::print(TEXT_PAGE_TITLE); ?></title>
     </head>
     <body class="fixed-left">
 
@@ -25,24 +25,24 @@
                     </h3>
 
                     <div class="p-3">
-                        <p class="text-muted text-center">Create a new Intellivoid Account</p>
+                        <p class="text-muted text-center"><?PHP HTML::print(TEXT_CARD_SUB_HEADER); ?></p>
 
                         <?PHP HTML::importScript('callbacks'); ?>
                         <form class="form-horizontal m-t-30" action="/register" method="POST">
 
                             <div class="form-group">
-                                <label for="email">Email</label>
-                                <input type="email" class="form-control" name="email" id="email" placeholder="Enter email">
+                                <label for="email"><?PHP HTML::print(TEXT_EMAIL_LABEL); ?></label>
+                                <input type="email" class="form-control" name="email" id="email" placeholder="<?PHP HTML::print(TEXT_EMAIL_PLACEHOLDER); ?>">
                             </div>
 
                             <div class="form-group">
-                                <label for="username">Username</label>
-                                <input type="text" class="form-control" name="username" id="username" placeholder="Enter Username or Email">
+                                <label for="username"><?PHP HTML::print(TEXT_USERNAME_LABEL); ?></label>
+                                <input type="text" class="form-control" name="username" id="username" placeholder="<?PHP HTML::print(TEXT_USERNAME_PLACEHOLDER); ?>">
                             </div>
 
                             <div class="form-group">
-                                <label for="password">Password</label>
-                                <input type="password" class="form-control" name="password" id="password" placeholder="Enter password">
+                                <label for="password"><?PHP HTML::print(TEXT_PASSWORD_LABEL); ?></label>
+                                <input type="password" class="form-control" name="password" id="password" placeholder="<?PHP HTML::print(TEXT_PASSWORD_PLACEHOLDER); ?>">
                             </div>
 
                             <div class="form-group">
@@ -57,7 +57,7 @@
 
                             <div class="form-group row m-t-20">
                                 <div class="col-sm-12 text-right">
-                                    <button class="btn btn-primary w-md waves-effect waves-light" type="submit">Register</button>
+                                    <button class="btn btn-primary w-md waves-effect waves-light" type="submit"><?PHP HTML::print(TEXT_SUBMIT_BUTTON); ?></button>
                                 </div>
                             </div>
 
@@ -68,8 +68,8 @@
             </div>
 
             <div class="m-t-40 text-center">
-                <p class="">Already have an account?
-                    <a href="/login" class="font-500 font-14 font-secondary"> Login</a>
+                <p><?PHP HTML::print(TEXT_EXISTING_ACCOUNT_LABEL); ?>
+                    <a href="/login" class="font-500 font-14 font-secondary"> <?PHP HTML::print(TEXT_LOGIN_LABEL); ?></a>
                 </p>
             </div>
 
