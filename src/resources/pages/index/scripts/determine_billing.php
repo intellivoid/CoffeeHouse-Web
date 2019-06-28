@@ -4,7 +4,7 @@
     use DynamicalWeb\DynamicalWeb;
 
     $BillingDetails = array(
-        'monthly_calls' => 'Unknown'
+        'monthly_calls' => TEXT_MONTHLY_CALLS_UNKNOWN
     );
 
     /** @var ApiPlan $Plan */
@@ -12,7 +12,7 @@
 
     if($Plan->MonthlyCalls == 0)
     {
-        $BillingDetails['monthly_calls'] = 'Unlimited';
+        $BillingDetails['monthly_calls'] = TEXT_MONTHLY_CALLS_UNLIMITED;
     }
     else
     {
@@ -24,19 +24,19 @@
     switch($Plan->PlanType)
     {
         case \CoffeeHouse\Abstracts\APIPlan::Free:
-            $BillingDetails['plan_type'] = "Free";
+            $BillingDetails['plan_type'] = TEXT_PLAN_TYPE_FREE;
             break;
 
         case \CoffeeHouse\Abstracts\APIPlan::Basic:
-            $BillingDetails['plan_type'] = "Basic";
+            $BillingDetails['plan_type'] = TEXT_PLAN_TYPE_BASIC;
             break;
 
         case \CoffeeHouse\Abstracts\APIPlan::Enterprise:
-            $BillingDetails['plan_type'] = "Enterprise";
+            $BillingDetails['plan_type'] = TEXT_PLAN_TYPE_ENTERPRISE;
             break;
 
         default:
-            $BillingDetails['plan_type'] = "Unknown";
+            $BillingDetails['plan_type'] = TEXT_PLAN_TYPE_UNKNOWN;
             break;
     }
 

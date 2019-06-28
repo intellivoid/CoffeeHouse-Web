@@ -41,7 +41,7 @@
     <head>
         <link rel="stylesheet" href="/assets/vendors/morris/morris.css">
         <?PHP HTML::importSection('header'); ?>
-        <title>CoffeeHouse - Dashboard</title>
+        <title><?PHP HTML::print(TEXT_PAGE_TITLE); ?></title>
     </head>
     <body>
         <?PHP HTML::importSection('navigation'); ?>
@@ -53,7 +53,7 @@
                 <div class="row">
                     <div class="col-sm-12">
                         <div class="page-title-box">
-                            <h4 class="page-title">CoffeeHouse Dashboard</h4>
+                            <h4 class="page-title"><?PHP HTML::print(TEXT_PAGE_TITLE); ?></h4>
                         </div>
                     </div>
                 </div>
@@ -64,7 +64,7 @@
                     <div class="col-xl-8">
                         <div class="card m-b-20">
                             <div class="card-body">
-                                <h4 class="header-title">Usage Analytics</h4>
+                                <h4 class="header-title"><?PHP HTML::print(TEXT_ANALYTICS_CARD_HEADER); ?></h4>
                                 <div id="api-usage-chart" class="morris-charts" style="height: 300px"></div>
                             </div>
                         </div>
@@ -73,11 +73,11 @@
                         <div class="card m-b-20">
                             <div class="card-body">
                                 <div class="form-group m-b-0">
-                                    <label for="api_key">API Key</label>
+                                    <label for="api_key"><?PHP HTML::print(TEXT_AUTH_API_KEY_HEADER); ?></label>
                                     <input class="form-control" type="text" value="<?PHP HTML::print($AccessKey->PublicKey); ?>" id="api_key" name="api_key" readonly>
                                 </div>
                                 <div class="form-group m-b-0">
-                                    <label for="certificate">Certificate</label>
+                                    <label for="certificate"><?PHP HTML::print(TEXT_AUTH_CERTIFICATE_KEY_HEADER); ?></label>
                                     <textarea class="form-control" type="text" id="certificate" name="certificate" rows="8" readonly><?PHP HTML::print($AccessKey->Signatures->createCertificate()); ?></textarea>
                                 </div>
                             </div>

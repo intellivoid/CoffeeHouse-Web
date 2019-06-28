@@ -3,7 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="8238003d-8aea-43a7-ad32-d30cdb7afd72" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/src/resources/languages/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/languages/en.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/pages/register/contents.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/pages/register/contents.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/pages/index/contents.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/pages/index/contents.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/pages/index/scripts/determine_billing.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/pages/index/scripts/determine_billing.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/pages/index/scripts/render_charts_js.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/pages/index/scripts/render_charts_js.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/pages/index/scripts/render_widgets.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/pages/index/scripts/render_widgets.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -46,19 +49,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/resources/languages/en.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="17" column="24" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="24" />
+            <state relative-caret-position="463">
+              <caret line="24" column="40" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="40" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/resources/pages/register/contents.php">
+        <entry file="file://$PROJECT_DIR$/src/resources/pages/index/contents.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="71" column="114" selection-start-line="71" selection-start-column="114" selection-end-line="71" selection-end-column="114" />
+            <state relative-caret-position="240">
+              <caret line="79" column="113" selection-start-line="79" selection-start-column="113" selection-end-line="79" selection-end-column="113" />
               <folding>
-                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="e#11#54#0#PHP" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -103,24 +107,24 @@
         <option value="$PROJECT_DIR$/src/resources/sections/footer.php" />
         <option value="$PROJECT_DIR$/src/resources/pages/index/scripts/determine_total_usage.php" />
         <option value="$PROJECT_DIR$/src/resources/pages/index/scripts/determine_pricing.php" />
-        <option value="$PROJECT_DIR$/src/resources/pages/index/scripts/render_charts_js.php" />
-        <option value="$PROJECT_DIR$/src/resources/pages/index/scripts/render_widgets.php" />
-        <option value="$PROJECT_DIR$/src/resources/pages/index/scripts/determine_billing.php" />
-        <option value="$PROJECT_DIR$/src/resources/pages/index/contents.php" />
         <option value="$PROJECT_DIR$/src/resources/pages/index/scripts/dashboard_actions.php" />
         <option value="$PROJECT_DIR$/src/resources/sections/jquery.php" />
         <option value="$PROJECT_DIR$/src/resources/sections/navigation.php" />
         <option value="$PROJECT_DIR$/src/assets/favicon/site.webmanifest" />
         <option value="$PROJECT_DIR$/src/resources/sections/header.php" />
         <option value="$PROJECT_DIR$/src/resources/pages/login/contents.php" />
-        <option value="$PROJECT_DIR$/src/resources/languages/en.json" />
         <option value="$PROJECT_DIR$/src/resources/pages/register/contents.php" />
+        <option value="$PROJECT_DIR$/src/resources/pages/index/scripts/determine_billing.php" />
+        <option value="$PROJECT_DIR$/src/resources/pages/index/scripts/render_charts_js.php" />
+        <option value="$PROJECT_DIR$/src/resources/pages/index/scripts/render_widgets.php" />
+        <option value="$PROJECT_DIR$/src/resources/languages/en.json" />
+        <option value="$PROJECT_DIR$/src/resources/pages/index/contents.php" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="135" />
-    <option name="y" value="206" />
+    <option name="x" value="28" />
+    <option name="y" value="176" />
     <option name="width" value="1130" />
     <option name="height" value="624" />
   </component>
@@ -174,7 +178,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="logout" type="462c0819:PsiDirectoryNode" />
+              <item name="index" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="CoffeeHouse-Web" type="b2602c69:ProjectViewProjectNode" />
@@ -182,7 +186,8 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="register" type="462c0819:PsiDirectoryNode" />
+              <item name="index" type="462c0819:PsiDirectoryNode" />
+              <item name="scripts" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="CoffeeHouse-Web" type="b2602c69:ProjectViewProjectNode" />
@@ -210,7 +215,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../OpenBlu-Web-Application" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
@@ -255,12 +260,12 @@
       <workItem from="1561652644899" duration="1411000" />
       <workItem from="1561683673056" duration="15328000" />
       <workItem from="1561734122798" duration="89000" />
-      <workItem from="1561735842162" duration="1462000" />
+      <workItem from="1561735842162" duration="3994000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29741000" />
+    <option name="totallyTimeSpent" value="32273000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -538,44 +543,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/pages/index/scripts/render_charts_js.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="9" column="67" selection-start-line="9" selection-start-column="67" selection-end-line="9" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/pages/index/scripts/render_widgets.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="36" column="28" lean-forward="true" selection-start-line="36" selection-start-column="28" selection-end-line="36" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/pages/index/scripts/determine_billing.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/pages/index/scripts/determine_total_usage.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-161">
-          <caret line="6" column="28" lean-forward="true" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
-          <folding>
-            <element signature="e#11#41#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/pages/index/contents.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/resources/pages/index/scripts/dashboard_actions.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -621,19 +588,64 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/languages/en.json">
+    <entry file="file://$PROJECT_DIR$/src/resources/pages/register/contents.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="17" column="24" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="24" />
+        <state relative-caret-position="168">
+          <caret line="7" column="2" lean-forward="true" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/pages/register/contents.php">
+    <entry file="file://$PROJECT_DIR$/src/resources/pages/index/scripts/determine_total_usage.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="71" column="114" selection-start-line="71" selection-start-column="114" selection-end-line="71" selection-end-column="114" />
+        <state relative-caret-position="144">
+          <caret line="6" column="28" lean-forward="true" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#11#41#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/pages/index/scripts/determine_billing.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="18" column="30" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/pages/index/scripts/render_charts_js.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1327">
+          <caret line="60" column="28" lean-forward="true" selection-start-line="60" selection-start-column="28" selection-end-line="60" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/pages/index/scripts/render_widgets.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="960">
+          <caret line="40" column="34" selection-start-line="40" selection-start-column="34" selection-end-line="40" selection-end-column="34" />
+          <folding>
+            <element signature="e#11#41#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/languages/en.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="463">
+          <caret line="24" column="40" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/pages/index/contents.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="79" column="113" selection-start-line="79" selection-start-column="113" selection-end-line="79" selection-end-column="113" />
+          <folding>
+            <element signature="e#11#54#0#PHP" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

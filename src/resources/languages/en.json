@@ -4,6 +4,26 @@
         "iso_639-1": "en"
     },
     "pages": {
+        "index": {
+            "PAGE_TITLE": "CoffeeHouse Dashboard",
+            "WIDGET_MONTHLY_CALLS": "Calls this month",
+            "WIDGET_MONTHLY_CALLS_SUB": "Calls last month: %s",
+            "WIDGET_BILLING_DETAILS": "Monthly Calls",
+            "WIDGET_BILLING_DETAILS_SUB": "Next Billing Cycle: %s",
+            "WIDGET_SUBSCRIPTION": "API Subscription",
+            "WIDGET_SUBSCRIPTION_SUB": "Billing Price: %s",
+            "PLAN_TYPE_FREE": "Free",
+            "PLAN_TYPE_BASIC": "Basic",
+            "PLAN_TYPE_ENTERPRISE": "Enterprise",
+            "PLAN_TYPE_UNKNOWN": "Unknown",
+            "MONTHLY_CALLS_UNLIMITED": "Unlimited",
+            "MONTHLY_CALLS_UNKNOWN": "Unknown",
+            "USAGE_CURRENT_MONTH_LABEL": "Current Month",
+            "USAGE_LAST_MONTH_LABEL": "Last Month",
+            "ANALYTICS_CARD_HEADER": "Usage Analytics",
+            "AUTH_API_KEY_HEADER": "API Key",
+            "AUTH_CERTIFICATE_KEY_HEADER": "Certificate"
+        },
         "register": {
             "PAGE_TITLE": "CoffeeHouse Dashboard - Register",
             "CARD_SUB_HEADER": "Create a new Intellivoid Account",

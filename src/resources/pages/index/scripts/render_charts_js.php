@@ -38,7 +38,7 @@ use ModularAPI\Objects\AccessKey;
         $Javascript .= "data: " . json_encode($data) . ",";
         $Javascript .= "xkey: \"day\",";
         $Javascript .= "ykeys: ['current_month', 'last_month'],";
-        $Javascript .= "labels: ['" . 'Current Month' . "', '" . 'Last Month' .  "']";
+        $Javascript .= "labels: ['" . TEXT_USAGE_CURRENT_MONTH_LABEL . "', '" . TEXT_USAGE_LAST_MONTH_LABEL .  "']";
     }
     else
     {
@@ -54,7 +54,7 @@ use ModularAPI\Objects\AccessKey;
         $Javascript .= "data: " . json_encode($data) . ",";
         $Javascript .= "xkey: \"day\",";
         $Javascript .= "ykeys: ['current_month'],";
-        $Javascript .= "labels: ['" . 'Current Month' . "']";
+        $Javascript .= "labels: ['" . TEXT_USAGE_CURRENT_MONTH_LABEL . "']";
     }
 
 
