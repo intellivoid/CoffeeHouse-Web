@@ -16,7 +16,7 @@
     }
     else
     {
-        $BillingDetails['monthly_calls'] = $Plan->MonthlyCalls;
+        $BillingDetails['monthly_calls'] = number_format($Plan->MonthlyCalls);
     }
 
     $BillingDetails['next_billing_cycle'] = $Plan->NextBillingCycle;

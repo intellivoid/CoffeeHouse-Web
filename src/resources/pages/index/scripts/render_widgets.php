@@ -26,7 +26,7 @@
         <div class="mini-stat clearfix bg-white">
             <span class="mini-stat-icon bg-brown mr-0 float-right"><i class="mdi mdi-chart-pie"></i></span>
             <div class="mini-stat-info">
-                <span class="counter text-brown"><?PHP HTML::print(number_format($BillingDetails['monthly_calls'])); ?></span>
+                <span class="counter text-brown"><?PHP HTML::print($BillingDetails['monthly_calls']); ?></span>
                 Monthly Calls
             </div>
             <div class="clearfix"></div>
