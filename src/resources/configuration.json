@@ -15,6 +15,13 @@
             "check_class_exists": true,
             "namespace": "IntellivoidAccounts",
             "main_class": "IntellivoidAccounts"
+        },
+        "CoffeeHouse": {
+            "directory_name": "CoffeeHouse",
+            "autoloader": "CoffeeHouse.php",
+            "check_class_exists": true,
+            "namespace": "CoffeeHouse",
+            "main_class": "CoffeeHouse"
         }
     },
     "runtime_scripts": {

@@ -1,7 +1,8 @@
 <?php
 
     use DynamicalWeb\DynamicalWeb;
-    use DynamicalWeb\Runtime;
+use DynamicalWeb\HTML;
+use DynamicalWeb\Runtime;
     use IntellivoidAccounts\Abstracts\LoginStatus;
     use IntellivoidAccounts\Abstracts\SearchMethods\AccountSearchMethod;
     use IntellivoidAccounts\Exceptions\AccountNotFoundException;
@@ -17,6 +18,7 @@
     use sws\sws;
 
     Runtime::import('IntellivoidAccounts');
+    HTML::importScript('check_plan');
 
     if($_SERVER['REQUEST_METHOD'] == 'POST')
     {
@@ -147,8 +149,14 @@
             }
 
             $IntellivoidAccounts->getLoginRecordManager()->createLoginRecord(
-                $Account->ID, getClientIP(), LoginStatus::Successful, 'OpenBlu Web Application'
+                $Account->ID, getClientIP(), LoginStatus::Successful, 'CoffeeHouse Web Application'
             );
+
+            if(planExists($Account->ID) == false)
+            {
+                header('Location: ' . getRedirectLocation() . 'callback=108');
+                exit();
+            }
 
             /** @var sws $sws */
             $sws = DynamicalWeb::getMemoryObject('sws');
