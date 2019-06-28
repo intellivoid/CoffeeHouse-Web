@@ -2,6 +2,7 @@
 
     use CoffeeHouse\Abstracts\PlanSearchMethod;
     use CoffeeHouse\CoffeeHouse;
+    use CoffeeHouse\Objects\ApiPlan;
     use DynamicalWeb\DynamicalWeb;
     use DynamicalWeb\Runtime;
 
@@ -19,7 +20,7 @@
                 )
             );
 
-            /** @var \CoffeeHouse\Objects\ApiPlan $Plan */
+            /** @var ApiPlan $Plan */
             $Plan = DynamicalWeb::getMemoryObject('API_PLAN');
             if($Plan->PlanStarted == false)
             {
