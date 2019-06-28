@@ -69,6 +69,11 @@
         }
     },
     "sections": {
-
+        "navigation": {
+            "LOGOUT_BUTTON": "Logout",
+            "NAV_UPDATE_SIGNATURES": "Update Signatures",
+            "NAV_DOWNLOAD_CERTIFICATE": "Download Certificate",
+            "NAV_API_DOCUMENTATION": "API Documentation"
+        }
     }
 }

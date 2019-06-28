@@ -1,19 +1,12 @@
 <header id="topnav">
     <div class="topbar-main">
         <div class="container-fluid">
-
-            <!-- Logo container-->
             <div class="logo">
                 <a href="/" class="logo">
                     <img src="/assets/images/logo-sm.png" alt="CoffeeHouse Logo" height="30">
                 </a>
-
             </div>
-            <!-- End Logo container-->
-
-
             <div class="menu-extras topbar-custom">
-
                 <ul class="list-inline float-right mb-0">
                     <li class="list-inline-item dropdown notification-list hide-phone">
                         <a class="nav-link dropdown-toggle arrow-none waves-effect" data-toggle="dropdown" href="#" role="button"
@@ -35,7 +28,7 @@
                             <img src="/assets/images/user.jpg" alt="user" class="rounded-circle">
                         </a>
                         <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
-                            <a class="dropdown-item" href="/logout"><i class="dripicons-exit text-muted"></i> Logout</a>
+                            <a class="dropdown-item" href="/logout"><i class="dripicons-exit text-muted"></i><?PHP \DynamicalWeb\HTML::print(TEXT_LOGOUT_BUTTON); ?></a>
                         </div>
                     </li>
                     <li class="menu-item list-inline-item">
@@ -69,25 +62,24 @@
 
                     <li>
                         <a href="?action=update_signatures">
-                            <i class="mdi mdi-refresh"></i> Update Signatures
+                            <i class="mdi mdi-refresh"></i> <?PHP \DynamicalWeb\HTML::print(TEXT_NAV_UPDATE_SIGNATURES); ?>
                         </a>
                     </li>
 
                     <li>
                         <a href="?action=download_certificate">
-                            <i class="mdi mdi-certificate"></i> Download Certificate
+                            <i class="mdi mdi-certificate"></i> <?PHP \DynamicalWeb\HTML::print(TEXT_NAV_DOWNLOAD_CERTIFICATE); ?>
                         </a>
                     </li>
 
                     <li>
                         <a href="https://gist.github.com/Netkas/d3617e5b5b66c7851c728d3c0073529a" target="_blank">
-                            <i class="mdi mdi-book"></i> API Documentation
+                            <i class="mdi mdi-book"></i> <?PHP \DynamicalWeb\HTML::print(TEXT_NAV_API_DOCUMENTATION); ?>
                         </a>
                     </li>
 
                 </ul>
-                <!-- End navigation menu -->
-            </div> <!-- end #navigation -->
-        </div> <!-- end container -->
-    </div> <!-- end navbar-custom -->
+            </div>
+        </div>
+    </div>
 </header>
