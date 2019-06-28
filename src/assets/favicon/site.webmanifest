@@ -1,6 +1,7 @@
 {
     "name": "CoffeeHouse",
     "short_name": "CoffeeHouse",
+    "related_applications": []
     "icons": [
         {
             "src": "/assets/favicon/android-chrome-36x36.png?v=YAmlY5waqg",
@@ -23,7 +24,8 @@
             "type": "image/png"
         }
     ],
-    "theme_color": "#ffffff",
-    "background_color": "#ffffff",
-    "display": "standalone"
+    "theme_color": "#2f3d46",
+    "background_color": "#2f3d46",
+    "display": "standalone",
+    "start_url": "/"
 }

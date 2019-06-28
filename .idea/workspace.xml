@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8238003d-8aea-43a7-ad32-d30cdb7afd72" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/resources/sections/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/sections/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/favicon/site.webmanifest" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/favicon/site.webmanifest" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/sections/jquery.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/sections/jquery.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -60,11 +62,29 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/resources/sections/header.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="624">
-              <caret line="26" selection-start-line="26" selection-end-line="26" />
+            <state relative-caret-position="-120">
+              <caret line="16" column="6" lean-forward="true" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/assets/favicon/site.webmanifest">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-258">
+              <caret line="3" column="30" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/resources/sections/jquery.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="168">
+              <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -99,7 +119,6 @@
         <option value="$PROJECT_DIR$/src/resources/sections/landing_js.php" />
         <option value="$PROJECT_DIR$/src/resources/sections/landing_footer.php" />
         <option value="$PROJECT_DIR$/src/resources/sections/landing_nav.php" />
-        <option value="$PROJECT_DIR$/src/resources/sections/jquery.php" />
         <option value="$PROJECT_DIR$/src/resources/libraries/sws/AutoConfig.php" />
         <option value="$PROJECT_DIR$/src/resources/libraries/sws/sws.php" />
         <option value="$PROJECT_DIR$/src/resources/shared/scripts/recaptcha.php" />
@@ -131,6 +150,8 @@
         <option value="$PROJECT_DIR$/src/resources/pages/index/scripts/dashboard_actions.php" />
         <option value="$PROJECT_DIR$/src/resources/sections/navigation.php" />
         <option value="$PROJECT_DIR$/src/resources/sections/header.php" />
+        <option value="$PROJECT_DIR$/src/assets/favicon/site.webmanifest" />
+        <option value="$PROJECT_DIR$/src/resources/sections/jquery.php" />
       </list>
     </option>
   </component>
@@ -162,6 +183,13 @@
               <item name="CoffeeHouse-Web" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CoffeeHouse-Web" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CoffeeHouse-Web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="favicon" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="CoffeeHouse-Web" type="b2602c69:ProjectViewProjectNode" />
@@ -263,12 +291,12 @@
       <updated>1561581667313</updated>
       <workItem from="1561581668860" duration="11451000" />
       <workItem from="1561652644899" duration="1411000" />
-      <workItem from="1561683673056" duration="11631000" />
+      <workItem from="1561683673056" duration="13062000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24493000" />
+    <option name="totallyTimeSpent" value="25924000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -322,18 +350,10 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/resources/sections/landing_js.php" />
     <entry file="file://$PROJECT_DIR$/src/resources/sections/landing_footer.php" />
     <entry file="file://$PROJECT_DIR$/src/resources/runtime_scripts/custom_headers.php" />
     <entry file="file://$PROJECT_DIR$/src/resources/sections/landing_nav.php" />
     <entry file="file://$PROJECT_DIR$/src/resources/sections/landing_headers.php" />
-    <entry file="file://$PROJECT_DIR$/src/resources/sections/jquery.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="2" column="11" selection-start-line="2" selection-start-column="11" selection-end-line="2" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/resources/libraries/sws/acm/acm.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -654,8 +674,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/resources/sections/header.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="624">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
+        <state relative-caret-position="-120">
+          <caret line="16" column="6" lean-forward="true" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/favicon/site.webmanifest">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-258">
+          <caret line="3" column="30" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/resources/sections/jquery.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
         </state>
       </provider>
     </entry>
