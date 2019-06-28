@@ -10,6 +10,8 @@
     use ModularAPI\ModularAPI;
     use ModularAPI\Objects\AccessKey;
 
+    HTML::importScript('dashboard_actions');
+
     Runtime::import('CoffeeHouse');
     $CoffeeHouse = new CoffeeHouse();
     $ModularAPI = new ModularAPI();

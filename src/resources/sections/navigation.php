@@ -68,7 +68,7 @@
                 <ul class="navigation-menu">
 
                     <li>
-                        <a href="#" target="_blank">
+                        <a href="?action=update_signatures">
                             <i class="mdi mdi-refresh"></i> Update Signatures
                         </a>
                     </li>
