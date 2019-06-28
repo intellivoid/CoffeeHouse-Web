@@ -14,9 +14,11 @@
                             <i class="mdi mdi-translate noti-icon"></i>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right language-switch">
-                            <a class="dropdown-item" href="#">
-                                <img src="/assets/images/flags/germany_flag.jpg" alt="" height="16"/>
-                                <span> German </span>
+                            <a class="dropdown-item" href="/?set_language=en">
+                                <span> English </span>
+                            </a>
+                            <a class="dropdown-item" href="/?set_language=zh">
+                                <span> 中文 </span>
                             </a>
                        </div>
                     </li>
