@@ -73,6 +73,18 @@
                         </a>
                     </li>
 
+                    <li>
+                        <a href="?action=download_certificate">
+                            <i class="mdi mdi-certificate"></i> Download Certificate
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <i class="mdi mdi-book"></i> API Documentation
+                        </a>
+                    </li>
+
                 </ul>
                 <!-- End navigation menu -->
             </div> <!-- end #navigation -->
