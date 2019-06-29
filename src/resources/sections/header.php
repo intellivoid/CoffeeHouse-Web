@@ -27,4 +27,4 @@
 <meta name="application-name" content="CoffeeHouse">
 <meta name="msapplication-TileColor" content="#6f3727">
 <meta name="msapplication-config" content="/assets/favicon/browserconfig.xml?v=YAmlY5waqg">
-<meta name="theme-color" content="#ffffff">
+<meta name="theme-color" content="#2f3d46">
