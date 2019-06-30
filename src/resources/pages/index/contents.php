@@ -31,6 +31,14 @@
             )
     );
 
+    if(isset($_GET['action']))
+    {
+        if($_GET['action'] == 'get_info')
+        {
+            HTML::importScript('internal_api');
+        }
+    }
+
     HTML::importScript('determine_total_usage');
     HTML::importScript('determine_billing');
 
@@ -94,4 +102,5 @@
     <script src="/assets/vendors/morris/morris.min.js"></script>
     <script src="/assets/vendors/raphael/raphael-min.js"></script>
     <?PHP HTML::importScript('render_charts_js'); ?>
+    <?PHP HTML::importScript('realtime_js'); ?>
 </html>

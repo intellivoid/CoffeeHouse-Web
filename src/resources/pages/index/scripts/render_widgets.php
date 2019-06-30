@@ -14,11 +14,11 @@
                 <i class="mdi mdi-calendar-today"></i>
             </span>
             <div class="mini-stat-info">
-                <span class="counter text-purple"><?PHP HTML::print(number_format($UsageData['CurrentMonth'])); ?></span>
+                <span class="counter text-purple" id="calls_current_month"><?PHP HTML::print(number_format($UsageData['CurrentMonth'])); ?></span>
                 <?PHP HTML::print(TEXT_WIDGET_MONTHLY_CALLS); ?>
             </div>
             <div class="clearfix"></div>
-            <p class="text-muted mb-0 m-t-20"><?PHP HTML::print(str_ireplace('%s', number_format($UsageData['LastMonth']), TEXT_WIDGET_MONTHLY_CALLS_SUB)); ?></p>
+            <p class="text-muted mb-0 m-t-20" id="calls_last_month"><?PHP HTML::print(str_ireplace('%s', number_format($UsageData['LastMonth']), TEXT_WIDGET_MONTHLY_CALLS_SUB)); ?></p>
 
         </div>
     </div>
