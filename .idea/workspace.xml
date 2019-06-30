@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="8238003d-8aea-43a7-ad32-d30cdb7afd72" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/src/resources/pages/index/scripts/internal_api.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/pages/index/scripts/internal_api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/pages/index/scripts/realtime_js.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/pages/index/scripts/realtime_js.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/pages/index/scripts/render_charts_js.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/pages/index/scripts/render_charts_js.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -53,11 +51,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/resources/pages/index/scripts/internal_api.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="223">
-              <caret line="46" column="8" lean-forward="true" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="8" />
+            <state relative-caret-position="463">
+              <caret line="32" column="26" lean-forward="true" selection-start-line="32" selection-start-column="26" selection-end-line="32" selection-end-column="26" />
               <folding>
                 <element signature="e#11#41#0#PHP" expanded="true" />
               </folding>
@@ -68,17 +66,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/resources/pages/index/scripts/render_charts_js.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
+            <state relative-caret-position="840">
               <caret line="39" column="61" lean-forward="true" selection-start-line="39" selection-start-column="47" selection-end-line="39" selection-end-column="61" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/resources/pages/index/scripts/realtime_js.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
-              <caret line="4" column="21" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
+            <state relative-caret-position="192">
+              <caret line="8" column="37" lean-forward="true" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -195,8 +193,8 @@
         <option value="$PROJECT_DIR$/src/resources/pages/index/contents.php" />
         <option value="$PROJECT_DIR$/src/resources/pages/index/scripts/render_widgets.php" />
         <option value="$PROJECT_DIR$/src/resources/pages/index/scripts/render_charts_js.php" />
-        <option value="$PROJECT_DIR$/src/resources/pages/index/scripts/internal_api.php" />
         <option value="$PROJECT_DIR$/src/resources/pages/index/scripts/realtime_js.php" />
+        <option value="$PROJECT_DIR$/src/resources/pages/index/scripts/internal_api.php" />
       </list>
     </option>
   </component>
@@ -340,12 +338,12 @@
       <workItem from="1561734122798" duration="89000" />
       <workItem from="1561735842162" duration="8255000" />
       <workItem from="1561778306793" duration="38000" />
-      <workItem from="1561854388532" duration="4013000" />
+      <workItem from="1561854388532" duration="4079000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40585000" />
+    <option name="totallyTimeSpent" value="40651000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -724,27 +722,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/pages/index/scripts/internal_api.php">
+    <entry file="file://$PROJECT_DIR$/src/resources/pages/index/scripts/realtime_js.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="46" column="8" lean-forward="true" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="8" />
-          <folding>
-            <element signature="e#11#41#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="192">
+          <caret line="8" column="37" lean-forward="true" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/resources/pages/index/scripts/render_charts_js.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
+        <state relative-caret-position="840">
           <caret line="39" column="61" lean-forward="true" selection-start-line="39" selection-start-column="47" selection-end-line="39" selection-end-column="61" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/resources/pages/index/scripts/realtime_js.php">
+    <entry file="file://$PROJECT_DIR$/src/resources/pages/index/scripts/internal_api.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="4" column="21" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
+        <state relative-caret-position="463">
+          <caret line="32" column="26" lean-forward="true" selection-start-line="32" selection-start-column="26" selection-end-line="32" selection-end-column="26" />
+          <folding>
+            <element signature="e#11#41#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

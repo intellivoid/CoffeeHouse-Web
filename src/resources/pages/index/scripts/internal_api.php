@@ -30,6 +30,9 @@
         }
     }
 
+    $Update['usage']['current_month'] = number_format($Update['usage']['current_month']);
+    $Update['usage']['last_month'] = number_format($Update['usage']['last_month']);
+
     $Update['analytics'] = array();
     if($AccessKey->Analytics->LastMonthAvailable == true)
     {
