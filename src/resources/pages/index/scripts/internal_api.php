@@ -30,6 +30,30 @@
         }
     }
 
+    $Update['analytics'] = array();
+    if($AccessKey->Analytics->LastMonthAvailable == true)
+    {
+        $Update['analytics']['last_month_available'] = true;
+        foreach ($AccessKey->Analytics->CurrentMonthUsage as $key => $value) {
+            $Update['analytics']['data'][$key]['day'] = $key + 1;
+            $Update['analytics']['data'][$key]['current_month'] = $value;
+        }
+
+        foreach ($AccessKey->Analytics->LastMonthUsage as $key => $value) {
+            $Update['analytics']['data'][$key]['day'] = $key + 1;
+            $Update['analytics']['data'][$key]['last_month'] = $value;
+        }
+    }
+    else
+    {
+        $Update['analytics']['last_month_available'] = false;
+        foreach($AccessKey->Analytics->CurrentMonthUsage as $key => $value)
+        {
+            $Update['analytics']['data'][$key]['day'] = $key + 1;
+            $Update['analytics']['data'][$key]['current_month'] = $value;
+        }
+    }
+
     header('Content-Type: application/json');
     print(json_encode($Update, JSON_PRETTY_PRINT));
     exit();

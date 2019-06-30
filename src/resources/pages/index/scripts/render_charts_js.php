@@ -47,7 +47,6 @@ use ModularAPI\Objects\AccessKey;
         foreach($AccessKeyObject->Analytics->CurrentMonthUsage as $key => $value)
         {
             $data[$key]['day'] = $key +1;
-            $data[$key]['day'] = (string)$data[$key]['day'];
             $data[$key]['current_month'] = $value;
         }
 
