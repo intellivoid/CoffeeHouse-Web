@@ -1,8 +1,8 @@
 <?php
 
     use DynamicalWeb\DynamicalWeb;
-use DynamicalWeb\HTML;
-use DynamicalWeb\Runtime;
+    use DynamicalWeb\HTML;
+    use DynamicalWeb\Runtime;
     use IntellivoidAccounts\Abstracts\LoginStatus;
     use IntellivoidAccounts\Abstracts\SearchMethods\AccountSearchMethod;
     use IntellivoidAccounts\Exceptions\AccountNotFoundException;
@@ -31,29 +31,6 @@ use DynamicalWeb\Runtime;
             header('Location: login?callback=103');
             exit();
         }
-    }
-
-    /**
-     * @return mixed
-     */
-    function getClientIP()
-    {
-        if(!empty($_SERVER['HTTP_CLIENT_IP']))
-        {
-            //ip from share internet
-            $ip = $_SERVER['HTTP_CLIENT_IP'];
-        }
-        elseif(!empty($_SERVER['HTTP_X_FORWARDED_FOR']))
-        {
-            //ip pass from proxy
-            $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
-        }
-        else
-        {
-            $ip = $_SERVER['REMOTE_ADDR'];
-        }
-
-        return $ip;
     }
 
     /**
@@ -149,7 +126,7 @@ use DynamicalWeb\Runtime;
             }
 
             $IntellivoidAccounts->getLoginRecordManager()->createLoginRecord(
-                $Account->ID, getClientIP(), LoginStatus::Successful, 'CoffeeHouse Web Application'
+                $Account->ID, CLIENT_REMOTE_HOST, LoginStatus::Successful, 'CoffeeHouse Web Application'
             );
 
             if(planExists($Account->ID) == false)
@@ -200,7 +177,7 @@ use DynamicalWeb\Runtime;
                 }
 
                 $IntellivoidAccounts->getLoginRecordManager()->createLoginRecord(
-                    $Account->ID, getClientIP(), LoginStatus::IncorrectCredentials, 'OpenBlu Web Application'
+                    $Account->ID, CLIENT_REMOTE_HOST, LoginStatus::IncorrectCredentials, 'OpenBlu Web Application'
                 );
             }
             catch(AccountNotFoundException $accountNotFoundException)

@@ -68,7 +68,7 @@
                 'content' => http_build_query(array(
                     'secret' => (string)$configuration['secret_key'],
                     'response' => $_POST['g-recaptcha-response'],
-                    'remoteip' => $_SERVER['REMOTE_ADDR']
+                    'remoteip' => CLIENT_REMOTE_HOST
                 ))
             )
         );
