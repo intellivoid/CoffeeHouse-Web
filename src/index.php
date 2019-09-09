@@ -35,7 +35,8 @@
             Page::staticResponse('DynamicalWeb Error', 'DynamicalWeb Internal Server Error', $e->getMessage());
             exit();
         }
-
+            Page::staticResponse('DynamicalWeb Error', 'DynamicalWeb Internal Server Error', $e->getMessage());
+            exit();
         header('Location: '. APP_HOME_PAGE);
         exit();
     }
