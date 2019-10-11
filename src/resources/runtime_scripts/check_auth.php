@@ -47,7 +47,7 @@
     catch(Exception $exception)
     {
         Page::staticResponse(
-            'OpenBlu Error',
+            'CoffeeHouse Error',
             'Web Sessions Issue',
             'There was an issue with your Web Session, try clearing your cookies and try again'
         );
