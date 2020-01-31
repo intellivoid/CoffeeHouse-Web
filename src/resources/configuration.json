@@ -1,6 +1,9 @@
 {
-    "home_page": "index",
     "primary_language": "en",
+    "debugging_mode": true,
+    "router": [
+        {"path": "/", "page": "index"}
+    ],
     "libraries": {
         "SecuredWebSessions": {
             "directory_name": "sws",
@@ -8,13 +11,6 @@
             "check_class_exists": true,
             "namespace": "sws",
             "main_class": "sws"
-        },
-        "IntellivoidAccounts": {
-            "directory_name": "IntellivoidAccounts",
-            "autoloader": "IntellivoidAccounts.php",
-            "check_class_exists": true,
-            "namespace": "IntellivoidAccounts",
-            "main_class": "IntellivoidAccounts"
         },
         "CoffeeHouse": {
             "directory_name": "CoffeeHouse",
@@ -26,7 +22,7 @@
     },
     "runtime_scripts": {
         "initialize": [],
-        "on_page_load": ["check_auth.php", "cache.php", "require_auth.php"],
+        "on_page_load": [],
         "page_loaded": [],
         "after_request": [],
         "on_request": [],
