@@ -6,7 +6,7 @@
     // Load the application resources
     use DynamicalWeb\DynamicalWeb;
     use DynamicalWeb\Page;
-    
+
     require __DIR__ . DIRECTORY_SEPARATOR . 'resources' . DIRECTORY_SEPARATOR . 'DynamicalWeb' . DIRECTORY_SEPARATOR . 'DynamicalWeb.php';
 
     try
