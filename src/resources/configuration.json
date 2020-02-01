@@ -13,6 +13,13 @@
             "namespace": "sws",
             "main_class": "sws"
         },
+        "IntellivoidSubscriptionManager": {
+            "directory_name": "IntellivoidSubscriptionManager",
+            "autoloader": "IntellivoidSubscriptionManager.php",
+            "check_class_exists": true,
+            "namespace": "IntellivoidSubscriptionManager",
+            "main_class": "IntellivoidSubscriptionManager"
+        },
         "CoffeeHouse": {
             "directory_name": "CoffeeHouse",
             "autoloader": "CoffeeHouse.php",
