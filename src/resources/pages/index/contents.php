@@ -2,6 +2,8 @@
     use DynamicalWeb\DynamicalWeb;
     use DynamicalWeb\HTML;
 
+    HTML::importScript('loading_splash');
+    exit();
 ?>
 <!doctype html>
 <html lang="<?PHP HTML::print(APP_LANGUAGE_ISO_639); ?>">
