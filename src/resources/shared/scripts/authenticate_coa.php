@@ -5,14 +5,14 @@
     use COASniffle\Exceptions\CoaAuthenticationException;
     use COASniffle\Exceptions\RequestFailedException;
     use COASniffle\Exceptions\UnsupportedAuthMethodException;
+    use CoffeeHouse\Abstracts\UserSubscriptionSearchMethod;
+    use CoffeeHouse\Exceptions\UserSubscriptionNotFoundException;
     use DynamicalWeb\Actions;
     use DynamicalWeb\DynamicalWeb;
     use DynamicalWeb\Runtime;
-    use OpenBlu\Abstracts\SearchMethods\UserSubscriptionSearchMethod;
-    use OpenBlu\Exceptions\UserSubscriptionRecordNotFoundException;
     use sws\sws;
 
-    Runtime::import('OpenBlu');
+    Runtime::import('CoffeeHouse');
     Runtime::import('IntellivoidSubscriptionManager');
 
     if(WEB_SESSION_ACTIVE == false)
@@ -27,7 +27,7 @@
     {
         /** @var COASniffle $COASniffle */
         $COASniffle = DynamicalWeb::getMemoryObject('coasniffle');
-        $OpenBlu = new OpenBlu\OpenBlu();
+        $CoffeeHouse = new CoffeeHouse\CoffeeHouse();
 
         try
         {
@@ -83,14 +83,14 @@
 
         try
         {
-            $UserSubscription = $OpenBlu->getUserSubscriptionManager()->getUserSubscription(
+            $UserSubscription = $CoffeeHouse->getUserSubscriptionManager()->getUserSubscription(
                 UserSubscriptionSearchMethod::byAccountID, $UserInformation->Tag
             );
 
             $Cookie->Data['subscription_active'] = true;
             $Cookie->Data['user_subscription_id'] = $UserSubscription->ID;
         }
-        catch (UserSubscriptionRecordNotFoundException $e)
+        catch (UserSubscriptionNotFoundException $e)
         {
             $Cookie->Data['subscription_active'] = false;
             $Cookie->Data['user_subscription_id'] = 0;

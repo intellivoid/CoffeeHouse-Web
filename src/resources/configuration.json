@@ -3,7 +3,8 @@
     "debugging_mode": true,
     "router": [
         {"path": "/", "page": "index"},
-        {"path": "/demo/lydia", "page": "lydia_demo"}
+        {"path": "/demo/lydia", "page": "lydia_demo"},
+        {"path": "/confirm_purchase", "page": "purchase"}
     ],
     "libraries": {
         "SecuredWebSessions": {
