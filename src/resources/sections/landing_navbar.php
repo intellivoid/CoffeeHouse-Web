@@ -12,7 +12,10 @@
         <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
             <ul class="navbar-nav ml-auto" id="mySidenav">
                 <li class="nav-item">
-                    <a href="<?PHP DynamicalWeb::getRoute('index', array(), true); ?>" class="nav-link active">Home</a>
+                    <a href="<?PHP DynamicalWeb::getRoute('index', array(), true); ?>" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="<?PHP DynamicalWeb::getRoute('index', array(), true); ?>#pricing" class="nav-link">Pricing</a>
                 </li>
                 <li class="nav-item">
                     <a href="<?PHP DynamicalWeb::getRoute('lydia_demo', array(), true); ?>" class="nav-link">Lydia Demo</a>
