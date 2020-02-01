@@ -1,3 +1,6 @@
+<?php
+    use DynamicalWeb\DynamicalWeb;
+?>
 <nav id="ch-navbar" class="navbar navbar-expand-lg navbar-inverse navbar-toggleable-md fixed-top sticky navbar-custom">
     <div class="container">
         <a class="navbar-brand logo" href="#">
@@ -9,22 +12,16 @@
         <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
             <ul class="navbar-nav ml-auto" id="mySidenav">
                 <li class="nav-item">
-                    <a href="#home" class="nav-link active">Home</a>
+                    <a href="<?PHP DynamicalWeb::getRoute('index', array(), true); ?>" class="nav-link active">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#features" class="nav-link">Features</a>
+                    <a href="<?PHP DynamicalWeb::getRoute('lydia_demo', array(), true); ?>" class="nav-link">Lydia Demo</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#shots" class="nav-link">Shot</a>
+                    <a href="#" class="nav-link">Dashboard</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#pricing" class="nav-link">Pricing</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#team" class="nav-link">Team</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#contact" class="nav-link">Contact</a>
+                    <a href="https://intellivoid.info/" class="nav-link">Intellivoid</a>
                 </li>
             </ul>
         </div>
