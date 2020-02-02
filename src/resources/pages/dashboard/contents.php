@@ -17,7 +17,6 @@ HTML::importScript('require_auth');
         <div class="wrapper">
             <div class="container-fluid">
 
-
             </div>
         </div>
 

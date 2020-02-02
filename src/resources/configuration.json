@@ -4,6 +4,7 @@
     "router": [
         {"path": "/", "page": "index"},
         {"path": "/auth/logout", "page": "logout"},
+        {"path": "/service_error", "page": "service_error"},
         {"path": "/terms", "page": "tos"},
         {"path": "/privacy", "page": "privacy"},
         {"path": "/demo/lydia", "page": "lydia_demo"},

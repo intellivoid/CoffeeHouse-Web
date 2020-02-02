@@ -1,16 +1,6 @@
 <?php
     use DynamicalWeb\DynamicalWeb;
     use DynamicalWeb\HTML;
-
-    if(WEB_SESSION_ACTIVE == false)
-    {
-        if(isset($_GET['access_token']))
-        {
-            HTML::importScript('authenticate_coa');
-        }
-    }
-
-    HTML::importScript('alert');
 ?>
 <!doctype html>
 <html lang="<?PHP HTML::print(APP_LANGUAGE_ISO_639); ?>">
