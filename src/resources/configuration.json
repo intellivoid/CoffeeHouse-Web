@@ -5,6 +5,7 @@
         {"path": "/", "page": "index"},
         {"path": "/auth/logout", "page": "logout"},
         {"path": "/terms", "page": "tos"},
+        {"path": "/privacy", "page": "privacy"},
         {"path": "/demo/lydia", "page": "lydia_demo"},
         {"path": "/confirm_purchase", "page": "purchase"},
         {"path": "/dashboard", "page": "dashboard"}
