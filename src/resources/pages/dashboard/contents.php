@@ -1,8 +1,16 @@
 <?PHP
 
+use DynamicalWeb\Actions;
+use DynamicalWeb\DynamicalWeb;
 use DynamicalWeb\HTML;
 
-HTML::importScript('require_auth');
+    HTML::importScript('require_auth');
+    HTML::importScript('check_subscription');
+
+    if(WEB_SUBSCRIPTION_ACTIVE == false)
+    {
+        Actions::redirect(DynamicalWeb::getRoute('index') . '#pricing');
+    }
 
 ?>
 <!doctype html>
