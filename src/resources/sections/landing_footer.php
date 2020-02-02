@@ -1,5 +1,7 @@
 <?php
-    use DynamicalWeb\HTML;
+
+use DynamicalWeb\DynamicalWeb;
+use DynamicalWeb\HTML;
 ?>
 <footer class="footer bg-dark">
     <div class="container">
@@ -8,12 +10,12 @@
                 <div class="float-right pull-none">
                     <ul class="list-inline social">
                         <li class="list-inline-item reference-link">
-                            <a href="#">
+                            <a href="<?PHP DynamicalWeb::getRoute('tos', array(), true); ?>">
                                 <small>Terms of Service</small>
                             </a>
                         </li>
                         <li class="list-inline-item reference-link">
-                            <a href="#">
+                            <a href="<?PHP DynamicalWeb::getRoute('privacy', array(), true); ?>">
                                 <small>Privacy Policy</small>
                             </a>
                         </li>
