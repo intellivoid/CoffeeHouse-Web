@@ -67,7 +67,7 @@
         /** @var sws $sws */
         $sws = DynamicalWeb::getMemoryObject('sws');
 
-        $Cookie = $sws->WebManager()->getCookie('web_session');
+        $Cookie = $sws->WebManager()->getCookie('ch_session');
         $Cookie->Data['session_active'] = true;
         $Cookie->Data['account_pubid'] = $UserInformation->PublicID;
         $Cookie->Data['account_id'] = $UserInformation->Tag;

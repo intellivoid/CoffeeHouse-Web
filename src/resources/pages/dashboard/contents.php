@@ -1,106 +1,37 @@
-<?PHP
-
-    use CoffeeHouse\Abstracts\PlanSearchMethod;
-    use CoffeeHouse\CoffeeHouse;
-    use CoffeeHouse\Objects\ApiPlan;
+<?php
     use DynamicalWeb\DynamicalWeb;
     use DynamicalWeb\HTML;
-    use DynamicalWeb\Runtime;
-    use ModularAPI\Abstracts\AccessKeySearchMethod;
-    use ModularAPI\ModularAPI;
-    use ModularAPI\Objects\AccessKey;
 
-
-    Runtime::import('CoffeeHouse');
-    HTML::importScript('dashboard_actions');
-
-    $CoffeeHouse = new CoffeeHouse();
-    $ModularAPI = new ModularAPI();
-
-    /** @var ApiPlan $Plan */
-    $Plan = DynamicalWeb::setMemoryObject(
-            'COFFEE_HOUSE_PLAN', $CoffeeHouse->getApiPlanManager()->getPlan(
-                    PlanSearchMethod::byAccountId, WEB_ACCOUNT_ID
-            )
-    );
-
-    /** @var AccessKey $AccessKey */
-    $AccessKey = DynamicalWeb::setMemoryObject(
-            'ACCESS_KEY', $ModularAPI->AccessKeys()->Manager->get(
-                AccessKeySearchMethod::byID, $Plan->AccessKeyId
-            )
-    );
-
-    if(isset($_GET['action']))
-    {
-        if($_GET['action'] == 'get_info')
-        {
-            HTML::importScript('internal_api');
-        }
-    }
-
-    HTML::importScript('determine_total_usage');
-    HTML::importScript('determine_billing');
-
-
+    HTML::importScript('require_auth');
 ?>
 <!doctype html>
 <html lang="<?PHP HTML::print(APP_LANGUAGE_ISO_639); ?>">
     <head>
-        <link rel="stylesheet" href="/assets/vendors/morris/morris.css">
-        <?PHP HTML::importSection('header'); ?>
-        <title><?PHP HTML::print(TEXT_PAGE_TITLE); ?></title>
+        <?PHP HTML::importSection('landing_headers'); ?>
+        <title>CoffeeHouse - Lydia Demo</title>
     </head>
-    <body>
-        <?PHP HTML::importSection('navigation'); ?>
 
-        <div class="wrapper">
-            <div class="container-fluid">
+    <body data-spy="scroll" data-target="#ch-navbar" data-offset="0">
+        <?PHP HTML::importSection('landing_navbar'); ?>
 
-                <!-- Page-Title -->
+        <section class="section demo" id="demo">
+            <div class="bg-overlay"></div>
+            <div class="container">
                 <div class="row">
-                    <div class="col-sm-12">
-                        <div class="page-title-box">
-                            <h4 class="page-title"><?PHP HTML::print(TEXT_PAGE_TITLE); ?></h4>
-                        </div>
+                    <div class="col-md-8 offset-md-2 text-white text-center">
+                        <img src="/assets/images/lydia_white_transparent.svg" class="img-fluid lydia_logo">
+                        <p class="mt-4 demo-subtitle mb-5 mb-5">Lydia is a advanced chat bot that actively learns from conversations and is capable of speaking in many languages without having to hard-configure anything about it.</p>
                     </div>
                 </div>
-
-                <?PHP HTML::importScript('render_widgets'); ?>
-
-                <div class="row">
-                    <div class="col-xl-8">
-                        <div class="card m-b-20">
-                            <div class="card-body">
-                                <h4 class="header-title"><?PHP HTML::print(TEXT_ANALYTICS_CARD_HEADER); ?></h4>
-                                <div id="api-usage-chart" class="morris-charts" style="height: 300px"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4">
-                        <div class="card m-b-20">
-                            <div class="card-body">
-                                <div class="form-group m-b-0">
-                                    <label for="api_key"><?PHP HTML::print(TEXT_AUTH_API_KEY_HEADER); ?></label>
-                                    <input class="form-control" type="text" value="<?PHP HTML::print($AccessKey->PublicKey); ?>" id="api_key" name="api_key" readonly>
-                                </div>
-                                <div class="form-group m-b-0">
-                                    <label for="certificate"><?PHP HTML::print(TEXT_AUTH_CERTIFICATE_KEY_HEADER); ?></label>
-                                    <textarea class="form-control" type="text" id="certificate" name="certificate" rows="8" readonly><?PHP HTML::print($AccessKey->Signatures->createCertificate()); ?></textarea>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            </div>
+        </section>
+        <section class="section" id="chat_demo">
+            <div class="container">
 
             </div>
-        </div>
+        </section>
 
-        <?PHP HTML::importSection('footer'); ?>
+        <?PHP HTML::importSection('landing_footer'); ?>
+        <?PHP HTML::importSection('landing_js'); ?>
     </body>
-    <?PHP HTML::importSection('jquery'); ?>
-    <script src="/assets/vendors/morris/morris.min.js"></script>
-    <script src="/assets/vendors/raphael/raphael-min.js"></script>
-    <?PHP HTML::importScript('render_charts_js'); ?>
-    <?PHP HTML::importScript('realtime_js'); ?>
 </html>

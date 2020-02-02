@@ -4,7 +4,8 @@
     "router": [
         {"path": "/", "page": "index"},
         {"path": "/demo/lydia", "page": "lydia_demo"},
-        {"path": "/confirm_purchase", "page": "purchase"}
+        {"path": "/confirm_purchase", "page": "purchase"},
+        {"path": "/dashboard", "page": "dashboard"}
     ],
     "libraries": {
         "SecuredWebSessions": {

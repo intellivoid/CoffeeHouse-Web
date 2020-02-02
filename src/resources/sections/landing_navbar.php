@@ -21,7 +21,7 @@
                     <a href="<?PHP DynamicalWeb::getRoute('lydia_demo', array(), true); ?>" class="nav-link">Lydia Demo</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link">Dashboard</a>
+                    <a href="<?PHP DynamicalWeb::getRoute('dashboard', array(), true); ?>" class="nav-link">Dashboard</a>
                 </li>
                 <li class="nav-item">
                     <a href="https://intellivoid.info/" class="nav-link">Intellivoid</a>
