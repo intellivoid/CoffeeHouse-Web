@@ -1,9 +1,10 @@
 <?php
 
-use CoffeeHouse\Abstracts\UserSubscriptionSearchMethod;
-use CoffeeHouse\CoffeeHouse;
-use CoffeeHouse\Exceptions\UserSubscriptionNotFoundException;
-use DynamicalWeb\Actions;
+    use CoffeeHouse\Abstracts\UserSubscriptionSearchMethod;
+    use CoffeeHouse\CoffeeHouse;
+    use CoffeeHouse\Exceptions\UserSubscriptionNotFoundException;
+    use CoffeeHouse\Objects\UserSubscription;
+    use DynamicalWeb\Actions;
     use DynamicalWeb\DynamicalWeb;
     use DynamicalWeb\Runtime;
     use IntellivoidAPI\Abstracts\RateLimitName;
@@ -114,15 +115,15 @@ use DynamicalWeb\Actions;
             )));
         }
 
-        if(isset(DynamicalWeb::$globalObjects['openblu']) == false)
+        if(isset(DynamicalWeb::$globalObjects['coffeehouse']) == false)
         {
-            /** @var OpenBlu $OpenBlu */
-            $OpenBlu = DynamicalWeb::setMemoryObject('openblu', new OpenBlu());
+            /** @var CoffeeHouse $CoffeeHouse */
+            $CoffeeHouse = DynamicalWeb::setMemoryObject('coffeehouse', new CoffeeHouse());
         }
         else
         {
-            /** @var OpenBlu $OpenBlu */
-            $OpenBlu = DynamicalWeb::getMemoryObject('openblu');
+            /** @var CoffeeHouse $CoffeeHouse */
+            $CoffeeHouse = DynamicalWeb::getMemoryObject('coffeehouse');
         }
 
         if(isset(DynamicalWeb::$globalObjects['intellivoid_subscription_manager']) == false)
@@ -136,7 +137,7 @@ use DynamicalWeb\Actions;
             $IntellivoidSubscriptionManager = DynamicalWeb::getMemoryObject('intellivoid_subscription_manager');
         }
 
-        $UserSubscription = check_user_subscription($OpenBlu);
+        $UserSubscription = check_user_subscription($CoffeeHouse);
         if(is_null($UserSubscription))
         {
             try
@@ -158,7 +159,7 @@ use DynamicalWeb\Actions;
             else
             {
                 $UserSubscription = register_subscription(
-                    $OpenBlu, $ActiveSubscription,
+                    $CoffeeHouse, $ActiveSubscription,
                     $ApplicationConfiguration['APPLICATION_INTERNAL_ID']
                 );
 
@@ -184,7 +185,7 @@ use DynamicalWeb\Actions;
                     $UserSubscription->SubscriptionID = 0;
                     try
                     {
-                        $OpenBlu->getUserSubscriptionManager()->updateUserSubscription($UserSubscription);
+                        $CoffeeHouse->getUserSubscriptionManager()->updateUserSubscription($UserSubscription);
                     }
                     catch(Exception $e)
                     {
@@ -230,7 +231,7 @@ use DynamicalWeb\Actions;
                     );
                     try
                     {
-                        $OpenBlu->getUserSubscriptionManager()->updateUserSubscription($UserSubscription);
+                        $CoffeeHouse->getUserSubscriptionManager()->updateUserSubscription($UserSubscription);
                     }
                     catch(Exception $e)
                     {
@@ -332,7 +333,7 @@ use DynamicalWeb\Actions;
         $sws->CookieManager()->updateCookie($Cookie);
     }
 
-    function register_subscription(OpenBlu $openBlu, Subscription $subscription, int $application_id): UserSubscription
+    function register_subscription(CoffeeHouse $coffeeHouse, Subscription $subscription, int $application_id): UserSubscription
     {
         if(isset(DynamicalWeb::$globalObjects['intellivoid_api']) == false)
         {
@@ -380,7 +381,7 @@ use DynamicalWeb\Actions;
 
         try
         {
-            return $openBlu->getUserSubscriptionManager()->registerUserSubscription(
+            return $coffeeHouse->getUserSubscriptionManager()->registerUserSubscription(
                 WEB_ACCOUNT_ID, $subscription->ID, $AccessRecord->ID
             );
         }
@@ -399,8 +400,8 @@ use DynamicalWeb\Actions;
         $Features  = Converter::featuresToSA($subscription->Properties->Features);
 
         $accessRecord->Variables = array();
-        $accessRecord->Variables['SERVER_CONFIGS'] = 0;
-        $accessRecord->Variables['MAX_SERVER_CONFIGS'] = (int)$Features['SERVER_CONFIGS'];
+        $accessRecord->Variables['LYDIA_SESSIONS'] = 0;
+        $accessRecord->Variables['MAX_LYDIA_SESSIONS'] = (int)$Features['LYDIA_SESSIONS'];
 
         return $accessRecord;
     }
@@ -452,14 +453,14 @@ use DynamicalWeb\Actions;
     /**
      * Checks if the user subscription is already registered
      *
-     * @param OpenBlu $openBlu
+     * @param CoffeeHouse $coffeeHouse
      * @return UserSubscription|null
      */
-    function check_user_subscription(OpenBlu $openBlu)
+    function check_user_subscription(CoffeeHouse $coffeeHouse)
     {
         try
         {
-            return $openBlu->getUserSubscriptionManager()->getUserSubscription(
+            return $coffeeHouse->getUserSubscriptionManager()->getUserSubscription(
                 UserSubscriptionSearchMethod::byAccountID, WEB_ACCOUNT_ID
             );
         }
