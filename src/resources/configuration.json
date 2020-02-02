@@ -44,8 +44,8 @@
         }
     },
     "runtime_scripts": {
-        "initialize": [],
-        "on_page_load": [],
+        "initialize": ["coa_sniffles.php"],
+        "on_page_load": ["check_auth.php"],
         "page_loaded": [],
         "after_request": [],
         "on_request": [],

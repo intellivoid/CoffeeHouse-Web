@@ -9,4 +9,5 @@
 <link rel="stylesheet" href="/assets/css/magnific-popup.css">
 <link rel="stylesheet" type="text/css" href="/assets/css/materialdesignicons.min.css" />
 <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
+<link href="/assets/css/animate.css" rel="stylesheet">
 <link href="/assets/css/fe_style.css" rel="stylesheet">

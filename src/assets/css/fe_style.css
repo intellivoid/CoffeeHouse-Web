@@ -345,9 +345,9 @@ span.title-divider:after {
         6.HOME
 =====================================*/
 .home{
-  background: -webkit-linear-gradient(315deg, rgba(0, 13, 184, 0.7) -10%, rgba(0, 44, 255, 0.8) 180%);
   background-size: cover;
   padding: 150px 0 0;
+  overflow: hidden;
 }
 
 .home-title{

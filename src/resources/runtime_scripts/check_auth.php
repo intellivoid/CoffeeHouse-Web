@@ -38,7 +38,7 @@
             exit();
         }
 
-        Actions::delayed_redirect(DynamicalWeb::getRoute('index'), 2);
+        header('Refresh: ' . 2 . ' URL=' . DynamicalWeb::getRoute('index'));
         HTML::importScript('loading_splash');
         exit();
 

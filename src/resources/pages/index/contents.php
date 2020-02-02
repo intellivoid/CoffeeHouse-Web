@@ -1,14 +1,12 @@
 <?php
     use DynamicalWeb\DynamicalWeb;
     use DynamicalWeb\HTML;
-
-    HTML::importScript('loading_splash');
-    exit();
 ?>
 <!doctype html>
 <html lang="<?PHP HTML::print(APP_LANGUAGE_ISO_639); ?>">
     <head>
         <?PHP HTML::importSection('landing_headers'); ?>
+        <link href="/assets/css/loader.css" rel="stylesheet">
         <title>CoffeeHouse</title>
     </head>
 
@@ -16,14 +14,18 @@
         <?PHP HTML::importSection('landing_navbar'); ?>
 
         <section class="section home" id="home">
-            <div class="bg-overlay"></div>
+
             <div class="container">
                 <div class="row">
+                    <div class="bg-overlay">
+                        <div class="bg"></div>
+                        <div class="bg bg2"></div>
+                        <div class="bg bg3"></div>
+                    </div>
                     <div class="col-md-8 offset-md-2 text-white text-center">
-                        <h1 class="home-title">CoffeeHouse</h1>
-                        <p class="mt-4 home-subtitle">Multi-purpose cloud based artificial intelligence & machine learning service for all</p>
-
-                        <img src="/assets/images/lydia_showcase.svg" alt="CoffeeHouse's Lydia being used in Python" class="img-fluid mt-4">
+                        <h1 class="home-title animated slow fadeInLeft">CoffeeHouse</h1>
+                        <p class="mt-4 home-subtitle animated slow fadeInRight">Multi-purpose cloud based artificial intelligence & machine learning service for all</p>
+                        <img src="/assets/images/lydia_showcase.svg" alt="CoffeeHouse's Lydia being used in Python" class="img-fluid mt-4 animated slower fadeIn">
                     </div>
                 </div>
             </div>
