@@ -1,7 +1,6 @@
 <?php
-
-use DynamicalWeb\DynamicalWeb;
-use DynamicalWeb\HTML;
+    use DynamicalWeb\DynamicalWeb;
+    use DynamicalWeb\HTML;
 ?>
 <footer class="footer bg-dark">
     <div class="container">
