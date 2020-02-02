@@ -4,13 +4,18 @@
     use DynamicalWeb\Actions;
     use DynamicalWeb\DynamicalWeb;
 
-    if(WEB_SESSION_ACTIVE == false)
+    function require_authentication(string $redirect_to='index', array $params=array())
     {
-        /** @var COASniffle $COASniffle */
-        $COASniffle = DynamicalWeb::getMemoryObject('coasniffle');
-        $Protocol = strtolower(substr($_SERVER["SERVER_PROTOCOL"],0,strpos( $_SERVER["SERVER_PROTOCOL"],'/'))).'://';
-        $RedirectURL = $Protocol . $_SERVER['HTTP_HOST'] . DynamicalWeb::getRoute('index');
-        $AuthenticationURL = $COASniffle->getCOA()->getAuthenticationURL($RedirectURL);
+        if(WEB_SESSION_ACTIVE == false)
+        {
+            $params['redirect'] = $redirect_to;
 
-        Actions::redirect($AuthenticationURL);
+            /** @var COASniffle $COASniffle */
+            $COASniffle = DynamicalWeb::getMemoryObject('coasniffle');
+            $Protocol = strtolower(substr($_SERVER["SERVER_PROTOCOL"],0,strpos( $_SERVER["SERVER_PROTOCOL"],'/'))).'://';
+            $RedirectURL = $Protocol . $_SERVER['HTTP_HOST'] . DynamicalWeb::getRoute('index', $params);
+            $AuthenticationURL = $COASniffle->getCOA()->getAuthenticationURL($RedirectURL);
+
+            Actions::redirect($AuthenticationURL);
+        }
     }
