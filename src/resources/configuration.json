@@ -3,6 +3,7 @@
     "debugging_mode": true,
     "router": [
         {"path": "/", "page": "index"},
+        {"path": "/auth/logout", "page": "logout"},
         {"path": "/demo/lydia", "page": "lydia_demo"},
         {"path": "/confirm_purchase", "page": "purchase"},
         {"path": "/dashboard", "page": "dashboard"}
