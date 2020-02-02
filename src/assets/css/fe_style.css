@@ -379,6 +379,21 @@ span.title-divider:after {
   line-height: 28px;
   font-weight: 300;
 }
+.generic{
+  background: -webkit-linear-gradient(315deg, rgb(0, 103, 101) -10%, rgb(0, 84, 133) 180%);
+  background-size: cover;
+  padding: 150px 0 0;
+}
+
+.generic-title{
+  line-height: 48px;
+  font-size: 36px;
+}
+.generic-subtitle{
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 300;
+}
 .lydia_logo{
   height: 256px;
   width: 256px;
