@@ -518,6 +518,9 @@ span.title-divider:after {
 .copy-rights{
   line-height: 36px;
 }
+.reference-link{
+  line-height: 36px;
+}
 .social li a {
   display: block;
   color: #777 !important;

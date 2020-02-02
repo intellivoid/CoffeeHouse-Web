@@ -7,11 +7,16 @@
             <div class="col-12">
                 <div class="float-right pull-none">
                     <ul class="list-inline social">
-                        <li class="list-inline-item"><a href="#"><i class="mdi mdi-twitter"></i></a></li>
-                        <li class="list-inline-item"><a href=""><i class="mdi mdi-dribbble"></i></a></li>
-                        <li class="list-inline-item"><a href=""><i class="mdi mdi-linkedin"></i></a></li>
-                        <li class="list-inline-item"><a href=""><i class="mdi mdi-google"></i></a></li>
-                        <li class="list-inline-item"><a href=""><i class="mdi mdi-facebook"></i></a></li>
+                        <li class="list-inline-item reference-link">
+                            <a href="#">
+                                <small>Terms of Service</small>
+                            </a>
+                        </li>
+                        <li class="list-inline-item reference-link">
+                            <a href="#">
+                                <small>Privacy Policy</small>
+                            </a>
+                        </li>
                     </ul>
                 </div>
                 <div class="pull-none">
