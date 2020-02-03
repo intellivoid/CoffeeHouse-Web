@@ -26,6 +26,10 @@
             case 'get_user':
                 get_user();
                 break;
+
+            case 'get_text':
+                get_text();
+                break;
         }
     }
 
@@ -36,6 +40,24 @@
         header('Content-Size: ' . strlen($data));
         print($data);
         exit();
+    }
+
+    function get_text()
+    {
+        send_response(array(
+            'status' => true,
+            'text' => array(
+                'generic_user' => 'You',
+                'authentication_required_message' => 'As much as i would love to chat with you, i need you to authenticate first! this is to prevent abuse and spam',
+                'authentication_action' => 'Click here to authenticate',
+                'generic_error_message' => 'Uh oh... Something went wrong, try refreshing maybe?',
+                'session_error_message' => 'Whoops! There seems to be an issue with our chat session. Try refreshing this page!',
+                'session_expired_message' => 'Hey! our chat session expired, we can talk again though! Try refreshing this page!',
+                'reload_action' => 'Refresh Page',
+                'introduction_message' => 'Hello! Try having a conversation with me!'
+
+            )
+        ));
     }
 
     function get_user()
@@ -55,6 +77,7 @@
             ));
         }
     }
+
 
     function lydia_think_thought()
     {

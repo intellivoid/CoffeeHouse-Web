@@ -4,6 +4,7 @@
     use DynamicalWeb\HTML;
 ?>
 var compiled_asset_etag = '<?php print(hash('sha256', hash('crc32b', time()))); ?>';
+var translation_text = null;
 var lydia_session = null;
 var current_message = null;
 var username = "You";
@@ -62,9 +63,9 @@ function ui_bot_authentication_required(msgid){
     ?>
     element_target = "#remsg_text_" + msgid;
     $(element_target).empty();
-    message_content = `As much as i would love to chat with you, i need you to authenticate first! this is to prevent abuse and spam<br/><br/>
+    message_content = `${translation_text.authentication_required_message}<br/><br/>
     <a href="<?php HTML::print($AuthenticationURL, false); ?>" class="text-white">
-        <i class="mdi mdi-lock pl-2 pr-1"></i>Click here to authenticate
+        <i class="mdi mdi-lock pl-2 pr-1"></i>${translation_text.authentication_action}
     </a>`;
     $(element_target).html(message_content);
     $('#chat_content').scrollTop($('#chat_content')[0].scrollHeight);
@@ -72,9 +73,9 @@ function ui_bot_authentication_required(msgid){
 function ui_bot_error(msgid){
     element_target = "#remsg_text_" + msgid;
     $(element_target).empty();
-    message_content = `Uh oh... Something went wrong, try refreshing maybe?<br/><br/>
+    message_content = `${translation_text.generic_error_message}<br/><br/>
     <a href="<?php DynamicalWeb::getRoute('lydia_demo', array(), true); ?>" class="text-white">
-        <i class="mdi mdi-reload pl-2 pr-1"></i>Reload
+        <i class="mdi mdi-reload pl-2 pr-1"></i>${translation_text.reload_action}
     </a>`;
     $(element_target).html(message_content);
     $('#chat_content').scrollTop($('#chat_content')[0].scrollHeight);
@@ -82,9 +83,9 @@ function ui_bot_error(msgid){
 function ui_bot_session_error(msgid){
     element_target = "#remsg_text_" + msgid;
     $(element_target).empty();
-    message_content = `Whoops! There seems to be an issue with our chat session. Try refreshing this page!<br/><br/>
+    message_content = `${translation_text.session_error_message}<br/><br/>
     <a href="<?php DynamicalWeb::getRoute('lydia_demo', array(), true); ?>" class="text-white">
-        <i class="mdi mdi-reload pl-2 pr-1"></i>Reload
+        <i class="mdi mdi-reload pl-2 pr-1"></i>${translation_text.reload_action}
     </a>`;
     $(element_target).html(message_content);
     $('#chat_content').scrollTop($('#chat_content')[0].scrollHeight);
@@ -92,9 +93,9 @@ function ui_bot_session_error(msgid){
 function ui_bot_session_expired(msgid){
     element_target = "#remsg_text_" + msgid;
     $(element_target).empty();
-    message_content = `Hey! our chat session expired, we can talk again though! Try refreshing this page!<br/><br/>
+    message_content = `${translation_text.session_expired_message}<br/><br/>
     <a href="<?php DynamicalWeb::getRoute('lydia_demo', array(), true); ?>" class="text-white">
-        <i class="mdi mdi-reload pl-2 pr-1"></i>Reload
+        <i class="mdi mdi-reload pl-2 pr-1"></i>${translation_text.reload_action}
     </a>`;
     $(element_target).html(message_content);
     $('#chat_content').scrollTop($('#chat_content')[0].scrollHeight);
@@ -102,7 +103,7 @@ function ui_bot_session_expired(msgid){
 function ui_bot_intro(msgid){
     element_target = "#remsg_text_" + msgid;
     $(element_target).empty();
-    message_content = `Hello! Try having a conversation with me!`;
+    message_content = translation_text.introduction_message;
     $(element_target).html(message_content);
     $('#chat_content').scrollTop($('#chat_content')[0].scrollHeight);
     ready = true;
@@ -141,13 +142,21 @@ function create_session(input){
     });
 }
 function get_user(){
-    current_message = gen_msgid(64);
-    ui_bot_message(current_message);
     $.post(
         "<?php DynamicalWeb::getRoute('lydia_demo', array('action' => 'get_user'), true); ?>",
         function(data, status){
             username = data.username;
             user_avatar = data.user_avatar;
+            get_text();
+        });
+}
+function get_text(){
+    current_message = gen_msgid(64);
+    ui_bot_message(current_message);
+    $.post(
+        "<?php DynamicalWeb::getRoute('lydia_demo', array('action' => 'get_text'), true); ?>",
+        function(data, status){
+            translation_text = data.text;
             ui_bot_intro(current_message)
         });
 }
@@ -220,7 +229,6 @@ function gen_msgid(length) {
     }
     return result;
 }
-
 $('#input_form').submit(function () {
     if(ready === true){
         if($("#user_input").val().length > 0) {
