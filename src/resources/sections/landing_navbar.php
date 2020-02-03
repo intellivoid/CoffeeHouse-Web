@@ -3,7 +3,7 @@
 ?>
 <nav id="ch-navbar" class="navbar navbar-expand-lg navbar-inverse navbar-toggleable-md fixed-top sticky navbar-custom">
     <div class="container">
-        <a class="navbar-brand logo" href="#">
+        <a class="navbar-brand logo" href="<?PHP DynamicalWeb::getRoute('index', array(), true); ?>">
             <span class="logo-text">CoffeeHouse</span>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
