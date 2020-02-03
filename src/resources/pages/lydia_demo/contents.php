@@ -31,10 +31,9 @@
                 <div class="row">
                     <div class="lydiachat mb-5">
                         <main class="lydiachat-chat" id="chat_content">
-
                         </main>
                         <form class="lydiachat-inputarea" id="input_form">
-                            <input class="form-control bg-dark text-white" autocomplete="off" type="text" id="user_input" placeholder="Talk to me" style="height: 40px;" disabled>
+                            <input class="form-control bg-dark text-white" autocomplete="off" type="text" id="user_input" placeholder="What's on your mind?" style="height: 40px;">
                             <button type="submit" class="btn btn-info btn-xs ml-2">
                                 <i class="mdi mdi-send pl-0 pb-0 pt-0"></i>
                             </button>

@@ -1,19 +1,15 @@
 <?php
 
-use COASniffle\Abstracts\AvatarResourceName;
-use COASniffle\Handlers\COA;
-use CoffeeHouse\Abstracts\ForeignSessionSearchMethod;
-use CoffeeHouse\Bots\Cleverbot;
-use CoffeeHouse\CoffeeHouse;
+    use COASniffle\Abstracts\AvatarResourceName;
+    use COASniffle\Handlers\COA;
+    use CoffeeHouse\Bots\Cleverbot;
+    use CoffeeHouse\CoffeeHouse;
     use DynamicalWeb\DynamicalWeb;
     use DynamicalWeb\Runtime;
-use sws\sws;
-use ZiProto\ZiProto;
+    use sws\sws;
 
     error_reporting(0);
     Runtime::import('CoffeeHouse');
-
-
 
     if(isset($_GET['action']))
     {
@@ -48,7 +44,7 @@ use ZiProto\ZiProto;
         {
             send_response(array(
                 'username' => "You",
-                "user_avatar" => "/assets/images/lydia_full.png"
+                "user_avatar" => "/assets/images/generic_user.svg"
             ));
         }
         else

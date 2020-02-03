@@ -1,12 +1,14 @@
 <?php
-use COASniffle\Abstracts\AvatarResourceName;use COASniffle\COASniffle;
-use COASniffle\Handlers\COA;use DynamicalWeb\DynamicalWeb;
+    use COASniffle\COASniffle;
+    use DynamicalWeb\DynamicalWeb;
     use DynamicalWeb\HTML;
 ?>
+var compiled_asset_etag = '<?php print(hash('sha256', hash('crc32b', time()))); ?>';
 var lydia_session = null;
 var current_message = null;
 var username = "You";
-var user_avatar = "/assets/images/lydia_full.png";
+var user_avatar = "/assets/images/generic_user.svg";
+var ready = false;
 function ui_user_message(alias, message, avatar){
     alias = ehtml(alias);
     message = ehtml(message);
@@ -103,16 +105,14 @@ function ui_bot_intro(msgid){
     message_content = `Hello! Try having a conversation with me!`;
     $(element_target).html(message_content);
     $('#chat_content').scrollTop($('#chat_content')[0].scrollHeight);
-    $("#user_input").prop("disabled", false);
-    $("#user_input").focus();
+    ready = true;
 }
 function ui_bot_response(msgid, response){
     element_target = "#remsg_text_" + msgid;
     $(element_target).empty();
     $(element_target).html(ehtml(response));
     $('#chat_content').scrollTop($('#chat_content')[0].scrollHeight);
-    $("#user_input").prop("disabled", false);
-    $("#user_input").focus();
+    ready = true;
 }
 function create_session(input){
     $.post(
@@ -155,7 +155,7 @@ function think_thought(input=null, skip_creation=false){
     if(input === null) {
         input = $("#user_input").val();
         $("#user_input").val('');
-        $("#user_input").prop("disabled", true);
+        ready = false;
     }
     if(skip_creation === false) {
         ui_user_message(
@@ -167,34 +167,36 @@ function think_thought(input=null, skip_creation=false){
             ui_bot_message(current_message);
         }, 1500);
     }
-    if(lydia_session == null) {
-        create_session(input);
-        return;
-    }
-    $.post(
-        "<?php DynamicalWeb::getRoute('lydia_demo', array('action' => 'think_thought'), true); ?>",
-        {"input": input},
-        function(data, status){
-            if(data.status == false)
-            {
-                switch(data.error_type){
-                    case 'session_expired':
-                        ui_bot_authentication_required(current_message);
-                        break;
-                    case 'session_error':
-                        ui_bot_session_error(current_message);
-                        break;
-                    default:
-                        ui_bot_error(isSecureContext);
-                        break;
-                }
-            }
-            else
-            {
-                ui_bot_response(current_message, data.response);
-            }
-        });
 
+    setTimeout(function() {
+        if(lydia_session == null) {
+            create_session(input);
+            return;
+        }
+        $.post(
+            "<?php DynamicalWeb::getRoute('lydia_demo', array('action' => 'think_thought'), true); ?>",
+            {"input": input},
+            function(data, status){
+                if(data.status == false)
+                {
+                    switch(data.error_type){
+                        case 'session_expired':
+                            ui_bot_authentication_required(current_message);
+                            break;
+                        case 'session_error':
+                            ui_bot_session_error(current_message);
+                            break;
+                        default:
+                            ui_bot_error(isSecureContext);
+                            break;
+                    }
+                }
+                else
+                {
+                    ui_bot_response(current_message, data.response);
+                }
+            });
+    }, 1500);
     return false;
 }
 function ehtml(html){
@@ -220,7 +222,11 @@ function gen_msgid(length) {
 }
 
 $('#input_form').submit(function () {
-    think_thought();
+    if(ready === true){
+        if($("#user_input").val().length > 0) {
+            think_thought();
+        }
+    }
     return false;
 });
 get_user();
