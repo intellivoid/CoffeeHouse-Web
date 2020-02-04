@@ -1,6 +1,10 @@
 <?php
     use DynamicalWeb\DynamicalWeb;
     use DynamicalWeb\HTML;
+    use DynamicalWeb\Page;
+    use DynamicalWeb\Runtime;
+    use IntellivoidSubscriptionManager\Exceptions\SubscriptionPlanNotFoundException;
+    use IntellivoidSubscriptionManager\IntellivoidSubscriptionManager;
 
     if(WEB_SESSION_ACTIVE == false)
     {
@@ -10,7 +14,114 @@
         }
     }
 
-    HTML::importScript('alert');
+    Runtime::import('IntellivoidSubscriptionManager');
+
+    $IntellivoidSubscriptionManager = new IntellivoidSubscriptionManager();
+    $ApplicationConfiguration = DynamicalWeb::getConfiguration('coasniffle');
+
+    try
+    {
+        $FreeSubscriptionPlan = $IntellivoidSubscriptionManager->getPlanManager()->getSubscriptionPlanByName(
+            $ApplicationConfiguration['APPLICATION_INTERNAL_ID'], "Free"
+        );
+    }
+    catch (SubscriptionPlanNotFoundException $e)
+    {
+        Page::staticResponse(
+            "Configuration Error", "Intellivoid Accounts Error",
+            "The subscription plan for 'FREE' is not configured properly"
+        );
+        exit();
+    }
+    catch(Exception $e)
+    {
+        Page::staticResponse(
+            "Configuration Error", "Intellivoid Accounts Error",
+            "The subscription plan for 'FREE' raised an unknown error"
+        );
+        exit();
+    }
+
+    try
+    {
+        $BasicSubscriptionPlan = $IntellivoidSubscriptionManager->getPlanManager()->getSubscriptionPlanByName(
+            $ApplicationConfiguration['APPLICATION_INTERNAL_ID'], "Basic"
+        );
+    }
+    catch (SubscriptionPlanNotFoundException $e)
+    {
+        Page::staticResponse(
+            "Configuration Error", "Intellivoid Accounts Error",
+            "The subscription plan for 'BASIC' is not configured properly"
+        );
+        exit();
+    }
+    catch(Exception $e)
+    {
+        Page::staticResponse(
+            "Configuration Error", "Intellivoid Accounts Error",
+            "The subscription plan for 'BASIC' raised an unknown error"
+        );
+        exit();
+    }
+
+    try
+    {
+        $EnterpriseSubscriptionPlan = $IntellivoidSubscriptionManager->getPlanManager()->getSubscriptionPlanByName(
+            $ApplicationConfiguration['APPLICATION_INTERNAL_ID'], "Enterprise"
+        );
+    }
+    catch (SubscriptionPlanNotFoundException $e)
+    {
+        Page::staticResponse(
+            "Configuration Error", "Intellivoid Accounts Error",
+            "The subscription plan for 'ENTERPRISE' is not configured properly"
+        );
+        exit();
+    }
+    catch(Exception $e)
+    {
+        Page::staticResponse(
+            "Configuration Error", "Intellivoid Accounts Error",
+            "The subscription plan for 'ENTERPRISE' raised an unknown error"
+        );
+        exit();
+    }
+
+    $COASniffle = DynamicalWeb::getMemoryObject('coasniffle');
+    $Protocol = strtolower(substr($_SERVER["SERVER_PROTOCOL"],0,strpos( $_SERVER["SERVER_PROTOCOL"],'/'))).'://';
+
+    $FreeLocation = '';
+    $BasicLocation = '';
+    $EnterpriseLocation = '';
+
+    if(WEB_SESSION_ACTIVE == false)
+    {
+        $FreeLocation = $COASniffle->getCOA()->getAuthenticationURL(
+            $Protocol . $_SERVER['HTTP_HOST'] . DynamicalWeb::getRoute('index', array(
+                'redirect' => 'confirm_purchase', 'plan' => 'free'
+            ))
+        );
+        $BasicLocation = $COASniffle->getCOA()->getAuthenticationURL(
+            $Protocol . $_SERVER['HTTP_HOST'] . DynamicalWeb::getRoute('index', array(
+                'redirect' => 'confirm_purchase', 'plan' => 'basic'
+            ))
+        );
+        $EnterpriseLocation = $COASniffle->getCOA()->getAuthenticationURL(
+            $Protocol . $_SERVER['HTTP_HOST'] . DynamicalWeb::getRoute('index', array(
+                'redirect' => 'confirm_purchase', 'plan' => 'enterprise'
+            ))
+        );
+    }
+    else
+    {
+        $FreeLocation = DynamicalWeb::getRoute('purchase', array('plan' => 'free'));
+        $BasicLocation = DynamicalWeb::getRoute('purchase', array('plan' => 'basic'));
+        $EnterpriseLocation = DynamicalWeb::getRoute('purchase', array('plan' => 'enterprise'));
+    }
+
+
+HTML::importScript('alert');
 ?>
 <!doctype html>
 <html lang="<?PHP HTML::print(APP_LANGUAGE_ISO_639); ?>">
@@ -104,7 +215,6 @@
             </div>
         </section>
 
-
         <section class="section" id="pricing">
             <div class="container">
 
@@ -134,7 +244,7 @@
                                     <p>Limited Resources</p>
                                     <p>For personal use only</p>
                                     <p>No hidden fees/trials</p>
-                                    <a href="#" class="btn btn-custom">Get License</a>
+                                    <a href="<?PHP HTML::print($FreeLocation); ?>" class="btn btn-custom">Get License</a>
                                 </div>
                             </div>
                         </div>
@@ -143,11 +253,15 @@
                         <div class="card plan-card text-center">
                             <div class="card-body">
                                 <div class="pt-3 pb-3">
+                                    <?PHP
+                                        $Text = "$%s";
+                                        $Text = str_ireplace('%s', $BasicSubscriptionPlan->CyclePrice, $Text);
+                                    ?>
                                     <h1><i class="ion-trophy plan-icon bg-dark"></i></h1>
                                     <h6 class="text-uppercase text-dark">Basic Plan</h6>
                                 </div>
                                 <div>
-                                    <h1 class="plan-price">$0.50<sup class="text-muted">USD Per Month</sup></h1>
+                                    <h1 class="plan-price"><?PHP HTML::print($Text); ?><sup class="text-muted">USD Per Month</sup></h1>
                                     <div class="plan-div-border"></div>
                                 </div>
                                 <div class="plan-features pb-3 mt-3 text-muted padding-t-b-30">
@@ -155,7 +269,7 @@
                                     <p>More Resources</p>
                                     <p>For personal use only</p>
                                     <p>No extra costs/hidden fees</p>
-                                    <a href="#" class="btn btn-custom">Get License</a>
+                                    <a href="<?PHP HTML::print($BasicLocation); ?>" class="btn btn-custom">Get License</a>
                                 </div>
                             </div>
                         </div>
@@ -164,19 +278,23 @@
                         <div class="card plan-card text-center">
                             <div class="card-body">
                                 <div class="pt-3 pb-3">
+                                    <?PHP
+                                        $Text = "$%s";
+                                        $Text = str_ireplace('%s', $EnterpriseSubscriptionPlan->CyclePrice, $Text);
+                                    ?>
                                     <h1><i class="ion-trophy plan-icon bg-dark"></i></h1>
                                     <h6 class="text-uppercase text-dark">Enterprise Plan</h6>
                                 </div>
                                 <div>
-                                    <h1 class="plan-price">$5<sup class="text-muted">USD Per month</sup></h1>
+                                    <h1 class="plan-price"><?PHP HTML::print($Text); ?><sup class="text-muted">USD Per month</sup></h1>
                                     <div class="plan-div-border"></div>
                                 </div>
                                 <div class="plan-features pb-3 mt-3 text-muted padding-t-b-30">
                                     <p>Free Official Support</p>
                                     <p>Unlimited Resources</p>
-                                    <p>For personal/commercial uses</p>
-                                    <p>Always free</p>
-                                    <a href="#" class="btn btn-custom">Get License</a>
+                                    <p>For personal uses</p>
+                                    <p>For commercial uses</p>
+                                    <a href="<?PHP HTML::print($EnterpriseLocation); ?>" class="btn btn-custom">Get License</a>
                                 </div>
                             </div>
                         </div>

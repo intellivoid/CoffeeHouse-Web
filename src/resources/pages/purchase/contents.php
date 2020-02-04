@@ -1,6 +1,21 @@
 <?php
+
+    use DynamicalWeb\Actions;
     use DynamicalWeb\DynamicalWeb;
     use DynamicalWeb\HTML;
+    use DynamicalWeb\Page;
+    use DynamicalWeb\Runtime;
+    use IntellivoidSubscriptionManager\Exceptions\SubscriptionPlanNotFoundException;
+    use IntellivoidSubscriptionManager\IntellivoidSubscriptionManager;
+
+    if(WEB_SUBSCRIPTION_ACTIVE)
+    {
+        Actions::redirect(DynamicalWeb::getRoute('dashboard'));
+    }
+
+
+
+
 ?>
 <!doctype html>
 <html lang="<?PHP HTML::print(APP_LANGUAGE_ISO_639); ?>">

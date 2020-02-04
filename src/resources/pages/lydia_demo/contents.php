@@ -24,7 +24,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-8 offset-md-2 text-white text-center animated fadeIn slow">
-                        <img src="/assets/images/lydia_white_transparent.svg" class="img-fluid lydia_logo">
+                        <img alt="Lydia Logo" src="/assets/images/lydia_white_transparent.svg" class="img-fluid lydia_logo">
                         <p class="mt-4 demo-subtitle mb-5 mb-5">Lydia is a advanced chat bot that actively learns from conversations and is capable of speaking in many languages without having to hard-configure anything about it.</p>
                     </div>
                 </div>
