@@ -1,3 +1,10 @@
+<?php
+
+use COASniffle\Abstracts\AvatarResourceName;
+use COASniffle\Handlers\COA;
+use DynamicalWeb\HTML;
+?>
+
 <header id="topnav">
     <div class="topbar-main">
         <div class="container-fluid">
@@ -27,7 +34,7 @@
                     <li class="list-inline-item dropdown notification-list">
                         <a class="nav-link dropdown-toggle arrow-none waves-effect nav-user" data-toggle="dropdown" href="#" role="button"
                            aria-haspopup="false" aria-expanded="false">
-                            <img src="/assets/images/user.jpg" alt="user" class="rounded-circle">
+                            <img src="<?PHP HTML::print(COA::getAvatarUrl(AvatarResourceName::Normal, WEB_ACCOUNT_PUBID)); ?>" alt="user" class="rounded-circle">
                         </a>
                         <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
                             <a class="dropdown-item" href="/logout"><i class="dripicons-exit text-muted"></i><?PHP \DynamicalWeb\HTML::print(TEXT_LOGOUT_BUTTON); ?></a>

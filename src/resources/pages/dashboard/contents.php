@@ -35,7 +35,15 @@
 
         <div class="wrapper">
             <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="page-title-box">
+                            <h4 class="page-title"><?PHP HTML::print("CoffeeHouse Dashboard"); ?></h4>
+                        </div>
+                    </div>
+                </div>
 
+                <?PHP HTML::importScript('render_widgets'); ?>
             </div>
         </div>
 

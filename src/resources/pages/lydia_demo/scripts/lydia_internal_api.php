@@ -161,11 +161,11 @@
     {
         if(WEB_SESSION_ACTIVE == false)
         {
-            send_response(array(
-                'status' => false,
-                'error_type' => "authentication_required",
-                'message' => null
-            ));
+            //send_response(array(
+            //    'status' => false,
+            //    'error_type' => "authentication_required",
+            //    'message' => null
+            //));
         }
 
         if(isset(DynamicalWeb::$globalObjects['coffeehouse']) == false)

@@ -11,3 +11,4 @@
 <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
 <link href="/assets/css/animate.css" rel="stylesheet">
 <link href="/assets/css/fe_style.css" rel="stylesheet">
+<link href="/assets/css/flag-icon.min.css" rel="stylesheet" type="text/css" />
