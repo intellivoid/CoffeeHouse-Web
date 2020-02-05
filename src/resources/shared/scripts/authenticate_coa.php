@@ -114,6 +114,12 @@
 
         switch($Redirect)
         {
+            case 'lydia_demo':
+                Actions::redirect(DynamicalWeb::getRoute(
+                    'lydia_demo', array()
+                ));
+                break;
+
             case 'dashboard':
                 Actions::redirect(DynamicalWeb::getRoute(
                     'dashboard', array()
