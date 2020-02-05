@@ -10,9 +10,11 @@
     use IntellivoidAPI\Abstracts\SearchMethods\AccessRecordSearchMethod;
     use IntellivoidAPI\Exceptions\AccessRecordNotFoundException;
     use IntellivoidAPI\IntellivoidAPI;
-    use IntellivoidSubscriptionManager\Abstracts\SearchMethods\SubscriptionSearchMethod;
+use IntellivoidSubscriptionManager\Abstracts\SearchMethods\SubscriptionPlanSearchMethod;
+use IntellivoidSubscriptionManager\Abstracts\SearchMethods\SubscriptionSearchMethod;
     use IntellivoidSubscriptionManager\Exceptions\SubscriptionNotFoundException;
-    use IntellivoidSubscriptionManager\IntellivoidSubscriptionManager;
+use IntellivoidSubscriptionManager\Exceptions\SubscriptionPlanNotFoundException;
+use IntellivoidSubscriptionManager\IntellivoidSubscriptionManager;
     use IntellivoidSubscriptionManager\Objects\Subscription\Feature;
 
     Runtime::import('CoffeeHouse');
@@ -31,7 +33,6 @@
     }
 
     require_authentication('dashboard');
-
 
     if(WEB_SUBSCRIPTION_ACTIVE == false)
     {
@@ -97,11 +98,21 @@
         $Subscription = $IntellivoidSubscriptionManager->getSubscriptionManager()->getSubscription(
             SubscriptionSearchMethod::byId, $UserSubscription->SubscriptionID
         );
+
+        $SubscriptionPlan = $IntellivoidSubscriptionManager->getPlanManager()->getSubscriptionPlan(
+                SubscriptionPlanSearchMethod::byId, $Subscription->SubscriptionPlanID
+        );
     }
     catch (SubscriptionNotFoundException $e)
     {
         Actions::redirect(DynamicalWeb::getRoute('service_error', array(
             'error_type' => 'rd_s_not_found'
+        )));
+    }
+    catch (SubscriptionPlanNotFoundException $e)
+    {
+        Actions::redirect(DynamicalWeb::getRoute('service_error', array(
+            'error_type' => 'rd_sp_not_found'
         )));
     }
     catch(Exception $e)
@@ -174,7 +185,63 @@
                     </div>
                 </div>
 
-                <?PHP HTML::importScript('render_widgets'); ?>
+                <!-- CoffeeHouse Dashboard Widgets -->
+                <div class="row">
+                    <div class="col-md-6 col-xl-4">
+                        <div class="mini-stat clearfix bg-white">
+                            <span class="mini-stat-icon bg-blacksalami mr-0 float-right">
+                                <img alt="Lydia Logo" src="/assets/images/lydia_white_transparent.svg" class="img-fluid img-xs rounded-circle mb-3">
+                            </span>
+                            <div class="mini-stat-info">
+                                <span class="counter text-white" id="calls_current_month"><?PHP HTML::print(number_format($UsedLydiaSessions)); ?></span>
+                                <?PHP HTML::print("Lydia Sessions"); ?>
+                            </div>
+                            <div class="clearfix"></div>
+                            <p class="text-muted mb-0 m-t-20" id="calls_last_month"><?PHP HTML::print(str_ireplace('%s', number_format($ConfiguredLydiaSessions), "%s Total Sessions Allowed")); ?></p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xl-4">
+                        <div class="mini-stat clearfix bg-white">
+                            <span class="mini-stat-icon bg-success mr-0 float-right">
+                                <i class="mdi mdi-chart-pie"></i>
+                            </span>
+                            <div class="mini-stat-info">
+                                <span class="counter text-success"><?PHP HTML::print("Billing Cycle"); ?></span>
+                                <?PHP HTML::print("When your next bill is processed on"); ?>
+                            </div>
+                            <div class="clearfix"></div>
+                            <p class="text-muted mb-0 m-t-20">
+                                <?PHP
+                                if((int)time() > $Subscription->NextBillingCycle)
+                                {
+                                    HTML::print("Today");
+                                }
+                                else
+                                {
+                                    HTML::print(gmdate("j/m/Y", $Subscription->NextBillingCycle));
+                                }
+                                ?>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-xl-4">
+                        <div class="mini-stat clearfix bg-white">
+                            <span class="mini-stat-icon bg-warning mr-0 float-right">
+                                <i class="mdi mdi-shopping"></i>
+                            </span>
+                            <div class="mini-stat-info">
+                                <span class="counter text-warning"><?PHP HTML::print($SubscriptionPlan->PlanName); ?></span>
+                                <?PHP HTML::print(str_ireplace('%s', gmdate("j/m/Y g:i a", $Subscription->CreatedTimestamp), "You started on %s")); ?>
+                            </div>
+                            <div class="clearfix"></div>
+                            <p class="text-muted mb-0 m-t-20">
+                                <?PHP
+                                    HTML::print(str_ireplace('%s', $Subscription->Properties->CyclePrice, 'You pay $%s USD every month'));
+                                ?>
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
