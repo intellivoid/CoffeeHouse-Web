@@ -26,6 +26,16 @@
                 <li class="nav-item">
                     <a href="https://intellivoid.info/" class="nav-link">Intellivoid</a>
                 </li>
+                <?PHP
+                    if(WEB_SESSION_ACTIVE)
+                    {
+                        ?>
+                        <li class="nav-item">
+                            <a href="<?PHP DynamicalWeb::getRoute('logout', array(), true); ?>" class="nav-link">Logout</a>
+                        </li>
+                        <?PHP
+                    }
+                ?>
             </ul>
         </div>
     </div>

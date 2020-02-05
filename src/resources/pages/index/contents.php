@@ -14,6 +14,8 @@
         }
     }
 
+    HTML::importScript('check_subscription');
+
     Runtime::import('IntellivoidSubscriptionManager');
 
     $IntellivoidSubscriptionManager = new IntellivoidSubscriptionManager();
@@ -120,8 +122,7 @@
         $EnterpriseLocation = DynamicalWeb::getRoute('purchase', array('plan' => 'enterprise'));
     }
 
-
-HTML::importScript('alert');
+    HTML::importScript('alert');
 ?>
 <!doctype html>
 <html lang="<?PHP HTML::print(APP_LANGUAGE_ISO_639); ?>">
