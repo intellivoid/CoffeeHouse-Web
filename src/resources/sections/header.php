@@ -5,6 +5,7 @@
 <link href="/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 <link href="/assets/css/icons.css" rel="stylesheet" type="text/css" />
 <link href="/assets/css/style.css" rel="stylesheet" type="text/css" />
+<link href="/assets/css/animate.css" rel="stylesheet">
 <link href="/assets/css/flag-icon.min.css" rel="stylesheet" type="text/css" />
 <meta name="title" content="CoffeeHouse API Dashboard">
 <meta name="description" content="Advanced Natrual Language Processing and Machine Learning chat dialog engine, powered by Intellivoid Cloud">

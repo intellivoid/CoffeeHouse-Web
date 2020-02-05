@@ -188,7 +188,7 @@ use IntellivoidSubscriptionManager\IntellivoidSubscriptionManager;
                 <!-- CoffeeHouse Dashboard Widgets -->
                 <div class="row">
                     <div class="col-md-6 col-xl-4">
-                        <div class="mini-stat clearfix bg-white">
+                        <div class="mini-stat clearfix bg-white animated fadeInLeft">
                             <span class="mini-stat-icon bg-blacksalami mr-0 float-right">
                                 <img alt="Lydia Logo" src="/assets/images/lydia_white_transparent.svg" class="img-fluid img-xs rounded-circle mb-3">
                             </span>
@@ -201,7 +201,7 @@ use IntellivoidSubscriptionManager\IntellivoidSubscriptionManager;
                         </div>
                     </div>
                     <div class="col-md-6 col-xl-4">
-                        <div class="mini-stat clearfix bg-white">
+                        <div class="mini-stat clearfix bg-white animated fadeInDown">
                             <span class="mini-stat-icon bg-success mr-0 float-right">
                                 <i class="mdi mdi-chart-pie"></i>
                             </span>
@@ -225,7 +225,7 @@ use IntellivoidSubscriptionManager\IntellivoidSubscriptionManager;
                         </div>
                     </div>
                     <div class="col-md-6 col-xl-4">
-                        <div class="mini-stat clearfix bg-white">
+                        <div class="mini-stat clearfix bg-white animated fadeInRight">
                             <span class="mini-stat-icon bg-warning mr-0 float-right">
                                 <i class="mdi mdi-shopping"></i>
                             </span>
@@ -242,6 +242,61 @@ use IntellivoidSubscriptionManager\IntellivoidSubscriptionManager;
                         </div>
                     </div>
                 </div>
+
+                <div class="row">
+                    <div class="col-xl-4">
+                        <div class="card m-b-20 animated flipInX">
+                            <div class="card-body">
+                                <div class="form-group m-b-0">
+                                    <label for="api_key">Access Key</label>
+                                    <input class="form-control" type="text" value="<?PHP HTML::print($AccessRecord->AccessKey); ?>" id="api_key" name="api_key" readonly>
+                                </div>
+                                <button class="btn btn-info btn-xs btn-block">
+                                    <i class="mdi mdi-reload pr-2"></i> Generate new Access Key
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card m-b-20 animated bounceInUp">
+                            <div class="card-body">
+                                <h5 class="header-title">Need Help?</h5>
+                                <div class="mt-2 ml-3">
+                                    <div class="row mt-3">
+                                        <a class="text-white" href="https://t.me/IntellivoidDev">
+                                            <i class="mdi mdi-telegram pr-2"></i>Telegram Support Group
+                                        </a>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <a class="text-white" href="https://t.me/IntellivoidSupport">
+                                            <i class="mdi mdi-telegram pr-2"></i>Intellivoid Support Account
+                                        </a>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <a class="text-white" href="https://intellivoid.info/contact">
+                                            <i class="mdi mdi-email pr-2"></i>Contact Intellivoid
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-8">
+                        <div class="card m-b-20 animated bounceInRight">
+                            <div class="card-body">
+                                <h4 class="header-title">API Usage</h4>
+                                <div id="api-usage-chart">
+                                    <div class="d-flex flex-column justify-content-center align-items-center" style="height:50vh;">
+                                        <div class="p-2 my-flex-item">
+                                            <h4 class="text-muted"><?PHP HTML::print("Coming soon"); ?></h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
             </div>
         </div>
 
