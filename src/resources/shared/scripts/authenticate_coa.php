@@ -120,6 +120,15 @@
                 ));
                 break;
 
+            case 'confirm_purchase':
+                if(isset($_GET['plan']))
+                {
+                    Actions::redirect(DynamicalWeb::getRoute(
+                        'purchase', array('plan' => $_GET['plan'])
+                    ));
+                }
+                break;
+
             case 'dashboard':
                 Actions::redirect(DynamicalWeb::getRoute(
                     'dashboard', array()
