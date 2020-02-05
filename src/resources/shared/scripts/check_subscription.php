@@ -89,7 +89,7 @@
         catch (SubscriptionNotFoundException $e)
         {
             remove_subscription();
-            Actions::redirect(DynamicalWeb::getRoute('api'));
+            Actions::redirect(DynamicalWeb::getRoute('index') . '#pricing');
             return;
         }
         catch(Exception $e)
@@ -194,7 +194,7 @@
                         )));
                     }
                     remove_subscription();
-                    Actions::redirect(DynamicalWeb::getRoute('api'));
+                    Actions::redirect(DynamicalWeb::getRoute('index') . '#pricing');
                     return;
                 }
                 catch(Exception $exception)
@@ -318,7 +318,7 @@
         $Cookie->Data['user_subscription_id'] = $userSubscription->SubscriptionID;
 
         $sws->CookieManager()->updateCookie($Cookie);
-        Actions::redirect(DynamicalWeb::getRoute('api'));
+        Actions::redirect(DynamicalWeb::getRoute('dashboard'));
     }
 
     function remove_subscription()
