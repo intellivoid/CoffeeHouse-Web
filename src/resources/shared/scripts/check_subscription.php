@@ -313,7 +313,7 @@
         /** @var sws $sws */
         $sws = DynamicalWeb::getMemoryObject('sws');
 
-        $Cookie = $sws->WebManager()->getCookie('web_session');
+        $Cookie = $sws->WebManager()->getCookie('ch_session');
         $Cookie->Data['subscription_active'] = true;
         $Cookie->Data['user_subscription_id'] = $userSubscription->SubscriptionID;
 
@@ -326,7 +326,7 @@
         /** @var sws $sws */
         $sws = DynamicalWeb::getMemoryObject('sws');
 
-        $Cookie = $sws->WebManager()->getCookie('web_session');
+        $Cookie = $sws->WebManager()->getCookie('ch_session');
         $Cookie->Data['subscription_active'] = false;
         $Cookie->Data['user_subscription_id'] = 0;
 
