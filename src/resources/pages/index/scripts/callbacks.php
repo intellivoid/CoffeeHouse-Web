@@ -38,5 +38,13 @@
                 render_alert('You\'ve logged in successfully!', 'success', 'check-circle-outline');
                 break;
 
+            case 106:
+                render_alert('The subscription plan was not found', 'warning', 'alert-circle');
+                break;
+
+            case 107:
+                render_alert('The subscription plan is not available', 'warning', 'alert-circle');
+                break;
+
         }
     }
