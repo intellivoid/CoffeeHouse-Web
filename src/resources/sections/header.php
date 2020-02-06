@@ -7,19 +7,18 @@
 <link href="/assets/css/style.css" rel="stylesheet" type="text/css" />
 <link href="/assets/css/animate.css" rel="stylesheet">
 <link href="/assets/css/flag-icon.min.css" rel="stylesheet" type="text/css" />
-<meta name="title" content="CoffeeHouse API Dashboard">
-<meta name="description" content="Advanced Natrual Language Processing and Machine Learning chat dialog engine, powered by Intellivoid Cloud">
+<meta name="title" content="CoffeeHouse">
+<meta name="description" content="Multi-purpose cloud based artificial intelligence & machine learning service for all">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://coffeehouse.intellivoid.info/">
-<meta property="og:title" content="CoffeeHouse API Dashboard">
-<meta property="og:description" content="Advanced Natrual Language Processing and Machine Learning chat dialog engine, powered by Intellivoid Cloud">
-<meta property="og:image" content="">
+<meta property="og:title" content="CoffeeHouse">
+<meta property="og:description" content="Multi-purpose cloud based artificial intelligence & machine learning service for all">
+<meta property="og:image" content="/assets/images/preview.png">
 <meta property="twitter:card" content="summary_large_image">
-<meta property="twitter:url" content="https://coffeehouse.intellivoid.info/">
-<meta property="twitter:title" content="CoffeeHouse API Dashboard">
-<meta property="twitter:description" content="Advanced Natrual Language Processing and Machine Learning chat dialog engine, powered by Intellivoid Cloud">
-<meta property="twitter:image" content="">
-
+<meta property="twitter:url" content="https://coffeehouse.intellivoid.info">
+<meta property="twitter:title" content="CoffeeHouse">
+<meta property="twitter:description" content="Multi-purpose cloud based artificial intelligence & machine learning service for all">
+<meta property="twitter:image" content="/assets/images/preview.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png?cdvn=5ABOj7lNNm">
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png?cdvn=5ABOj7lNNm">
 <link rel="icon" type="image/png" sizes="194x194" href="/assets/favicon/favicon-194x194.png?cdvn=5ABOj7lNNm">

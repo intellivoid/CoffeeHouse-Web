@@ -1,8 +1,18 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
-<meta content="Admin Dashboard" name="description">
-<meta content="Themesbrand" name="author">
+<meta name="title" content="CoffeeHouse">
+<meta name="description" content="Multi-purpose cloud based artificial intelligence & machine learning service for all">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://coffeehouse.intellivoid.info/">
+<meta property="og:title" content="CoffeeHouse">
+<meta property="og:description" content="Multi-purpose cloud based artificial intelligence & machine learning service for all">
+<meta property="og:image" content="/assets/images/preview.png">
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://coffeehouse.intellivoid.info">
+<meta property="twitter:title" content="CoffeeHouse">
+<meta property="twitter:description" content="Multi-purpose cloud based artificial intelligence & machine learning service for all">
+<meta property="twitter:image" content="/assets/images/preview.png">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500|Quattrocento+Sans:400,700" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="/assets/css/mobirise.css">
