@@ -1,5 +1,6 @@
 <?php
     use DynamicalWeb\DynamicalWeb;
+    use DynamicalWeb\HTML;
 ?>
 <nav id="ch-navbar" class="navbar navbar-expand-lg navbar-inverse navbar-toggleable-md fixed-top sticky navbar-custom">
     <div class="container">
@@ -12,16 +13,24 @@
         <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
             <ul class="navbar-nav ml-auto" id="mySidenav">
                 <li class="nav-item">
-                    <a href="<?PHP DynamicalWeb::getRoute('index', array(), true); ?>" class="nav-link">Home</a>
+                    <a href="<?PHP DynamicalWeb::getRoute('index', array(), true); ?>" class="nav-link">
+                        <?PHP HTML::print(TEXT_NAVBAR_HOME); ?>
+                    </a>
                 </li>
                 <li class="nav-item">
-                    <a href="<?PHP DynamicalWeb::getRoute('index', array(), true); ?>#pricing" class="nav-link">Pricing</a>
+                    <a href="<?PHP DynamicalWeb::getRoute('index', array(), true); ?>#pricing" class="nav-link">
+                        <?PHP HTML::print(TEXT_NAVBAR_PRICING); ?>
+                    </a>
                 </li>
                 <li class="nav-item">
-                    <a href="<?PHP DynamicalWeb::getRoute('lydia_demo', array(), true); ?>" class="nav-link">Lydia Demo</a>
+                    <a href="<?PHP DynamicalWeb::getRoute('lydia_demo', array(), true); ?>" class="nav-link">
+                        <?PHP HTML::print(TEXT_NAVBAR_LYDIA_DEMO); ?>
+                    </a>
                 </li>
                 <li class="nav-item">
-                    <a href="<?PHP DynamicalWeb::getRoute('dashboard', array(), true); ?>" class="nav-link">Dashboard</a>
+                    <a href="<?PHP DynamicalWeb::getRoute('dashboard', array(), true); ?>" class="nav-link">
+                        <?PHP HTML::print(TEXT_NAVBAR_DASHBOARD); ?>
+                    </a>
                 </li>
                 <li class="nav-item">
                     <a href="https://intellivoid.info/" class="nav-link">Intellivoid</a>
@@ -31,7 +40,9 @@
                     {
                         ?>
                         <li class="nav-item">
-                            <a href="<?PHP DynamicalWeb::getRoute('logout', array(), true); ?>" class="nav-link">Logout</a>
+                            <a href="<?PHP DynamicalWeb::getRoute('logout', array(), true); ?>" class="nav-link">
+                                <?PHP HTML::print(TEXT_NAVBAR_LOGOUT); ?>
+                            </a>
                         </li>
                         <?PHP
                     }
