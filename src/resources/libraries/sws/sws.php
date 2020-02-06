@@ -76,7 +76,7 @@
          */
         public function __construct()
         {
-            $this->acm = new acm(__DIR__, 'CoffeeHouse Web');
+            $this->acm = new acm(__DIR__, 'CoffeeHouse Web Application');
             $this->DatabaseConfiguration = $this->acm->getConfiguration('Database');
 
             $this->Database = new mysqli(

@@ -1,106 +1,296 @@
-<?PHP
-
-    use CoffeeHouse\Abstracts\PlanSearchMethod;
-    use CoffeeHouse\CoffeeHouse;
-    use CoffeeHouse\Objects\ApiPlan;
+<?php
     use DynamicalWeb\DynamicalWeb;
     use DynamicalWeb\HTML;
+    use DynamicalWeb\Page;
     use DynamicalWeb\Runtime;
-    use ModularAPI\Abstracts\AccessKeySearchMethod;
-    use ModularAPI\ModularAPI;
-    use ModularAPI\Objects\AccessKey;
+    use IntellivoidSubscriptionManager\Exceptions\SubscriptionPlanNotFoundException;
+    use IntellivoidSubscriptionManager\IntellivoidSubscriptionManager;
 
-
-    Runtime::import('CoffeeHouse');
-    HTML::importScript('dashboard_actions');
-
-    $CoffeeHouse = new CoffeeHouse();
-    $ModularAPI = new ModularAPI();
-
-    /** @var ApiPlan $Plan */
-    $Plan = DynamicalWeb::setMemoryObject(
-            'COFFEE_HOUSE_PLAN', $CoffeeHouse->getApiPlanManager()->getPlan(
-                    PlanSearchMethod::byAccountId, WEB_ACCOUNT_ID
-            )
-    );
-
-    /** @var AccessKey $AccessKey */
-    $AccessKey = DynamicalWeb::setMemoryObject(
-            'ACCESS_KEY', $ModularAPI->AccessKeys()->Manager->get(
-                AccessKeySearchMethod::byID, $Plan->AccessKeyId
-            )
-    );
-
-    if(isset($_GET['action']))
+    if(WEB_SESSION_ACTIVE == false)
     {
-        if($_GET['action'] == 'get_info')
+        if(isset($_GET['access_token']))
         {
-            HTML::importScript('internal_api');
+            HTML::importScript('authenticate_coa');
         }
     }
 
-    HTML::importScript('determine_total_usage');
-    HTML::importScript('determine_billing');
+    HTML::importScript('check_subscription');
 
+    Runtime::import('IntellivoidSubscriptionManager');
 
+    $IntellivoidSubscriptionManager = new IntellivoidSubscriptionManager();
+    $ApplicationConfiguration = DynamicalWeb::getConfiguration('coasniffle');
+
+    try
+    {
+        $FreeSubscriptionPlan = $IntellivoidSubscriptionManager->getPlanManager()->getSubscriptionPlanByName(
+            $ApplicationConfiguration['APPLICATION_INTERNAL_ID'], "Free"
+        );
+    }
+    catch (SubscriptionPlanNotFoundException $e)
+    {
+        Page::staticResponse(
+            "Configuration Error", "Intellivoid Accounts Error",
+            "The subscription plan for 'FREE' is not configured properly"
+        );
+        exit();
+    }
+    catch(Exception $e)
+    {
+        Page::staticResponse(
+            "Configuration Error", "Intellivoid Accounts Error",
+            "The subscription plan for 'FREE' raised an unknown error"
+        );
+        exit();
+    }
+
+    try
+    {
+        $BasicSubscriptionPlan = $IntellivoidSubscriptionManager->getPlanManager()->getSubscriptionPlanByName(
+            $ApplicationConfiguration['APPLICATION_INTERNAL_ID'], "Basic"
+        );
+    }
+    catch (SubscriptionPlanNotFoundException $e)
+    {
+        Page::staticResponse(
+            "Configuration Error", "Intellivoid Accounts Error",
+            "The subscription plan for 'BASIC' is not configured properly"
+        );
+        exit();
+    }
+    catch(Exception $e)
+    {
+        Page::staticResponse(
+            "Configuration Error", "Intellivoid Accounts Error",
+            "The subscription plan for 'BASIC' raised an unknown error"
+        );
+        exit();
+    }
+
+    try
+    {
+        $EnterpriseSubscriptionPlan = $IntellivoidSubscriptionManager->getPlanManager()->getSubscriptionPlanByName(
+            $ApplicationConfiguration['APPLICATION_INTERNAL_ID'], "Enterprise"
+        );
+    }
+    catch (SubscriptionPlanNotFoundException $e)
+    {
+        Page::staticResponse(
+            "Configuration Error", "Intellivoid Accounts Error",
+            "The subscription plan for 'ENTERPRISE' is not configured properly"
+        );
+        exit();
+    }
+    catch(Exception $e)
+    {
+        Page::staticResponse(
+            "Configuration Error", "Intellivoid Accounts Error",
+            "The subscription plan for 'ENTERPRISE' raised an unknown error"
+        );
+        exit();
+    }
+
+    $COASniffle = DynamicalWeb::getMemoryObject('coasniffle');
+    $Protocol = strtolower(substr($_SERVER["SERVER_PROTOCOL"],0,strpos( $_SERVER["SERVER_PROTOCOL"],'/'))).'://';
+
+    $FreeLocation = '';
+    $BasicLocation = '';
+    $EnterpriseLocation = '';
+
+    if(WEB_SESSION_ACTIVE == false)
+    {
+        $FreeLocation = $COASniffle->getCOA()->getAuthenticationURL(
+            $Protocol . $_SERVER['HTTP_HOST'] . DynamicalWeb::getRoute('index', array(
+                'redirect' => 'confirm_purchase', 'plan' => 'free'
+            ))
+        );
+        $BasicLocation = $COASniffle->getCOA()->getAuthenticationURL(
+            $Protocol . $_SERVER['HTTP_HOST'] . DynamicalWeb::getRoute('index', array(
+                'redirect' => 'confirm_purchase', 'plan' => 'basic'
+            ))
+        );
+        $EnterpriseLocation = $COASniffle->getCOA()->getAuthenticationURL(
+            $Protocol . $_SERVER['HTTP_HOST'] . DynamicalWeb::getRoute('index', array(
+                'redirect' => 'confirm_purchase', 'plan' => 'enterprise'
+            ))
+        );
+    }
+    else
+    {
+        $FreeLocation = DynamicalWeb::getRoute('purchase', array('plan' => 'free'));
+        $BasicLocation = DynamicalWeb::getRoute('purchase', array('plan' => 'basic'));
+        $EnterpriseLocation = DynamicalWeb::getRoute('purchase', array('plan' => 'enterprise'));
+    }
+
+    HTML::importScript('alert');
 ?>
 <!doctype html>
 <html lang="<?PHP HTML::print(APP_LANGUAGE_ISO_639); ?>">
     <head>
-        <link rel="stylesheet" href="/assets/vendors/morris/morris.css">
-        <?PHP HTML::importSection('header'); ?>
+        <?PHP HTML::importSection('landing_headers'); ?>
+        <link href="/assets/css/loader.css" rel="stylesheet">
         <title><?PHP HTML::print(TEXT_PAGE_TITLE); ?></title>
     </head>
-    <body>
-        <?PHP HTML::importSection('navigation'); ?>
-
-        <div class="wrapper">
-            <div class="container-fluid">
-
-                <!-- Page-Title -->
+    <body data-spy="scroll" data-target="#ch-navbar" data-offset="20">
+        <?PHP HTML::importSection('landing_navbar'); ?>
+        <section class="section home" id="home">
+            <div class="container">
+                <?PHP HTML::importScript('callbacks'); ?>
                 <div class="row">
-                    <div class="col-sm-12">
-                        <div class="page-title-box">
-                            <h4 class="page-title"><?PHP HTML::print(TEXT_PAGE_TITLE); ?></h4>
-                        </div>
+                    <div class="bg-overlay">
+                        <div class="bg"></div>
+                        <div class="bg bg2"></div>
+                        <div class="bg bg3"></div>
+                    </div>
+                    <div class="col-md-8 offset-md-2 text-white text-center">
+                        <h1 class="home-title animated slow fadeInLeft"><?PHP HTML::print(TEXT_INTRODUCTION_TITLE); ?></h1>
+                        <p class="mt-4 home-subtitle animated slow fadeInRight"><?PHP HTML::print(TEXT_INTRODUCTION_DESCRIPTION); ?></p>
+                        <img src="/assets/images/lydia_showcase.svg" alt="<?PHP HTML::print(TEXT_INTRODUCTION_IMAGE_ALT); ?>" class="img-fluid mt-4 animated slower fadeIn">
                     </div>
                 </div>
-
-                <?PHP HTML::importScript('render_widgets'); ?>
-
-                <div class="row">
-                    <div class="col-xl-8">
-                        <div class="card m-b-20">
-                            <div class="card-body">
-                                <h4 class="header-title"><?PHP HTML::print(TEXT_ANALYTICS_CARD_HEADER); ?></h4>
-                                <div id="api-usage-chart" class="morris-charts" style="height: 300px"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-4">
-                        <div class="card m-b-20">
-                            <div class="card-body">
-                                <div class="form-group m-b-0">
-                                    <label for="api_key"><?PHP HTML::print(TEXT_AUTH_API_KEY_HEADER); ?></label>
-                                    <input class="form-control" type="text" value="<?PHP HTML::print($AccessKey->PublicKey); ?>" id="api_key" name="api_key" readonly>
-                                </div>
-                                <div class="form-group m-b-0">
-                                    <label for="certificate"><?PHP HTML::print(TEXT_AUTH_CERTIFICATE_KEY_HEADER); ?></label>
-                                    <textarea class="form-control" type="text" id="certificate" name="certificate" rows="8" readonly><?PHP HTML::print($AccessKey->Signatures->createCertificate()); ?></textarea>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
             </div>
-        </div>
-
-        <?PHP HTML::importSection('footer'); ?>
+        </section>
+        <section class="section" id="features">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="text-center">
+                            <h3><?PHP HTML::print(TEXT_FEATURES_HEADER); ?></h3>
+                            <p class="text-muted slogan"><?PHP HTML::print(TEXT_FEATURES_DESCRIPTION); ?></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-md-4 services-box">
+                        <div class="text-center p-3">
+                            <i class="mbri-help text-custom"></i>
+                            <h5 class="pt-4"><?PHP HTML::print(TEXT_FEATURE_1_TITLE); ?></h5>
+                            <p class="text-gray pt-2"><?PHP HTML::print(TEXT_FEATURE_1_DESCRIPTION); ?></p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 services-box">
+                        <div class="text-center p-3">
+                            <i class="mbri-devices text-custom"></i>
+                            <h5 class="pt-4"><?PHP HTML::print(TEXT_FEATURE_2_TITLE); ?></h5>
+                            <p class="text-gray pt-2"><?PHP HTML::print(TEXT_FEATURE_2_DESCRIPTION); ?></p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 services-box">
+                        <div class="text-center p-3">
+                            <i class="mbri-sale text-custom "></i>
+                            <h5 class="pt-4"><?PHP HTML::print(TEXT_FEATURE_3_TITLE); ?></h5>
+                            <p class="text-gray pt-2"><?PHP HTML::print(TEXT_FEATURE_3_DESCRIPTION); ?></p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 services-box">
+                        <div class="text-center p-3">
+                            <i class="mbri-smile-face text-custom"></i>
+                            <h5 class="pt-4"><?PHP HTML::print(TEXT_FEATURE_4_TITLE); ?></h5>
+                            <p class="text-gray pt-2"><?PHP HTML::print(TEXT_FEATURE_4_DESCRIPTION); ?></p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 services-box">
+                        <div class="text-center p-3">
+                            <i class="mbri-features text-custom"></i>
+                            <h5 class="pt-4"><?PHP HTML::print(TEXT_FEATURE_5_TITLE); ?></h5>
+                            <p class="text-gray pt-2"><?PHP HTML::print(TEXT_FEATURE_5_DESCRIPTION); ?></p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 services-box">
+                        <div class="text-center p-3">
+                            <i class="mbri-code text-custom"></i>
+                            <h5 class="pt-4"><?PHP HTML::print(TEXT_FEATURE_6_TITLE); ?></h5>
+                            <p class="text-gray pt-2"><?PHP HTML::print(TEXT_FEATURE_6_DESCRIPTION); ?></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section" id="pricing">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="text-center">
+                            <h3><?PHP HTML::print(TEXT_PRICING_HEADER); ?></h3>
+                            <p class="text-muted slogan"><?PHP HTML::print(TEXT_PRICING_DESCRIPTION); ?></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-sm-4">
+                        <div class="card plan-card text-center">
+                            <div class="card-body">
+                                <div class="pt-3 pb-3">
+                                    <h1><i class="ion-trophy plan-icon bg-dark"></i></h1>
+                                    <h6 class="text-uppercase text-dark"><?PHP HTML::print(TEXT_PRICING_FEATURE_PERSONAL_USAGE); ?></h6>
+                                </div>
+                                <div>
+                                    <h1 class="plan-price text-success"><?PHP HTML::print(TEXT_PLAN_FREE_TITLE); ?></h1>
+                                    <div class="plan-div-border"></div>
+                                </div>
+                                <div class="plan-features pb-3 mt-3 text-muted padding-t-b-30">
+                                    <p><?PHP HTML::print(TEXT_PRICING_FEATURE_FREE_SUPPORT); ?></p>
+                                    <p><?PHP HTML::print(TEXT_PRICING_FEATURE_LIMITED_RESOURCES); ?></p>
+                                    <p><?PHP HTML::print(TEXT_PRICING_FEATURE_PERSONAL_USE_ONLY); ?></p>
+                                    <p><?PHP HTML::print(TEXT_PRICING_FEATURE_NO_HIDDEN_TRIALS); ?></p>
+                                    <a href="<?PHP HTML::print($FreeLocation); ?>" class="btn btn-custom"><?PHP HTML::print(TEXT_GET_LICENSE_BUTTON); ?></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="card plan-card text-center">
+                            <div class="card-body">
+                                <div class="pt-3 pb-3">
+                                    <?PHP
+                                        $Text = "$%s";
+                                        $Text = str_ireplace('%s', $BasicSubscriptionPlan->CyclePrice, $Text);
+                                    ?>
+                                    <h1><i class="ion-trophy plan-icon bg-dark"></i></h1>
+                                    <h6 class="text-uppercase text-dark"><?PHP HTML::print(TEXT_PLAN_BASIC_TITLE); ?></h6>
+                                </div>
+                                <div>
+                                    <h1 class="plan-price"><?PHP HTML::print($Text); ?><sup class="text-muted"><?PHP HTML::print(TEXT_PRICE_PER_MONTH); ?></sup></h1>
+                                    <div class="plan-div-border"></div>
+                                </div>
+                                <div class="plan-features pb-3 mt-3 text-muted padding-t-b-30">
+                                    <p><?PHP HTML::print(TEXT_PRICING_FEATURE_FREE_SUPPORT); ?></p>
+                                    <p><?PHP HTML::print(TEXT_PRICING_FEATURE_MORE_RESOURCES); ?></p>
+                                    <p><?PHP HTML::print(TEXT_PRICING_FEATURE_PERSONAL_USE_ONLY); ?></p>
+                                    <p><?PHP HTML::print(TEXT_PRICING_FEATURE_NO_HIDDEN_FEES); ?></p>
+                                    <a href="<?PHP HTML::print($BasicLocation); ?>" class="btn btn-custom"><?PHP HTML::print(TEXT_GET_LICENSE_BUTTON); ?></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="card plan-card text-center">
+                            <div class="card-body">
+                                <div class="pt-3 pb-3">
+                                    <?PHP
+                                        $Text = "$%s";
+                                        $Text = str_ireplace('%s', $EnterpriseSubscriptionPlan->CyclePrice, $Text);
+                                    ?>
+                                    <h1><i class="ion-trophy plan-icon bg-dark"></i></h1>
+                                    <h6 class="text-uppercase text-dark"><?PHP HTML::print(TEXT_PLAN_ENTERPRISE_TITLE); ?></h6>
+                                </div>
+                                <div>
+                                    <h1 class="plan-price"><?PHP HTML::print($Text); ?><sup class="text-muted"><?PHP HTML::print(TEXT_PRICE_PER_MONTH); ?></sup></h1>
+                                    <div class="plan-div-border"></div>
+                                </div>
+                                <div class="plan-features pb-3 mt-3 text-muted padding-t-b-30">
+                                    <p><?PHP HTML::print(TEXT_PRICING_FEATURE_FREE_SUPPORT); ?></p>
+                                    <p><?PHP HTML::print(TEXT_PRICING_FEATURE_UNLIMITED_RESOURCES); ?></p>
+                                    <p><?PHP HTML::print(TEXT_PRICING_FEATURE_PERSONAL_AND_COMMERCIAL_USE); ?></p>
+                                    <a href="<?PHP HTML::print($EnterpriseLocation); ?>" class="btn btn-custom"><?PHP HTML::print(TEXT_GET_LICENSE_BUTTON); ?></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <?PHP HTML::importSection('landing_footer'); ?>
+        <?PHP HTML::importSection('landing_js'); ?>
     </body>
-    <?PHP HTML::importSection('jquery'); ?>
-    <script src="/assets/vendors/morris/morris.min.js"></script>
-    <script src="/assets/vendors/raphael/raphael-min.js"></script>
-    <?PHP HTML::importScript('render_charts_js'); ?>
-    <?PHP HTML::importScript('realtime_js'); ?>
 </html>

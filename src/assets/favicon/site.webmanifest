@@ -3,28 +3,52 @@
     "short_name": "CoffeeHouse",
     "icons": [
         {
-            "src": "/assets/favicon/android-chrome-36x36.png?v=YAmlY5waqg",
+            "src": "/assets/favicon/android-chrome-36x36.png?cdvn=5ABOj7lNNm",
             "sizes": "36x36",
             "type": "image/png"
         },
         {
-            "src": "/assets/favicon/android-chrome-48x48.png?v=YAmlY5waqg",
+            "src": "/assets/favicon/android-chrome-48x48.png?cdvn=5ABOj7lNNm",
             "sizes": "48x48",
             "type": "image/png"
         },
         {
-            "src": "/assets/favicon/android-chrome-72x72.png?v=YAmlY5waqg",
+            "src": "/assets/favicon/android-chrome-72x72.png?cdvn=5ABOj7lNNm",
             "sizes": "72x72",
             "type": "image/png"
         },
         {
-            "src": "/assets/favicon/android-chrome-96x96.png?v=YAmlY5waqg",
+            "src": "/assets/favicon/android-chrome-96x96.png?cdvn=5ABOj7lNNm",
             "sizes": "96x96",
+            "type": "image/png"
+        },
+        {
+            "src": "/assets/favicon/android-chrome-144x144.png?cdvn=5ABOj7lNNm",
+            "sizes": "144x144",
+            "type": "image/png"
+        },
+        {
+            "src": "/assets/favicon/android-chrome-192x192.png?cdvn=5ABOj7lNNm",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/assets/favicon/android-chrome-256x256.png?cdvn=5ABOj7lNNm",
+            "sizes": "256x256",
+            "type": "image/png"
+        },
+        {
+            "src": "/assets/favicon/android-chrome-384x384.png?cdvn=5ABOj7lNNm",
+            "sizes": "384x384",
+            "type": "image/png"
+        },
+        {
+            "src": "/assets/favicon/android-chrome-512x512.png?cdvn=5ABOj7lNNm",
+            "sizes": "512x512",
             "type": "image/png"
         }
     ],
-    "theme_color": "#2f3d46",
-    "background_color": "#2f3d46",
-    "display": "standalone",
-    "start_url": "/"
+    "theme_color": "#35454f",
+    "background_color": "#35454f",
+    "display": "standalone"
 }

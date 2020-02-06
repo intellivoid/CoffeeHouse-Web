@@ -11,10 +11,7 @@
      */
     function render_alert(string $text, string $type, string $icon)
     {
-        print("<div class=\"alert alert-$type alert-dismissible fade show\" role=\"alert\">");
-        print("<button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-label=\"Close\">");
-        print("<span aria-hidden=\"true\">×</span>");
-        print("</button>");
+        print("<div class=\"alert animated flipInX alert-$type alert-colored\" role=\"alert\">");
         print("<i class=\"mdi mdi-$icon\"></i> ");
         HTML::print($text);
         print("</div>");
