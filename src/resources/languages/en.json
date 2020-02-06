@@ -73,7 +73,15 @@
             "PRICE_PER_MONTH": "USD Per month",
             "PLAN_FREE_TITLE": "FREE",
             "PLAN_BASIC_TITLE": "Basic Plan",
-            "PLAN_ENTERPRISE_TITLE": "Enterprise Plan"
+            "PLAN_ENTERPRISE_TITLE": "Enterprise Plan",
+            "CALLBACK_100": "There was an unexpected error while trying to process your request",
+            "CALLBACK_101": "Intellivoid Accounts returned a response that was not understood by the server",
+            "CALLBACK_102": "There was an error while trying to process your authentication: %s",
+            "CALLBACK_103": "Intellivoid Accounts cannot be reached at this time",
+            "CALLBACK_104": "The authentication method that was used isn't supported by this server",
+            "CALLBACK_105": "You've logged in successfully!",
+            "CALLBACK_106": "The subscription plan was not found",
+            "CALLBACK_107": "The subscription plan is not available"
         },
         "lydia_demo": {
             "PAGE_TITLE": "CoffeeHouse - Lydia",

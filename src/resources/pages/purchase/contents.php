@@ -8,9 +8,9 @@
     use COASniffle\Objects\SubscriptionPurchaseResults;
     use DynamicalWeb\Actions;
     use DynamicalWeb\DynamicalWeb;
-use DynamicalWeb\HTML;
+    use DynamicalWeb\HTML;
 
-HTML::importScript('check_subscription');
+    HTML::importScript('check_subscription');
 
     if(WEB_SUBSCRIPTION_ACTIVE)
     {
