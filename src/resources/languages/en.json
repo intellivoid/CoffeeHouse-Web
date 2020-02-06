@@ -127,6 +127,10 @@
             "DESCRIPTION_2": "Well, it's optional. But the URL contains important information which allows a programmer to determine the issue",
             "HEADER_3": "Like what?",
             "DESCRIPTION_3": "Nothing personal of course, just ask the programmer."
+        },
+        "tos": {
+            "PAGE_TITLE": "CoffeeHouse - Terms of Service",
+            "PAGE_HEADER": "Terms of Service"
         }
     },
     "sections": {
