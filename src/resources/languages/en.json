@@ -11,6 +11,13 @@
             "CARD_CONTENT_HEADER": "What can i do?",
             "HOME_BUTTON": "Go Home"
         },
+        "500": {
+            "PAGE_TITLE": "CoffeeHouse - 500 Internal Server Error",
+            "PAGE_HEADER": "500",
+            "PAGE_DESC": "Server made an oopsy, but we can't show you why. Let our staff know instead!",
+            "CARD_CONTENT_HEADER": "What can i do?",
+            "HOME_BUTTON": "Go Home"
+        },
         "dashboard": {
             "PAGE_TITLE": "CoffeeHouse Dashboard",
             "PAGE_HEADER": "CoffeeHouse Dashboard",
