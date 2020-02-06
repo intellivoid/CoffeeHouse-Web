@@ -4,17 +4,9 @@
         "iso_639-1": "en"
     },
     "pages": {
-        "purchase": {
-            "DETAILS_HEADER": "Confirm Purchase",
-            "DETAILS_DESC": "Review subscription details and start the subscription",
-            "DETAILS_SERVER_CONFIGURATIONS": "Server Configurations",
-            "DETAILS_PAYMENT": "You will pay $%cp USD every %bc days",
-            "PROMOTION_HEADER": "Promotion Code (Optional)",
-            "PROMOTION_DESC": "If you have a promotion code to receive a special offer, you can enter it below and verify it",
-            "PROMOTION_LABEL": "Promotion Code",
-            "PROMOTION_PLACEHOLDER": "Enter Promotion Code",
-            "PROMOTION_SUBMIT_BUTTON": "Verify",
-            "CONFIRM_PURCHASE_BUTTON": "Confirm Purchase"
+        "dashboard": {
+            "PAGE_TITLE": "CoffeeHouse Dashboard",
+            "PAGE_HEADER": "CoffeeHouse Dashboard"
         }
     },
     "sections": {
@@ -22,7 +14,24 @@
             "LOGOUT_BUTTON": "Logout",
             "NAV_UPDATE_SIGNATURES": "Update Signatures",
             "NAV_DOWNLOAD_CERTIFICATE": "Download Certificate",
-            "NAV_API_DOCUMENTATION": "API Documentation"
+            "NAV_API_DOCUMENTATION": "API Documentation",
+            "WIDGET_LYDIA_SESSIONS_HEADER": "Lydia Sessions",
+            "WIDGET_LYDIA_SESSIONS_FOOTER": "%s Total Sessions Allowed",
+            "WIDGET_BILLING_CYCLE_HEADER": "Billing Cycle",
+            "WIDGET_BILLING_CYCLE_DESCRIPTION": "When your next bill is processed on",
+            "BILLING_CYCLE_TODAY": "Today",
+            "WIDGET_PLAN_DESCRIPTION": "You started on %s",
+            "WIDGET_PLAN_FOOTER": "You pay $%s USD every month",
+            "ACCESS_KEY_CARD_TITLE": "Access Key",
+            "GENERATE_NEW_ACCESS_KEY_BUTTON": "Generate new Access Key",
+            "SUPPORT_CARD_TITLE": "Need Help?",
+            "SUPPORT_TELEGRAM_SUPPORT_GROUP": "Telegram Support Group",
+            "SUPPORT_TELEGRAM_SUPPORT_ACCOUNT": "Telegram Support Account",
+            "SUPPORT_CONTACT_INTELLIVOID": "Contact Intellivoid",
+            "API_USAGE_CARD_TITLE": "API Usage",
+            "API_USAGE_COMING_SOON": "Coming Soon",
+            "CALLBACK_100": "There was an error while trying to process your request",
+            "CALLBACK_101": "A new access key has been generated successfully"
         }
     }
 }

@@ -173,17 +173,16 @@
 <html lang="<?PHP HTML::print(APP_LANGUAGE_ISO_639); ?>">
     <head>
         <?PHP HTML::importSection('header'); ?>
-        <title>CoffeeHouse Dashboard</title>
+        <title><?PHP HTML::print(TEXT_PAGE_TITLE); ?></title>
     </head>
     <body>
         <?PHP HTML::importSection('navigation'); ?>
-
         <div class="wrapper">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-sm-12">
                         <div class="page-title-box">
-                            <h4 class="page-title"><?PHP HTML::print("CoffeeHouse Dashboard"); ?></h4>
+                            <h4 class="page-title"><?PHP HTML::print(TEXT_PAGE_HEADER); ?></h4>
                         </div>
                     </div>
                 </div>
@@ -196,10 +195,10 @@
                             </span>
                             <div class="mini-stat-info">
                                 <span class="counter text-white" id="calls_current_month"><?PHP HTML::print(number_format($UsedLydiaSessions)); ?></span>
-                                <?PHP HTML::print("Lydia Sessions"); ?>
+                                <?PHP HTML::print(TEXT_WIDGET_LYDIA_SESSIONS_HEADER); ?>
                             </div>
                             <div class="clearfix"></div>
-                            <p class="text-muted mb-0 m-t-20" id="calls_last_month"><?PHP HTML::print(str_ireplace('%s', number_format($ConfiguredLydiaSessions), "%s Total Sessions Allowed")); ?></p>
+                            <p class="text-muted mb-0 m-t-20" id="calls_last_month"><?PHP HTML::print(str_ireplace('%s', number_format($ConfiguredLydiaSessions), TEXT_WIDGET_LYDIA_SESSIONS_FOOTER)); ?></p>
                         </div>
                     </div>
                     <div class="col-md-6 col-xl-4">
@@ -208,15 +207,15 @@
                                 <i class="mdi mdi-chart-pie"></i>
                             </span>
                             <div class="mini-stat-info">
-                                <span class="counter text-success"><?PHP HTML::print("Billing Cycle"); ?></span>
-                                <?PHP HTML::print("When your next bill is processed on"); ?>
+                                <span class="counter text-success"><?PHP HTML::print(TEXT_WIDGET_BILLING_CYCLE_HEADER); ?></span>
+                                <?PHP HTML::print(TEXT_WIDGET_BILLING_CYCLE_DESCRIPTION); ?>
                             </div>
                             <div class="clearfix"></div>
                             <p class="text-muted mb-0 m-t-20">
                                 <?PHP
                                 if((int)time() > $Subscription->NextBillingCycle)
                                 {
-                                    HTML::print("Today");
+                                    HTML::print(TEXT_BILLING_CYCLE_TODAY);
                                 }
                                 else
                                 {
@@ -233,28 +232,25 @@
                             </span>
                             <div class="mini-stat-info">
                                 <span class="counter text-warning"><?PHP HTML::print($SubscriptionPlan->PlanName); ?></span>
-                                <?PHP HTML::print(str_ireplace('%s', gmdate("j/m/Y g:i a", $Subscription->CreatedTimestamp), "You started on %s")); ?>
+                                <?PHP HTML::print(str_ireplace('%s', gmdate("j/m/Y g:i a", $Subscription->CreatedTimestamp), TEXT_WIDGET_PLAN_DESCRIPTION)); ?>
                             </div>
                             <div class="clearfix"></div>
                             <p class="text-muted mb-0 m-t-20">
-                                <?PHP
-                                    HTML::print(str_ireplace('%s', $Subscription->Properties->CyclePrice, 'You pay $%s USD every month'));
-                                ?>
+                                <?PHP HTML::print(str_ireplace('%s', $Subscription->Properties->CyclePrice, TEXT_WIDGET_PLAN_FOOTER)); ?>
                             </p>
                         </div>
                     </div>
                 </div>
-
                 <div class="row">
                     <div class="col-xl-4">
                         <div class="card m-b-20 animated flipInX">
                             <div class="card-body">
                                 <div class="form-group m-b-0">
-                                    <label for="api_key">Access Key</label>
+                                    <label for="api_key"><?PHP HTML::print(TEXT_ACCESS_KEY_CARD_TITLE); ?></label>
                                     <input class="form-control" type="text" value="<?PHP HTML::print($AccessRecord->AccessKey); ?>" id="api_key" name="api_key" readonly>
                                 </div>
                                 <button class="btn btn-info btn-xs btn-block" onclick="location.href='<?PHP DynamicalWeb::getRoute('dashboard', array('action' => 'generate_access_key'), true); ?>';">
-                                    <i class="mdi mdi-reload pr-2"></i> Generate new Access Key
+                                    <i class="mdi mdi-reload pr-2"></i> <?PHP  HTML::print(TEXT_GENERATE_NEW_ACCESS_KEY_BUTTON); ?>
                                 </button>
                             </div>
                         </div>
@@ -264,17 +260,17 @@
                                 <div class="mt-2 ml-3">
                                     <div class="row mt-3">
                                         <a class="text-white" href="https://t.me/IntellivoidDev">
-                                            <i class="mdi mdi-telegram pr-2"></i>Telegram Support Group
+                                            <i class="mdi mdi-telegram pr-2"></i><?PHP HTML::print(TEXT_SUPPORT_TELEGRAM_SUPPORT_GROUP); ?>
                                         </a>
                                     </div>
                                     <div class="row mt-3">
                                         <a class="text-white" href="https://t.me/IntellivoidSupport">
-                                            <i class="mdi mdi-telegram pr-2"></i>Intellivoid Support Account
+                                            <i class="mdi mdi-telegram pr-2"></i><?PHP HTML::print(TEXT_SUPPORT_TELEGRAM_SUPPORT_ACCOUNT); ?>
                                         </a>
                                     </div>
                                     <div class="row mt-3">
                                         <a class="text-white" href="https://intellivoid.info/contact">
-                                            <i class="mdi mdi-email pr-2"></i>Contact Intellivoid
+                                            <i class="mdi mdi-email pr-2"></i><?PHP HTML::print(TEXT_SUPPORT_CONTACT_INTELLIVOID); ?>
                                         </a>
                                     </div>
 
@@ -285,23 +281,20 @@
                     <div class="col-xl-8">
                         <div class="card m-b-20 animated bounceInRight">
                             <div class="card-body">
-                                <h4 class="header-title">API Usage</h4>
+                                <h4 class="header-title"><?PHP HTML::print(TEXT_API_USAGE_CARD_TITLE); ?></h4>
                                 <div id="api-usage-chart">
                                     <div class="d-flex flex-column justify-content-center align-items-center" style="height:50vh;">
                                         <div class="p-2 my-flex-item">
-                                            <h4 class="text-muted"><?PHP HTML::print("Coming soon"); ?></h4>
+                                            <h4 class="text-muted"><?PHP HTML::print(TEXT_API_USAGE_COMING_SOON); ?></h4>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-
                 </div>
-
             </div>
         </div>
-
         <?PHP HTML::importSection('footer'); ?>
     </body>
     <?PHP HTML::importSection('jquery'); ?>
