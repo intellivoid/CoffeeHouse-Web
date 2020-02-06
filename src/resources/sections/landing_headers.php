@@ -12,3 +12,18 @@
 <link href="/assets/css/animate.css" rel="stylesheet">
 <link href="/assets/css/fe_style.css" rel="stylesheet">
 <link href="/assets/css/flag-icon.min.css" rel="stylesheet" type="text/css" />
+
+
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png?cdvn=5ABOj7lNNm">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png?cdvn=5ABOj7lNNm">
+<link rel="icon" type="image/png" sizes="194x194" href="/assets/favicon/favicon-194x194.png?cdvn=5ABOj7lNNm">
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon/android-chrome-192x192.png?cdvn=5ABOj7lNNm">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png?cdvn=5ABOj7lNNm">
+<link rel="manifest" href="/assets/favicon/site.webmanifest?cdvn=5ABOj7lNNm">
+<link rel="mask-icon" href="/assets/favicon/safari-pinned-tab.svg?cdvn=5ABOj7lNNm" color="#925c25">
+<link rel="shortcut icon" href="/assets/favicon/favicon.ico?cdvn=5ABOj7lNNm">
+<meta name="apple-mobile-web-app-title" content="CoffeeHouse">
+<meta name="application-name" content="CoffeeHouse">
+<meta name="msapplication-TileColor" content="#925c25">
+<meta name="msapplication-config" content="/assets/favicon/browserconfig.xml?cdvn=5ABOj7lNNm">
+<meta name="theme-color" content="#ffffff">
