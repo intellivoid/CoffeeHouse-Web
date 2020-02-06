@@ -1,11 +1,13 @@
 <?PHP
     use DynamicalWeb\DynamicalWeb;
+    use DynamicalWeb\HTML;
+
 ?>
 <div class="modal fade" id="change-language-dialog" tabindex="-1" role="dialog" aria-labelledby="cld" aria-hidden="true" style="display: none;">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="cld">Change Language</h5>
+                <h5 class="modal-title" id="cld"><?PHP HTML::print(TEXT_CHANGE_LANGUAGE_DIALOG_TITLE);?></h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">
                         <i class="mdi mdi-close"></i>

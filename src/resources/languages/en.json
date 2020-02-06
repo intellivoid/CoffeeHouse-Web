@@ -134,11 +134,8 @@
         }
     },
     "sections": {
-        "navigation": {
-            "LOGOUT_BUTTON": "Logout",
-            "NAV_UPDATE_SIGNATURES": "Update Signatures",
-            "NAV_DOWNLOAD_CERTIFICATE": "Download Certificate",
-            "NAV_API_DOCUMENTATION": "API Documentation"
+        "change_language_modal": {
+            "CHANGE_LANGUAGE_DIALOG_TITLE": "Change Language"
         }
     }
 }
