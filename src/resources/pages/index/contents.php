@@ -129,16 +129,13 @@
     <head>
         <?PHP HTML::importSection('landing_headers'); ?>
         <link href="/assets/css/loader.css" rel="stylesheet">
-        <title>CoffeeHouse</title>
+        <title><?PHP HTML::print(TEXT_PAGE_TITLE); ?></title>
     </head>
-
     <body data-spy="scroll" data-target="#ch-navbar" data-offset="20">
         <?PHP HTML::importSection('landing_navbar'); ?>
-
         <section class="section home" id="home">
             <div class="container">
                 <?PHP HTML::importScript('callbacks'); ?>
-
                 <div class="row">
                     <div class="bg-overlay">
                         <div class="bg"></div>
@@ -146,106 +143,97 @@
                         <div class="bg bg3"></div>
                     </div>
                     <div class="col-md-8 offset-md-2 text-white text-center">
-                        <h1 class="home-title animated slow fadeInLeft">CoffeeHouse</h1>
-                        <p class="mt-4 home-subtitle animated slow fadeInRight">Multi-purpose cloud based artificial intelligence & machine learning service for all</p>
-                        <img src="/assets/images/lydia_showcase.svg" alt="CoffeeHouse's Lydia being used in Python" class="img-fluid mt-4 animated slower fadeIn">
+                        <h1 class="home-title animated slow fadeInLeft"><?PHP HTML::print(TEXT_INTRODUCTION_TITLE); ?></h1>
+                        <p class="mt-4 home-subtitle animated slow fadeInRight"><?PHP HTML::print(TEXT_INTRODUCTION_DESCRIPTION); ?></p>
+                        <img src="/assets/images/lydia_showcase.svg" alt="<?PHP HTML::print(TEXT_INTRODUCTION_IMAGE_ALT); ?>" class="img-fluid mt-4 animated slower fadeIn">
                     </div>
                 </div>
             </div>
         </section>
-
-
         <section class="section" id="features">
             <div class="container">
-
                 <div class="row">
                     <div class="col-12">
                         <div class="text-center">
-                            <h3>Everything simplified.</h3>
-                            <p class="text-muted slogan">CoffeeHouse is a one stop solution for cloud-based artificial intelligence & machine learning processing, overtime more features are added and improved on CoffeeHouse</p>
+                            <h3><?PHP HTML::print(TEXT_FEATURES_HEADER); ?></h3>
+                            <p class="text-muted slogan"><?PHP HTML::print(TEXT_FEATURES_DESCRIPTION); ?></p>
                         </div>
                     </div>
                 </div>
-
                 <div class="row mt-4">
                     <div class="col-md-4 services-box">
                         <div class="text-center p-3">
                             <i class="mbri-help text-custom"></i>
-                            <h5 class="pt-4">Community & Official Support</h5>
-                            <p class="text-gray pt-2"> We also have a great community where you can drop by in and ask any question your heart desires </p>
+                            <h5 class="pt-4"><?PHP HTML::print(TEXT_FEATURE_1_TITLE); ?></h5>
+                            <p class="text-gray pt-2"><?PHP HTML::print(TEXT_FEATURE_1_DESCRIPTION); ?></p>
                         </div>
                     </div>
                     <div class="col-md-4 services-box">
                         <div class="text-center p-3">
                             <i class="mbri-devices text-custom"></i>
-                            <h5 class="pt-4">Open Platform</h5>
-                            <p class="text-gray pt-2"> Our open source API Wrappers & Documentation is available to all, free free to contribute!</p>
+                            <h5 class="pt-4"><?PHP HTML::print(TEXT_FEATURE_2_TITLE); ?></h5>
+                            <p class="text-gray pt-2"><?PHP HTML::print(TEXT_FEATURE_2_DESCRIPTION); ?></p>
                         </div>
                     </div>
                     <div class="col-md-4 services-box">
                         <div class="text-center p-3">
                             <i class="mbri-sale text-custom "></i>
-                            <h5 class="pt-4">Affordable & Free</h5>
-                            <p class="text-gray pt-2"> We provide the service for free if you would like to use it for personal uses, need more? it's also affordable with monthly subscriptions!</p>
+                            <h5 class="pt-4"><?PHP HTML::print(TEXT_FEATURE_3_TITLE); ?></h5>
+                            <p class="text-gray pt-2"><?PHP HTML::print(TEXT_FEATURE_3_DESCRIPTION); ?></p>
                         </div>
                     </div>
-
                     <div class="col-md-4 services-box">
                         <div class="text-center p-3">
                             <i class="mbri-smile-face text-custom"></i>
-                            <h5 class="pt-4">Independent Technologies</h5>
-                            <p class="text-gray pt-2">CoffeeHouse is not dependent upon third party services or libraries such as Tensorflow to function, everything was build from scratch.</p>
+                            <h5 class="pt-4"><?PHP HTML::print(TEXT_FEATURE_4_TITLE); ?></h5>
+                            <p class="text-gray pt-2"><?PHP HTML::print(TEXT_FEATURE_4_DESCRIPTION); ?></p>
                         </div>
                     </div>
                     <div class="col-md-4 services-box">
                         <div class="text-center p-3">
                             <i class="mbri-features text-custom"></i>
-                            <h5 class="pt-4">Always More</h5>
-                            <p class="text-gray pt-2">We are constantly working hard to add and improve this service for everyone</p>
+                            <h5 class="pt-4"><?PHP HTML::print(TEXT_FEATURE_5_TITLE); ?></h5>
+                            <p class="text-gray pt-2"><?PHP HTML::print(TEXT_FEATURE_5_DESCRIPTION); ?></p>
                         </div>
                     </div>
                     <div class="col-md-4 services-box">
                         <div class="text-center p-3">
                             <i class="mbri-code text-custom"></i>
-                            <h5 class="pt-4">Truly Simple</h5>
-                            <p class="text-gray pt-2">No need for complicated configurations or setups, start using our services with little to no effort as a software developer</p>
+                            <h5 class="pt-4"><?PHP HTML::print(TEXT_FEATURE_6_TITLE); ?></h5>
+                            <p class="text-gray pt-2"><?PHP HTML::print(TEXT_FEATURE_6_DESCRIPTION); ?></p>
                         </div>
                     </div>
                 </div>
-
             </div>
         </section>
-
         <section class="section" id="pricing">
             <div class="container">
-
                 <div class="row">
                     <div class="col-12">
                         <div class="text-center">
-                            <h3>Affordable Pricing</h3>
-                            <p class="text-muted slogan">Choose the right plan for your necessities</p>
+                            <h3><?PHP HTML::print(TEXT_PRICING_HEADER); ?></h3>
+                            <p class="text-muted slogan"><?PHP HTML::print(TEXT_PRICING_DESCRIPTION); ?></p>
                         </div>
                     </div>
                 </div>
-
                 <div class="row mt-4">
                     <div class="col-sm-4">
                         <div class="card plan-card text-center">
                             <div class="card-body">
                                 <div class="pt-3 pb-3">
                                     <h1><i class="ion-trophy plan-icon bg-dark"></i></h1>
-                                    <h6 class="text-uppercase text-dark">Personal Use</h6>
+                                    <h6 class="text-uppercase text-dark"><?PHP HTML::print(TEXT_PRICING_FEATURE_PERSONAL_USAGE); ?></h6>
                                 </div>
                                 <div>
-                                    <h1 class="plan-price text-success">FREE</h1>
+                                    <h1 class="plan-price text-success"><?PHP HTML::print(TEXT_PLAN_FREE_TITLE); ?></h1>
                                     <div class="plan-div-border"></div>
                                 </div>
                                 <div class="plan-features pb-3 mt-3 text-muted padding-t-b-30">
-                                    <p>Free Official Support</p>
-                                    <p>Limited Resources</p>
-                                    <p>For personal use only</p>
-                                    <p>No hidden fees/trials</p>
-                                    <a href="<?PHP HTML::print($FreeLocation); ?>" class="btn btn-custom">Get License</a>
+                                    <p><?PHP HTML::print(TEXT_PRICING_FEATURE_FREE_SUPPORT); ?></p>
+                                    <p><?PHP HTML::print(TEXT_PRICING_FEATURE_LIMITED_RESOURCES); ?></p>
+                                    <p><?PHP HTML::print(TEXT_PRICING_FEATURE_PERSONAL_USE_ONLY); ?></p>
+                                    <p><?PHP HTML::print(TEXT_PRICING_FEATURE_NO_HIDDEN_TRIALS); ?></p>
+                                    <a href="<?PHP HTML::print($FreeLocation); ?>" class="btn btn-custom"><?PHP HTML::print(TEXT_GET_LICENSE_BUTTON); ?></a>
                                 </div>
                             </div>
                         </div>
@@ -259,18 +247,18 @@
                                         $Text = str_ireplace('%s', $BasicSubscriptionPlan->CyclePrice, $Text);
                                     ?>
                                     <h1><i class="ion-trophy plan-icon bg-dark"></i></h1>
-                                    <h6 class="text-uppercase text-dark">Basic Plan</h6>
+                                    <h6 class="text-uppercase text-dark"><?PHP HTML::print(TEXT_PLAN_BASIC_TITLE); ?></h6>
                                 </div>
                                 <div>
-                                    <h1 class="plan-price"><?PHP HTML::print($Text); ?><sup class="text-muted">USD Per Month</sup></h1>
+                                    <h1 class="plan-price"><?PHP HTML::print($Text); ?><sup class="text-muted"><?PHP HTML::print(TEXT_PRICE_PER_MONTH); ?></sup></h1>
                                     <div class="plan-div-border"></div>
                                 </div>
                                 <div class="plan-features pb-3 mt-3 text-muted padding-t-b-30">
-                                    <p>Free Official Support</p>
-                                    <p>More Resources</p>
-                                    <p>For personal use only</p>
-                                    <p>No extra costs/hidden fees</p>
-                                    <a href="<?PHP HTML::print($BasicLocation); ?>" class="btn btn-custom">Get License</a>
+                                    <p><?PHP HTML::print(TEXT_PRICING_FEATURE_FREE_SUPPORT); ?></p>
+                                    <p><?PHP HTML::print(TEXT_PRICING_FEATURE_MORE_RESOURCES); ?></p>
+                                    <p><?PHP HTML::print(TEXT_PRICING_FEATURE_PERSONAL_USE_ONLY); ?></p>
+                                    <p><?PHP HTML::print(TEXT_PRICING_FEATURE_NO_HIDDEN_FEES); ?></p>
+                                    <a href="<?PHP HTML::print($BasicLocation); ?>" class="btn btn-custom"><?PHP HTML::print(TEXT_GET_LICENSE_BUTTON); ?></a>
                                 </div>
                             </div>
                         </div>
@@ -284,28 +272,24 @@
                                         $Text = str_ireplace('%s', $EnterpriseSubscriptionPlan->CyclePrice, $Text);
                                     ?>
                                     <h1><i class="ion-trophy plan-icon bg-dark"></i></h1>
-                                    <h6 class="text-uppercase text-dark">Enterprise Plan</h6>
+                                    <h6 class="text-uppercase text-dark"><?PHP HTML::print(TEXT_PLAN_ENTERPRISE_TITLE); ?></h6>
                                 </div>
                                 <div>
-                                    <h1 class="plan-price"><?PHP HTML::print($Text); ?><sup class="text-muted">USD Per month</sup></h1>
+                                    <h1 class="plan-price"><?PHP HTML::print($Text); ?><sup class="text-muted"><?PHP HTML::print(TEXT_PRICE_PER_MONTH); ?></sup></h1>
                                     <div class="plan-div-border"></div>
                                 </div>
                                 <div class="plan-features pb-3 mt-3 text-muted padding-t-b-30">
-                                    <p>Free Official Support</p>
-                                    <p>Unlimited Resources</p>
-                                    <p>For personal uses</p>
-                                    <p>For commercial uses</p>
-                                    <a href="<?PHP HTML::print($EnterpriseLocation); ?>" class="btn btn-custom">Get License</a>
+                                    <p><?PHP HTML::print(TEXT_PRICING_FEATURE_FREE_SUPPORT); ?></p>
+                                    <p><?PHP HTML::print(TEXT_PRICING_FEATURE_UNLIMITED_RESOURCES); ?></p>
+                                    <p><?PHP HTML::print(TEXT_PRICING_FEATURE_PERSONAL_AND_COMMERCIAL_USE); ?></p>
+                                    <a href="<?PHP HTML::print($EnterpriseLocation); ?>" class="btn btn-custom"><?PHP HTML::print(TEXT_GET_LICENSE_BUTTON); ?></a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!-- end row -->
-
             </div>
         </section>
-
         <?PHP HTML::importSection('landing_footer'); ?>
         <?PHP HTML::importSection('landing_js'); ?>
     </body>
