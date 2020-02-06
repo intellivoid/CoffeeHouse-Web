@@ -147,6 +147,12 @@
             "NAVBAR_LYDIA_DEMO": "Lydia Demo",
             "NAVBAR_DASHBOARD": "Dashboard",
             "NAVBAR_LOGOUT": "Logout"
+        },
+        "navigation": {
+            "NAVBAR_AVATAR_DROPDOWN_LOGOUT": "Logout",
+            "NAVBAR_HOME": "Home",
+            "NAVBAR_GENERATE_ACCESS_KEY": "Generate Access Key",
+            "NAVBAR_DOCS": "API Documentation"
         }
     }
 }

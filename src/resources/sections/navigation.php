@@ -1,11 +1,9 @@
 <?php
-
-use COASniffle\Abstracts\AvatarResourceName;
-use COASniffle\Handlers\COA;
-use DynamicalWeb\DynamicalWeb;
-use DynamicalWeb\HTML;
+    use COASniffle\Abstracts\AvatarResourceName;
+    use COASniffle\Handlers\COA;
+    use DynamicalWeb\DynamicalWeb;
+    use DynamicalWeb\HTML;
 ?>
-
 <header id="topnav">
     <div class="topbar-main">
         <div class="container-fluid">
@@ -29,11 +27,10 @@ use DynamicalWeb\HTML;
                             <img src="<?PHP HTML::print(COA::getAvatarUrl(AvatarResourceName::Normal, WEB_ACCOUNT_PUBID)); ?>" alt="user" class="rounded-circle">
                         </a>
                         <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
-                            <a class="dropdown-item" href="<?PHP DynamicalWeb::getRoute('logout', array(), true); ?>"><i class="dripicons-exit text-muted"></i><?PHP HTML::print(TEXT_LOGOUT_BUTTON); ?></a>
+                            <a class="dropdown-item" href="<?PHP DynamicalWeb::getRoute('logout', array(), true); ?>"><i class="dripicons-exit text-muted"></i><?PHP HTML::print(TEXT_NAVBAR_AVATAR_DROPDOWN_LOGOUT); ?></a>
                         </div>
                     </li>
                     <li class="menu-item list-inline-item">
-                        <!-- Mobile menu toggle-->
                         <a class="navbar-toggle nav-link">
                             <div class="lines">
                                 <span></span>
@@ -41,37 +38,29 @@ use DynamicalWeb\HTML;
                                 <span></span>
                             </div>
                         </a>
-                        <!-- End mobile menu toggle-->
                     </li>
-
                 </ul>
             </div>
-            <!-- end menu-extras -->
-
             <div class="clearfix"></div>
-
-        </div> <!-- end container -->
+        </div>
     </div>
-    <!-- end topbar-main -->
-
-    <!-- MENU Start -->
     <div class="navbar-custom">
         <div class="container-fluid">
             <div id="navigation">
                 <ul class="navigation-menu">
                     <li>
                         <a href="<?PHP DynamicalWeb::getRoute('index', array(), true); ?>">
-                            <i class="mdi mdi-home"></i> <?PHP HTML::print("Home"); ?>
+                            <i class="mdi mdi-home"></i> <?PHP HTML::print(TEXT_NAVBAR_HOME); ?>
                         </a>
                     </li>
                     <li>
                         <a href="<?PHP DynamicalWeb::getRoute('dashboard', array('action' => 'generate_access_key'), true); ?>">
-                            <i class="mdi mdi-refresh"></i> <?PHP HTML::print("Generate Access Key"); ?>
+                            <i class="mdi mdi-refresh"></i> <?PHP HTML::print(TEXT_NAVBAR_GENERATE_ACCESS_KEY); ?>
                         </a>
                     </li>
                     <li>
                         <a href="https://gist.github.com/Netkas/d3617e5b5b66c7851c728d3c0073529a" target="_blank">
-                            <i class="mdi mdi-book"></i> <?PHP HTML::print("API Documentation"); ?>
+                            <i class="mdi mdi-book"></i> <?PHP HTML::print(TEXT_NAVBAR_DOCS); ?>
                         </a>
                     </li>
                 </ul>
