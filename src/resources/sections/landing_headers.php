@@ -1,17 +1,17 @@
-<meta charset="utf-8" />
+<meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
-<meta content="Admin Dashboard" name="description" />
-<meta content="Themesbrand" name="author" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500|Quattrocento+Sans:400,700" rel="stylesheet" />
-<link rel="stylesheet" type="text/css" href="/assets/css/mobirise.css" />
+<meta content="Admin Dashboard" name="description">
+<meta content="Themesbrand" name="author">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500|Quattrocento+Sans:400,700" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="/assets/css/mobirise.css">
 <link rel="stylesheet" href="/assets/css/magnific-popup.css">
-<link rel="stylesheet" type="text/css" href="/assets/css/materialdesignicons.min.css" />
+<link rel="stylesheet" type="text/css" href="/assets/css/materialdesignicons.min.css">
 <link href="/assets/css/bootstrap.min.css" rel="stylesheet">
 <link href="/assets/css/animate.css" rel="stylesheet">
 <link href="/assets/css/fe_style.css" rel="stylesheet">
-<link href="/assets/css/flag-icon.min.css" rel="stylesheet" type="text/css" />
+<link href="/assets/css/flag-icon.min.css" rel="stylesheet" type="text/css">
 <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png?cdvn=5ABOj7lNNm">
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png?cdvn=5ABOj7lNNm">
 <link rel="icon" type="image/png" sizes="194x194" href="/assets/favicon/favicon-194x194.png?cdvn=5ABOj7lNNm">
