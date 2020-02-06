@@ -7,7 +7,7 @@
     <head>
         <?PHP HTML::importSection('landing_headers'); ?>
         <link href="/assets/css/loader.css" rel="stylesheet">
-        <title>CoffeeHouse</title>
+        <title>CoffeeHouse - Terms of Service</title>
     </head>
 
     <body data-spy="scroll" data-target="#ch-navbar" data-offset="20">
