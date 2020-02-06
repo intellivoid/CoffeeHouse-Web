@@ -136,6 +136,10 @@
     "sections": {
         "change_language_modal": {
             "CHANGE_LANGUAGE_DIALOG_TITLE": "Change Language"
+        },
+        "landing_footer": {
+            "FOOTER_TERMS_OF_SERVICE": "Terms of Service",
+            "FOOTER_PRIVACY_POLICY": "Privacy Policy"
         }
     }
 }
