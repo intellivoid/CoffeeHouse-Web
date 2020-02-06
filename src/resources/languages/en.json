@@ -116,6 +116,17 @@
             "CALLBACK_101": "The promotion code is not available",
             "CALLBACK_102": "The promotion code has expired",
             "CALLBACK_103": "The promotion code is not applicable to this plan"
+        },
+        "service_error": {
+            "PAGE_TITLE": "CoffeeHouse - Service Error",
+            "HEADER_TITLE": "Service Error",
+            "HEADER_DESCRIPTION": "There was an error while trying to handle your request",
+            "HEADER_1": "What is this?",
+            "DESCRIPTION_1": "There was an error while trying to handle your request, please send this page's URL to Intellivoid Support",
+            "HEADER_2": "Why?",
+            "DESCRIPTION_2": "Well, it's optional. But the URL contains important information which allows a programmer to determine the issue",
+            "HEADER_3": "Like what?",
+            "DESCRIPTION_3": "Nothing personal of course, just ask the programmer."
         }
     },
     "sections": {
