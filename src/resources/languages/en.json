@@ -87,6 +87,10 @@
             "SESSION_EXPIRED_RESPONSE": "Hey! our chat session expired, we can talk again though! Try refreshing this page!",
             "RELOAD_ACTION": "Reload Page",
             "INTRODUCTION_MESSAGE": "Hello! Try having a conversation with me!"
+        },
+        "privacy": {
+            "PAGE_TITLE": "CoffeeHouse - Privacy Policy",
+            "PAGE_HEADER": "Privacy Policy"
         }
     },
     "sections": {
