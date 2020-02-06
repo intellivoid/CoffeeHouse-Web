@@ -10,11 +10,11 @@
     use IntellivoidAPI\Abstracts\SearchMethods\AccessRecordSearchMethod;
     use IntellivoidAPI\Exceptions\AccessRecordNotFoundException;
     use IntellivoidAPI\IntellivoidAPI;
-use IntellivoidSubscriptionManager\Abstracts\SearchMethods\SubscriptionPlanSearchMethod;
-use IntellivoidSubscriptionManager\Abstracts\SearchMethods\SubscriptionSearchMethod;
+    use IntellivoidSubscriptionManager\Abstracts\SearchMethods\SubscriptionPlanSearchMethod;
+    use IntellivoidSubscriptionManager\Abstracts\SearchMethods\SubscriptionSearchMethod;
     use IntellivoidSubscriptionManager\Exceptions\SubscriptionNotFoundException;
-use IntellivoidSubscriptionManager\Exceptions\SubscriptionPlanNotFoundException;
-use IntellivoidSubscriptionManager\IntellivoidSubscriptionManager;
+    use IntellivoidSubscriptionManager\Exceptions\SubscriptionPlanNotFoundException;
+    use IntellivoidSubscriptionManager\IntellivoidSubscriptionManager;
     use IntellivoidSubscriptionManager\Objects\Subscription\Feature;
 
     Runtime::import('CoffeeHouse');
@@ -165,6 +165,9 @@ use IntellivoidSubscriptionManager\IntellivoidSubscriptionManager;
         }
     }
 
+    HTML::importScript('actions');
+    HTML::importScript('alert');
+
 ?>
 <!doctype html>
 <html lang="<?PHP HTML::print(APP_LANGUAGE_ISO_639); ?>">
@@ -184,8 +187,7 @@ use IntellivoidSubscriptionManager\IntellivoidSubscriptionManager;
                         </div>
                     </div>
                 </div>
-
-                <!-- CoffeeHouse Dashboard Widgets -->
+                <?PHP HTML::importScript('callbacks'); ?>
                 <div class="row">
                     <div class="col-md-6 col-xl-4">
                         <div class="mini-stat clearfix bg-white animated fadeInLeft">
@@ -251,7 +253,7 @@ use IntellivoidSubscriptionManager\IntellivoidSubscriptionManager;
                                     <label for="api_key">Access Key</label>
                                     <input class="form-control" type="text" value="<?PHP HTML::print($AccessRecord->AccessKey); ?>" id="api_key" name="api_key" readonly>
                                 </div>
-                                <button class="btn btn-info btn-xs btn-block">
+                                <button class="btn btn-info btn-xs btn-block" onclick="location.href='<?PHP DynamicalWeb::getRoute('dashboard', array('action' => 'generate_access_key'), true); ?>';">
                                     <i class="mdi mdi-reload pr-2"></i> Generate new Access Key
                                 </button>
                             </div>

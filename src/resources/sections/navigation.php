@@ -58,27 +58,22 @@ use DynamicalWeb\HTML;
     <div class="navbar-custom">
         <div class="container-fluid">
             <div id="navigation">
-                <!-- Navigation Menu-->
                 <ul class="navigation-menu">
-
                     <li>
-                        <a href="?action=update_signatures">
-                            <i class="mdi mdi-refresh"></i> <?PHP HTML::print(TEXT_NAV_UPDATE_SIGNATURES); ?>
+                        <a href="<?PHP DynamicalWeb::getRoute('index', array(), true); ?>">
+                            <i class="mdi mdi-home"></i> <?PHP HTML::print("Home"); ?>
                         </a>
                     </li>
-
                     <li>
-                        <a href="?action=download_certificate">
-                            <i class="mdi mdi-certificate"></i> <?PHP HTML::print(TEXT_NAV_DOWNLOAD_CERTIFICATE); ?>
+                        <a href="<?PHP DynamicalWeb::getRoute('dashboard', array('action' => 'generate_access_key'), true); ?>">
+                            <i class="mdi mdi-refresh"></i> <?PHP HTML::print("Generate Access Key"); ?>
                         </a>
                     </li>
-
                     <li>
                         <a href="https://gist.github.com/Netkas/d3617e5b5b66c7851c728d3c0073529a" target="_blank">
-                            <i class="mdi mdi-book"></i> <?PHP HTML::print(TEXT_NAV_API_DOCUMENTATION); ?>
+                            <i class="mdi mdi-book"></i> <?PHP HTML::print("API Documentation"); ?>
                         </a>
                     </li>
-
                 </ul>
             </div>
         </div>
