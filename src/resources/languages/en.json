@@ -6,15 +6,7 @@
     "pages": {
         "dashboard": {
             "PAGE_TITLE": "CoffeeHouse Dashboard",
-            "PAGE_HEADER": "CoffeeHouse Dashboard"
-        }
-    },
-    "sections": {
-        "navigation": {
-            "LOGOUT_BUTTON": "Logout",
-            "NAV_UPDATE_SIGNATURES": "Update Signatures",
-            "NAV_DOWNLOAD_CERTIFICATE": "Download Certificate",
-            "NAV_API_DOCUMENTATION": "API Documentation",
+            "PAGE_HEADER": "CoffeeHouse Dashboard",
             "WIDGET_LYDIA_SESSIONS_HEADER": "Lydia Sessions",
             "WIDGET_LYDIA_SESSIONS_FOOTER": "%s Total Sessions Allowed",
             "WIDGET_BILLING_CYCLE_HEADER": "Billing Cycle",
@@ -32,6 +24,14 @@
             "API_USAGE_COMING_SOON": "Coming Soon",
             "CALLBACK_100": "There was an error while trying to process your request",
             "CALLBACK_101": "A new access key has been generated successfully"
+        }
+    },
+    "sections": {
+        "navigation": {
+            "LOGOUT_BUTTON": "Logout",
+            "NAV_UPDATE_SIGNATURES": "Update Signatures",
+            "NAV_DOWNLOAD_CERTIFICATE": "Download Certificate",
+            "NAV_API_DOCUMENTATION": "API Documentation"
         }
     }
 }
