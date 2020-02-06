@@ -4,6 +4,13 @@
         "iso_639-1": "en"
     },
     "pages": {
+        "404": {
+            "PAGE_TITLE": "CoffeeHouse - 404 Not Found",
+            "PAGE_HEADER": "404",
+            "PAGE_DESC": "Nothing was found here, that's all we know.",
+            "CARD_CONTENT_HEADER": "What can i do?",
+            "HOME_BUTTON": "Go Home"
+        },
         "dashboard": {
             "PAGE_TITLE": "CoffeeHouse Dashboard",
             "PAGE_HEADER": "CoffeeHouse Dashboard",
