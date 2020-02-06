@@ -12,8 +12,6 @@
 <link href="/assets/css/animate.css" rel="stylesheet">
 <link href="/assets/css/fe_style.css" rel="stylesheet">
 <link href="/assets/css/flag-icon.min.css" rel="stylesheet" type="text/css" />
-
-
 <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png?cdvn=5ABOj7lNNm">
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png?cdvn=5ABOj7lNNm">
 <link rel="icon" type="image/png" sizes="194x194" href="/assets/favicon/favicon-194x194.png?cdvn=5ABOj7lNNm">
