@@ -114,7 +114,7 @@
     <head>
         <?PHP HTML::importSection('landing_headers'); ?>
         <link href="/assets/css/loader.css" rel="stylesheet">
-        <title>CoffeeHouse - Confirm Purchase</title>
+        <title><?PHP HTML::print(TEXT_PAGE_TITLE); ?></title>
     </head>
 
     <body data-spy="scroll" data-target="#ch-navbar" data-offset="20">
@@ -123,7 +123,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-8 offset-md-2 text-white text-center">
-                        <h1 class="generic-title mb-5">Confirm Purchase</h1>
+                        <h1 class="generic-title mb-5"><?PHP HTML::print(TEXT_CONFIRM_PURCHASE_TITLE); ?></h1>
                     </div>
                 </div>
             </div>
@@ -136,10 +136,8 @@
                         <div class="card m-b-20">
                             <div class="card-body">
                                 <div class="card-body">
-
-                                    <h4 class="card-title"><?PHP HTML::print(TEXT_DETAILS_HEADER); ?></h4>
+                                    <h4 class="card-title"><?PHP HTML::print(TEXT_CONFIRM_PURCHASE_TITLE); ?></h4>
                                     <p class="card-description"><?PHP HTML::print(TEXT_DETAILS_DESC); ?></p>
-
                                     <div class="row">
                                         <div class="col-md-6">
                                             <table class="table">
@@ -149,10 +147,10 @@
                                                 {
                                                     switch($feature['name'])
                                                     {
-                                                        case 'SERVER_CONFIGS':
+                                                        case 'LYDIA_SESSIONS':
                                                             ?>
                                                             <tr>
-                                                                <td><?PHP HTML::print("Server Configurations"); ?></td>
+                                                                <td><?PHP HTML::print(TEXT_LYDIA_SESSIONS_CONFIGURATION); ?></td>
                                                                 <td><?PHP HTML::print($feature['value']); ?></td>
                                                             </tr>
                                                             <?PHP
@@ -179,10 +177,10 @@
                                                 <h1 class="font-weight-normal mb-4 text-success">$<?PHP HTML::print($Subscription->SubscriptionDetails->InitialPrice); ?> USD</h1>
                                                 <p>
                                                     <?PHP
-                                                    $Text = TEXT_DETAILS_PAYMENT;
-                                                    $Text = str_ireplace('%bc', intval(abs($Subscription->SubscriptionDetails->BillingCycle)/60/60/24), $Text);
-                                                    $Text = str_ireplace('%cp', $Subscription->SubscriptionDetails->CyclePrice, $Text);
-                                                    HTML::print($Text);
+                                                        $Text = TEXT_DETAILS_PAYMENT;
+                                                        $Text = str_ireplace('%bc', intval(abs($Subscription->SubscriptionDetails->BillingCycle)/60/60/24), $Text);
+                                                        $Text = str_ireplace('%cp', $Subscription->SubscriptionDetails->CyclePrice, $Text);
+                                                        HTML::print($Text);
                                                     ?>
                                                 </p>
                                             </div>

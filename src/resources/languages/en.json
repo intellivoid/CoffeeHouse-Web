@@ -99,6 +99,23 @@
         "privacy": {
             "PAGE_TITLE": "CoffeeHouse - Privacy Policy",
             "PAGE_HEADER": "Privacy Policy"
+        },
+        "purchase": {
+            "PAGE_TITLE": "CoffeeHouse - Confirm Purchase",
+            "CONFIRM_PURCHASE_TITLE": "Confirm Purchase",
+            "DETAILS_DESC": "Review subscription details and start the subscription",
+            "LYDIA_SESSIONS_CONFIGURATION": "Monthly Lydia Sessions",
+            "DETAILS_PAYMENT": "You will pay $%cp USD every %bc days",
+            "PROMOTION_HEADER": "Promotion Code (Optional)",
+            "PROMOTION_DESC": "If you have a promotion code to receive a special offer, you can enter it below and verify it",
+            "PROMOTION_LABEL": "Promotion Code",
+            "PROMOTION_PLACEHOLDER": "Enter Promotion Code",
+            "PROMOTION_SUBMIT_BUTTON": "Verify",
+            "CONFIRM_PURCHASE_BUTTON": "Confirm Purchase",
+            "CALLBACK_100": "The promotion code is invalid",
+            "CALLBACK_101": "The promotion code is not available",
+            "CALLBACK_102": "The promotion code has expired",
+            "CALLBACK_103": "The promotion code is not applicable to this plan"
         }
     },
     "sections": {
