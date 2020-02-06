@@ -74,6 +74,19 @@
             "PLAN_FREE_TITLE": "FREE",
             "PLAN_BASIC_TITLE": "Basic Plan",
             "PLAN_ENTERPRISE_TITLE": "Enterprise Plan"
+        },
+        "lydia_demo": {
+            "PAGE_TITLE": "CoffeeHouse - Lydia",
+            "HEADER_DESCRIPTION": "Lydia is a advanced chat bot that actively learns from conversations and is capable of speaking in many languages without having to hard-configure anything about it.",
+            "INPUT_PLACEHOLDER": "What's on your mind?",
+            "GENERIC_USER_SELF": "You",
+            "AUTHENTICATION_REQUIRED_RESPONSE": "As much as i would love to chat with you, i need you to authenticate first! this is to prevent abuse and spam",
+            "AUTHENTICATION_REQUIRED_ACTION": "Click here to authenticate",
+            "GENERIC_ERROR_RESPONSE": "Uh oh... Something went wrong, try refreshing maybe?",
+            "SESSION_ERROR_RESPONSE": "Whoops! There seems to be an issue with our chat session. Try refreshing this page!",
+            "SESSION_EXPIRED_RESPONSE": "Hey! our chat session expired, we can talk again though! Try refreshing this page!",
+            "RELOAD_ACTION": "Reload Page",
+            "INTRODUCTION_MESSAGE": "Hello! Try having a conversation with me!"
         }
     },
     "sections": {

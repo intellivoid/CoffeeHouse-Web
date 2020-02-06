@@ -47,14 +47,14 @@
         send_response(array(
             'status' => true,
             'text' => array(
-                'generic_user' => 'You',
-                'authentication_required_message' => 'As much as i would love to chat with you, i need you to authenticate first! this is to prevent abuse and spam',
-                'authentication_action' => 'Click here to authenticate',
-                'generic_error_message' => 'Uh oh... Something went wrong, try refreshing maybe?',
-                'session_error_message' => 'Whoops! There seems to be an issue with our chat session. Try refreshing this page!',
-                'session_expired_message' => 'Hey! our chat session expired, we can talk again though! Try refreshing this page!',
-                'reload_action' => 'Refresh Page',
-                'introduction_message' => 'Hello! Try having a conversation with me!'
+                'generic_user' => TEXT_GENERIC_USER_SELF,
+                'authentication_required_message' => TEXT_AUTHENTICATION_REQUIRED_RESPONSE,
+                'authentication_action' => TEXT_AUTHENTICATION_REQUIRED_ACTION,
+                'generic_error_message' => TEXT_GENERIC_ERROR_RESPONSE,
+                'session_error_message' => TEXT_SESSION_ERROR_RESPONSE,
+                'session_expired_message' => TEXT_SESSION_EXPIRED_RESPONSE,
+                'reload_action' => TEXT_RELOAD_ACTION,
+                'introduction_message' => TEXT_INTRODUCTION_MESSAGE
 
             )
         ));
@@ -65,7 +65,7 @@
         if(WEB_SESSION_ACTIVE == false)
         {
             send_response(array(
-                'username' => "You",
+                'username' => TEXT_GENERIC_USER_SELF,
                 "user_avatar" => "/assets/images/generic_user.svg"
             ));
         }
@@ -161,11 +161,11 @@
     {
         if(WEB_SESSION_ACTIVE == false)
         {
-            //send_response(array(
-            //    'status' => false,
-            //    'error_type' => "authentication_required",
-            //    'message' => null
-            //));
+            send_response(array(
+                'status' => false,
+                'error_type' => "authentication_required",
+                'message' => null
+            ));
         }
 
         if(isset(DynamicalWeb::$globalObjects['coffeehouse']) == false)
@@ -183,7 +183,7 @@
         try
         {
             $CleverBot = new Cleverbot($CoffeeHouse);
-            $CleverBot->newSession('en');
+            $CleverBot->newSession(APP_LANGUAGE_ISO_639);
             $Session = $CleverBot->getSession();
 
             /** @var sws $sws */
