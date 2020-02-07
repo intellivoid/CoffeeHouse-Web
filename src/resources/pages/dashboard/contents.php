@@ -256,7 +256,7 @@
                         </div>
                         <div class="card m-b-20 animated bounceInUp">
                             <div class="card-body">
-                                <h5 class="header-title">Need Help?</h5>
+                                <h5 class="header-title"><?PHP HTML::print(TEXT_SUPPORT_CARD_TITLE); ?></h5>
                                 <div class="mt-2 ml-3">
                                     <div class="row mt-3">
                                         <a class="text-white" href="https://t.me/IntellivoidDev">
