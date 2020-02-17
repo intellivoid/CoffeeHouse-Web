@@ -1,0 +1,158 @@
+{
+    "language": {
+        "name": "turkish",
+        "iso_639-1": "tr"
+    },
+    "pages": {
+        "404": {
+            "PAGE_TITLE": "CoffeeHouse - 404 Bulunamadı",
+            "PAGE_HEADER": "404",
+            "PAGE_DESC": "Burada hiçbir şey bulunamadı, tek bildiğimiz bu.",
+            "CARD_CONTENT_HEADER": "Ne yapabilirim ?",
+            "HOME_BUTTON": "Anasayfaya Dön"
+        },
+        "500": {
+            "PAGE_TITLE": "CoffeeHouse - 500 Sunucu Hatası",
+            "PAGE_HEADER": "500",
+            "PAGE_DESC": "Sunucu oopsy yaptı, ama size nedenini gösteremeyiz. Bunun yerine personelimize haber verin!",
+            "CARD_CONTENT_HEADER": "Ne yapabilirim ?",
+            "HOME_BUTTON": "Anasayfaya Dön"
+        },
+        "dashboard": {
+            "PAGE_TITLE": "CoffeeHouse Paneli",
+            "PAGE_HEADER": "CoffeeHouse Paneli",
+            "WIDGET_LYDIA_SESSIONS_HEADER": "Lydia Oturumları",
+            "WIDGET_LYDIA_SESSIONS_FOOTER": "İzin Verilen Toplam Oturumlar %s",
+            "WIDGET_BILLING_CYCLE_HEADER": "Fatura Döngüsü",
+            "WIDGET_BILLING_CYCLE_DESCRIPTION": "Bir sonraki faturanız işleme alındığında",
+            "BILLING_CYCLE_TODAY": "Bugün",
+            "WIDGET_PLAN_DESCRIPTION": "%s tarihinde başladınız",
+            "WIDGET_PLAN_FOOTER": "Her ay $%s USD ödüyorsun.",
+            "ACCESS_KEY_CARD_TITLE": "Erişim Anahtarı",
+            "GENERATE_NEW_ACCESS_KEY_BUTTON": "Yeni Bir Erişim Anahtarı Oluştur",
+            "SUPPORT_CARD_TITLE": "Yardıma mı ihtiyaç var ?",
+            "SUPPORT_TELEGRAM_SUPPORT_GROUP": "Telegram Destek Grubu",
+            "SUPPORT_TELEGRAM_SUPPORT_ACCOUNT": "Telegram Destek Hesabı",
+            "SUPPORT_CONTACT_INTELLIVOID": "Intellivoid ile iletişime geç",
+            "API_USAGE_CARD_TITLE": "API Kullanımı",
+            "API_USAGE_COMING_SOON": "Yakında",
+            "CALLBACK_100": "İsteğinizi işleme koymaya çalışırken bir hata oluştu",
+            "CALLBACK_101": "Yeni bir erişim anahtarı başarıyla oluşturuldu"
+        },
+        "index": {
+            "PAGE_TITLE": "CoffeeHouse",
+            "INTRODUCTION_TITLE": "CoffeeHouse",
+            "INTRODUCTION_DESCRIPTION": "Herkes için çok amaçlı bulut tabanlı yapay zeka ve makine öğrenimi hizmeti",
+            "INTRODUCTION_IMAGE_ALT": "CoffeeHouse'un Lydia'sı Python'da kullanılıyor",
+            "FEATURES_HEADER": "Her şey basitleştirildi.",
+            "FEATURES_DESCRIPTION": "CoffeeHouse, bulut tabanlı yapay zeka ve makine öğrenimi işleme için tek durak bir çözümdür, fazla mesai CoffeeHouse'da daha fazla özellik eklenir ve geliştirilir",
+            "FEATURE_1_TITLE": "Toplıluk & Resmi Destek",
+            "FEATURE_1_DESCRIPTION": "Ayrıca buraya girip içinizden geçen herhangi bir soruyu sorabileceğiniz harika bir topluluğumuz var.",
+            "FEATURE_2_TITLE": "Açık Platform",
+            "FEATURE_2_DESCRIPTION": "Açık kaynak API Paketleyicileri ve Belgelerimiz herkese açıktır, katkıda bulunmak ücretsizdir!",
+            "FEATURE_3_TITLE": "Uygun Fiyatlı ve Ücretsiz",
+            "FEATURE_3_DESCRIPTION": "Kişisel kullanımlar için kullanmak isterseniz hizmeti ücretsiz olarak sağlıyoruz, daha fazlasına mı ihtiyacınız var? aylık aboneliklerle de uygun fiyatlı!",
+            "FEATURE_4_TITLE": "Bağımsız Teknolojiler",
+            "FEATURE_4_DESCRIPTION": "CoffeeHouse, üçüncü taraf hizmetlere veya Tensorflow gibi kütüphanelere bağlı değildir, her şey sıfırdan inşa edilmiştir.",
+            "FEATURE_5_TITLE": "Her Zaman Daha Fazlası",
+            "FEATURE_5_DESCRIPTION": "Bu hizmeti herkes için eklemek ve geliştirmek için sürekli çalışıyoruz",
+            "FEATURE_6_TITLE": "Gerçekten Basit",
+            "FEATURE_6_DESCRIPTION": "Karmaşık yapılandırma ve kurulumlara gerek yok, hizmetlerimizi bir yazılım geliştiricisi olarak çok az çaba harcayarak veya hiç çaba harcamadan kullanmaya başlayın",
+            "PRICING_HEADER": "Uygun Fiyatlandırma",
+            "PRICING_DESCRIPTION": "İhtiyaçlarınız için doğru planı seçin",
+            "PRICING_FEATURE_FREE_SUPPORT": "Ücretsiz Resmi Destek",
+            "PRICING_FEATURE_LIMITED_RESOURCES": "Sınırlı kaynaklar",
+            "PRICING_FEATURE_MORE_RESOURCES": "Fazla Kaynak",
+            "PRICING_FEATURE_UNLIMITED_RESOURCES": "Sınırsız Kaynaklar",
+            "PRICING_FEATURE_PERSONAL_USE_ONLY": "Sadece kişisel kullanım içindir",
+            "PRICING_FEATURE_PERSONAL_AND_COMMERCIAL_USE": "Kişisel ve ticari kullanımlar için",
+            "PRICING_FEATURE_NO_HIDDEN_FEES": "Ek ücret/gizli ücret yok",
+            "PRICING_FEATURE_NO_HIDDEN_TRIALS": "Gizli ücret/deneme yok",
+            "PRICING_FEATURE_PERSONAL_USAGE": "Kişisel Kullanım",
+            "GET_LICENSE_BUTTON": "Lisans Al",
+            "PRICE_PER_MONTH": "Aylık USD",
+            "PLAN_FREE_TITLE": "Ücretsiz",
+            "PLAN_BASIC_TITLE": "Temel Plan",
+            "PLAN_ENTERPRISE_TITLE": "Kurumsal Plan",
+            "CALLBACK_100": "İsteğinizi işleme koymaya çalışırken beklenmeyen bir hata oluştu",
+            "CALLBACK_101": "Intellivoid Hesapları, sunucu tarafından anlaşılmayan bir yanıt döndürdü",
+            "CALLBACK_102": "Kimlik doğrulama işleminiz yapılırken bir hata oluştu: %s",
+            "CALLBACK_103": "Intellivoid Hesaplarına şu anda ulaşılamıyor",
+            "CALLBACK_104": "Kullanılan kimlik doğrulama yöntemi bu sunucu tarafından desteklenmiyor",
+            "CALLBACK_105": "Başarılı bir şekilde giriş yaptın!",
+            "CALLBACK_106": "Abonelik planı bulunamadı",
+            "CALLBACK_107": "Abonelik planı mevcut değil"
+        },
+        "lydia_demo": {
+            "PAGE_TITLE": "CoffeeHouse - Lydia",
+            "HEADER_DESCRIPTION": "Lydia, konuşmaları aktif olarak öğrenen ve bu konuda hiçbir şey yapılandırmak zorunda kalmadan birçok dilde konuşabilen gelişmiş bir sohbet botudur.",
+            "INPUT_PLACEHOLDER": "Aklınızdan ne geçiyor?",
+            "GENERIC_USER_SELF": "Sen",
+            "AUTHENTICATION_REQUIRED_RESPONSE": "Seninle sohbet etmek istediğim kadar, önce kimlik doğrulamanı istiyorum! bu kötüye kullanımı ve spam'ı önlemek içindir",
+            "AUTHENTICATION_REQUIRED_ACTION": "Kimlik doğrulaması için burayı tıklayın",
+            "GENERIC_ERROR_RESPONSE": "Ah ... Bir şeyler ters gitti, Bu sayfayı yenilemeyi deneyin",
+            "SESSION_ERROR_RESPONSE": "Tüh! Sohbet oturumumuzla ilgili bir sorun var gibi görünüyor. Bu sayfayı yenilemeyi deneyin!",
+            "SESSION_EXPIRED_RESPONSE": "Hey! sohbet oturumumuzun süresi doldu, yine konuşabiliriz! Bu sayfayı yenilemeyi deneyin!",
+            "RELOAD_ACTION": "Sayfayı Yenile",
+            "INTRODUCTION_MESSAGE": "Merhaba! Benimle sohbet etmeyi dene!"
+        },
+        "privacy": {
+            "PAGE_TITLE": "CoffeeHouse - Gizlilik Politikası",
+            "PAGE_HEADER": "Gizlilik Politikası"
+        },
+        "purchase": {
+            "PAGE_TITLE": "CoffeeHouse - Satın Alma İşlemini Onayla",
+            "CONFIRM_PURCHASE_TITLE": "Satın Alma İşlemini Onayla",
+            "DETAILS_DESC": "Abonelik ayrıntılarını inceleyin ve aboneliği başlatın",
+            "LYDIA_SESSIONS_CONFIGURATION": "Aylık Lydia Oturum",
+            "DETAILS_PAYMENT": "Her %bc günde bir %cp USD ödeyeceksiniz",
+            "PROMOTION_HEADER": "Promosyon Kodu (isteğe bağlı)",
+            "PROMOTION_DESC": "Özel bir teklif almak için bir promosyon kodunuz varsa, aşağıya girip doğrulayabilirsiniz",
+            "PROMOTION_LABEL": "Promosyon kodu",
+            "PROMOTION_PLACEHOLDER": "Promosyon Kodu Gir",
+            "PROMOTION_SUBMIT_BUTTON": "Doğrula",
+            "CONFIRM_PURCHASE_BUTTON": "Satın Alma İşlemini Onayla",
+            "CALLBACK_100": "Promosyon kodu geçersiz",
+            "CALLBACK_101": "Promosyon kodu mevcut değil",
+            "CALLBACK_102": "Promosyon kodunun süresi doldu",
+            "CALLBACK_103": "Promosyon kodu bu plan için geçerli değil"
+        },
+        "service_error": {
+            "PAGE_TITLE": "CoffeeHouse - Servis Hatası",
+            "HEADER_TITLE": "Servis Hatası",
+            "HEADER_DESCRIPTION": "İsteğiniz ele alınmaya çalışılırken bir hata oluştu",
+            "HEADER_1": "Bu nedir ?",
+            "DESCRIPTION_1": "İsteğiniz yerine getirilmeye çalışılırken bir hata oluştu, lütfen bu sayfanın URL'sini Intellivoid Destek'e gönderin",
+            "HEADER_2": "Neden?",
+            "DESCRIPTION_2": "Peki, isteğe bağlı. Ancak URL, bir programcının sorunu belirlemesine olanak tanıyan önemli bilgiler içerir",
+            "HEADER_3": "Ne Gibi ?",
+            "DESCRIPTION_3": "Tabii ki kişisel bir şey yok, sadece programcıya sorun."
+        },
+        "tos": {
+            "PAGE_TITLE": "CoffeeHouse - Kullanım Şartları",
+            "PAGE_HEADER": "Kullanım Şartları"
+        }
+    },
+    "sections": {
+        "change_language_modal": {
+            "CHANGE_LANGUAGE_DIALOG_TITLE": "Dili Değiştir"
+        },
+        "landing_footer": {
+            "FOOTER_TERMS_OF_SERVICE": "Kullanım Şartları",
+            "FOOTER_PRIVACY_POLICY": "Privacy Policy"
+        },
+        "landing_navbar": {
+            "NAVBAR_HOME": "Anasayfa",
+            "NAVBAR_PRICING": "Ödeme",
+            "NAVBAR_LYDIA_DEMO": "Lydia Demo",
+            "NAVBAR_DASHBOARD": "Panel",
+            "NAVBAR_LOGOUT": "Çıkış Yap"
+        },
+        "navigation": {
+            "NAVBAR_AVATAR_DROPDOWN_LOGOUT": "Çıkış Yap",
+            "NAVBAR_HOME": "Anasayfa",
+            "NAVBAR_GENERATE_ACCESS_KEY": "Erişim Anahtarı Oluştur",
+            "NAVBAR_DOCS": "API Belgeleri"
+        }
+    }
+}
