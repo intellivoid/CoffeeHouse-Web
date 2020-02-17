@@ -1,0 +1,158 @@
+{
+    "language": {
+        "name": "chinese",
+        "iso_639-1": "zh"
+    },
+    "pages": {
+        "404": {
+            "PAGE_TITLE": "CoffeeHouse - 找不到404",
+            "PAGE_HEADER": "404",
+            "PAGE_DESC": "在这里什么也没找到，仅此而已。",
+            "CARD_CONTENT_HEADER": "我能做什么？",
+            "HOME_BUTTON": "回家"
+        },
+        "500": {
+            "PAGE_TITLE": "CoffeeHouse - 500内部服务器错误",
+            "PAGE_HEADER": "500",
+            "PAGE_DESC": "伺服器发生错误，请告知我们的职员。",
+            "CARD_CONTENT_HEADER": "我能做什么？",
+            "HOME_BUTTON": "回家"
+        },
+        "dashboard": {
+            "PAGE_TITLE": "CoffeeHouse仪表板",
+            "PAGE_HEADER": "CoffeeHouse仪表板",
+            "WIDGET_LYDIA_SESSIONS_HEADER": "莉迪亚会议",
+            "WIDGET_LYDIA_SESSIONS_FOOTER": "%s允许的总会话",
+            "WIDGET_BILLING_CYCLE_HEADER": "结算周期",
+            "WIDGET_BILLING_CYCLE_DESCRIPTION": "下一张帐单在何时处理",
+            "BILLING_CYCLE_TODAY": "今天",
+            "WIDGET_PLAN_DESCRIPTION": "您是从%s开始的",
+            "WIDGET_PLAN_FOOTER": "您每月支付$%s USD",
+            "ACCESS_KEY_CARD_TITLE": "访问密钥",
+            "GENERATE_NEW_ACCESS_KEY_BUTTON": "生成新的访问密钥",
+            "SUPPORT_CARD_TITLE": "需要帮忙？",
+            "SUPPORT_TELEGRAM_SUPPORT_GROUP": "电报支持小组",
+            "SUPPORT_TELEGRAM_SUPPORT_ACCOUNT": "电报支持帐户",
+            "SUPPORT_CONTACT_INTELLIVOID": "联系Intellivoid",
+            "API_USAGE_CARD_TITLE": "API用法",
+            "API_USAGE_COMING_SOON": "快来了",
+            "CALLBACK_100": "尝试处理您的请求时出错",
+            "CALLBACK_101": "已成功生成新的访问密钥"
+        },
+        "index": {
+            "PAGE_TITLE": "CoffeeHouse",
+            "INTRODUCTION_TITLE": "CoffeeHouse",
+            "INTRODUCTION_DESCRIPTION": "面向所有人的基于云的多功能人工智能和机器学习服务",
+            "INTRODUCTION_IMAGE_ALT": "CoffeeHouse的Lydia在Python中使用",
+            "FEATURES_HEADER": "一切都简化了。",
+            "FEATURES_DESCRIPTION": "CoffeeHouse是基于云的人工智能和机器学习处理的一站式解决方案，超时后，在CoffeeHouse上添加并改进了更多功能",
+            "FEATURE_1_TITLE": "社区与官方支持",
+            "FEATURE_1_DESCRIPTION": "我们还有一个很棒的社区，您可以在这里闲逛并询问您心中渴望的任何问题",
+            "FEATURE_2_TITLE": "开放平台",
+            "FEATURE_2_DESCRIPTION": "我们的开源API包装器和文档可供所有人使用，免费免费提供！",
+            "FEATURE_3_TITLE": "经济实惠且免费",
+            "FEATURE_3_DESCRIPTION": "如果您想将其用于个人用途，还需要更多免费服务，我们将免费提供该服务。 每月订阅也可以负担得起！",
+            "FEATURE_4_TITLE": "独立技术",
+            "FEATURE_4_DESCRIPTION": "CoffeeHouse并不依赖第三方服务或Tensorflow等库来运行，一切都从头开始构建。",
+            "FEATURE_5_TITLE": "总是更多",
+            "FEATURE_5_DESCRIPTION": "我们一直在努力为每个人添加和改进此服务",
+            "FEATURE_6_TITLE": "真正简单",
+            "FEATURE_6_DESCRIPTION": "无需复杂的配置和设置，以软件开发人员的身份就可以轻松使用我们的服务",
+            "PRICING_HEADER": "实惠的价格",
+            "PRICING_DESCRIPTION": "根据您的需要选择正确的计划",
+            "PRICING_FEATURE_FREE_SUPPORT": "免费的官方支持",
+            "PRICING_FEATURE_LIMITED_RESOURCES": "有限的资源",
+            "PRICING_FEATURE_MORE_RESOURCES": "更多资源",
+            "PRICING_FEATURE_UNLIMITED_RESOURCES": "无限资源",
+            "PRICING_FEATURE_PERSONAL_USE_ONLY": "只能个人使用",
+            "PRICING_FEATURE_PERSONAL_AND_COMMERCIAL_USE": "用于个人和商业用途",
+            "PRICING_FEATURE_NO_HIDDEN_FEES": "没有额外费用/隐藏费用",
+            "PRICING_FEATURE_NO_HIDDEN_TRIALS": "没有隐藏的费用/试用",
+            "PRICING_FEATURE_PERSONAL_USAGE": "个人使用",
+            "GET_LICENSE_BUTTON": "获得许可证",
+            "PRICE_PER_MONTH": "每月美元",
+            "PLAN_FREE_TITLE": "自由",
+            "PLAN_BASIC_TITLE": "基本计划",
+            "PLAN_ENTERPRISE_TITLE": "企业计划",
+            "CALLBACK_100": "尝试处理您的请求时出现意外错误",
+            "CALLBACK_101": "Intellivoid帐户返回了服务器无法理解的响应",
+            "CALLBACK_102": "尝试处理身份验证时出错：%s",
+            "CALLBACK_103": "目前无法访问Intellivoid帐户",
+            "CALLBACK_104": "该服务器不支持使用的身份验证方法",
+            "CALLBACK_105": "您已成功登录！",
+            "CALLBACK_106": "找不到订阅计划",
+            "CALLBACK_107": "订阅计划不可用"
+        },
+        "lydia_demo": {
+            "PAGE_TITLE": "CoffeeHouse - Lydia",
+            "HEADER_DESCRIPTION": "莉迪亚（Lydia）是一个高级聊天机器人，可以主动地从对话中学习，并且能够以多种语言讲话，而无需对其进行任何硬配置。",
+            "INPUT_PLACEHOLDER": "你在想什么？",
+            "GENERIC_USER_SELF": "您",
+            "AUTHENTICATION_REQUIRED_RESPONSE": "我很想和您聊天，我需要您先进行身份验证！ 这是为了防止滥用和垃圾邮件",
+            "AUTHENTICATION_REQUIRED_ACTION": "点击此处进行身份验证",
+            "GENERIC_ERROR_RESPONSE": "嗯...出了点问题，也许尝试刷新一下？",
+            "SESSION_ERROR_RESPONSE": "哎呀！ 我们的聊天会话似乎存在问题。 尝试刷新此页面！",
+            "SESSION_EXPIRED_RESPONSE": "嘿! 我们的聊天会话已过期，但是我们可以再次交谈！ 尝试刷新此页面！",
+            "RELOAD_ACTION": "重新载入页面",
+            "INTRODUCTION_MESSAGE": "你好！ 尝试与我对话！"
+        },
+        "privacy": {
+            "PAGE_TITLE": "CoffeeHouse - 隐私政策",
+            "PAGE_HEADER": "隐私政策"
+        },
+        "purchase": {
+            "PAGE_TITLE": "CoffeeHouse - 确认购买",
+            "CONFIRM_PURCHASE_TITLE": "确认购买",
+            "DETAILS_DESC": "查看订阅详细信息并开始订阅",
+            "LYDIA_SESSIONS_CONFIGURATION": "每月莉迪亚会议",
+            "DETAILS_PAYMENT": "您将每%bc天支付$%cp USD",
+            "PROMOTION_HEADER": "促销代码（可选）",
+            "PROMOTION_DESC": "如果您有促销代码可以收到特别优惠，则可以在下面输入并验证它",
+            "PROMOTION_LABEL": "促销代码",
+            "PROMOTION_PLACEHOLDER": "输入促销代码",
+            "PROMOTION_SUBMIT_BUTTON": "校验",
+            "CONFIRM_PURCHASE_BUTTON": "确认购买",
+            "CALLBACK_100": "促销代码无效",
+            "CALLBACK_101": "促销代码不可用",
+            "CALLBACK_102": "促销代码已过期",
+            "CALLBACK_103": "促销代码不适用于此计划"
+        },
+        "service_error": {
+            "PAGE_TITLE": "CoffeeHouse - 服务错误",
+            "HEADER_TITLE": "服务错误",
+            "HEADER_DESCRIPTION": "尝试处理您的请求时出错",
+            "HEADER_1": "这是什么？",
+            "DESCRIPTION_1": "尝试处理您的请求时出错，请将此页面的URL发送给Intellivoid支持",
+            "HEADER_2": "为什么？",
+            "DESCRIPTION_2": "好吧，它是可选的。 但是该URL包含重要信息，可让程序员确定问题所在",
+            "HEADER_3": "像什么？",
+            "DESCRIPTION_3": "当然没有什么私人的，只问程序员。"
+        },
+        "tos": {
+            "PAGE_TITLE": "CoffeeHouse - 服务条款",
+            "PAGE_HEADER": "服务条款"
+        }
+    },
+    "sections": {
+        "change_language_modal": {
+            "CHANGE_LANGUAGE_DIALOG_TITLE": "改变语言"
+        },
+        "landing_footer": {
+            "FOOTER_TERMS_OF_SERVICE": "服务条款",
+            "FOOTER_PRIVACY_POLICY": "隐私政策"
+        },
+        "landing_navbar": {
+            "NAVBAR_HOME": "家",
+            "NAVBAR_PRICING": "价钱",
+            "NAVBAR_LYDIA_DEMO": "莉迪亚（Lydia）演示",
+            "NAVBAR_DASHBOARD": "仪表板",
+            "NAVBAR_LOGOUT": "登出"
+        },
+        "navigation": {
+            "NAVBAR_AVATAR_DROPDOWN_LOGOUT": "登出",
+            "NAVBAR_HOME": "家",
+            "NAVBAR_GENERATE_ACCESS_KEY": "生成访问密钥",
+            "NAVBAR_DOCS": "API文档"
+        }
+    }
+}
