@@ -1,0 +1,158 @@
+{
+    "language": {
+        "name": "spanish",
+        "iso_639-1": "es"
+    },
+    "pages": {
+        "404": {
+            "PAGE_TITLE": "CoffeeHouse - 404 No Encontrado",
+            "PAGE_HEADER": "404",
+            "PAGE_DESC": "Nada fué encontado aquí, eso es todo lo que sabemos.",
+            "CARD_CONTENT_HEADER": "Qué puedo hacer?",
+            "HOME_BUTTON": "Ir al Inicio"
+        },
+        "500": {
+            "PAGE_TITLE": "CoffeeHouse - 500 Error interno del servidor",
+            "PAGE_HEADER": "500",
+            "PAGE_DESC": "El servidor hizo un oopsy, pero no te podemos mostrar por qué. Hazle saber a nuestro staff!",
+            "CARD_CONTENT_HEADER": "Qué puedo hacer?",
+            "HOME_BUTTON": "Ir al Inicio"
+        },
+        "dashboard": {
+            "PAGE_TITLE": "CoffeeHouse Dashboard",
+            "PAGE_HEADER": "CoffeeHouse Dashboard",
+            "WIDGET_LYDIA_SESSIONS_HEADER": "Sesiones de Lydia",
+            "WIDGET_LYDIA_SESSIONS_FOOTER": "Sesiones permitidas totales %s",
+            "WIDGET_BILLING_CYCLE_HEADER": "Ciclo de facturación",
+            "WIDGET_BILLING_CYCLE_DESCRIPTION": "Cuando tu proximo cobro es procesado en",
+            "BILLING_CYCLE_TODAY": "Hoy",
+            "WIDGET_PLAN_DESCRIPTION": "Tú iniciaste en %s",
+            "WIDGET_PLAN_FOOTER": "Tú pagas USD cada mes",
+            "ACCESS_KEY_CARD_TITLE": "Clave de acceso",
+            "GENERATE_NEW_ACCESS_KEY_BUTTON": "Generar nueva clave de acceso",
+            "SUPPORT_CARD_TITLE": "Necesitas Ayuda?",
+            "SUPPORT_TELEGRAM_SUPPORT_GROUP": "Grupo de soporte en Telegram",
+            "SUPPORT_TELEGRAM_SUPPORT_ACCOUNT": "Cuenta de Soporte en Telegram",
+            "SUPPORT_CONTACT_INTELLIVOID": "Contacta a Intellivoid",
+            "API_USAGE_CARD_TITLE": "Uso de API",
+            "API_USAGE_COMING_SOON": "Muy pronto",
+            "CALLBACK_100": "Hubo un error mientras tratabamos de procesar tu solicitud",
+            "CALLBACK_101": "Una nueva clave de acesso ha sido generada correctamente"
+        },
+        "index": {
+            "PAGE_TITLE": "CoffeeHouse",
+            "INTRODUCTION_TITLE": "CoffeeHouse",
+            "INTRODUCTION_DESCRIPTION": "Inteligencia Artificial Multi proposito basada en la nube y servicio de Machine Learning para todos",
+            "INTRODUCTION_IMAGE_ALT": "Lydia de CoffeeHouse está siendo usado en Python",
+            "FEATURES_HEADER": "Todo simplificado.",
+            "FEATURES_DESCRIPTION": "CoffeeHouse es una solucion para inteligencia artificial basada en la nube y procesamiento de Machine Learning, con el tiempo, nuevas caracteristicas son añadidas y mejoradas en CoffeeHouse",
+            "FEATURE_1_TITLE": "Soprte oficial y de la comunidad",
+            "FEATURE_1_DESCRIPTION": "Tambien tenemos una grandiosa comunidad donde puedes entrar y soltar la pregunnta que tu corazón desea",
+            "FEATURE_2_TITLE": "Plataforma abierta",
+            "FEATURE_2_DESCRIPTION": "Nuestros wrappers de API y documentación de código abierto están disponibles para todos, sientete libre de contribuir!",
+            "FEATURE_3_TITLE": "Asequible & Gratis",
+            "FEATURE_3_DESCRIPTION": "Nosotros proporcionamos el servicio gratis si te gustaria usarlo para usos personales, necesitas más? tambien es asequible con subscripciones mensuales!",
+            "FEATURE_4_TITLE": "Tecnologias independiente",
+            "FEATURE_4_DESCRIPTION": "CoffeeHouse no depende de servicios de terceros o liberias como TensorFlow para funcionar, todo fué hecho desde cero.",
+            "FEATURE_5_TITLE": "Siempre más",
+            "FEATURE_5_DESCRIPTION": "Nosotros estamos constantemente trabajando duro para mejorar este servicio para todos",
+            "FEATURE_6_TITLE": "Verdaderamente Simple",
+            "FEATURE_6_DESCRIPTION": "No hay necesidad de  configuraciones complicadas, empieza usando nuestros servicios con poco o ningun esfuerzo como un desarrollador de software",
+            "PRICING_HEADER": "Precios Asequibles",
+            "PRICING_DESCRIPTION": "Elige el plan correcto para tus necesidades",
+            "PRICING_FEATURE_FREE_SUPPORT": "Soporte oficial gratuito",
+            "PRICING_FEATURE_LIMITED_RESOURCES": "Recursos limitados",
+            "PRICING_FEATURE_MORE_RESOURCES": "Más recursos",
+            "PRICING_FEATURE_UNLIMITED_RESOURCES": "Recursos Ilimitados",
+            "PRICING_FEATURE_PERSONAL_USE_ONLY": "Solo para uso personal",
+            "PRICING_FEATURE_PERSONAL_AND_COMMERCIAL_USE": "Solo para uso personal y comercial",
+            "PRICING_FEATURE_NO_HIDDEN_FEES": "Sin costos ocultos/cobros extras",
+            "PRICING_FEATURE_NO_HIDDEN_TRIALS": "Sin cobros ocultos/pruebas",
+            "PRICING_FEATURE_PERSONAL_USAGE": "Uso Personal",
+            "GET_LICENSE_BUTTON": "Obtener Licencia",
+            "PRICE_PER_MONTH": "USD por mes",
+            "PLAN_FREE_TITLE": "GRATIS",
+            "PLAN_BASIC_TITLE": "Plan Básico",
+            "PLAN_ENTERPRISE_TITLE": "Plan Empresarial",
+            "CALLBACK_100": "Hubo un error mientras tratabamos de procesar tú solicitud",
+            "CALLBACK_101": "Intellivoid Accounts devolvió una respuesta que no fué entendida por el servidor",
+            "CALLBACK_102": "Hubo un error al tratar de procesar tu autenticación: %s",
+            "CALLBACK_103": "Intellivoid Accounts no puede ser contactado en este momento",
+            "CALLBACK_104": "El metodo de autenticación usado no es soportado por este servidor",
+            "CALLBACK_105": "Has iniciado sesión exitosamente!",
+            "CALLBACK_106": "El plan de subscripción no fué encontrado",
+            "CALLBACK_107": "El plan de subscripción no está disponible"
+        },
+        "lydia_demo": {
+            "PAGE_TITLE": "CoffeeHouse - Lydia",
+            "HEADER_DESCRIPTION": "Lydia es un bot de chat avanzado que aprende activamente de las conversaciones y es capaz de hablar en diferentes lenguajes sin tener que configurar algo.",
+            "INPUT_PLACEHOLDER": "Que hay en tu mente?",
+            "GENERIC_USER_SELF": "Tú",
+            "AUTHENTICATION_REQUIRED_RESPONSE": "Me gustaria mucho conversar contigo, pero necesito que te auntentiques primero!, eso es para prevenir spam y abuso",
+            "AUTHENTICATION_REQUIRED_ACTION": "Haz click aquí para autenticarte",
+            "GENERIC_ERROR_RESPONSE": "Uh oh... Algo salió mal, prueba refrescando la página tal vez?",
+            "SESSION_ERROR_RESPONSE": "Whoops! Parece que hubo un problema con nuestra sesión de chat. Intenta refrescar la página!",
+            "SESSION_EXPIRED_RESPONSE": "Hey! nuestra sesión de chat ha expirado, aunque podemos hablar de nuevo! Intenta refrescando esta página!",
+            "RELOAD_ACTION": "Refrescar página",
+            "INTRODUCTION_MESSAGE": "Hola! Intenta tener una conversación conmigo!"
+        },
+        "privacy": {
+            "PAGE_TITLE": "CoffeeHouse - Politica de privacidad",
+            "PAGE_HEADER": "Politica de Privacidad"
+        },
+        "purchase": {
+            "PAGE_TITLE": "CoffeeHouse - Confirmar Compra",
+            "CONFIRM_PURCHASE_TITLE": "Confirmar Compra",
+            "DETAILS_DESC": "Revisa los detalles de la subscripción e inicia la subscripción",
+            "LYDIA_SESSIONS_CONFIGURATION": "Sesiones mensuales de Lydia",
+            "DETAILS_PAYMENT": "Vas a pagar $%cp USD cada %bc dias",
+            "PROMOTION_HEADER": "Código Promocional (Opcional)",
+            "PROMOTION_DESC": "If you have a promotion code to receive a special offer, you can enter it below and verify it",
+            "PROMOTION_LABEL": "Código Promocional",
+            "PROMOTION_PLACEHOLDER": "Ingresar Código promocional",
+            "PROMOTION_SUBMIT_BUTTON": "Verificar",
+            "CONFIRM_PURCHASE_BUTTON": "Confirmar Compra",
+            "CALLBACK_100": "El código promocional es invalido",
+            "CALLBACK_101": "El código promocional no está disponible",
+            "CALLBACK_102": "El código promocional ha expirado",
+            "CALLBACK_103": "El código promocional no es aplicable para este plan"
+        },
+        "service_error": {
+            "PAGE_TITLE": "CoffeeHouse - Error del servicio",
+            "HEADER_TITLE": "Error del servicio",
+            "HEADER_DESCRIPTION": "Hubo un error al tratar de procesar tu solicitud",
+            "HEADER_1": "Qué es esto?",
+            "DESCRIPTION_1": "Hubo un error al tratar de procesar tu solicitud, porfavor envia la URL de esta pagina al soporte de Intellivoid",
+            "HEADER_2": "Por qué?",
+            "DESCRIPTION_2": "Bueno, es opcional. Pero la URL contiene información importante que le permite a un programador determinar el problema",
+            "HEADER_3": "Como qué?",
+            "DESCRIPTION_3": "Nada personal, solo pregunta al programador."
+        },
+        "tos": {
+            "PAGE_TITLE": "CoffeeHouse - Terminos del Servicio",
+            "PAGE_HEADER": "Terminos del Servicio"
+        }
+    },
+    "sections": {
+        "change_language_modal": {
+            "CHANGE_LANGUAGE_DIALOG_TITLE": "Cambiar Lenguaje"
+        },
+        "landing_footer": {
+            "FOOTER_TERMS_OF_SERVICE": "Terminos del servicio",
+            "FOOTER_PRIVACY_POLICY": "Politica de privacidad"
+        },
+        "landing_navbar": {
+            "NAVBAR_HOME": "Inicio",
+            "NAVBAR_PRICING": "Precios",
+            "NAVBAR_LYDIA_DEMO": "Demo de Lydia",
+            "NAVBAR_DASHBOARD": "Dashboard",
+            "NAVBAR_LOGOUT": "Cerrar Sesión"
+        },
+        "navigation": {
+            "NAVBAR_AVATAR_DROPDOWN_LOGOUT": "Cerrar Sesión",
+            "NAVBAR_HOME": "Inicio",
+            "NAVBAR_GENERATE_ACCESS_KEY": "Generar clave de acceso",
+            "NAVBAR_DOCS": "Documentación de la API"
+        }
+    }
+}
