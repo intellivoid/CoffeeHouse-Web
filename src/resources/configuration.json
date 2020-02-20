@@ -1,6 +1,6 @@
 {
     "primary_language": "en",
-    "debugging_mode": true,
+    "debugging_mode": false,
     "router": [
         {"path": "/", "page": "index"},
         {"path": "/auth/logout", "page": "logout"},
