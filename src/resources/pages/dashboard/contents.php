@@ -159,10 +159,14 @@
     {
         $UsedLydiaSessions = (int)$AccessRecord->Variables['LYDIA_SESSIONS'];
 
-        if($UsedLydiaSessions > $ConfiguredLydiaSessions)
+        if($ConfiguredLydiaSessions > 0)
         {
-            $UsedLydiaSessions = $ConfiguredLydiaSessions;
+            if($UsedLydiaSessions > $ConfiguredLydiaSessions)
+            {
+                $UsedLydiaSessions = $ConfiguredLydiaSessions;
+            }
         }
+
     }
 
     HTML::importScript('actions');
