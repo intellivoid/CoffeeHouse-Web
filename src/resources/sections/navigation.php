@@ -59,7 +59,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="https://gist.github.com/Netkas/d3617e5b5b66c7851c728d3c0073529a" target="_blank">
+                        <a href="https://gist.github.com/Netkas/e8977b26f482ca40911a949df7dd286f" target="_blank">
                             <i class="mdi mdi-book"></i> <?PHP HTML::print(TEXT_NAVBAR_DOCS); ?>
                         </a>
                     </li>
