@@ -1,6 +1,16 @@
 {
-    "home_page": "index",
     "primary_language": "en",
+    "debugging_mode": false,
+    "router": [
+        {"path": "/", "page": "index"},
+        {"path": "/auth/logout", "page": "logout"},
+        {"path": "/service_error", "page": "service_error"},
+        {"path": "/terms", "page": "tos"},
+        {"path": "/privacy", "page": "privacy"},
+        {"path": "/demo/lydia", "page": "lydia_demo"},
+        {"path": "/confirm_purchase", "page": "purchase"},
+        {"path": "/dashboard", "page": "dashboard"}
+    ],
     "libraries": {
         "SecuredWebSessions": {
             "directory_name": "sws",
@@ -9,12 +19,19 @@
             "namespace": "sws",
             "main_class": "sws"
         },
-        "IntellivoidAccounts": {
-            "directory_name": "IntellivoidAccounts",
-            "autoloader": "IntellivoidAccounts.php",
+        "IntellivoidSubscriptionManager": {
+            "directory_name": "IntellivoidSubscriptionManager",
+            "autoloader": "IntellivoidSubscriptionManager.php",
             "check_class_exists": true,
-            "namespace": "IntellivoidAccounts",
-            "main_class": "IntellivoidAccounts"
+            "namespace": "IntellivoidSubscriptionManager",
+            "main_class": "IntellivoidSubscriptionManager"
+        },
+        "IntellivoidAPI": {
+            "directory_name": "IntellivoidAPI",
+            "autoloader": "IntellivoidAPI.php",
+            "check_class_exists": true,
+            "namespace": "IntellivoidAPI",
+            "main_class": "IntellivoidAPI"
         },
         "CoffeeHouse": {
             "directory_name": "CoffeeHouse",
@@ -22,14 +39,21 @@
             "check_class_exists": true,
             "namespace": "CoffeeHouse",
             "main_class": "CoffeeHouse"
+        },
+        "COASniffle": {
+            "directory_name": "COASniffle",
+            "autoloader": "COASniffle.php",
+            "check_class_exists": true,
+            "namespace": "COASniffle",
+            "main_class": "COASniffle"
         }
     },
     "runtime_scripts": {
-        "initialize": [],
-        "on_page_load": ["check_auth.php", "cache.php", "require_auth.php"],
+        "initialize": ["coa_sniffles.php"],
+        "on_page_load": ["check_auth.php"],
         "page_loaded": [],
         "after_request": [],
-        "on_request": [],
+        "on_request": ["maintenance.php"],
         "on_import": []
     }
 }
