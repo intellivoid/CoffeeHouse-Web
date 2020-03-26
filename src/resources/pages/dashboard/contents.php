@@ -273,7 +273,7 @@
                                         </a>
                                     </div>
                                     <div class="row mt-3">
-                                        <a class="text-white" href="https://intellivoid.info/contact">
+                                        <a class="text-white" href="https://intellivoid.net/contact">
                                             <i class="mdi mdi-email pr-2"></i><?PHP HTML::print(TEXT_SUPPORT_CONTACT_INTELLIVOID); ?>
                                         </a>
                                     </div>

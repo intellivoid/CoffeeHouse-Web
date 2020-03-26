@@ -10,12 +10,12 @@
 <meta name="title" content="CoffeeHouse">
 <meta name="description" content="Multi-purpose cloud based artificial intelligence & machine learning service for all">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://coffeehouse.intellivoid.info/">
+<meta property="og:url" content="https://coffeehouse.intellivoid.net/">
 <meta property="og:title" content="CoffeeHouse">
 <meta property="og:description" content="Multi-purpose cloud based artificial intelligence & machine learning service for all">
 <meta property="og:image" content="/assets/images/preview.png">
 <meta property="twitter:card" content="summary_large_image">
-<meta property="twitter:url" content="https://coffeehouse.intellivoid.info">
+<meta property="twitter:url" content="https://coffeehouse.intellivoid.net">
 <meta property="twitter:title" content="CoffeeHouse">
 <meta property="twitter:description" content="Multi-purpose cloud based artificial intelligence & machine learning service for all">
 <meta property="twitter:image" content="/assets/images/preview.png">

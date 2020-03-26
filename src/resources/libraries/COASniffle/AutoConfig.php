@@ -19,7 +19,7 @@
     $EndpointSchema->setDefinition('LocalDevelopment', 'False');
     $EndpointSchema->setDefinition('EnableSSL', 'True');
     $EndpointSchema->setDefinition('LocalEndpoint', 'http://localhost');
-    $EndpointSchema->setDefinition('ProductionEndpoint', 'https://accounts.intellivoid.info');
+    $EndpointSchema->setDefinition('ProductionEndpoint', 'https://accounts.intellivoid.net');
     $acm->defineSchema('Endpoint', $EndpointSchema);
 
     // If auto-loaded via CLI, Process any arguments passed to the main execution point

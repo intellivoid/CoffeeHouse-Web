@@ -8,7 +8,7 @@ If you do not, stop using CoffeeHouse and any services related to CoffeeHouse
 
 (A) By accessing or using CoffeeHouse's services via an API, Application, Product or
 service, you are agreeing to the  Intellivoid Terms of Service at 
-[intellivoid.info](https://intellivoid.info/tos) (or such other URL as Intellivoid
+[intellivoid.net](https://intellivoid.net/tos) (or such other URL as Intellivoid
 may provide) and these Additional Terms (the "CoffeeHouse Additional Terms") on 
 CoffeeHouse.
 
@@ -41,9 +41,9 @@ By accessing the CoffeeHouse Dashboard or using the demos found on the website
 you are required to authorize yourself using a Intellivoid Account for the
 purpose of preventing spam, data collection and unauthorized access. By using
 Intellivoid Accounts on CoffeeHouse you agree to the terms of service of
-Intellivoid Accounts which can be found [here](https://accounts.intellivoid.info/tos).
+Intellivoid Accounts which can be found [here](https://accounts.intellivoid.net/tos).
 You also agree and acknowledge the privacy conditions for Intellivoid
-Accounts which can be found [here](https://accounts.intellivoid.info/privacy)
+Accounts which can be found [here](https://accounts.intellivoid.net/privacy)
 
 These Terms of use represent a legal agreement between you and Intellivoid 
 for the use of the CoffeeHouse's services, and do not affect or amend any other 
@@ -112,7 +112,7 @@ Provision of the CoffeeHouse services is conditional upon proper usage. **You ma
 Intellivoid may immediately suspend access to CoffeeHouse API or CoffeeHouse's
 services and or terminate this agreement at any time, with or without cause. 
 If you wish to terminate this agreement you may do so by cancelling your 
-subscription by visiting [Intellivoid Accounts](https://accounts.intellivoid.info/)
+subscription by visiting [Intellivoid Accounts](https://accounts.intellivoid.net/)
 and navigating to your active subscriptions then proceed to cancel your
 subscription with CoffeeHouse, Intellivoid will not be liable for any
 costs, expenses or damages as a result of either party choosing to terminate

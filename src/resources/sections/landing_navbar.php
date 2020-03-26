@@ -33,7 +33,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="https://intellivoid.info/" class="nav-link">Intellivoid</a>
+                    <a href="https://intellivoid.net/" class="nav-link">Intellivoid</a>
                 </li>
                 <?PHP
                     if(WEB_SESSION_ACTIVE)
