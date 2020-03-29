@@ -30,6 +30,10 @@
         include_once(__DIR__ . DIRECTORY_SEPARATOR . 'ZiProto' . DIRECTORY_SEPARATOR . 'ZiProto.php');
     }
 
+    if(class_exists('msqg\msqg') == false)
+    {
+        include_once(__DIR__ . DIRECTORY_SEPARATOR . 'msqg' . DIRECTORY_SEPARATOR . 'msqg.php');
+    }
 
     if(class_exists('acm\acm') == false)
     {
@@ -76,7 +80,7 @@
          */
         public function __construct()
         {
-            $this->acm = new acm(__DIR__, 'CoffeeHouse Web Application');
+            $this->acm = new acm(__DIR__, 'sws');
             $this->DatabaseConfiguration = $this->acm->getConfiguration('Database');
 
             $this->Database = new mysqli(
