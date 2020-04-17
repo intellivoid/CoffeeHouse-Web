@@ -169,6 +169,10 @@
 
     }
 
+    DynamicalWeb::setMemoryObject('subscription_plan', $SubscriptionPlan);
+    DynamicalWeb::setMemoryObject('access_record', $AccessRecord);
+    DynamicalWeb::setMemoryObject('subscription', $Subscription);
+
     HTML::importScript('actions');
     HTML::importScript('alert');
 
