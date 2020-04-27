@@ -6,7 +6,8 @@
     use DynamicalWeb\Actions;
     use DynamicalWeb\DynamicalWeb;
     use DynamicalWeb\HTML;
-    use DynamicalWeb\Runtime;
+use DynamicalWeb\Javascript;
+use DynamicalWeb\Runtime;
     use IntellivoidAPI\Abstracts\SearchMethods\AccessRecordSearchMethod;
     use IntellivoidAPI\Exceptions\AccessRecordNotFoundException;
     use IntellivoidAPI\IntellivoidAPI;
@@ -173,6 +174,7 @@
     DynamicalWeb::setMemoryObject('access_record', $AccessRecord);
     DynamicalWeb::setMemoryObject('subscription', $Subscription);
 
+    HTML::importScript('deepanalytics');
     HTML::importScript('actions');
     HTML::importScript('alert');
 
@@ -181,6 +183,7 @@
 <html lang="<?PHP HTML::print(APP_LANGUAGE_ISO_639); ?>">
     <head>
         <?PHP HTML::importSection('header'); ?>
+        <link rel="stylesheet" href="/assets/vendors/morris/morris.css">
         <title><?PHP HTML::print(TEXT_PAGE_TITLE); ?></title>
     </head>
     <body>
@@ -290,11 +293,23 @@
                         <div class="card m-b-20 animated bounceInRight">
                             <div class="card-body">
                                 <h4 class="header-title"><?PHP HTML::print(TEXT_API_USAGE_CARD_TITLE); ?></h4>
-                                <div id="api-usage-chart">
-                                    <div class="d-flex flex-column justify-content-center align-items-center" style="height:50vh;">
-                                        <div class="p-2 my-flex-item">
-                                            <h4 class="text-muted"><?PHP HTML::print(TEXT_API_USAGE_COMING_SOON); ?></h4>
-                                        </div>
+                                <div id="deepanalytics_viewer">
+                                    <div id="morris-line-example" class="morris-charts" style="height: 300px">
+
+                                        <nav>
+                                            <ul class="pagination pagination-sm">
+                                                <li class="page-item disabled">
+                                                    <a class="page-link" href="#" tabindex="-1">Previous</a>
+                                                </li>
+                                                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                                <li class="page-item">
+                                                    <a class="page-link" href="#">Next</a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+
                                     </div>
                                 </div>
                             </div>
@@ -308,4 +323,5 @@
     <?PHP HTML::importSection('jquery'); ?>
     <script src="/assets/vendors/morris/morris.min.js"></script>
     <script src="/assets/vendors/raphael/raphael-min.js"></script>
+    <?PHP Javascript::importScript('deepanalytics', array(), false); ?>
 </html>
