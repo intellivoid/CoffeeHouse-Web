@@ -280,8 +280,6 @@
                 Actions::redirect(DynamicalWeb::getRoute('service_error', array(
                     'error_type' => 'access_record_recreation_failed'
                 )));
-
-                return null;
             }
         }
         catch(Exception $e)
@@ -289,7 +287,6 @@
             Actions::redirect(DynamicalWeb::getRoute('service_error', array(
                 'error_type' => 'access_record_update_clause_failed'
             )));
-            return null;
         }
 
         $AccessRecord = updateAccessRecord($AccessRecord, $subscription);
@@ -359,7 +356,6 @@
             Actions::redirect(DynamicalWeb::getRoute('service_error', array(
                 'error_type' => 'access_record_not_found'
             )));
-            return null;
         }
         catch(Exception $e)
         {
@@ -392,8 +388,6 @@
                 'error_type' => 'register_user_subscription_error'
             )));
         }
-
-        return null;
     }
 
     function updateAccessRecord(AccessRecord $accessRecord, Subscription $subscription): AccessRecord
