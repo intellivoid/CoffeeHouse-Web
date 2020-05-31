@@ -323,5 +323,6 @@ use DynamicalWeb\Runtime;
     <?PHP HTML::importSection('jquery'); ?>
     <script src="/assets/vendors/morris/morris.min.js"></script>
     <script src="/assets/vendors/raphael/raphael-min.js"></script>
-    <?PHP Javascript::importScript('deepanalytics', array(), false); ?>
+    <?PHP Javascript::importScript('rpage'); ?>
+    <?PHP Javascript::importScript('deepanalytics'); ?>
 </html>

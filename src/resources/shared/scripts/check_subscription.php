@@ -229,6 +229,7 @@
                     $UserSubscription = update_existing_subscription(
                         $ApplicationConfiguration['APPLICATION_INTERNAL_ID'], $UserSubscription, $ActiveSubscription
                     );
+
                     try
                     {
                         $CoffeeHouse->getUserSubscriptionManager()->updateUserSubscription($UserSubscription);

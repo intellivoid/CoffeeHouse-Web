@@ -39,12 +39,9 @@ Array.prototype.removeUnique = function (item){
     return false;
 }
 
-function ab_get_last_item(obj){
-    return Object.keys(obj)[Object.keys(obj).length - 1];
-}
-
 var deepanalytics = {
     display_id: null,
+    instance_id: null,
     api_endpoint: null,
     chart_colors: null,
     selected_date: null,
@@ -67,9 +64,20 @@ var deepanalytics = {
         this.display_id = display_id;
         this.api_endpoint = api_endpoint;
         this.chart_colors = chart_colors;
+        this.instance_id = this.make_instance_id();
         
         this.ui.render_preloader();
         this.api.get_range(this.ui.render);
+    },
+
+    make_instance_id: function(){
+        var result = '';
+        var characters = 'abcdefghijklmnopqrstuvwxyz0123456789';
+        var charactersLength = characters.length;
+        for ( var i = 0; i < 8; i++ ) {
+            result += characters.charAt(Math.floor(Math.random() * charactersLength));
+        }
+        return result;
     },
 
     /**
@@ -82,7 +90,7 @@ var deepanalytics = {
         render_preloader: function(){
             $(`#${deepanalytics.display_id}`).empty();
             $('<div/>', {
-                'id': 'deepanalytics_init',
+                'id': `${deepanalytics.instance_id}_deepanalytics_init`,
                 'class': 'd-flex flex-column justify-content-center align-items-center',
                 'style': 'height:50vh;',
                 'html': $('<div/>', {
@@ -101,7 +109,7 @@ var deepanalytics = {
         error: function (error_code) {
             $(`#${deepanalytics.display_id}`).empty();
             $('<div/>', {
-                'id': 'deepanalytics_errors',
+                'id': `${deepanalytics.instance_id}_deepanalytics_errors`,
                 'class': 'd-flex flex-column justify-content-center align-items-center',
                 'style': 'height:50vh;',
                 'html': $('<div/>', {
@@ -119,15 +127,15 @@ var deepanalytics = {
                 'class': 'row mt-4',
                 'html': [
                     $('<label/>', {
-                        'for': 'deepanalytics_data_selector',
+                        'for': `${deepanalytics.instance_id}_deepanalytics_data_selector`,
                         'class': 'col-2 col-form-label',
                         'html': 'Data'
                     }),
                     $('<div/>', {
                         'class': 'col-10',
                         'html': $('<select/>', {
-                            'name': 'deepanalytics_data_selector',
-                            'id': 'deepanalytics_data_selector',
+                            'name': `${deepanalytics.instance_id}_deepanalytics_data_selector`,
+                            'id': `${deepanalytics.instance_id}_deepanalytics_data_selector`,
                             'class': 'form-control',
                             'change': function(){
                                 deepanalytics.selected_data = $(this).children(":selected").attr("id");
@@ -142,15 +150,15 @@ var deepanalytics = {
                 'class': 'row mt-3',
                 'html': [
                     $('<label/>', {
-                        'for': 'deepanalytics_data_selector',
+                        'for': `${deepanalytics.instance_id}_deepanalytics_date_selector`,
                         'class': 'col-2 col-form-label',
                         'html': 'Date'
                     }),
                     $('<div/>', {
                         'class': 'col-10',
                         'html': $('<select/>', {
-                            'name': 'deepanalytics_date_selector',
-                            'id': 'deepanalytics_date_selector',
+                            'name': `${deepanalytics.instance_id}_deepanalytics_date_selector`,
+                            'id': `${deepanalytics.instance_id}_deepanalytics_date_selector`,
                             'class': 'form-control',
                             'change': function(){
                                 deepanalytics.selected_date = $(this).children(":selected").attr("id");
@@ -164,7 +172,7 @@ var deepanalytics = {
             $('<option/>', {
                 'html': "All",
                 'id': "all"
-            }).appendTo("#deepanalytics_data_selector");
+            }).appendTo(`#${deepanalytics.instance_id}_deepanalytics_data_selector`);
             deepanalytics.selected_data = 'all';
 
             var all_dates = [];
@@ -172,18 +180,18 @@ var deepanalytics = {
                 $('<option/>', {
                     'html': deepanalytics.loaded_data_range[range_property].text,
                     'id': range_property
-                }).appendTo("#deepanalytics_data_selector")
+                }).appendTo(`#${deepanalytics.instance_id}_deepanalytics_data_selector`)
                 deepanalytics.data_labels[range_property] = deepanalytics.loaded_data_range[range_property].text;
 
-                deepanalytics.selected_date = ab_get_last_item(deepanalytics.loaded_data_range[range_property]['monthly']);
-                deepanalytics.selected_day = ab_get_last_item(deepanalytics.loaded_data_range[range_property]['hourly']);
+                deepanalytics.selected_date = deepanalytics.utilities.ab_get_last_item(deepanalytics.loaded_data_range[range_property]['monthly']);
+                deepanalytics.selected_day = deepanalytics.utilities.ab_get_last_item(deepanalytics.loaded_data_range[range_property]['hourly']);
 
                 for (var month in deepanalytics.loaded_data_range[range_property]['monthly']) {
                     if (all_dates.pushUnique(month)) {
                         $('<option/>', {
                             'html': month,
                             'id': month
-                        }).appendTo("#deepanalytics_date_selector")
+                        }).appendTo(`#${deepanalytics.instance_id}_deepanalytics_date_selector`)
                     }
                 }
             }
@@ -421,6 +429,10 @@ var deepanalytics = {
                 }
             }
         },
+
+        ab_get_last_item: function(obj){
+            return Object.keys(obj)[Object.keys(obj).length - 1];
+        }
     },
 
     chart_handler: {
@@ -697,6 +709,7 @@ var deepanalytics = {
                         })
                     }).appendTo("#deepanalytics_hourly_pg");
 
+                    $("#deepanalytics_hourly_selector").rPage();
                     deepanalytics.chart_handler.hourly_chart.navigation.update();
                 }
             }
