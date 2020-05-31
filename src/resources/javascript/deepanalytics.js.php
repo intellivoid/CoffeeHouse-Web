@@ -796,6 +796,7 @@ var deepanalytics = {
 
                 no_data_render: function(){
                     $("#deepanalytics_monthly_line_chart").empty();
+                    $("#deepanalytics_hourly_selector").empty();
                     $('<div/>', {
                         'class': 'd-flex flex-column justify-content-center align-items-center',
                         'style': 'height:40vh;',
