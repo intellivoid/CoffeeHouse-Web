@@ -182,10 +182,16 @@ var deepanalytics = {
                 }).appendTo(`#${deepanalytics.instance_id}_deepanalytics_data_selector`)
                 deepanalytics.data_labels[range_property] = deepanalytics.loaded_data_range[range_property].text;
 
-                console.log(deepanalytics.utilities.ab_get_last_item(deepanalytics.loaded_data_range[range_property]['monthly']));
-                var selected_date = deepanalytics.utilities.ab_get_last_item(deepanalytics.loaded_data_range[range_property]['monthly']);
+                var selected_date = Object.keys(deepanalytics.loaded_data_range[range_property]['monthly'])[0];
                 if(typeof selected_date != "undefined") {
-                    deepanalytics.selected_date = selected_date;
+                    if(typeof deepanalytics.selected_date == "undefined"){
+                        deepanalytics.selected_date = selected_date;
+                    } else {
+                        var current_selected = new Date(deepanalytics.selected_date);
+                        if(new Date(selected_date) > current_selected){
+                            deepanalytics.selected_date = selected_date;
+                        }
+                    }
                 }
 
                 var selected_day = deepanalytics.utilities.ab_get_last_item(deepanalytics.loaded_data_range[range_property]['hourly']);
