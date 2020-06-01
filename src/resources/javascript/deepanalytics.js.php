@@ -22,6 +22,7 @@
  */
 
 var deepanalytics = {
+    version: "1.0.0.0"
     display_id: null,
     instance_id: null,
     api_endpoint: null,
