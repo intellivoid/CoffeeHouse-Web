@@ -449,10 +449,10 @@ const deepanalytics = {
         },
 
         load_hourly_range: function (data) {
-            hourly_range = {};
+            let hourly_range = {};
             deepanalytics.hourly_range = {};
             for (let data_range in data) {
-                var hourly_range = data[data_range]["hourly"];
+                hourly_range = data[data_range]["hourly"];
                 for (let stamp in hourly_range) {
                     const formatted_stamp = stamp.split('-')[2];
                     if (deepanalytics.selected_date === `${stamp.split('-')[0]}-${stamp.split('-')[1]}`) {
@@ -548,6 +548,8 @@ const deepanalytics = {
                 },
 
                 render: function () {
+                    let stamp;
+                    let data_entry_object;
                     $(`#${deepanalytics.instance_id}_deepanalytics_hourly_line_chart`).empty();
 
                     const exclude = [];
@@ -557,13 +559,13 @@ const deepanalytics = {
 
                     if (deepanalytics.selected_data === "all") {
                         for (let data_entry in deepanalytics.loaded_hourly_data['results']) {
-                            var data_entry_object = deepanalytics.loaded_hourly_data['results'][data_entry];
+                            data_entry_object = deepanalytics.loaded_hourly_data['results'][data_entry];
 
                             if (data_entry_object == null) {
                                 deepanalytics.utilities.push_unique(exclude, data_entry);
                                 labels = deepanalytics.utilities.get_key_labels(exclude);
                             } else {
-                                for (var stamp in data_entry_object['data']) {
+                                for (stamp in data_entry_object['data']) {
                                     if (typeof working_data[stamp] == "undefined") {
                                         working_data[stamp] = {}
                                     }
@@ -573,14 +575,14 @@ const deepanalytics = {
                             }
                         }
                     } else {
-                        var data_entry_object = deepanalytics.loaded_hourly_data['results'][deepanalytics.selected_data];
+                        data_entry_object = deepanalytics.loaded_hourly_data['results'][deepanalytics.selected_data];
 
                         if (data_entry_object == null) {
                             this.no_data_render();
                             return;
                         } else {
                             labels = deepanalytics.utilities.get_single_label(deepanalytics.selected_data);
-                            for (var stamp in data_entry_object['data']) {
+                            for (stamp in data_entry_object['data']) {
                                 if (typeof working_data[stamp] == "undefined") {
                                     working_data[stamp] = {}
                                 }
@@ -810,6 +812,8 @@ const deepanalytics = {
                 },
 
                 render: function () {
+                    let stamp;
+                    let data_entry_object;
                     $(`#${deepanalytics.instance_id}_deepanalytics_monthly_line_chart`).empty();
 
                     const exclude = [];
@@ -819,13 +823,13 @@ const deepanalytics = {
 
                     if (deepanalytics.selected_data === "all") {
                         for (let data_entry in deepanalytics.loaded_monthly_data['results']) {
-                            var data_entry_object = deepanalytics.loaded_monthly_data['results'][data_entry];
+                            data_entry_object = deepanalytics.loaded_monthly_data['results'][data_entry];
 
                             if (data_entry_object == null) {
                                 deepanalytics.utilities.push_unique(exclude, data_entry);
                                 labels = deepanalytics.utilities.get_key_labels(exclude);
                             } else {
-                                for (var stamp in data_entry_object['data']) {
+                                for (stamp in data_entry_object['data']) {
                                     if (typeof working_data[stamp] == "undefined") {
                                         working_data[stamp] = {}
                                     }
@@ -835,14 +839,14 @@ const deepanalytics = {
                             }
                         }
                     } else {
-                        var data_entry_object = deepanalytics.loaded_monthly_data['results'][deepanalytics.selected_data];
+                        data_entry_object = deepanalytics.loaded_monthly_data['results'][deepanalytics.selected_data];
 
                         if (data_entry_object == null) {
                             this.deepanalytics.chart_handler.monthly_chart.chart.no_data_render();
                             return;
                         } else {
                             labels = deepanalytics.utilities.get_single_label(deepanalytics.selected_data);
-                            for (var stamp in data_entry_object['data']) {
+                            for (stamp in data_entry_object['data']) {
                                 if (typeof working_data[stamp] == "undefined") {
                                     working_data[stamp] = {}
                                 }
