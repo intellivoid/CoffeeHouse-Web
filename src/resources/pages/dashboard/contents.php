@@ -6,7 +6,8 @@
     use DynamicalWeb\Actions;
     use DynamicalWeb\DynamicalWeb;
     use DynamicalWeb\HTML;
-    use DynamicalWeb\Runtime;
+use DynamicalWeb\Javascript;
+use DynamicalWeb\Runtime;
     use IntellivoidAPI\Abstracts\SearchMethods\AccessRecordSearchMethod;
     use IntellivoidAPI\Exceptions\AccessRecordNotFoundException;
     use IntellivoidAPI\IntellivoidAPI;
@@ -169,6 +170,11 @@
 
     }
 
+    DynamicalWeb::setMemoryObject('subscription_plan', $SubscriptionPlan);
+    DynamicalWeb::setMemoryObject('access_record', $AccessRecord);
+    DynamicalWeb::setMemoryObject('subscription', $Subscription);
+
+    HTML::importScript('deepanalytics');
     HTML::importScript('actions');
     HTML::importScript('alert');
 
@@ -177,6 +183,7 @@
 <html lang="<?PHP HTML::print(APP_LANGUAGE_ISO_639); ?>">
     <head>
         <?PHP HTML::importSection('header'); ?>
+        <link rel="stylesheet" href="/assets/vendors/morris/morris.css">
         <title><?PHP HTML::print(TEXT_PAGE_TITLE); ?></title>
     </head>
     <body>
@@ -286,12 +293,8 @@
                         <div class="card m-b-20 animated bounceInRight">
                             <div class="card-body">
                                 <h4 class="header-title"><?PHP HTML::print(TEXT_API_USAGE_CARD_TITLE); ?></h4>
-                                <div id="api-usage-chart">
-                                    <div class="d-flex flex-column justify-content-center align-items-center" style="height:50vh;">
-                                        <div class="p-2 my-flex-item">
-                                            <h4 class="text-muted"><?PHP HTML::print(TEXT_API_USAGE_COMING_SOON); ?></h4>
-                                        </div>
-                                    </div>
+                                <div id="deepanalytics_viewer">
+                                   <span><?PHP HTML::print(TEXT_API_USAGE_CARD_LOADING_PLACEHOLDER) ?></span>
                                 </div>
                             </div>
                         </div>
@@ -304,4 +307,6 @@
     <?PHP HTML::importSection('jquery'); ?>
     <script src="/assets/vendors/morris/morris.min.js"></script>
     <script src="/assets/vendors/raphael/raphael-min.js"></script>
+    <?PHP Javascript::importScript('rpage'); ?>
+    <?PHP Javascript::importScript('deepanalytics'); ?>
 </html>

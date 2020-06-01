@@ -28,14 +28,24 @@
 
     try
     {
+        $Protocol = strtolower(substr($_SERVER["SERVER_PROTOCOL"],0,strpos( $_SERVER["SERVER_PROTOCOL"],'/'))).'://';
+        $RedirectURL = $Protocol . $_SERVER['HTTP_HOST'] . DynamicalWeb::getRoute('dashboard');
+
         /** @var SubscriptionPurchaseResults $Subscription */
         if(isset($_GET['promotion_code']))
         {
-            $Subscription = $COASniffle->getCOA()->createSubscription(WEB_ACCESS_TOKEN, $_GET['plan'], $_GET['promotion_code']);
+            if(strlen($_GET['promotion_code']) > 0)
+            {
+                $Subscription = $COASniffle->getCOA()->createSubscription(WEB_ACCESS_TOKEN, $_GET['plan'], $RedirectURL, $_GET['promotion_code']);
+            }
+            else
+            {
+                $Subscription = $COASniffle->getCOA()->createSubscription(WEB_ACCESS_TOKEN, $_GET['plan'], $RedirectURL);
+            }
         }
         else
         {
-            $Subscription = $COASniffle->getCOA()->createSubscription(WEB_ACCESS_TOKEN, $_GET['plan']);
+            $Subscription = $COASniffle->getCOA()->createSubscription(WEB_ACCESS_TOKEN, $_GET['plan'], $RedirectURL);
         }
     }
     catch (BadResponseException $e)
@@ -210,7 +220,7 @@
                                 }
                                 ?>
                                 <div class="card-body">
-                                    <button type="button" onclick="window.open('<?PHP HTML::print($Subscription->ProcessTransactionURL); ?>');" class="btn btn-outline-primary float-right"><?PHP HTML::print(TEXT_CONFIRM_PURCHASE_BUTTON); ?></button>
+                                    <button type="button" onclick="location.href='<?PHP HTML::print($Subscription->ProcessTransactionURL); ?>';" class="btn btn-outline-primary float-right"><?PHP HTML::print(TEXT_CONFIRM_PURCHASE_BUTTON); ?></button>
                                 </div>
                             </div>
                         </div>
