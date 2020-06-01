@@ -16,9 +16,9 @@
  * DynamicalCompression. No further setup or configuration is required, just
  * add the following files to DynamicalWeb's base.
  *
- * src/resources/plugins/frontend/dynamicalweb.js
- * src/resources/plugins/backend/dynamicalweb.go
- * src/resources/plugins/dynamicalweb.conf
+ * src/resources/plugins/frontend/deepanalytics.js
+ * src/resources/plugins/backend/deepanalytics.go
+ * src/resources/plugins/deepanalytics.conf
  */
 
 var deepanalytics = {
