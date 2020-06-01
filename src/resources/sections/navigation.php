@@ -59,7 +59,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="https://gist.github.com/Netkas/e8977b26f482ca40911a949df7dd286f" target="_blank">
+                        <a href="https://docs.intellivoid.net/coffeehouse/v1/introduction" target="_blank">
                             <i class="mdi mdi-book"></i> <?PHP HTML::print(TEXT_NAVBAR_DOCS); ?>
                         </a>
                     </li>
