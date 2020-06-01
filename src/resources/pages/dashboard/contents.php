@@ -294,23 +294,7 @@ use DynamicalWeb\Runtime;
                             <div class="card-body">
                                 <h4 class="header-title"><?PHP HTML::print(TEXT_API_USAGE_CARD_TITLE); ?></h4>
                                 <div id="deepanalytics_viewer">
-                                    <div id="morris-line-example" class="morris-charts" style="height: 300px">
-
-                                        <nav>
-                                            <ul class="pagination pagination-sm">
-                                                <li class="page-item disabled">
-                                                    <a class="page-link" href="#" tabindex="-1">Previous</a>
-                                                </li>
-                                                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                                <li class="page-item">
-                                                    <a class="page-link" href="#">Next</a>
-                                                </li>
-                                            </ul>
-                                        </nav>
-
-                                    </div>
+                                   <span><?PHP HTML::print(TEXT_API_USAGE_CARD_LOADING_PLACEHOLDER) ?></span>
                                 </div>
                             </div>
                         </div>

@@ -35,6 +35,7 @@
             "SUPPORT_TELEGRAM_SUPPORT_ACCOUNT": "Telegram Support Account",
             "SUPPORT_CONTACT_INTELLIVOID": "Contact Intellivoid",
             "API_USAGE_CARD_TITLE": "API Usage",
+            "API_USAGE_CARD_LOADING_PLACEHOLDER": "Working...",
             "DEEPANALYTICS_NO_DATA_ERROR": "No Data Available",
             "DEEPANALYTICS_GENERIC_ERROR": "DeepAnalytics Error (%s)",
             "DEEPANALYTICS_MONTHLY_USAGE": "Monthly Usage",
