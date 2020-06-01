@@ -71,7 +71,7 @@ var deepanalytics = {
 
     make_instance_id: function(){
         var result = '';
-        var characters = 'abcdefghijklmnopqrstuvwxyz0123456789';
+        var characters = 'abcdefghijklmnopqrstuvwxyz';
         var charactersLength = characters.length;
         for ( var i = 0; i < 8; i++ ) {
             result += characters.charAt(Math.floor(Math.random() * charactersLength));
@@ -235,8 +235,8 @@ var deepanalytics = {
                             'html': $('<a/>', {
                                 'class': 'nav-link active',
                                 'data-toggle': 'tab',
-                                'id:': 'deepanalytics_monthly_tab',
-                                'href': '#deepanalytics_monthly_tab',
+                                'id:': `${deepanalytics.instance_id}_deepanalytics_monthly_tab`,
+                                'href': `#${deepanalytics.instance_id}_deepanalytics_monthly_tab`,
                                 'role': 'tab',
                                 'aria-selected': 'true',
                                 'html': [
@@ -258,8 +258,8 @@ var deepanalytics = {
                             'html': $('<a/>', {
                                 'class': 'nav-link',
                                 'data-toggle': 'tab',
-                                'id:': 'deepanalytics_hourly_tab',
-                                'href': '#deepanalytics_hourly_tab',
+                                'id:': `${deepanalytics.instance_id}_deepanalytics_hourly_tab`,
+                                'href': `#${deepanalytics.instance_id}_deepanalytics_hourly_tab`,
                                 'role': 'tab',
                                 'aria-selected': 'false',
                                 'html': [
@@ -286,26 +286,26 @@ var deepanalytics = {
                     'html': [
                         $('<div/>', {
                             'class': 'tab-pane p-3 active',
-                            'id': 'deepanalytics_monthly_tab',
+                            'id': `${deepanalytics.instance_id}_deepanalytics_monthly_tab`,
                             'role': 'tabpanel',
                             'html': $('<div/>', {
-                                'id': 'deepanalytics_monthly_line_chart',
+                                'id': `${deepanalytics.instance_id}_deepanalytics_monthly_line_chart`,
                                 'class': 'morris-chart',
                                 'style': 'height: 300px;'
                             })
                         }),
                         $('<div/>', {
                             'class': 'tab-pane p-3',
-                            'id': 'deepanalytics_hourly_tab',
+                            'id': `${deepanalytics.instance_id}_deepanalytics_hourly_tab`,
                             'role': 'tabpanel',
                             'html': [
                                 $('<div/>', {
-                                    'id': 'deepanalytics_hourly_line_chart',
+                                    'id': `${deepanalytics.instance_id}_deepanalytics_hourly_line_chart`,
                                     'class': 'morris-chart',
                                     'style': 'height: 270px;'
                                 }),
                                 $('<div/>', {
-                                    'id': 'deepanalytics_hourly_selector',
+                                    'id': `${deepanalytics.instance_id}_deepanalytics_hourly_selector`,
                                     'style': 'height: 30px;'
                                 })
                             ]
@@ -496,7 +496,7 @@ var deepanalytics = {
 
             ui: {
                 render_preloader: function(){
-                    $("#deepanalytics_hourly_line_chart").empty();
+                    $(`#${deepanalytics.instance_id}_deepanalytics_hourly_line_chart`).empty();
                     $('<div/>', {
                         'class': 'd-flex flex-column justify-content-center align-items-center',
                         'style': 'height:40vh;',
@@ -506,7 +506,7 @@ var deepanalytics = {
                                 'class': 'fa fa-circle-o-notch fa-spin'
                             })
                         })
-                    }).appendTo("#deepanalytics_hourly_line_chart");
+                    }).appendTo(`#${deepanalytics.instance_id}_deepanalytics_hourly_line_chart`);
 
                     deepanalytics.chart_handler.hourly_chart.navigation.disable();
                 }
@@ -530,7 +530,7 @@ var deepanalytics = {
                 },
 
                 no_data_render: function(){
-                    $("#deepanalytics_hourly_line_chart").empty();
+                    $(`#${deepanalytics.instance_id}_deepanalytics_hourly_line_chart`).empty();
                     $('<div/>', {
                         'class': 'd-flex flex-column justify-content-center align-items-center',
                         'style': 'height:40vh;',
@@ -540,11 +540,11 @@ var deepanalytics = {
                                 'html': 'No Data Available'
                             })
                         })
-                    }).appendTo("#deepanalytics_hourly_line_chart");
+                    }).appendTo(`#${deepanalytics.instance_id}_deepanalytics_hourly_line_chart`);
                 },
 
                 render: function(){
-                    $("#deepanalytics_hourly_line_chart").empty();
+                    $(`#${deepanalytics.instance_id}_deepanalytics_hourly_line_chart`).empty();
 
                     var exclude = [];
                     var labels = deepanalytics.utilities.get_key_labels(exclude);
@@ -610,7 +610,7 @@ var deepanalytics = {
                     }
 
                     deepanalytics.chart_handler.hourly_chart.chart.createLineChart(
-                        'deepanalytics_hourly_line_chart', $data, 'y',
+                        `${deepanalytics.instance_id}_deepanalytics_hourly_line_chart`, $data, 'y',
                         labels.keys, labels.labels, deepanalytics.chart_colors
                     );
                 }
@@ -634,12 +634,12 @@ var deepanalytics = {
 
                 disable: function(){
 
-                    $("#deepanalytics_hourly_pg_previous").unbind("click");
-                    $("#deepanalytics_hourly_pg_next").unbind("click");
+                    $(`#${deepanalytics.instance_id}_deepanalytics_hourly_pg_previous`).unbind("click");
+                    $(`#${deepanalytics.instance_id}_deepanalytics_hourly_pg_next`).unbind("click");
 
                     for (var current_range in this.range) {
                         if(typeof(this.range[current_range]) == "number"){
-                            $(`#deepanalytics_hourly_pg_${this.range[current_range]}`).unbind("click");
+                            $(`#${deepanalytics.instance_id}_deepanalytics_hourly_pg_${this.range[current_range]}`).unbind("click");
                         }
                     }
                 },
@@ -648,18 +648,18 @@ var deepanalytics = {
                     var selected = this.range[this.selected_index];
 
                     // Unbind existing events
-                    $("#deepanalytics_hourly_pg_previous").unbind("click");
-                    $("#deepanalytics_hourly_pg_next").unbind("click");
+                    $(`#${deepanalytics.instance_id}_deepanalytics_hourly_pg_previous`).unbind("click");
+                    $(`#${deepanalytics.instance_id}_deepanalytics_hourly_pg_next`).unbind("click");
 
                     // Update previous button event
                     if(selected == this.minimum)
                     {
-                        $("#deepanalytics_hourly_pg_previous").addClass("disabled");
+                        $(`#${deepanalytics.instance_id}_deepanalytics_hourly_pg_previous`).addClass("disabled");
                     }
                     else
                     {
-                        $("#deepanalytics_hourly_pg_previous").removeClass("disabled");
-                        $("#deepanalytics_hourly_pg_previous").click(function(){
+                        $(`#${deepanalytics.instance_id}_deepanalytics_hourly_pg_previous`).removeClass("disabled");
+                        $(`#${deepanalytics.instance_id}_deepanalytics_hourly_pg_previous`).click(function(){
                             deepanalytics.chart_handler.hourly_chart.navigation.selected_index -= 1;
                             deepanalytics.chart_handler.hourly_chart.navigation.update();
                         });
@@ -668,12 +668,12 @@ var deepanalytics = {
                     // Update next button event
                     if(selected == this.maximum)
                     {
-                        $("#deepanalytics_hourly_pg_next").addClass("disabled");
+                        $(`#${deepanalytics.instance_id}_deepanalytics_hourly_pg_next`).addClass("disabled");
                     }
                     else
                     {
-                        $("#deepanalytics_hourly_pg_next").removeClass("disabled");
-                        $("#deepanalytics_hourly_pg_next").click(function(){
+                        $(`#${deepanalytics.instance_id}_deepanalytics_hourly_pg_next`).removeClass("disabled");
+                        $(`#${deepanalytics.instance_id}_deepanalytics_hourly_pg_next`).click(function(){
                             deepanalytics.chart_handler.hourly_chart.navigation.selected_index += 1;
                             deepanalytics.chart_handler.hourly_chart.navigation.update();
                         });
@@ -682,15 +682,15 @@ var deepanalytics = {
                     for (var current_range in this.range) {
                         if(typeof(this.range[current_range]) == "number"){
 
-                            $(`#deepanalytics_hourly_pg_${this.range[current_range]}`).removeClass("active");
-                            $(`#deepanalytics_hourly_pg_${this.range[current_range]}`).unbind("click");
+                            $(`#${deepanalytics.instance_id}_deepanalytics_hourly_pg_${this.range[current_range]}`).removeClass("active");
+                            $(`#${deepanalytics.instance_id}_deepanalytics_hourly_pg_${this.range[current_range]}`).unbind("click");
 
                             if(this.range[current_range] == selected){
-                                $(`#deepanalytics_hourly_pg_${this.range[current_range]}`).addClass("active");
+                                $(`#${deepanalytics.instance_id}_deepanalytics_hourly_pg_${this.range[current_range]}`).addClass("active");
                             }
 
-                            $(`#deepanalytics_hourly_pg_${this.range[current_range]}`).removeClass("disabled");
-                            $(`#deepanalytics_hourly_pg_${this.range[current_range]}`).click(function() {
+                            $(`#${deepanalytics.instance_id}_deepanalytics_hourly_pg_${this.range[current_range]}`).removeClass("disabled");
+                            $(`#${deepanalytics.instance_id}_deepanalytics_hourly_pg_${this.range[current_range]}`).click(function() {
                                 var value = parseInt($(this).attr("id").match(/\d+/g)[0]);
                                 deepanalytics.chart_handler.hourly_chart.navigation.selected_index = deepanalytics.chart_handler.hourly_chart.navigation.range.indexOf(value);
                                 deepanalytics.chart_handler.hourly_chart.navigation.update();
@@ -708,10 +708,10 @@ var deepanalytics = {
                     $("<nav/>", {
                         "html": $("<ul/>", {
                             "class": "pagination pagination-sm justify-content-center",
-                            "id": "deepanalytics_hourly_pg",
+                            "id": `${deepanalytics.instance_id}_deepanalytics_hourly_pg`,
                             "html": $("<li/>", {
                                 "class": "page-item disabled",
-                                "id": "deepanalytics_hourly_pg_previous",
+                                "id": `${deepanalytics.instance_id}_deepanalytics_hourly_pg_previous`,
                                 "html": $("<a/>", {
                                     "class": "page-link",
                                     "href": "#/",
@@ -721,7 +721,7 @@ var deepanalytics = {
                                 })
                             })
                         })
-                    }).appendTo("#deepanalytics_hourly_selector");
+                    }).appendTo(`#${deepanalytics.instance_id}_deepanalytics_hourly_selector`);
 
                     for(var day in deepanalytics.hourly_range){
 
@@ -737,18 +737,18 @@ var deepanalytics = {
 
                         $("<li/>", {
                             "class": "page-item disabled",
-                            "id": `deepanalytics_hourly_pg_${day}`,
+                            "id": `${deepanalytics.instance_id}_deepanalytics_hourly_pg_${day}`,
                             "html": $("<a/>", {
                                 "class": "page-link",
                                 "href": "#/",
                                 "html": day
                             })
-                        }).appendTo("#deepanalytics_hourly_pg");
+                        }).appendTo(`#${deepanalytics.instance_id}_deepanalytics_hourly_pg`);
                     }
 
                     $("<li/>", {
                         "class": "page-item disabled",
-                        "id": "deepanalytics_hourly_pg_next",
+                        "id": `${deepanalytics.instance_id}_deepanalytics_hourly_pg_next`,
                         "html": $("<a/>", {
                             "class": "page-link",
                             "href": "#/",
@@ -756,9 +756,9 @@ var deepanalytics = {
                                 "class": "mdi mdi-chevron-right"
                             })
                         })
-                    }).appendTo("#deepanalytics_hourly_pg");
+                    }).appendTo(`#${deepanalytics.instance_id}_deepanalytics_hourly_pg`);
 
-                    $("#deepanalytics_hourly_selector").rPage();
+                    $(`#${deepanalytics.instance_id}_deepanalytics_hourly_selector`).rPage();
                     deepanalytics.chart_handler.hourly_chart.navigation.update();
                 }
             }
@@ -775,8 +775,8 @@ var deepanalytics = {
 
             ui: {
                 render_preloader: function(){
-                    $("#deepanalytics_monthly_line_chart").empty();
-                    $("#deepanalytics_hourly_selector").empty();
+                    $(`#${deepanalytics.instance_id}_deepanalytics_monthly_line_chart`).empty();
+                    $(`#${deepanalytics.instance_id}_deepanalytics_hourly_selector`).empty();
                     $('<div/>', {
                         'class': 'd-flex flex-column justify-content-center align-items-center',
                         'style': 'height:50vh;',
@@ -786,7 +786,7 @@ var deepanalytics = {
                                 'class': 'fa fa-circle-o-notch fa-spin'
                             })
                         })
-                    }).appendTo("#deepanalytics_monthly_line_chart");
+                    }).appendTo(`#${deepanalytics.instance_id}_deepanalytics_monthly_line_chart`);
                 }
             },
 
@@ -807,8 +807,8 @@ var deepanalytics = {
                 },
 
                 no_data_render: function(){
-                    $("#deepanalytics_monthly_line_chart").empty();
-                    $("#deepanalytics_hourly_selector").empty();
+                    $(`#${deepanalytics.instance_id}_deepanalytics_monthly_line_chart`).empty();
+                    $(`#${deepanalytics.instance_id}_deepanalytics_hourly_selector`).empty();
                     $('<div/>', {
                         'class': 'd-flex flex-column justify-content-center align-items-center',
                         'style': 'height:40vh;',
@@ -818,11 +818,11 @@ var deepanalytics = {
                                 'html': 'No Data Available'
                             })
                         })
-                    }).appendTo("#deepanalytics_monthly_line_chart");
+                    }).appendTo(`#${deepanalytics.instance_id}_deepanalytics_monthly_line_chart`);
                 },
 
                 render: function(){
-                    $("#deepanalytics_monthly_line_chart").empty();
+                    $(`#${deepanalytics.instance_id}_deepanalytics_monthly_line_chart`).empty();
 
                     var exclude = [];
                     var labels = deepanalytics.utilities.get_key_labels(exclude);
@@ -882,7 +882,7 @@ var deepanalytics = {
                     }
 
                     deepanalytics.chart_handler.monthly_chart.chart.createLineChart(
-                        'deepanalytics_monthly_line_chart', $data, 'y',
+                        `${deepanalytics.instance_id}_deepanalytics_monthly_line_chart`, $data, 'y',
                         labels.keys, labels.labels, deepanalytics.chart_colors
                     );
                 }
