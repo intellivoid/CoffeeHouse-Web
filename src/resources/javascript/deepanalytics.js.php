@@ -20,8 +20,7 @@
  * src/resources/plugins/backend/deepanalytics.go
  * src/resources/plugins/deepanalytics.conf
  */
-
-var deepanalytics = {
+const deepanalytics = {
     version: "1.0.0.0",
     display_id: null,
     instance_id: null,
@@ -44,16 +43,16 @@ var deepanalytics = {
      * @param api_endpoint
      * @param chart_colors
      */
-    init: function(display_id, api_endpoint, chart_colors){
+    init: function (display_id, api_endpoint, chart_colors) {
         this.display_id = display_id;
         this.api_endpoint = api_endpoint;
         this.chart_colors = chart_colors;
         this.instance_id = this.make_instance_id();
 
         this.ui.render_preloader();
-        this.api.load_locale(function(){
-            deepanalytics.api.get_range(function(){
-                if(deepanalytics.utilities.check_if_empty(deepanalytics.loaded_data_range)) {
+        this.api.load_locale(function () {
+            deepanalytics.api.get_range(function () {
+                if (deepanalytics.utilities.check_if_empty(deepanalytics.loaded_data_range)) {
                     $(`#${deepanalytics.display_id}`).empty();
                     $('<div/>', {
                         'id': `${deepanalytics.instance_id}_deepanalytics_errors`,
@@ -74,11 +73,11 @@ var deepanalytics = {
 
     },
 
-    make_instance_id: function(){
-        var result = '';
-        var characters = 'abcdefghijklmnopqrstuvwxyz';
-        var charactersLength = characters.length;
-        for ( var i = 0; i < 8; i++ ) {
+    make_instance_id: function () {
+        let result = '';
+        const characters = 'abcdefghijklmnopqrstuvwxyz';
+        const charactersLength = characters.length;
+        for (let i = 0; i < 8; i++) {
             result += characters.charAt(Math.floor(Math.random() * charactersLength));
         }
         return result;
@@ -91,7 +90,7 @@ var deepanalytics = {
         /**
          * Renders the preloader animation
          */
-        render_preloader: function(){
+        render_preloader: function () {
             $(`#${deepanalytics.display_id}`).empty();
             $('<div/>', {
                 'id': `${deepanalytics.instance_id}_deepanalytics_init`,
@@ -125,7 +124,7 @@ var deepanalytics = {
             }).appendTo(`#${deepanalytics.display_id}`);
         },
 
-        render: function() {
+        render: function () {
             $(`#${deepanalytics.display_id}`).empty();
             $('<div/>', {
                 'class': 'row mt-4',
@@ -141,7 +140,7 @@ var deepanalytics = {
                             'name': `${deepanalytics.instance_id}_deepanalytics_data_selector`,
                             'id': `${deepanalytics.instance_id}_deepanalytics_data_selector`,
                             'class': 'form-control',
-                            'change': function(){
+                            'change': function () {
                                 deepanalytics.selected_data = $(this).children(":selected").attr("id");
                                 deepanalytics.ui.reload();
                             }
@@ -164,7 +163,7 @@ var deepanalytics = {
                             'name': `${deepanalytics.instance_id}_deepanalytics_date_selector`,
                             'id': `${deepanalytics.instance_id}_deepanalytics_date_selector`,
                             'class': 'form-control',
-                            'change': function(){
+                            'change': function () {
                                 deepanalytics.selected_date = $(this).children(":selected").attr("id");
                                 deepanalytics.ui.reload();
                             }
@@ -179,32 +178,32 @@ var deepanalytics = {
             }).appendTo(`#${deepanalytics.instance_id}_deepanalytics_data_selector`);
             deepanalytics.selected_data = 'all';
 
-            var all_dates = [];
-            for (var range_property in deepanalytics.loaded_data_range) {
+            const all_dates = [];
+            for (let range_property in deepanalytics.loaded_data_range) {
                 $('<option/>', {
                     'html': deepanalytics.loaded_data_range[range_property].text,
                     'id': range_property
                 }).appendTo(`#${deepanalytics.instance_id}_deepanalytics_data_selector`)
                 deepanalytics.data_labels[range_property] = deepanalytics.loaded_data_range[range_property].text;
 
-                var selected_date = Object.keys(deepanalytics.loaded_data_range[range_property]['monthly'])[0];
-                if(typeof selected_date != "undefined") {
-                    if(typeof deepanalytics.selected_date == "undefined"){
+                const selected_date = Object.keys(deepanalytics.loaded_data_range[range_property]['monthly'])[0];
+                if (typeof selected_date != "undefined") {
+                    if (typeof deepanalytics.selected_date == "undefined") {
                         deepanalytics.selected_date = selected_date;
                     } else {
-                        var current_selected = new Date(deepanalytics.selected_date);
-                        if(new Date(selected_date) > current_selected){
+                        const current_selected = new Date(deepanalytics.selected_date);
+                        if (new Date(selected_date) > current_selected) {
                             deepanalytics.selected_date = selected_date;
                         }
                     }
                 }
 
-                var selected_day = deepanalytics.utilities.ab_get_last_item(deepanalytics.loaded_data_range[range_property]['hourly']);
-                if(typeof selected_day != "undefined"){
+                const selected_day = deepanalytics.utilities.ab_get_last_item(deepanalytics.loaded_data_range[range_property]['hourly']);
+                if (typeof selected_day != "undefined") {
                     deepanalytics.selected_day = selected_day;
                 }
 
-                for (var month in deepanalytics.loaded_data_range[range_property]['monthly']) {
+                for (let month in deepanalytics.loaded_data_range[range_property]['monthly']) {
 
                     if (deepanalytics.utilities.push_unique(all_dates, month)) {
                         $('<option/>', {
@@ -215,7 +214,7 @@ var deepanalytics = {
                 }
             }
 
-            if(deepanalytics.ui.tab_view.render()){
+            if (deepanalytics.ui.tab_view.render()) {
                 deepanalytics.utilities.load_hourly_range(deepanalytics.loaded_data_range);
                 deepanalytics.chart_handler.monthly_chart.init();
                 deepanalytics.chart_handler.hourly_chart.init();
@@ -224,13 +223,13 @@ var deepanalytics = {
         },
 
         tab_view: {
-            render: function(){
+            render: function () {
                 this.render_tabs();
                 this.render_tab_pages();
                 return true;
             },
 
-            render_tabs: function(){
+            render_tabs: function () {
                 $('<ul/>', {
                     'class': 'nav nav-tabs nav-tabs-custom mt-3',
                     'role': 'tablist',
@@ -247,7 +246,7 @@ var deepanalytics = {
                                 'html': [
                                     $('<span/>', {
                                         'class': 'd-none d-md-block',
-                                        'html':  deepanalytics.locale.DEEPANALYTICS_MONTHLY_USAGE
+                                        'html': deepanalytics.locale.DEEPANALYTICS_MONTHLY_USAGE
                                     }),
                                     $('<span/>', {
                                         'class': 'd-block d-md-none',
@@ -285,7 +284,7 @@ var deepanalytics = {
                 }).appendTo(`#${deepanalytics.display_id}`);
             },
 
-            render_tab_pages: function(){
+            render_tab_pages: function () {
                 $('<div/>', {
                     'class': 'tab-content',
                     'html': [
@@ -318,13 +317,13 @@ var deepanalytics = {
                     ]
                 }).appendTo(`#${deepanalytics.display_id}`);
 
-                $('a[data-toggle="tab"]').on('shown.bs.tab', function(e) {
+                $('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
                     $(window).trigger('resize');
                 });
             }
         },
 
-        reload: function(){
+        reload: function () {
             deepanalytics.utilities.load_hourly_range(deepanalytics.loaded_data_range);
             deepanalytics.chart_handler.monthly_chart.init();
             deepanalytics.chart_handler.hourly_chart.init();
@@ -360,7 +359,7 @@ var deepanalytics = {
             });
         },
 
-        get_monthly_data: function(callback){
+        get_monthly_data: function (callback) {
             $.ajax({
                 url: `${deepanalytics.api_endpoint}?action=deepanalytics.get_monthly_data`,
                 type: "POST",
@@ -369,12 +368,9 @@ var deepanalytics = {
                     "month": deepanalytics.selected_date.split('-')[1]
                 },
                 success: function (data) {
-                    if(data['status'] === false)
-                    {
+                    if (data['status'] === false) {
                         deepanalytics.error(-12);
-                    }
-                    else
-                    {
+                    } else {
                         deepanalytics.loaded_monthly_data = data;
                         callback();
                     }
@@ -385,7 +381,7 @@ var deepanalytics = {
             });
         },
 
-        get_hourly_data: function(callback){
+        get_hourly_data: function (callback) {
             $.ajax({
                 url: `${deepanalytics.api_endpoint}?action=deepanalytics.get_hourly_data`,
                 type: "POST",
@@ -395,12 +391,9 @@ var deepanalytics = {
                     "day": deepanalytics.selected_day.split('-')[2]
                 },
                 success: function (data) {
-                    if(data['status'] === false)
-                    {
+                    if (data['status'] === false) {
                         deepanalytics.error(-14);
-                    }
-                    else
-                    {
+                    } else {
                         deepanalytics.loaded_hourly_data = data;
                         callback();
                     }
@@ -413,14 +406,12 @@ var deepanalytics = {
     },
 
     utilities: {
-        get_key_labels: function(exclude) {
-            var data_keys = [];
-            var data_labels = [];
+        get_key_labels: function (exclude) {
+            const data_keys = [];
+            const data_labels = [];
 
-            for(var label in deepanalytics.data_labels)
-            {
-                if(exclude.indexOf(label) < 0)
-                {
+            for (let label in deepanalytics.data_labels) {
+                if (exclude.indexOf(label) < 0) {
                     deepanalytics.utilities.push_unique(data_keys, label);
                     deepanalytics.utilities.push_unique(data_labels, deepanalytics.data_labels[label]);
                 }
@@ -432,9 +423,9 @@ var deepanalytics = {
             }
         },
 
-        get_single_label: function(label) {
-            var data_keys = [];
-            var data_labels = [];
+        get_single_label: function (label) {
+            const data_keys = [];
+            const data_labels = [];
 
             deepanalytics.utilities.push_unique(data_keys, label);
             deepanalytics.utilities.push_unique(data_labels, deepanalytics.data_labels[label]);
@@ -445,12 +436,11 @@ var deepanalytics = {
             }
         },
 
-        check_if_empty: function(data){
-            var is_empty = true;
+        check_if_empty: function (data) {
+            let is_empty = true;
 
-            for(var data_range in data) {
-                if(Object.prototype.toString.call(data[data_range]["hourly"]) == "[object Object]")
-                {
+            for (let data_range in data) {
+                if (Object.prototype.toString.call(data[data_range]["hourly"]) === "[object Object]") {
                     is_empty = false;
                 }
             }
@@ -458,16 +448,14 @@ var deepanalytics = {
             return is_empty;
         },
 
-        load_hourly_range: function(data){
+        load_hourly_range: function (data) {
             hourly_range = {};
             deepanalytics.hourly_range = {};
-            for(var data_range in data) {
+            for (let data_range in data) {
                 var hourly_range = data[data_range]["hourly"];
-                for(var stamp in hourly_range)
-                {
-                    var formatted_stamp = stamp.split('-')[2];
-                    if(deepanalytics.selected_date == `${stamp.split('-')[0]}-${stamp.split('-')[1]}`)
-                    {
+                for (let stamp in hourly_range) {
+                    const formatted_stamp = stamp.split('-')[2];
+                    if (deepanalytics.selected_date == `${stamp.split('-')[0]}-${stamp.split('-')[1]}`) {
                         deepanalytics.hourly_range[formatted_stamp] = {
                             id: hourly_range[stamp]["id"],
                             date: hourly_range[stamp]["date"]
@@ -478,11 +466,11 @@ var deepanalytics = {
             }
         },
 
-        ab_get_last_item: function(obj){
+        ab_get_last_item: function (obj) {
             return Object.keys(obj)[Object.keys(obj).length - 1];
         },
 
-        remove_unique: function (obj, item){
+        remove_unique: function (obj, item) {
             const index = obj.indexOf(item);
             if (index > -1) {
                 obj.splice(index, 1);
@@ -491,7 +479,7 @@ var deepanalytics = {
             return false;
         },
 
-        push_unique: function (obj, item){
+        push_unique: function (obj, item) {
             if (obj.indexOf(item) == -1) {
                 obj.push(item);
                 return true;
@@ -506,12 +494,12 @@ var deepanalytics = {
 
             line_chart: null,
 
-            init: function() {
+            init: function () {
                 this.navigation.render();
             },
 
             ui: {
-                render_preloader: function(){
+                render_preloader: function () {
                     $(`#${deepanalytics.instance_id}_deepanalytics_hourly_line_chart`).empty();
                     $('<div/>', {
                         'class': 'd-flex flex-column justify-content-center align-items-center',
@@ -545,7 +533,7 @@ var deepanalytics = {
                     });
                 },
 
-                no_data_render: function(){
+                no_data_render: function () {
                     $(`#${deepanalytics.instance_id}_deepanalytics_hourly_line_chart`).empty();
                     $('<div/>', {
                         'class': 'd-flex flex-column justify-content-center align-items-center',
@@ -559,28 +547,24 @@ var deepanalytics = {
                     }).appendTo(`#${deepanalytics.instance_id}_deepanalytics_hourly_line_chart`);
                 },
 
-                render: function(){
+                render: function () {
                     $(`#${deepanalytics.instance_id}_deepanalytics_hourly_line_chart`).empty();
 
-                    var exclude = [];
-                    var labels = deepanalytics.utilities.get_key_labels(exclude);
-                    var $data = [];
-                    var working_data = {};
+                    const exclude = [];
+                    let labels = deepanalytics.utilities.get_key_labels(exclude);
+                    const $data = [];
+                    const working_data = {};
 
-                    if(deepanalytics.selected_data == "all")
-                    {
-                        for(var data_entry in deepanalytics.loaded_hourly_data['results']) {
+                    if (deepanalytics.selected_data == "all") {
+                        for (let data_entry in deepanalytics.loaded_hourly_data['results']) {
                             var data_entry_object = deepanalytics.loaded_hourly_data['results'][data_entry];
 
-                            if(data_entry_object == null)
-                            {
+                            if (data_entry_object == null) {
                                 deepanalytics.utilities.push_unique(exclude, data_entry);
                                 labels = deepanalytics.utilities.get_key_labels(exclude);
-                            }
-                            else
-                            {
-                                for(var stamp in data_entry_object['data']){
-                                    if(typeof working_data[stamp] == "undefined"){
+                            } else {
+                                for (var stamp in data_entry_object['data']) {
+                                    if (typeof working_data[stamp] == "undefined") {
                                         working_data[stamp] = {}
                                     }
                                     working_data[stamp][data_entry] =
@@ -588,21 +572,16 @@ var deepanalytics = {
                                 }
                             }
                         }
-                    }
-                    else
-                    {
+                    } else {
                         var data_entry_object = deepanalytics.loaded_hourly_data['results'][deepanalytics.selected_data];
 
-                        if(data_entry_object == null)
-                        {
+                        if (data_entry_object == null) {
                             this.no_data_render();
                             return;
-                        }
-                        else
-                        {
+                        } else {
                             labels = deepanalytics.utilities.get_single_label(deepanalytics.selected_data);
-                            for(var stamp in data_entry_object['data']){
-                                if(typeof working_data[stamp] == "undefined"){
+                            for (var stamp in data_entry_object['data']) {
+                                if (typeof working_data[stamp] == "undefined") {
                                     working_data[stamp] = {}
                                 }
                                 working_data[stamp][deepanalytics.selected_data] =
@@ -611,7 +590,7 @@ var deepanalytics = {
                         }
                     }
 
-                    for(var entry in working_data){
+                    for (let entry in working_data) {
                         $data.push(
                             Object.assign(
                                 {y: entry},
@@ -620,7 +599,7 @@ var deepanalytics = {
                         )
                     }
 
-                    if($data.length == 0){
+                    if ($data.length == 0) {
                         this.no_data_render();
                         return;
                     }
@@ -639,75 +618,69 @@ var deepanalytics = {
                 maximum: null,
                 selected_index: null,
 
-                update: function() {
+                update: function () {
                     deepanalytics.chart_handler.hourly_chart.ui.render_preloader();
                     deepanalytics.selected_day = `${deepanalytics.selected_date}-${this.range[this.selected_index]}`;
-                    deepanalytics.api.get_hourly_data(function(){
+                    deepanalytics.api.get_hourly_data(function () {
                         deepanalytics.chart_handler.hourly_chart.chart.render();
                         deepanalytics.chart_handler.hourly_chart.navigation.update_ui();
                     });
                 },
 
-                disable: function(){
+                disable: function () {
 
                     $(`#${deepanalytics.instance_id}_deepanalytics_hourly_pg_previous`).unbind("click");
                     $(`#${deepanalytics.instance_id}_deepanalytics_hourly_pg_next`).unbind("click");
 
-                    for (var current_range in this.range) {
-                        if(typeof(this.range[current_range]) == "number"){
+                    for (let current_range in this.range) {
+                        if (typeof (this.range[current_range]) == "number") {
                             $(`#${deepanalytics.instance_id}_deepanalytics_hourly_pg_${this.range[current_range]}`).unbind("click");
                         }
                     }
                 },
 
-                update_ui: function() {
-                    var selected = this.range[this.selected_index];
+                update_ui: function () {
+                    const selected = this.range[this.selected_index];
 
                     // Unbind existing events
                     $(`#${deepanalytics.instance_id}_deepanalytics_hourly_pg_previous`).unbind("click");
                     $(`#${deepanalytics.instance_id}_deepanalytics_hourly_pg_next`).unbind("click");
 
                     // Update previous button event
-                    if(selected == this.minimum)
-                    {
+                    if (selected == this.minimum) {
                         $(`#${deepanalytics.instance_id}_deepanalytics_hourly_pg_previous`).addClass("disabled");
-                    }
-                    else
-                    {
+                    } else {
                         $(`#${deepanalytics.instance_id}_deepanalytics_hourly_pg_previous`).removeClass("disabled");
-                        $(`#${deepanalytics.instance_id}_deepanalytics_hourly_pg_previous`).click(function(){
+                        $(`#${deepanalytics.instance_id}_deepanalytics_hourly_pg_previous`).click(function () {
                             deepanalytics.chart_handler.hourly_chart.navigation.selected_index -= 1;
                             deepanalytics.chart_handler.hourly_chart.navigation.update();
                         });
                     }
 
                     // Update next button event
-                    if(selected == this.maximum)
-                    {
+                    if (selected == this.maximum) {
                         $(`#${deepanalytics.instance_id}_deepanalytics_hourly_pg_next`).addClass("disabled");
-                    }
-                    else
-                    {
+                    } else {
                         $(`#${deepanalytics.instance_id}_deepanalytics_hourly_pg_next`).removeClass("disabled");
-                        $(`#${deepanalytics.instance_id}_deepanalytics_hourly_pg_next`).click(function(){
+                        $(`#${deepanalytics.instance_id}_deepanalytics_hourly_pg_next`).click(function () {
                             deepanalytics.chart_handler.hourly_chart.navigation.selected_index += 1;
                             deepanalytics.chart_handler.hourly_chart.navigation.update();
                         });
                     }
 
-                    for (var current_range in this.range) {
-                        if(typeof(this.range[current_range]) == "number"){
+                    for (let current_range in this.range) {
+                        if (typeof (this.range[current_range]) == "number") {
 
                             $(`#${deepanalytics.instance_id}_deepanalytics_hourly_pg_${this.range[current_range]}`).removeClass("active");
                             $(`#${deepanalytics.instance_id}_deepanalytics_hourly_pg_${this.range[current_range]}`).unbind("click");
 
-                            if(this.range[current_range] == selected){
+                            if (this.range[current_range] == selected) {
                                 $(`#${deepanalytics.instance_id}_deepanalytics_hourly_pg_${this.range[current_range]}`).addClass("active");
                             }
 
                             $(`#${deepanalytics.instance_id}_deepanalytics_hourly_pg_${this.range[current_range]}`).removeClass("disabled");
-                            $(`#${deepanalytics.instance_id}_deepanalytics_hourly_pg_${this.range[current_range]}`).click(function() {
-                                var value = parseInt($(this).attr("id").match(/\d+/g)[0]);
+                            $(`#${deepanalytics.instance_id}_deepanalytics_hourly_pg_${this.range[current_range]}`).click(function () {
+                                const value = parseInt($(this).attr("id").match(/\d+/g)[0]);
                                 deepanalytics.chart_handler.hourly_chart.navigation.selected_index = deepanalytics.chart_handler.hourly_chart.navigation.range.indexOf(value);
                                 deepanalytics.chart_handler.hourly_chart.navigation.update();
                             });
@@ -715,7 +688,7 @@ var deepanalytics = {
                     }
                 },
 
-                render: function() {
+                render: function () {
                     deepanalytics.chart_handler.hourly_chart.navigation.minimum = null;
                     deepanalytics.chart_handler.hourly_chart.navigation.maximum = null;
                     deepanalytics.chart_handler.hourly_chart.navigation.selected = null;
@@ -739,12 +712,12 @@ var deepanalytics = {
                         })
                     }).appendTo(`#${deepanalytics.instance_id}_deepanalytics_hourly_selector`);
 
-                    for(var day in deepanalytics.hourly_range){
+                    for (let day in deepanalytics.hourly_range) {
 
                         deepanalytics.chart_handler.hourly_chart.navigation.maximum = parseInt(day);
                         deepanalytics.utilities.push_unique(deepanalytics.chart_handler.hourly_chart.navigation.range, parseInt(day));
 
-                        if(deepanalytics.chart_handler.hourly_chart.navigation.minimum == null){
+                        if (deepanalytics.chart_handler.hourly_chart.navigation.minimum == null) {
                             deepanalytics.chart_handler.hourly_chart.navigation.minimum = parseInt(day);
                             deepanalytics.chart_handler.hourly_chart.navigation.selected = parseInt(day);
                             deepanalytics.chart_handler.hourly_chart.navigation.selected_index = deepanalytics.chart_handler.hourly_chart.navigation.range.indexOf(parseInt(day));
@@ -783,14 +756,13 @@ var deepanalytics = {
         monthly_chart: {
             line_chart: null,
 
-            init: function()
-            {
+            init: function () {
                 this.ui.render_preloader();
                 deepanalytics.api.get_monthly_data(this.chart.render);
             },
 
             ui: {
-                render_preloader: function(){
+                render_preloader: function () {
                     $(`#${deepanalytics.instance_id}_deepanalytics_monthly_line_chart`).empty();
                     $(`#${deepanalytics.instance_id}_deepanalytics_hourly_selector`).empty();
                     $('<div/>', {
@@ -822,7 +794,7 @@ var deepanalytics = {
                     });
                 },
 
-                no_data_render: function(){
+                no_data_render: function () {
                     $(`#${deepanalytics.instance_id}_deepanalytics_monthly_line_chart`).empty();
                     $(`#${deepanalytics.instance_id}_deepanalytics_hourly_selector`).empty();
                     $('<div/>', {
@@ -837,25 +809,24 @@ var deepanalytics = {
                     }).appendTo(`#${deepanalytics.instance_id}_deepanalytics_monthly_line_chart`);
                 },
 
-                render: function(){
+                render: function () {
                     $(`#${deepanalytics.instance_id}_deepanalytics_monthly_line_chart`).empty();
 
-                    var exclude = [];
-                    var labels = deepanalytics.utilities.get_key_labels(exclude);
-                    var $data = [];
-                    var working_data = {};
+                    const exclude = [];
+                    let labels = deepanalytics.utilities.get_key_labels(exclude);
+                    const $data = [];
+                    const working_data = {};
 
-                    if(deepanalytics.selected_data == "all") {
-                        for(var data_entry in deepanalytics.loaded_monthly_data['results']) {
+                    if (deepanalytics.selected_data == "all") {
+                        for (let data_entry in deepanalytics.loaded_monthly_data['results']) {
                             var data_entry_object = deepanalytics.loaded_monthly_data['results'][data_entry];
 
-                            if(data_entry_object == null) {
+                            if (data_entry_object == null) {
                                 deepanalytics.utilities.push_unique(exclude, data_entry);
                                 labels = deepanalytics.utilities.get_key_labels(exclude);
-                            }
-                            else {
-                                for(var stamp in data_entry_object['data']){
-                                    if(typeof working_data[stamp] == "undefined"){
+                            } else {
+                                for (var stamp in data_entry_object['data']) {
+                                    if (typeof working_data[stamp] == "undefined") {
                                         working_data[stamp] = {}
                                     }
                                     working_data[stamp][data_entry] =
@@ -863,18 +834,16 @@ var deepanalytics = {
                                 }
                             }
                         }
-                    }
-                    else
-                    {
+                    } else {
                         var data_entry_object = deepanalytics.loaded_monthly_data['results'][deepanalytics.selected_data];
 
-                        if(data_entry_object == null) {
+                        if (data_entry_object == null) {
                             this.deepanalytics.chart_handler.monthly_chart.chart.no_data_render();
                             return;
                         } else {
                             labels = deepanalytics.utilities.get_single_label(deepanalytics.selected_data);
-                            for(var stamp in data_entry_object['data']){
-                                if(typeof working_data[stamp] == "undefined"){
+                            for (var stamp in data_entry_object['data']) {
+                                if (typeof working_data[stamp] == "undefined") {
                                     working_data[stamp] = {}
                                 }
                                 working_data[stamp][deepanalytics.selected_data] =
@@ -883,7 +852,7 @@ var deepanalytics = {
                         }
                     }
 
-                    for(var entry in working_data){
+                    for (let entry in working_data) {
                         $data.push(
                             Object.assign(
                                 {y: entry},
@@ -892,7 +861,7 @@ var deepanalytics = {
                         )
                     }
 
-                    if($data.length == 0){
+                    if ($data.length == 0) {
                         this.deepanalytics.chart_handler.monthly_chart.chart.no_data_render();
                         return;
                     }
@@ -905,7 +874,7 @@ var deepanalytics = {
             }
         }
     }
-}
+};
 
 $(document).ready(function () {
     deepanalytics.init(
