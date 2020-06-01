@@ -53,6 +53,7 @@ const deepanalytics = {
         this.api.load_locale(function () {
             deepanalytics.api.get_range(function () {
                 if (deepanalytics.utilities.check_if_empty(deepanalytics.loaded_data_range)) {
+                    // noinspection JSUnresolvedFunction
                     $(`#${deepanalytics.display_id}`).empty();
                     $('<div/>', {
                         'id': `${deepanalytics.instance_id}_deepanalytics_errors`,
@@ -92,6 +93,7 @@ const deepanalytics = {
          */
         render_preloader: function () {
             $(`#${deepanalytics.display_id}`).empty();
+            // noinspection JSUnresolvedFunction
             $('<div/>', {
                 'id': `${deepanalytics.instance_id}_deepanalytics_init`,
                 'class': 'd-flex flex-column justify-content-center align-items-center',
@@ -470,15 +472,6 @@ const deepanalytics = {
             return Object.keys(obj)[Object.keys(obj).length - 1];
         },
 
-        remove_unique: function (obj, item) {
-            const index = obj.indexOf(item);
-            if (index > -1) {
-                obj.splice(index, 1);
-                return true;
-            }
-            return false;
-        },
-
         push_unique: function (obj, item) {
             if (obj.indexOf(item) === -1) {
                 obj.push(item);
@@ -649,7 +642,7 @@ const deepanalytics = {
                     $(`#${deepanalytics.instance_id}_deepanalytics_hourly_pg_next`).unbind("click");
 
                     // Update previous button event
-                    if (selected == this.minimum) {
+                    if (selected === this.minimum) {
                         $(`#${deepanalytics.instance_id}_deepanalytics_hourly_pg_previous`).addClass("disabled");
                     } else {
                         $(`#${deepanalytics.instance_id}_deepanalytics_hourly_pg_previous`).removeClass("disabled");
@@ -660,7 +653,7 @@ const deepanalytics = {
                     }
 
                     // Update next button event
-                    if (selected == this.maximum) {
+                    if (selected === this.maximum) {
                         $(`#${deepanalytics.instance_id}_deepanalytics_hourly_pg_next`).addClass("disabled");
                     } else {
                         $(`#${deepanalytics.instance_id}_deepanalytics_hourly_pg_next`).removeClass("disabled");
