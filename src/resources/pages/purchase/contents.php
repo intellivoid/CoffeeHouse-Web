@@ -34,7 +34,14 @@
         /** @var SubscriptionPurchaseResults $Subscription */
         if(isset($_GET['promotion_code']))
         {
-            $Subscription = $COASniffle->getCOA()->createSubscription(WEB_ACCESS_TOKEN, $_GET['plan'], $RedirectURL, $_GET['promotion_code']);
+            if(strlen($_GET['promotion_code']) > 0)
+            {
+                $Subscription = $COASniffle->getCOA()->createSubscription(WEB_ACCESS_TOKEN, $_GET['plan'], $RedirectURL, $_GET['promotion_code']);
+            }
+            else
+            {
+                $Subscription = $COASniffle->getCOA()->createSubscription(WEB_ACCESS_TOKEN, $_GET['plan'], $RedirectURL);
+            }
         }
         else
         {
