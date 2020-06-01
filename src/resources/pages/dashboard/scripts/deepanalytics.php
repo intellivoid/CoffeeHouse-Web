@@ -29,7 +29,11 @@
         }
     }
 
-    /** @noinspection PhpUndefinedConstantInspection */
+    /**
+     * Returns the locale data defined in the language file
+     *
+     * @noinspection PhpUndefinedConstantInspection
+     */
     function da_get_locale()
     {
         $Results = array(
@@ -50,7 +54,11 @@
         exit(0);
     }
 
-    /** @noinspection DuplicatedCode */
+    /**
+     * Returns the hourly data which is used to be rendered in the linechart
+     *
+     * @noinspection DuplicatedCode
+     */
     function da_get_hourly_data()
     {
         if(isset($_POST['year']) == false)
@@ -184,6 +192,9 @@
         exit(0);
     }
 
+    /**
+     * Returns the monthly data that's used to render the linechart
+     */
     function da_get_monthly_data()
     {
         if(isset($_POST['year']) == false)
@@ -299,6 +310,9 @@
         exit(0);
     }
 
+    /**
+     * Returns the data range that's available
+     */
     function da_get_range()
     {
         /** @var CoffeeHouse $CoffeeHouse */
