@@ -455,7 +455,7 @@ const deepanalytics = {
                 var hourly_range = data[data_range]["hourly"];
                 for (let stamp in hourly_range) {
                     const formatted_stamp = stamp.split('-')[2];
-                    if (deepanalytics.selected_date == `${stamp.split('-')[0]}-${stamp.split('-')[1]}`) {
+                    if (deepanalytics.selected_date === `${stamp.split('-')[0]}-${stamp.split('-')[1]}`) {
                         deepanalytics.hourly_range[formatted_stamp] = {
                             id: hourly_range[stamp]["id"],
                             date: hourly_range[stamp]["date"]
@@ -480,7 +480,7 @@ const deepanalytics = {
         },
 
         push_unique: function (obj, item) {
-            if (obj.indexOf(item) == -1) {
+            if (obj.indexOf(item) === -1) {
                 obj.push(item);
                 return true;
             }
@@ -555,7 +555,7 @@ const deepanalytics = {
                     const $data = [];
                     const working_data = {};
 
-                    if (deepanalytics.selected_data == "all") {
+                    if (deepanalytics.selected_data === "all") {
                         for (let data_entry in deepanalytics.loaded_hourly_data['results']) {
                             var data_entry_object = deepanalytics.loaded_hourly_data['results'][data_entry];
 
@@ -599,7 +599,7 @@ const deepanalytics = {
                         )
                     }
 
-                    if ($data.length == 0) {
+                    if ($data.length === 0) {
                         this.no_data_render();
                         return;
                     }
@@ -674,7 +674,7 @@ const deepanalytics = {
                             $(`#${deepanalytics.instance_id}_deepanalytics_hourly_pg_${this.range[current_range]}`).removeClass("active");
                             $(`#${deepanalytics.instance_id}_deepanalytics_hourly_pg_${this.range[current_range]}`).unbind("click");
 
-                            if (this.range[current_range] == selected) {
+                            if (this.range[current_range] === selected) {
                                 $(`#${deepanalytics.instance_id}_deepanalytics_hourly_pg_${this.range[current_range]}`).addClass("active");
                             }
 
@@ -817,7 +817,7 @@ const deepanalytics = {
                     const $data = [];
                     const working_data = {};
 
-                    if (deepanalytics.selected_data == "all") {
+                    if (deepanalytics.selected_data === "all") {
                         for (let data_entry in deepanalytics.loaded_monthly_data['results']) {
                             var data_entry_object = deepanalytics.loaded_monthly_data['results'][data_entry];
 
@@ -861,7 +861,7 @@ const deepanalytics = {
                         )
                     }
 
-                    if ($data.length == 0) {
+                    if ($data.length === 0) {
                         this.deepanalytics.chart_handler.monthly_chart.chart.no_data_render();
                         return;
                     }
