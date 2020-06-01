@@ -26,6 +26,7 @@ const deepanalytics = {
     instance_id: null,
     api_endpoint: null,
     chart_colors: null,
+    gride_line_color: null,
     selected_date: null,
     selected_day: null,
     selected_data: null,
@@ -43,10 +44,11 @@ const deepanalytics = {
      * @param api_endpoint
      * @param chart_colors
      */
-    init: function (display_id, api_endpoint, chart_colors) {
+    init: function (display_id, api_endpoint, chart_colors, grid_line_color) {
         this.display_id = display_id;
         this.api_endpoint = api_endpoint;
         this.chart_colors = chart_colors;
+        this.gride_line_color = grid_line_color;
         this.instance_id = this.make_instance_id();
 
         this.ui.render_preloader();
@@ -623,7 +625,7 @@ const deepanalytics = {
                         ykeys: ykeys,
                         labels: labels,
                         hideHover: 'auto',
-                        gridLineColor: '#2f3e47',
+                        gridLineColor: deepanalytics.gride_line_color,
                         resize: true, //defaulted to true
                         lineColors: lineColors,
                         lineWidth: 2
@@ -886,7 +888,7 @@ const deepanalytics = {
                         ykeys: ykeys,
                         labels: labels,
                         hideHover: 'auto',
-                        gridLineColor: '#2f3e47',
+                        gridLineColor: deepanalytics.gride_line_color,
                         resize: true,
                         lineColors: lineColors,
                         lineWidth: 2
@@ -980,5 +982,6 @@ const deepanalytics = {
 $(document).ready(function () {
     deepanalytics.init(
         "deepanalytics_viewer", "<?php \DynamicalWeb\DynamicalWeb::getRoute('dashboard', [], true); ?>",
-        ['#5468da', '#ffbb44', '#67a8e4', '#4ac18e', '#ea553d', '#3bc3e9']);
+        ['#5468da', '#ffbb44', '#67a8e4', '#4ac18e', '#ea553d', '#3bc3e9'],
+        '#2f3e47');
 });
