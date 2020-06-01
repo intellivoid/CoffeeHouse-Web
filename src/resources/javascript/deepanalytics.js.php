@@ -22,7 +22,7 @@
  */
 
 var deepanalytics = {
-    version: "1.0.0.0"
+    version: "1.0.0.0",
     display_id: null,
     instance_id: null,
     api_endpoint: null,
@@ -35,6 +35,7 @@ var deepanalytics = {
     loaded_data_range: null,
     loaded_monthly_data: null,
     loaded_hourly_data: null,
+    locale: {},
 
     /**
      * Initialize DeepAnalytics.js
@@ -48,26 +49,29 @@ var deepanalytics = {
         this.api_endpoint = api_endpoint;
         this.chart_colors = chart_colors;
         this.instance_id = this.make_instance_id();
-        
+
         this.ui.render_preloader();
-        this.api.get_range(function(){
-            if(deepanalytics.utilities.check_if_empty(deepanalytics.loaded_data_range)) {
-                $(`#${deepanalytics.display_id}`).empty();
-                $('<div/>', {
-                    'id': `${deepanalytics.instance_id}_deepanalytics_errors`,
-                    'class': 'd-flex flex-column justify-content-center align-items-center',
-                    'style': 'height:50vh;',
-                    'html': $('<div/>', {
-                        'class': 'p-2 my-flex-item fa-3x',
-                        'html': $('<h4/>', {
-                            'html': `No Data Available`
+        this.api.load_locale(function(){
+            deepanalytics.api.get_range(function(){
+                if(deepanalytics.utilities.check_if_empty(deepanalytics.loaded_data_range)) {
+                    $(`#${deepanalytics.display_id}`).empty();
+                    $('<div/>', {
+                        'id': `${deepanalytics.instance_id}_deepanalytics_errors`,
+                        'class': 'd-flex flex-column justify-content-center align-items-center',
+                        'style': 'height:50vh;',
+                        'html': $('<div/>', {
+                            'class': 'p-2 my-flex-item fa-3x',
+                            'html': $('<h4/>', {
+                                'html': deepanalytics.locale.DEEPANALYTICS_NO_DATA_ERROR
+                            })
                         })
-                    })
-                }).appendTo(`#${deepanalytics.display_id}`);
-            } else {
-                deepanalytics.ui.render();
-            }
-        });
+                    }).appendTo(`#${deepanalytics.display_id}`);
+                } else {
+                    deepanalytics.ui.render();
+                }
+            });
+        })
+
     },
 
     make_instance_id: function(){
@@ -103,7 +107,7 @@ var deepanalytics = {
         },
 
         /**
-         * Displays an error message followed by the appropiate error code
+         * Displays an error message followed by the appropriate error code
          * @param error_code
          */
         error: function (error_code) {
@@ -115,7 +119,7 @@ var deepanalytics = {
                 'html': $('<div/>', {
                     'class': 'p-2 my-flex-item fa-3x',
                     'html': $('<h4/>', {
-                        'html': `DeepAnalytics Error (${error_code})`
+                        'html': deepanalytics.locale.DEEPANALYTICS_GENERIC_ERROR.replace("%s", error_code)
                     })
                 })
             }).appendTo(`#${deepanalytics.display_id}`);
@@ -152,7 +156,7 @@ var deepanalytics = {
                     $('<label/>', {
                         'for': `${deepanalytics.instance_id}_deepanalytics_date_selector`,
                         'class': 'col-2 col-form-label',
-                        'html': 'Date'
+                        'html': deepanalytics.locale.DEEPANALYTICS_DATE_SELECTOR
                     }),
                     $('<div/>', {
                         'class': 'col-10',
@@ -170,7 +174,7 @@ var deepanalytics = {
             }).appendTo(`#${deepanalytics.display_id}`);
 
             $('<option/>', {
-                'html': "All",
+                'html': deepanalytics.locale.DEEPANALYTICS_DATA_ALL,
                 'id': "all"
             }).appendTo(`#${deepanalytics.instance_id}_deepanalytics_data_selector`);
             deepanalytics.selected_data = 'all';
@@ -243,7 +247,7 @@ var deepanalytics = {
                                 'html': [
                                     $('<span/>', {
                                         'class': 'd-none d-md-block',
-                                        'html': 'Monthly Usage'
+                                        'html':  deepanalytics.locale.DEEPANALYTICS_MONTHLY_USAGE
                                     }),
                                     $('<span/>', {
                                         'class': 'd-block d-md-none',
@@ -266,7 +270,7 @@ var deepanalytics = {
                                 'html': [
                                     $('<span/>', {
                                         'class': 'd-none d-md-block',
-                                        'html': 'Daily Usage'
+                                        'html': deepanalytics.locale.DEEPANALYTICS_DAILY_USAGE
                                     }),
                                     $('<span/>', {
                                         'class': 'd-block d-md-none',
@@ -328,6 +332,20 @@ var deepanalytics = {
     },
 
     api: {
+        load_locale: function (callback) {
+            $.ajax({
+                url: `${deepanalytics.api_endpoint}?action=deepanalytics.locale`,
+                type: "GET",
+                success: function (data) {
+                    deepanalytics.locale = data.payload;
+                    callback();
+                },
+                error: function () {
+                    deepanalytics.error(-10)
+                }
+            });
+        },
+
         get_range: function (callback) {
             $.ajax({
                 url: `${deepanalytics.api_endpoint}?action=deepanalytics.get_range`,
@@ -337,7 +355,7 @@ var deepanalytics = {
                     callback();
                 },
                 error: function () {
-                    deepanalytics.error(-10)
+                    deepanalytics.error(-11)
                 }
             });
         },
@@ -353,7 +371,7 @@ var deepanalytics = {
                 success: function (data) {
                     if(data['status'] === false)
                     {
-                        deepanalytics.error(-20);
+                        deepanalytics.error(-12);
                     }
                     else
                     {
@@ -362,7 +380,7 @@ var deepanalytics = {
                     }
                 },
                 error: function () {
-                    deepanalytics.error(-10);
+                    deepanalytics.error(-13);
                 }
             });
         },
@@ -379,7 +397,7 @@ var deepanalytics = {
                 success: function (data) {
                     if(data['status'] === false)
                     {
-                        deepanalytics.error(-20);
+                        deepanalytics.error(-14);
                     }
                     else
                     {
@@ -388,7 +406,7 @@ var deepanalytics = {
                     }
                 },
                 error: function () {
-                    deepanalytics.error(-10);
+                    deepanalytics.error(-15);
                 }
             });
         }
@@ -435,9 +453,6 @@ var deepanalytics = {
                 {
                     is_empty = false;
                 }
-                //if(typeof data[data_range]["hourly"].length == "undefined") {
-                //    is_empty = false;
-                //}
             }
 
             return is_empty;
@@ -538,7 +553,7 @@ var deepanalytics = {
                         'html': $('<div/>', {
                             'class': 'p-2 my-flex-item fa-3x',
                             'html': $('<h4/>', {
-                                'html': 'No Data Available'
+                                'html': deepanalytics.locale.DEEPANALYTICS_NO_DATA_ERROR
                             })
                         })
                     }).appendTo(`#${deepanalytics.instance_id}_deepanalytics_hourly_line_chart`);
@@ -816,7 +831,7 @@ var deepanalytics = {
                         'html': $('<div/>', {
                             'class': 'p-2 my-flex-item fa-3x',
                             'html': $('<h4/>', {
-                                'html': 'No Data Available'
+                                'html': deepanalytics.locale.DEEPANALYTICS_NO_DATA_ERROR
                             })
                         })
                     }).appendTo(`#${deepanalytics.instance_id}_deepanalytics_monthly_line_chart`);

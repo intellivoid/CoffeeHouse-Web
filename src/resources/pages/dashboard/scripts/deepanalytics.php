@@ -11,6 +11,10 @@
     {
         switch($_GET['action'])
         {
+            case "deepanalytics.locale":
+                da_get_locale();
+                break;
+
             case "deepanalytics.get_range":
                 da_get_range();
                 break;
@@ -23,6 +27,27 @@
                 da_get_hourly_data();
                 break;
         }
+    }
+
+    /** @noinspection PhpUndefinedConstantInspection */
+    function da_get_locale()
+    {
+        $Results = array(
+            'status' => true,
+            'payload' => array(
+                'DEEPANALYTICS_NO_DATA_ERROR' => TEXT_DEEPANALYTICS_NO_DATA_ERROR,
+                'DEEPANALYTICS_GENERIC_ERROR' => TEXT_DEEPANALYTICS_GENERIC_ERROR,
+                'DEEPANALYTICS_MONTHLY_USAGE' => TEXT_DEEPANALYTICS_MONTHLY_USAGE,
+                'DEEPANALYTICS_DAILY_USAGE' => TEXT_DEEPANALYTICS_DAILY_USAGE,
+                'DEEPANALYTICS_DATA_SELECTOR' => TEXT_DEEPANALYTICS_DATA_SELECTOR,
+                'DEEPANALYTICS_DATE_SELECTOR' => TEXT_DEEPANALYTICS_DATE_SELECTOR,
+                'DEEPANALYTICS_DATA_ALL' => TEXT_DEEPANALYTICS_DATA_ALL
+            )
+        );
+
+        header('Content-Type: application/json');
+        print(json_encode($Results));
+        exit(0);
     }
 
     /** @noinspection DuplicatedCode */
@@ -288,21 +313,21 @@
                     "intellivoid_api", "requests", $AccessRecord->ID),
                 "hourly" => $CoffeeHouse->getDeepAnalytics()->getHourlyDataRange(
                     "intellivoid_api", "requests", $AccessRecord->ID),
-                "text" => "API Requests"
+                "text" => TEXT_DATA_TYPE_REQUESTS
             ),
             "created_sessions" => array(
                 "monthly" => $CoffeeHouse->getDeepAnalytics()->getMonthlyDataRange(
                     "coffeehouse_api", "created_sessions", $AccessRecord->ID),
                 "hourly" => $CoffeeHouse->getDeepAnalytics()->getHourlyDataRange(
                     "coffeehouse_api", "created_sessions", $AccessRecord->ID),
-                "text" => "Lydia Sessions Created"
+                "text" => TEXT_DATA_TYPE_LYDIA_SESSIONS_CREATED
             ),
             "ai_responses" => array(
                 "monthly" => $CoffeeHouse->getDeepAnalytics()->getMonthlyDataRange(
                     "coffeehouse_api", "ai_responses", $AccessRecord->ID),
                 "hourly" => $CoffeeHouse->getDeepAnalytics()->getHourlyDataRange(
                     "coffeehouse_api", "ai_responses", $AccessRecord->ID),
-                "text" => "Lydia Thoughts Processed"
+                "text" => TEXT_DATA_TYPE_LYDIA_THOUGHTS_PROCESSED
             )
         );
 
