@@ -74,6 +74,10 @@ const deepanalytics = {
 
     },
 
+    /**
+     * Generates a random string for the instance ID
+     * @returns {string}
+     */
     make_instance_id: function () {
         let result = '';
         const characters = 'abcdefghijklmnopqrstuvwxyz';
@@ -126,6 +130,9 @@ const deepanalytics = {
             }).appendTo(`#${deepanalytics.display_id}`);
         },
 
+        /**
+         * Renders the main UI components such as the data and date selector and tabs
+         */
         render: function () {
             $(`#${deepanalytics.display_id}`).empty();
             $('<div/>', {
@@ -224,13 +231,23 @@ const deepanalytics = {
 
         },
 
+        /**
+         * Handler for the Tab Viewer
+         */
         tab_view: {
+            /**
+             * Initialize the renderer for th tab view
+             * @returns {boolean}
+             */
             render: function () {
                 this.render_tabs();
                 this.render_tab_pages();
                 return true;
             },
 
+            /**
+             * Render the tab headers
+             */
             render_tabs: function () {
                 $('<ul/>', {
                     'class': 'nav nav-tabs nav-tabs-custom mt-3',
@@ -286,6 +303,9 @@ const deepanalytics = {
                 }).appendTo(`#${deepanalytics.display_id}`);
             },
 
+            /**
+             * Render the tab pages
+             */
             render_tab_pages: function () {
                 $('<div/>', {
                     'class': 'tab-content',
@@ -325,6 +345,9 @@ const deepanalytics = {
             }
         },
 
+        /**
+         * Reloads the tab page's contents to show the data for the currently selected data and date
+         */
         reload: function () {
             deepanalytics.utilities.load_hourly_range(deepanalytics.loaded_data_range);
             deepanalytics.chart_handler.monthly_chart.init();
@@ -332,7 +355,15 @@ const deepanalytics = {
         }
     },
 
+    /**
+     * API Handler, sends and processes requests for DeepAnalytics
+     */
     api: {
+
+        /**
+         * Requests the locale data for displaying the proper language on the UI
+         * @param callback
+         */
         load_locale: function (callback) {
             $.ajax({
                 url: `${deepanalytics.api_endpoint}?action=deepanalytics.locale`,
@@ -347,6 +378,11 @@ const deepanalytics = {
             });
         },
 
+        /**
+         * Requests for the date range that's currently available and executes the callback function
+         * if successful
+         * @param callback
+         */
         get_range: function (callback) {
             $.ajax({
                 url: `${deepanalytics.api_endpoint}?action=deepanalytics.get_range`,
@@ -361,6 +397,11 @@ const deepanalytics = {
             });
         },
 
+        /**
+         * Requests and returns the monthly data that's currently selected and
+         * executes the callback function if successful
+         * @param callback
+         */
         get_monthly_data: function (callback) {
             $.ajax({
                 url: `${deepanalytics.api_endpoint}?action=deepanalytics.get_monthly_data`,
@@ -383,6 +424,11 @@ const deepanalytics = {
             });
         },
 
+        /**
+         * Requests and returns the hourly data that's currently selected
+         * and executes the callback function if successful
+         * @param callback
+         */
         get_hourly_data: function (callback) {
             $.ajax({
                 url: `${deepanalytics.api_endpoint}?action=deepanalytics.get_hourly_data`,
@@ -407,7 +453,16 @@ const deepanalytics = {
         }
     },
 
+    /**
+     * Miscellaneous functions used to make things easier
+     */
     utilities: {
+
+        /**
+         * Extracts the key labels, optionally excludes speicified labels
+         * @param exclude
+         * @returns {{keys: [], labels: []}}
+         */
         get_key_labels: function (exclude) {
             const data_keys = [];
             const data_labels = [];
@@ -425,6 +480,12 @@ const deepanalytics = {
             }
         },
 
+        /**
+         * Returns a single label
+         *
+         * @param label
+         * @returns {{keys: [], labels: []}}
+         */
         get_single_label: function (label) {
             const data_keys = [];
             const data_labels = [];
@@ -438,6 +499,12 @@ const deepanalytics = {
             }
         },
 
+        /**
+         * Checks if the data range is empty by checking if it's an object rather than an empty array
+         *
+         * @param data
+         * @returns {boolean}
+         */
         check_if_empty: function (data) {
             let is_empty = true;
 
@@ -450,6 +517,14 @@ const deepanalytics = {
             return is_empty;
         },
 
+        /**
+         * !Important
+         *
+         * Loads the hourly range into memory so that the hourly selector
+         * can render properly
+         *
+         * @param data
+         */
         load_hourly_range: function (data) {
             let hourly_range = {};
             deepanalytics.hourly_range = {};
@@ -468,10 +543,24 @@ const deepanalytics = {
             }
         },
 
+        /**
+         * Returns the last item from an object
+         *
+         * @param obj
+         * @returns {string}
+         */
         ab_get_last_item: function (obj) {
             return Object.keys(obj)[Object.keys(obj).length - 1];
         },
 
+        /**
+         * Pushes an item into the object only if the object does not already
+         * contain the item
+         *
+         * @param obj
+         * @param item
+         * @returns {boolean}
+         */
         push_unique: function (obj, item) {
             if (obj.indexOf(item) === -1) {
                 obj.push(item);
@@ -481,16 +570,31 @@ const deepanalytics = {
         }
     },
 
+    /**
+     * Main chart handler for monthly and hourly data displays
+     */
     chart_handler: {
 
+        /**
+         * Hourly chart handler, includes the navigation view
+         */
         hourly_chart: {
 
+            /**
+             * The MorrisJS linechart object
+             */
             line_chart: null,
 
+            /**
+             * Initializes the renderer for the hourly chart and hourly navigation
+             */
             init: function () {
                 this.navigation.render();
             },
 
+            /**
+             * The main UI in the tab view for the hourly line chart
+             */
             ui: {
                 render_preloader: function () {
                     $(`#${deepanalytics.instance_id}_deepanalytics_hourly_line_chart`).empty();
