@@ -320,6 +320,7 @@ var deepanalytics = {
         },
 
         reload: function(){
+            deepanalytics.utilities.load_hourly_range(deepanalytics.loaded_data_range);
             deepanalytics.chart_handler.monthly_chart.init();
             deepanalytics.chart_handler.hourly_chart.init();
         }
@@ -443,6 +444,7 @@ var deepanalytics = {
 
         load_hourly_range: function(data){
             hourly_range = {};
+            deepanalytics.hourly_range = {};
             for(var data_range in data) {
                 var hourly_range = data[data_range]["hourly"];
                 for(var stamp in hourly_range)
