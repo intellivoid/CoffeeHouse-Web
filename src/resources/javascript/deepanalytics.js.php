@@ -59,7 +59,7 @@ var deepanalytics = {
                     'html': $('<div/>', {
                         'class': 'p-2 my-flex-item fa-3x',
                         'html': $('<h4/>', {
-                            'html': `No Data`
+                            'html': `No Data Available`
                         })
                     })
                 }).appendTo(`#${deepanalytics.display_id}`);
@@ -423,9 +423,13 @@ var deepanalytics = {
             var is_empty = true;
 
             for(var data_range in data) {
-                if(typeof data[data_range]["hourly"].length == "undefined") {
+                if(Object.prototype.toString.call(data[data_range]["hourly"]) == "[object Object]")
+                {
                     is_empty = false;
                 }
+                //if(typeof data[data_range]["hourly"].length == "undefined") {
+                //    is_empty = false;
+                //}
             }
 
             return is_empty;
