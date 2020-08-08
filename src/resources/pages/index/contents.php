@@ -15,7 +15,6 @@
     }
 
     HTML::importScript('check_subscription');
-
     Runtime::import('IntellivoidSubscriptionManager');
 
     $IntellivoidSubscriptionManager = new IntellivoidSubscriptionManager();
