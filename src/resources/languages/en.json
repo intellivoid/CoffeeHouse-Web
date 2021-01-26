@@ -47,7 +47,8 @@
             "DATA_TYPE_LYDIA_SESSIONS_CREATED": "Lydia Sessions Created",
             "DATA_TYPE_LYDIA_THOUGHTS_PROCESSED": "Lydia Thoughts Processed",
             "CALLBACK_100": "There was an error while trying to process your request",
-            "CALLBACK_101": "A new access key has been generated successfully"
+            "CALLBACK_101": "A new access key has been generated successfully",
+            "CALLBACK_102": "Welcome Back! Your subscription has been updated, make sure your software is up to date."
         },
         "index": {
             "PAGE_TITLE": "CoffeeHouse",

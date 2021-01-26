@@ -6,8 +6,8 @@
     use DynamicalWeb\Actions;
     use DynamicalWeb\DynamicalWeb;
     use DynamicalWeb\HTML;
-use DynamicalWeb\Javascript;
-use DynamicalWeb\Runtime;
+    use DynamicalWeb\Javascript;
+    use DynamicalWeb\Runtime;
     use IntellivoidAPI\Abstracts\SearchMethods\AccessRecordSearchMethod;
     use IntellivoidAPI\Exceptions\AccessRecordNotFoundException;
     use IntellivoidAPI\IntellivoidAPI;
@@ -125,6 +125,7 @@ use DynamicalWeb\Runtime;
 
     try
     {
+        /** @noinspection PhpUndefinedVariableInspection */
         $AccessRecord = $IntellivoidAPI->getAccessKeyManager()->getAccessRecord(
             AccessRecordSearchMethod::byId, $UserSubscription->AccessRecordID
         );
@@ -146,6 +147,7 @@ use DynamicalWeb\Runtime;
     $UsedLydiaSessions = "Unknown";
 
     /** @var Feature $feature */
+    /** @noinspection PhpUndefinedVariableInspection */
     foreach($Subscription->Properties->Features as $feature)
     {
         switch($feature->Name)
@@ -155,6 +157,7 @@ use DynamicalWeb\Runtime;
                 break;
         }
     }
+
 
     if(isset($AccessRecord->Variables['LYDIA_SESSIONS']))
     {
@@ -177,7 +180,17 @@ use DynamicalWeb\Runtime;
     HTML::importScript('deepanalytics');
     HTML::importScript('actions');
     HTML::importScript('alert');
+    HTML::importScript('update_subscription');
 
+    /** @noinspection PhpUnhandledExceptionInspection */
+    if(us_update_required($Subscription))
+    {
+        /** @noinspection PhpUnhandledExceptionInspection */
+        $Subscription = us_update_subscription($Subscription);
+
+        Actions::redirect(DynamicalWeb::getRoute("dashboard", ["callback" => "102"]));
+        exit();
+    }
 ?>
 <!doctype html>
 <html lang="<?PHP HTML::print(APP_LANGUAGE_ISO_639); ?>">
