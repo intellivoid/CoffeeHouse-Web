@@ -21,8 +21,9 @@
         "dashboard": {
             "PAGE_TITLE": "CoffeeHouse Dashboard",
             "PAGE_HEADER": "CoffeeHouse Dashboard",
-            "WIDGET_LYDIA_SESSIONS_HEADER": "Lydia Sessions",
-            "WIDGET_LYDIA_SESSIONS_FOOTER": "%s Total Sessions Allowed",
+            "WIDGET_LAST_ACTIVITY_HEADER": "Last Activity",
+            "WIDGET_LAST_ACTIVITY_DESCRIPTION": "The last request you made using your Access Key ",
+            "WIDGET_LAST_ACTIVITY_NEVER": "Never",
             "WIDGET_BILLING_CYCLE_HEADER": "Billing Cycle",
             "WIDGET_BILLING_CYCLE_DESCRIPTION": "When your next bill is processed on",
             "BILLING_CYCLE_TODAY": "Today",

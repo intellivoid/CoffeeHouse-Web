@@ -57,7 +57,7 @@
                         }
                         else
                         {
-                            HTML::print($current_usage);
+                            HTML::print($current_usage . "/∞");
                         }
                     ?>
                 </span>

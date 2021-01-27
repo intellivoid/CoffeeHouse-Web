@@ -234,7 +234,6 @@ use IntellivoidSubscriptionManager\Objects\Subscription\Feature;
 
     $TotalResourceUsage = 0;
     $TotalResourcesAllocated = 0;
-
 ?>
 <!doctype html>
 <html lang="<?PHP HTML::print(APP_LANGUAGE_ISO_639); ?>">
@@ -260,15 +259,26 @@ use IntellivoidSubscriptionManager\Objects\Subscription\Feature;
                 <div class="row">
                     <div class="col-md-6 col-xl-4">
                         <div class="mini-stat clearfix bg-white animated fadeInLeft">
-                            <span class="mini-stat-icon bg-blacksalami mr-0 float-right">
-                                <img alt="Lydia Logo" src="/assets/images/lydia_white_transparent.svg" class="img-fluid img-xs rounded-circle mb-3">
+                            <span class="mini-stat-icon bg-indigo mr-0 float-right">
+                                <i class="mdi mdi-av-timer"></i>
                             </span>
                             <div class="mini-stat-info">
-                                <span class="counter text-white" id="calls_current_month"><?PHP HTML::print(number_format($UsedLydiaSessions)); ?></span>
-                                <?PHP HTML::print(TEXT_WIDGET_LYDIA_SESSIONS_HEADER); ?>
+                                <span class="counter text-indigo"><?PHP HTML::print(TEXT_WIDGET_LAST_ACTIVITY_HEADER); ?></span>
+                                <?PHP HTML::print(TEXT_WIDGET_LAST_ACTIVITY_DESCRIPTION); ?>
                             </div>
                             <div class="clearfix"></div>
-                            <p class="text-muted mb-0 m-t-20" id="calls_last_month"><?PHP HTML::print(str_ireplace('%s', number_format($ConfiguredLydiaSessions), TEXT_WIDGET_LYDIA_SESSIONS_FOOTER)); ?></p>
+                            <p class="text-muted mb-0 m-t-20" id="calls_last_month">
+                                <?PHP
+                                    if($AccessRecord->LastActivity > 0)
+                                    {
+                                        HTML::print(gmdate("j/m/Y g:i a", $AccessRecord->LastActivity));
+                                    }
+                                    else
+                                    {
+                                        HTML::print(TEXT_WIDGET_LAST_ACTIVITY_NEVER);
+                                    }
+                                ?>
+                            </p>
                         </div>
                     </div>
                     <div class="col-md-6 col-xl-4">
