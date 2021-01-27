@@ -64,10 +64,25 @@ use IntellivoidSubscriptionManager\Utilities\Converter;
 
         foreach($plan_features as $feature_name => $value)
         {
-            $Feature = new Subscription\Feature();
-            $Feature->Name = $feature_name;
-            $Feature->Value = $value;
-            $subscription->Properties->addFeature($Feature);
+            $feature_already_exists = false;
+
+            /** @var Subscription\Feature $feature */
+            foreach($subscription->Properties->Features as $feature)
+            {
+                if($feature->Name == $feature_name)
+                {
+                    $feature_already_exists = true;
+                    break;
+                }
+            }
+
+            if($feature_already_exists == false)
+            {
+                $Feature = new Subscription\Feature();
+                $Feature->Name = $feature_name;
+                $Feature->Value = $value;
+                $subscription->Properties->addFeature($Feature);
+            }
         }
 
         $IntellivoidSubscriptionManager->getSubscriptionManager()->updateSubscription($subscription);
