@@ -11,12 +11,14 @@
     use IntellivoidAPI\Abstracts\SearchMethods\AccessRecordSearchMethod;
     use IntellivoidAPI\Exceptions\AccessRecordNotFoundException;
     use IntellivoidAPI\IntellivoidAPI;
-    use IntellivoidSubscriptionManager\Abstracts\SearchMethods\SubscriptionPlanSearchMethod;
+use IntellivoidAPI\Objects\AccessRecord;
+use IntellivoidSubscriptionManager\Abstracts\SearchMethods\SubscriptionPlanSearchMethod;
     use IntellivoidSubscriptionManager\Abstracts\SearchMethods\SubscriptionSearchMethod;
     use IntellivoidSubscriptionManager\Exceptions\SubscriptionNotFoundException;
     use IntellivoidSubscriptionManager\Exceptions\SubscriptionPlanNotFoundException;
     use IntellivoidSubscriptionManager\IntellivoidSubscriptionManager;
-    use IntellivoidSubscriptionManager\Objects\Subscription\Feature;
+use IntellivoidSubscriptionManager\Objects\Subscription;
+use IntellivoidSubscriptionManager\Objects\Subscription\Feature;
 
     Runtime::import('CoffeeHouse');
     Runtime::import('IntellivoidSubscriptionManager');
@@ -181,6 +183,7 @@
     HTML::importScript('actions');
     HTML::importScript('alert');
     HTML::importScript('update_subscription');
+    HTML::importScript('usage_widget');
 
     /** @noinspection PhpUnhandledExceptionInspection */
     if(us_update_required($Subscription))
@@ -191,6 +194,47 @@
         Actions::redirect(DynamicalWeb::getRoute("dashboard", ["callback" => "102"]));
         exit();
     }
+
+    /**
+     * Gets the current usage record from the Access Key
+     *
+     * @param AccessRecord $access_record
+     * @param string $usage_name
+     * @return int
+     */
+    function getCurrentUsage(AccessRecord $access_record, string $usage_name): int
+    {
+        if(isset($access_record->Variables[$usage_name]) == false)
+        {
+            return 0;
+        }
+
+        return $access_record->Variables[$usage_name];
+    }
+
+    /**
+     * Gets the current usage record from the Subscription
+     *
+     * @param Subscription $subscription
+     * @param string $usage_name
+     * @return int
+     */
+    function getAllowedUsage(Subscription $subscription, string $usage_name): int
+    {
+        foreach($subscription->Properties->Features as $feature)
+        {
+            if($feature->Name == $usage_name)
+            {
+                return $feature->Value;
+            }
+        }
+
+        return 0;
+    }
+
+    $TotalResourceUsage = 0;
+    $TotalResourcesAllocated = 0;
+
 ?>
 <!doctype html>
 <html lang="<?PHP HTML::print(APP_LANGUAGE_ISO_639); ?>">
@@ -211,6 +255,8 @@
                     </div>
                 </div>
                 <?PHP HTML::importScript('callbacks'); ?>
+
+
                 <div class="row">
                     <div class="col-md-6 col-xl-4">
                         <div class="mini-stat clearfix bg-white animated fadeInLeft">
@@ -265,6 +311,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="row">
                     <div class="col-xl-4">
                         <div class="card m-b-20 animated flipInX">
@@ -278,27 +325,51 @@
                                 </button>
                             </div>
                         </div>
-                        <div class="card m-b-20 animated bounceInUp">
+                        <div class="card m-b-20 animated flipInX">
                             <div class="card-body">
-                                <h5 class="header-title"><?PHP HTML::print(TEXT_SUPPORT_CARD_TITLE); ?></h5>
-                                <div class="mt-2 ml-3">
-                                    <div class="row mt-3">
-                                        <a class="text-white" href="https://t.me/IntellivoidDev">
-                                            <i class="mdi mdi-telegram pr-2"></i><?PHP HTML::print(TEXT_SUPPORT_TELEGRAM_SUPPORT_GROUP); ?>
-                                        </a>
-                                    </div>
-                                    <div class="row mt-3">
-                                        <a class="text-white" href="https://t.me/IntellivoidSupport">
-                                            <i class="mdi mdi-telegram pr-2"></i><?PHP HTML::print(TEXT_SUPPORT_TELEGRAM_SUPPORT_ACCOUNT); ?>
-                                        </a>
-                                    </div>
-                                    <div class="row mt-3">
-                                        <a class="text-white" href="https://intellivoid.net/contact">
-                                            <i class="mdi mdi-email pr-2"></i><?PHP HTML::print(TEXT_SUPPORT_CONTACT_INTELLIVOID); ?>
-                                        </a>
-                                    </div>
-
-                                </div>
+                                <h5 class="header-title mb-3">Resource Usage</h5>
+                                <?PHP
+                                    generateUsageWidget(
+                                        getCurrentUsage($AccessRecord, "LYDIA_SESSIONS"),
+                                        getAllowedUsage($Subscription, "LYDIA_SESSIONS"),
+                                        "Lydia Sessions", "#3bc3e9"
+                                    );
+                                    generateUsageWidget(
+                                        getCurrentUsage($AccessRecord, "NFW_CHECKS"),
+                                        getAllowedUsage($Subscription, "MAX_NSFW_CHECKS"),
+                                        "NSFW Classifications", "#ea553d"
+                                    );
+                                    generateUsageWidget(
+                                        getCurrentUsage($AccessRecord, "POS_CHECKS"),
+                                        getAllowedUsage($Subscription, "MAX_POS_CHECKS"),
+                                        "POS Requests", "#e83e8c"
+                                    );
+                                    generateUsageWidget(
+                                        getCurrentUsage($AccessRecord, "SENTIMENT_CHECKS"),
+                                        getAllowedUsage($Subscription, "MAX_SENTIMENT_CHECKS"),
+                                        "Sentiment Classifications", "#007bff"
+                                    );
+                                    generateUsageWidget(
+                                        getCurrentUsage($AccessRecord, "EMOTION_CHECKS"),
+                                        getAllowedUsage($Subscription, "MAX_EMOTION_CHECKS"),
+                                        "Emotion Classifications", "#20c997"
+                                    );
+                                    generateUsageWidget(
+                                        getCurrentUsage($AccessRecord, "SPAM_CHECKS"),
+                                        getAllowedUsage($Subscription, "MAX_SPAM_CHECKS"),
+                                        "Spam Classifications", "#ffc107"
+                                    );
+                                    generateUsageWidget(
+                                        getCurrentUsage($AccessRecord, "LANGUAGE_CHECKS"),
+                                        getAllowedUsage($Subscription, "MAX_LANGUAGE_CHECKS"),
+                                        "Language Detections", "#dc3545"
+                                    );
+                                    generateUsageWidget(
+                                        getCurrentUsage($AccessRecord, "NER_CHECKS"),
+                                        getAllowedUsage($Subscription, "MAX_NER_CHECKS"),
+                                        "NER Requests", "#6f42c1"
+                                    );
+                                ?>
                             </div>
                         </div>
                     </div>
@@ -322,4 +393,8 @@
     <script src="/assets/vendors/raphael/raphael-min.js"></script>
     <?PHP Javascript::importScript('rpage'); ?>
     <?PHP Javascript::importScript('deepanalytics'); ?>
+    <?PHP Javascript::importScript('excanvas'); ?>
+    <?PHP Javascript::importScript('knobbet'); ?>
+    <?PHP Javascript::importScript('peity'); ?>
+    <?PHP Javascript::importScript('dashboard'); ?>
 </html>

@@ -941,7 +941,7 @@ const deepanalytics = {
                         data_entry_object = deepanalytics.loaded_monthly_data['results'][deepanalytics.selected_data];
 
                         if (data_entry_object == null) {
-                            this.deepanalytics.chart_handler.monthly_chart.chart.no_data_render();
+                            deepanalytics.chart_handler.monthly_chart.chart.no_data_render();
                             return;
                         } else {
                             labels = deepanalytics.utilities.get_single_label(deepanalytics.selected_data);
@@ -965,7 +965,7 @@ const deepanalytics = {
                     }
 
                     if ($data.length === 0) {
-                        this.deepanalytics.chart_handler.monthly_chart.chart.no_data_render();
+                        deepanalytics.chart_handler.monthly_chart.chart.no_data_render();
                         return;
                     }
 
