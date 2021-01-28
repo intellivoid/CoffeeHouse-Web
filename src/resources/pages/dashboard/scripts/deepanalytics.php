@@ -49,8 +49,9 @@
             )
         );
 
-        header('Content-Type: application/json');
-        print(json_encode($Results));
+        \DynamicalWeb\Response::setResponseType("application/json");
+        print(json_encode($Results, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE));
+        \DynamicalWeb\Response::finishRequest();
         exit(0);
     }
 
@@ -69,8 +70,9 @@
                 'message' => 'Missing parameter \'year\''
             );
 
-            header('Content-Type: application/json');
-            print(json_encode($Results));
+            \DynamicalWeb\Response::setResponseType("application/json");
+            print(json_encode($Results, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE));
+            \DynamicalWeb\Response::finishRequest();
             exit(0);
         }
 
@@ -82,8 +84,9 @@
                 'message' => 'Missing parameter \'month\''
             );
 
-            header('Content-Type: application/json');
-            print(json_encode($Results));
+            \DynamicalWeb\Response::setResponseType("application/json");
+            print(json_encode($Results, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE));
+            \DynamicalWeb\Response::finishRequest();
             exit(0);
         }
 
@@ -95,8 +98,9 @@
                 'message' => 'Missing parameter \'day\''
             );
 
-            header('Content-Type: application/json');
-            print(json_encode($Results));
+            \DynamicalWeb\Response::setResponseType("application/json");
+            print(json_encode($Results, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE));
+            \DynamicalWeb\Response::finishRequest();
             exit(0);
         }
 
@@ -116,7 +120,7 @@
         try
         {
             $Object = $CoffeeHouse->getDeepAnalytics()->getHourlyData(
-                "intellivoid_api", "requests", $AccessRecord->ID,
+                "intellivoid_api", "requests", $AccessRecord->ID, true,
                 (int)$_POST['year'], (int)$_POST['month'], (int)$_POST['day']);
 
             $Results[$Object->Name] = array(
@@ -139,7 +143,7 @@
         try
         {
             $Object = $CoffeeHouse->getDeepAnalytics()->getHourlyData(
-                "coffeehouse_api", "created_sessions", $AccessRecord->ID,
+                "coffeehouse_api", "created_sessions", $AccessRecord->ID, true,
                 (int)$_POST['year'], (int)$_POST['month'], (int)$_POST['day']);
 
             $Results[$Object->Name] = array(
@@ -162,7 +166,7 @@
         try
         {
             $Object = $CoffeeHouse->getDeepAnalytics()->getHourlyData(
-                "coffeehouse_api", "ai_responses", $AccessRecord->ID,
+                "coffeehouse_api", "ai_responses", $AccessRecord->ID, true.
                 (int)$_POST['year'], (int)$_POST['month'], (int)$_POST['day']);
 
             $Results[$Object->Name] = array(
@@ -187,8 +191,9 @@
             'results' => $Results
         );
 
-        header('Content-Type: application/json');
-        print(json_encode($Results));
+        \DynamicalWeb\Response::setResponseType("application/json");
+        print(json_encode($Results, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE));
+        \DynamicalWeb\Response::finishRequest();
         exit(0);
     }
 
@@ -234,7 +239,7 @@
         try
         {
             $Object = $CoffeeHouse->getDeepAnalytics()->getMonthlyData(
-                "intellivoid_api", "requests", $AccessRecord->ID,
+                "intellivoid_api", "requests", $AccessRecord->ID, true,
                 (int)$_POST['year'], (int)$_POST['month']);
 
             $Results[$Object->Name] = array(
@@ -257,7 +262,7 @@
         try
         {
             $Object = $CoffeeHouse->getDeepAnalytics()->getMonthlyData(
-                "coffeehouse_api", "created_sessions", $AccessRecord->ID,
+                "coffeehouse_api", "created_sessions", $AccessRecord->ID, true,
                 (int)$_POST['year'], (int)$_POST['month']);
 
             $Results[$Object->Name] = array(
@@ -280,7 +285,7 @@
         try
         {
             $Object = $CoffeeHouse->getDeepAnalytics()->getMonthlyData(
-                "coffeehouse_api", "ai_responses", $AccessRecord->ID,
+                "coffeehouse_api", "ai_responses", $AccessRecord->ID, true,
                 (int)$_POST['year'], (int)$_POST['month']);
 
             $Results[$Object->Name] = array(
@@ -305,8 +310,9 @@
             'results' => $Results
         );
 
-        header('Content-Type: application/json');
-        print(json_encode($Results));
+        \DynamicalWeb\Response::setResponseType("application/json");
+        print(json_encode($Results, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE));
+        \DynamicalWeb\Response::finishRequest();
         exit(0);
     }
 
@@ -345,7 +351,8 @@
             )
         );
 
-        header('Content-Type: application/json');
-        print(json_encode($Results));
+        \DynamicalWeb\Response::setResponseType("application/json");
+        print(json_encode($Results, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE));
+        \DynamicalWeb\Response::finishRequest();
         exit(0);
     }
