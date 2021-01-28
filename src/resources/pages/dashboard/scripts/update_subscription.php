@@ -33,7 +33,7 @@ use IntellivoidSubscriptionManager\Utilities\Converter;
         /** @var Subscription\Feature $feature */
         foreach($plan_features as $feature_name => $value)
         {
-            if(in_array($feature_name, $current_features) == false)
+            if(in_array($feature_name, array_keys($current_features)) == false)
             {
                 return true;
             }

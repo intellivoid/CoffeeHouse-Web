@@ -188,6 +188,8 @@ use IntellivoidSubscriptionManager\Objects\Subscription\Feature;
     /** @noinspection PhpUnhandledExceptionInspection */
     if(us_update_required($Subscription))
     {
+        var_dump("Update required!");
+        exit();
         /** @noinspection PhpUnhandledExceptionInspection */
         $Subscription = us_update_subscription($Subscription);
 
