@@ -1,7 +1,7 @@
 {
     "configuration": {
         "primary_language": "en",
-        "debugging_mode": true,
+        "debugging_mode": false,
         "enable_ppm": true,
         "buffer_output": true,
         "compression": {
