@@ -344,42 +344,42 @@
                                     generateUsageWidget(
                                         getCurrentUsage($AccessRecord, "LYDIA_SESSIONS"),
                                         getAllowedUsage($Subscription, "LYDIA_SESSIONS"),
-                                        "Lydia Sessions", "#3bc3e9"
+                                        TEXT_DATA_TYPE_LYDIA_SESSIONS_CREATED, "#3bc3e9"
                                     );
                                     generateUsageWidget(
                                         getCurrentUsage($AccessRecord, "NFW_CHECKS"),
                                         getAllowedUsage($Subscription, "MAX_NSFW_CHECKS"),
-                                        "NSFW Classifications", "#ea553d"
+                                        TEXT_DATA_TYPE_NSFW_CLASSIFICATIONS, "#ea553d"
                                     );
                                     generateUsageWidget(
                                         getCurrentUsage($AccessRecord, "POS_CHECKS"),
                                         getAllowedUsage($Subscription, "MAX_POS_CHECKS"),
-                                        "POS Requests", "#e83e8c"
+                                        TEXT_DATA_TYPE_POS_CHECKS, "#e83e8c"
                                     );
                                     generateUsageWidget(
                                         getCurrentUsage($AccessRecord, "SENTIMENT_CHECKS"),
                                         getAllowedUsage($Subscription, "MAX_SENTIMENT_CHECKS"),
-                                        "Sentiment Classifications", "#007bff"
+                                        TEXT_DATA_TYPE_SENTIMENT_CHECKS, "#007bff"
                                     );
                                     generateUsageWidget(
                                         getCurrentUsage($AccessRecord, "EMOTION_CHECKS"),
                                         getAllowedUsage($Subscription, "MAX_EMOTION_CHECKS"),
-                                        "Emotion Classifications", "#20c997"
+                                        TEXT_DATA_TYPE_EMOTION_CHECKS, "#20c997"
                                     );
                                     generateUsageWidget(
                                         getCurrentUsage($AccessRecord, "SPAM_CHECKS"),
                                         getAllowedUsage($Subscription, "MAX_SPAM_CHECKS"),
-                                        "Spam Classifications", "#ffc107"
+                                        TEXT_DATA_TYPE_CHATROOM_SPAM_PREDICTIONS, "#ffc107"
                                     );
                                     generateUsageWidget(
                                         getCurrentUsage($AccessRecord, "LANGUAGE_CHECKS"),
                                         getAllowedUsage($Subscription, "MAX_LANGUAGE_CHECKS"),
-                                        "Language Detections", "#dc3545"
+                                        TEXT_DATA_TYPE_LANGUAGE_DETECTION, "#dc3545"
                                     );
                                     generateUsageWidget(
                                         getCurrentUsage($AccessRecord, "NER_CHECKS"),
                                         getAllowedUsage($Subscription, "MAX_NER_CHECKS"),
-                                        "NER Requests", "#6f42c1"
+                                        TEXT_DATA_TYPE_NER_CHECKS, "#6f42c1"
                                     );
                                 ?>
                             </div>
