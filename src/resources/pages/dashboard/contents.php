@@ -11,14 +11,14 @@
     use IntellivoidAPI\Abstracts\SearchMethods\AccessRecordSearchMethod;
     use IntellivoidAPI\Exceptions\AccessRecordNotFoundException;
     use IntellivoidAPI\IntellivoidAPI;
-use IntellivoidAPI\Objects\AccessRecord;
-use IntellivoidSubscriptionManager\Abstracts\SearchMethods\SubscriptionPlanSearchMethod;
+    use IntellivoidAPI\Objects\AccessRecord;
+    use IntellivoidSubscriptionManager\Abstracts\SearchMethods\SubscriptionPlanSearchMethod;
     use IntellivoidSubscriptionManager\Abstracts\SearchMethods\SubscriptionSearchMethod;
     use IntellivoidSubscriptionManager\Exceptions\SubscriptionNotFoundException;
     use IntellivoidSubscriptionManager\Exceptions\SubscriptionPlanNotFoundException;
     use IntellivoidSubscriptionManager\IntellivoidSubscriptionManager;
-use IntellivoidSubscriptionManager\Objects\Subscription;
-use IntellivoidSubscriptionManager\Objects\Subscription\Feature;
+    use IntellivoidSubscriptionManager\Objects\Subscription;
+    use IntellivoidSubscriptionManager\Objects\Subscription\Feature;
 
     Runtime::import('CoffeeHouse');
     Runtime::import('IntellivoidSubscriptionManager');

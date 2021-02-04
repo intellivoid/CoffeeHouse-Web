@@ -9,11 +9,11 @@
      * @param int $total
      * @return int
      */
-    function calculatePercentage(int $input, int $total): int
+    function calculatePercentage(int $input, int $total): float
     {
         if($total > 0)
         {
-            return ($input / $total) * 100;
+            return ($input * 100) / $total;
             //return round($input * ($total / 100), 2);
         }
 
