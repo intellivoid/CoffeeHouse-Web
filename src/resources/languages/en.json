@@ -53,6 +53,7 @@
             "DATA_TYPE_EMOTION_CHECKS": "Emotion Analysis Checks",
             "DATA_TYPE_CHATROOM_SPAM_PREDICTIONS": "Chatroom Spam Predictions",
             "DATA_TYPE_LANGUAGE_DETECTION": "Language Detection Requests",
+            "DATA_TYPE_NER_CHECKS": "NER Checks",
             "CALLBACK_100": "There was an error while trying to process your request",
             "CALLBACK_101": "A new access key has been generated successfully",
             "CALLBACK_102": "Welcome Back! Your subscription has been updated, make sure your software is up to date."
