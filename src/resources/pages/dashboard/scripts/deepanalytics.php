@@ -164,6 +164,7 @@
         $Results["sentiment_checks"] = db_hourly_data_fetch("coffeehouse_api", "sentiment_checks", $CoffeeHouse, $AccessRecord, $SelectedDate);
         $Results["emotion_checks"] = db_hourly_data_fetch("coffeehouse_api", "emotion_checks", $CoffeeHouse, $AccessRecord, $SelectedDate);
         $Results["chatroom_spam_checks"] = db_hourly_data_fetch("coffeehouse_api", "chatroom_spam_checks", $CoffeeHouse, $AccessRecord, $SelectedDate);
+        $Results["language_checks"] = db_hourly_data_fetch("coffeehouse_api", "language_checks", $CoffeeHouse, $AccessRecord, $SelectedDate);
 
         $Results = array(
             'status' => true,
@@ -262,6 +263,7 @@
         $AnalyticalResults["sentiment_checks"] = db_monthly_data_fetch("coffeehouse_api", "sentiment_checks", $CoffeeHouse, $AccessRecord);
         $AnalyticalResults["emotion_checks"] = db_monthly_data_fetch("coffeehouse_api", "emotion_checks", $CoffeeHouse, $AccessRecord);
         $AnalyticalResults["chatroom_spam_checks"] = db_monthly_data_fetch("coffeehouse_api", "chatroom_spam_checks", $CoffeeHouse, $AccessRecord);
+        $AnalyticalResults["language_checks"] = db_monthly_data_fetch("coffeehouse_api", "language_checks", $CoffeeHouse, $AccessRecord);
 
         $Results = array(
             "status" => true,
@@ -349,6 +351,14 @@
                 "hourly" => $CoffeeHouse->getDeepAnalytics()->getHourlyDataRange(
                     "coffeehouse_api", "chatroom_spam_checks", $AccessRecord->ID),
                 "text" => TEXT_DATA_TYPE_CHATROOM_SPAM_PREDICTIONS
+            ),
+
+            "language_checks" => array(
+                "monthly" => $CoffeeHouse->getDeepAnalytics()->getMonthlyDataRange(
+                    "coffeehouse_api", "language_checks", $AccessRecord->ID),
+                "hourly" => $CoffeeHouse->getDeepAnalytics()->getHourlyDataRange(
+                    "coffeehouse_api", "language_checks", $AccessRecord->ID),
+                "text" => TEXT_DATA_TYPE_LANGUAGE_DETECTION
             )
         );
 
