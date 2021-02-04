@@ -51,6 +51,7 @@
             "DATA_TYPE_POS_CHECKS": "Part-Of-Speech Checks",
             "DATA_TYPE_SENTIMENT_CHECKS": "Sentiment Analysis Checks",
             "DATA_TYPE_EMOTION_CHECKS": "Emotion Analysis Checks",
+            "DATA_TYPE_CHATROOM_SPAM_PREDICTIONS": "Chatroom Spam Predictions",
             "CALLBACK_100": "There was an error while trying to process your request",
             "CALLBACK_101": "A new access key has been generated successfully",
             "CALLBACK_102": "Welcome Back! Your subscription has been updated, make sure your software is up to date."
