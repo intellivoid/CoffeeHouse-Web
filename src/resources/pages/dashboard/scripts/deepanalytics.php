@@ -159,6 +159,7 @@
         $Results["requests"] = db_hourly_data_fetch("intellivoid_api", "requests", $CoffeeHouse, $AccessRecord, $SelectedDate);
         $Results["created_sessions"] = db_hourly_data_fetch("coffeehouse_api", "created_sessions", $CoffeeHouse, $AccessRecord, $SelectedDate);
         $Results["ai_responses"] = db_hourly_data_fetch("coffeehouse_api", "ai_responses", $CoffeeHouse, $AccessRecord, $SelectedDate);
+        $Results["nsfw_classifications"] = db_hourly_data_fetch("coffeehouse_api", "nsfw_classifications", $CoffeeHouse, $AccessRecord, $SelectedDate);
 
         $Results = array(
             'status' => true,
@@ -252,6 +253,7 @@
         $AnalyticalResults["requests"] = db_monthly_data_fetch("intellivoid_api", "requests", $CoffeeHouse, $AccessRecord);
         $AnalyticalResults["created_sessions"] = db_monthly_data_fetch("coffeehouse_api", "created_sessions", $CoffeeHouse, $AccessRecord);
         $AnalyticalResults["ai_responses"] = db_monthly_data_fetch("coffeehouse_api", "ai_responses", $CoffeeHouse, $AccessRecord);
+        $AnalyticalResults["nsfw_classifications"] = db_monthly_data_fetch("coffeehouse_api", "nsfw_classifications", $CoffeeHouse, $AccessRecord);
 
         $Results = array(
             "status" => true,
@@ -299,6 +301,14 @@
                 "hourly" => $CoffeeHouse->getDeepAnalytics()->getHourlyDataRange(
                     "coffeehouse_api", "ai_responses", $AccessRecord->ID),
                 "text" => TEXT_DATA_TYPE_LYDIA_THOUGHTS_PROCESSED
+            ),
+
+            "nsfw_classifications" => array(
+                "monthly" => $CoffeeHouse->getDeepAnalytics()->getMonthlyDataRange(
+                    "coffeehouse_api", "nsfw_classifications", $AccessRecord->ID),
+                "hourly" => $CoffeeHouse->getDeepAnalytics()->getHourlyDataRange(
+                    "coffeehouse_api", "nsfw_classifications", $AccessRecord->ID),
+                "text" => TEXT_DATA_TYPE_NSFW_CLASSIFICATIONS
             )
         );
 
