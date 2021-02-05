@@ -12,5 +12,8 @@
                 render_alert(TEXT_CALLBACK_101, 'success', 'check-circle-outline');
                 break;
 
+            case 102:
+                render_alert(TEXT_CALLBACK_102, 'success', 'check-circle-outline');
+                break;
         }
     }

@@ -941,7 +941,7 @@ const deepanalytics = {
                         data_entry_object = deepanalytics.loaded_monthly_data['results'][deepanalytics.selected_data];
 
                         if (data_entry_object == null) {
-                            this.deepanalytics.chart_handler.monthly_chart.chart.no_data_render();
+                            deepanalytics.chart_handler.monthly_chart.chart.no_data_render();
                             return;
                         } else {
                             labels = deepanalytics.utilities.get_single_label(deepanalytics.selected_data);
@@ -965,7 +965,7 @@ const deepanalytics = {
                     }
 
                     if ($data.length === 0) {
-                        this.deepanalytics.chart_handler.monthly_chart.chart.no_data_render();
+                        deepanalytics.chart_handler.monthly_chart.chart.no_data_render();
                         return;
                     }
 
@@ -982,6 +982,6 @@ const deepanalytics = {
 $(document).ready(function () {
     deepanalytics.init(
         "deepanalytics_viewer", "<?php \DynamicalWeb\DynamicalWeb::getRoute('dashboard', [], true); ?>",
-        ['#5468da', '#ffbb44', '#67a8e4', '#4ac18e', '#ea553d', '#3bc3e9'],
+        ['#5468da', '#ffbb44', '#67a8e4', '#4ac18e', '#ea553d', '#3bc3e9', '#ea553d', '#e83e8c', '#007bff', '#20c997', '#ffc107', '#dc3545', '#6f42c1'],
         '#2f3e47');
 });
