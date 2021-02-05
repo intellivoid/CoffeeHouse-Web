@@ -87,7 +87,7 @@
 
             return $return_results;
         }
-        catch(DataNotFoundException)
+        catch(DataNotFoundException $e)
         {
             return null;
         }
@@ -210,7 +210,7 @@
 
             return $return_results;
         }
-        catch(DataNotFoundException)
+        catch(DataNotFoundException $e)
         {
             return null;
         }
