@@ -135,6 +135,9 @@
         <section class="section home" id="home">
             <div class="container">
                 <?PHP HTML::importScript('callbacks'); ?>
+                <?PHP
+                render_alert("We are no longer providing Lydia as a service anymore and it will completely be removed from CoffeeHouse soon, thank you for understanding.", 'danger', 'alert-circle');
+                ?>
                 <div class="row">
                     <div class="bg-overlay">
                         <div class="bg"></div>
