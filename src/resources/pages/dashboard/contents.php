@@ -6,16 +6,18 @@
     use DynamicalWeb\Actions;
     use DynamicalWeb\DynamicalWeb;
     use DynamicalWeb\HTML;
-use DynamicalWeb\Javascript;
-use DynamicalWeb\Runtime;
+    use DynamicalWeb\Javascript;
+    use DynamicalWeb\Runtime;
     use IntellivoidAPI\Abstracts\SearchMethods\AccessRecordSearchMethod;
     use IntellivoidAPI\Exceptions\AccessRecordNotFoundException;
     use IntellivoidAPI\IntellivoidAPI;
+    use IntellivoidAPI\Objects\AccessRecord;
     use IntellivoidSubscriptionManager\Abstracts\SearchMethods\SubscriptionPlanSearchMethod;
     use IntellivoidSubscriptionManager\Abstracts\SearchMethods\SubscriptionSearchMethod;
     use IntellivoidSubscriptionManager\Exceptions\SubscriptionNotFoundException;
     use IntellivoidSubscriptionManager\Exceptions\SubscriptionPlanNotFoundException;
     use IntellivoidSubscriptionManager\IntellivoidSubscriptionManager;
+    use IntellivoidSubscriptionManager\Objects\Subscription;
     use IntellivoidSubscriptionManager\Objects\Subscription\Feature;
 
     Runtime::import('CoffeeHouse');
@@ -125,6 +127,7 @@ use DynamicalWeb\Runtime;
 
     try
     {
+        /** @noinspection PhpUndefinedVariableInspection */
         $AccessRecord = $IntellivoidAPI->getAccessKeyManager()->getAccessRecord(
             AccessRecordSearchMethod::byId, $UserSubscription->AccessRecordID
         );
@@ -146,6 +149,7 @@ use DynamicalWeb\Runtime;
     $UsedLydiaSessions = "Unknown";
 
     /** @var Feature $feature */
+    /** @noinspection PhpUndefinedVariableInspection */
     foreach($Subscription->Properties->Features as $feature)
     {
         switch($feature->Name)
@@ -155,6 +159,7 @@ use DynamicalWeb\Runtime;
                 break;
         }
     }
+
 
     if(isset($AccessRecord->Variables['LYDIA_SESSIONS']))
     {
@@ -177,7 +182,58 @@ use DynamicalWeb\Runtime;
     HTML::importScript('deepanalytics');
     HTML::importScript('actions');
     HTML::importScript('alert');
+    HTML::importScript('update_subscription');
+    HTML::importScript('usage_widget');
 
+    /** @noinspection PhpUnhandledExceptionInspection */
+    if(us_update_required($Subscription))
+    {
+        /** @noinspection PhpUnhandledExceptionInspection */
+        $Subscription = us_update_subscription($Subscription);
+
+        Actions::redirect(DynamicalWeb::getRoute("dashboard", ["callback" => "102"]));
+        exit();
+    }
+
+    /**
+     * Gets the current usage record from the Access Key
+     *
+     * @param AccessRecord $access_record
+     * @param string $usage_name
+     * @return int
+     */
+    function getCurrentUsage(AccessRecord $access_record, string $usage_name): int
+    {
+        if(isset($access_record->Variables[$usage_name]) == false)
+        {
+            return 0;
+        }
+
+        return $access_record->Variables[$usage_name];
+    }
+
+    /**
+     * Gets the current usage record from the Subscription
+     *
+     * @param Subscription $subscription
+     * @param string $usage_name
+     * @return int
+     */
+    function getAllowedUsage(Subscription $subscription, string $usage_name): int
+    {
+        foreach($subscription->Properties->Features as $feature)
+        {
+            if($feature->Name == $usage_name)
+            {
+                return $feature->Value;
+            }
+        }
+
+        return 0;
+    }
+
+    $TotalResourceUsage = 0;
+    $TotalResourcesAllocated = 0;
 ?>
 <!doctype html>
 <html lang="<?PHP HTML::print(APP_LANGUAGE_ISO_639); ?>">
@@ -198,18 +254,31 @@ use DynamicalWeb\Runtime;
                     </div>
                 </div>
                 <?PHP HTML::importScript('callbacks'); ?>
+
+
                 <div class="row">
                     <div class="col-md-6 col-xl-4">
                         <div class="mini-stat clearfix bg-white animated fadeInLeft">
-                            <span class="mini-stat-icon bg-blacksalami mr-0 float-right">
-                                <img alt="Lydia Logo" src="/assets/images/lydia_white_transparent.svg" class="img-fluid img-xs rounded-circle mb-3">
+                            <span class="mini-stat-icon bg-indigo mr-0 float-right">
+                                <i class="mdi mdi-av-timer"></i>
                             </span>
                             <div class="mini-stat-info">
-                                <span class="counter text-white" id="calls_current_month"><?PHP HTML::print(number_format($UsedLydiaSessions)); ?></span>
-                                <?PHP HTML::print(TEXT_WIDGET_LYDIA_SESSIONS_HEADER); ?>
+                                <span class="counter text-indigo"><?PHP HTML::print(TEXT_WIDGET_LAST_ACTIVITY_HEADER); ?></span>
+                                <?PHP HTML::print(TEXT_WIDGET_LAST_ACTIVITY_DESCRIPTION); ?>
                             </div>
                             <div class="clearfix"></div>
-                            <p class="text-muted mb-0 m-t-20" id="calls_last_month"><?PHP HTML::print(str_ireplace('%s', number_format($ConfiguredLydiaSessions), TEXT_WIDGET_LYDIA_SESSIONS_FOOTER)); ?></p>
+                            <p class="text-muted mb-0 m-t-20" id="calls_last_month">
+                                <?PHP
+                                    if($AccessRecord->LastActivity > 0)
+                                    {
+                                        HTML::print(gmdate("j/m/Y g:i a", $AccessRecord->LastActivity));
+                                    }
+                                    else
+                                    {
+                                        HTML::print(TEXT_WIDGET_LAST_ACTIVITY_NEVER);
+                                    }
+                                ?>
+                            </p>
                         </div>
                     </div>
                     <div class="col-md-6 col-xl-4">
@@ -252,6 +321,7 @@ use DynamicalWeb\Runtime;
                         </div>
                     </div>
                 </div>
+
                 <div class="row">
                     <div class="col-xl-4">
                         <div class="card m-b-20 animated flipInX">
@@ -265,27 +335,51 @@ use DynamicalWeb\Runtime;
                                 </button>
                             </div>
                         </div>
-                        <div class="card m-b-20 animated bounceInUp">
+                        <div class="card m-b-20 animated flipInX">
                             <div class="card-body">
-                                <h5 class="header-title"><?PHP HTML::print(TEXT_SUPPORT_CARD_TITLE); ?></h5>
-                                <div class="mt-2 ml-3">
-                                    <div class="row mt-3">
-                                        <a class="text-white" href="https://t.me/IntellivoidDev">
-                                            <i class="mdi mdi-telegram pr-2"></i><?PHP HTML::print(TEXT_SUPPORT_TELEGRAM_SUPPORT_GROUP); ?>
-                                        </a>
-                                    </div>
-                                    <div class="row mt-3">
-                                        <a class="text-white" href="https://t.me/IntellivoidSupport">
-                                            <i class="mdi mdi-telegram pr-2"></i><?PHP HTML::print(TEXT_SUPPORT_TELEGRAM_SUPPORT_ACCOUNT); ?>
-                                        </a>
-                                    </div>
-                                    <div class="row mt-3">
-                                        <a class="text-white" href="https://intellivoid.net/contact">
-                                            <i class="mdi mdi-email pr-2"></i><?PHP HTML::print(TEXT_SUPPORT_CONTACT_INTELLIVOID); ?>
-                                        </a>
-                                    </div>
-
-                                </div>
+                                <h5 class="header-title mb-3">Resource Usage</h5>
+                                <?PHP
+                                    generateUsageWidget(
+                                        getCurrentUsage($AccessRecord, "LYDIA_SESSIONS"),
+                                        getAllowedUsage($Subscription, "LYDIA_SESSIONS"),
+                                        TEXT_DATA_TYPE_LYDIA_SESSIONS_CREATED, "#3bc3e9"
+                                    );
+                                    generateUsageWidget(
+                                        getCurrentUsage($AccessRecord, "NFW_CHECKS"),
+                                        getAllowedUsage($Subscription, "MAX_NSFW_CHECKS"),
+                                        TEXT_DATA_TYPE_NSFW_CLASSIFICATIONS, "#ea553d"
+                                    );
+                                    generateUsageWidget(
+                                        getCurrentUsage($AccessRecord, "POS_CHECKS"),
+                                        getAllowedUsage($Subscription, "MAX_POS_CHECKS"),
+                                        TEXT_DATA_TYPE_POS_CHECKS, "#e83e8c"
+                                    );
+                                    generateUsageWidget(
+                                        getCurrentUsage($AccessRecord, "SENTIMENT_CHECKS"),
+                                        getAllowedUsage($Subscription, "MAX_SENTIMENT_CHECKS"),
+                                        TEXT_DATA_TYPE_SENTIMENT_CHECKS, "#007bff"
+                                    );
+                                    generateUsageWidget(
+                                        getCurrentUsage($AccessRecord, "EMOTION_CHECKS"),
+                                        getAllowedUsage($Subscription, "MAX_EMOTION_CHECKS"),
+                                        TEXT_DATA_TYPE_EMOTION_CHECKS, "#20c997"
+                                    );
+                                    generateUsageWidget(
+                                        getCurrentUsage($AccessRecord, "SPAM_CHECKS"),
+                                        getAllowedUsage($Subscription, "MAX_SPAM_CHECKS"),
+                                        TEXT_DATA_TYPE_CHATROOM_SPAM_PREDICTIONS, "#ffc107"
+                                    );
+                                    generateUsageWidget(
+                                        getCurrentUsage($AccessRecord, "LANGUAGE_CHECKS"),
+                                        getAllowedUsage($Subscription, "MAX_LANGUAGE_CHECKS"),
+                                        TEXT_DATA_TYPE_LANGUAGE_DETECTION, "#dc3545"
+                                    );
+                                    generateUsageWidget(
+                                        getCurrentUsage($AccessRecord, "NER_CHECKS"),
+                                        getAllowedUsage($Subscription, "MAX_NER_CHECKS"),
+                                        TEXT_DATA_TYPE_NER_CHECKS, "#6f42c1"
+                                    );
+                                ?>
                             </div>
                         </div>
                     </div>
@@ -309,4 +403,8 @@ use DynamicalWeb\Runtime;
     <script src="/assets/vendors/raphael/raphael-min.js"></script>
     <?PHP Javascript::importScript('rpage'); ?>
     <?PHP Javascript::importScript('deepanalytics'); ?>
+    <?PHP Javascript::importScript('excanvas'); ?>
+    <?PHP Javascript::importScript('knobbet'); ?>
+    <?PHP Javascript::importScript('peity'); ?>
+    <?PHP Javascript::importScript('dashboard'); ?>
 </html>
