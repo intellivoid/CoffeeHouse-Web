@@ -120,7 +120,7 @@
     HTML::importScript("alert");
 ?>
 <!doctype html>
-<html lang="<?PHP HTML::print(APP_LANGUAGE_ISO_639); ?>">
+<html lang="<?PHP HTML::print(DYNAMICAL_SELECTED_LOCALIZATION_ISO_CODE); ?>">
     <head>
         <?PHP HTML::importSection("landing_headers"); ?>
         <link href="/assets/css/loader.css" rel="stylesheet">

@@ -183,7 +183,7 @@
         try
         {
             $CleverBot = new Cleverbot($CoffeeHouse);
-            $CleverBot->newSession(APP_LANGUAGE_ISO_639);
+            $CleverBot->newSession(DYNAMICAL_SELECTED_LOCALIZATION_ISO_CODE);
             $Session = $CleverBot->getSession();
 
             /** @var sws $sws */
