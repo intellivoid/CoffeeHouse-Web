@@ -1,0 +1,51 @@
+{
+    "name": "CoffeeHouse Web Application",
+    "version": "3.0.0.0",
+    "author": "Zi Xing Narrakas",
+    "organization": "Intellivoid Technologies",
+    "configuration": {
+        "root_path": "/",
+        "localization": {
+            "enabled": true,
+            "primary_localization": "en",
+            "auto_detect_preference": true,
+            "localizations": {
+                "en": "localization/en.json",
+                "zh": "localization/zh.json",
+                "zh-cn": "localization/zh.json",
+                "tr": "localization/tr.json",
+                "es": "localization/es.json"
+            }
+        },
+        "sessions": {
+            "enabled": true,
+            "configuration_name": "Intellivoid Accounts"
+        },
+        "favicon": null,
+        "localization_enabled": true,
+        "debugging_mode": false,
+        "framework_signature": true,
+        "application_signature": false,
+        "security_headers": false,
+        "enable_khm": true,
+        "firewall_deny": [],
+        "headers": {}
+    },
+    "runtime_scripts": [
+        {"event": "pre_page_load", "script": "runtime_scripts/coa_sniffles.dyn"},
+        {"event": "pre_page_load", "script": "runtime_scripts/check_auth.dyn"}
+    ],
+    "web_assets": [
+        {"type": "ppm", "name": "primary_assets", "source": "net.intellivoid.coffeehouse_web==latest", "path": "assets"}
+    ],
+    "router": [
+        {"method": ["GET", "POST"], "path": "", "page": "index", "params": []},
+        {"method": ["GET", "POST"], "path": "auth/logout", "page": "logout", "params": []},
+        {"method": ["GET", "POST"], "path": "service_error", "page": "service_error", "params": []},
+        {"method": ["GET", "POST"], "path": "terms", "page": "tos", "params": []},
+        {"method": ["GET", "POST"], "path": "privacy", "page": "privacy", "params": []},
+        {"method": ["GET", "POST"], "path": "demo/lydia", "page": "lydia_demo", "params": []},
+        {"method": ["GET", "POST"], "path": "confirm_purchase", "page": "purchase", "params": []},
+        {"method": ["GET", "POST"], "path": "dashboard", "page": "dashboard", "params": []}
+    ]
+}
