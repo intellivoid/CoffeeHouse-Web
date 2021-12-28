@@ -9,7 +9,7 @@
         <div class="container-fluid">
             <div class="logo">
                 <a href="<?PHP DynamicalWeb::getRoute('dashboard', array(), true); ?>" class="logo">
-                    <img src="/assets/images/logo-sm.png" alt="CoffeeHouse Logo" height="30">
+                    <img src="<?PHP DynamicalWeb::printAssetRoute('primary_assets', '/images/logo-sm.png'); ?>" alt="CoffeeHouse Logo" height="30">
                 </a>
             </div>
             <div class="menu-extras topbar-custom">
@@ -24,10 +24,10 @@
                     <li class="list-inline-item dropdown notification-list">
                         <a class="nav-link dropdown-toggle arrow-none waves-effect nav-user" data-toggle="dropdown" href="#" role="button"
                            aria-haspopup="false" aria-expanded="false">
-                            <img src="<?PHP HTML::print(COA::getAvatarUrl(AvatarResourceName::Normal, WEB_ACCOUNT_PUBID)); ?>" alt="user" class="rounded-circle">
+                            <img src="<?PHP HTML::print(COA::getAvatarUrl(AvatarResourceName::Normal, WEB_ACCOUNT_PUBID), false); ?>" alt="user" class="rounded-circle">
                         </a>
                         <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
-                            <a class="dropdown-item" href="<?PHP DynamicalWeb::getRoute('logout', array(), true); ?>"><i class="dripicons-exit text-muted"></i><?PHP HTML::print(TEXT_NAVBAR_AVATAR_DROPDOWN_LOGOUT); ?></a>
+                            <a class="dropdown-item" href="<?PHP DynamicalWeb::printRoute('logout', array(), true); ?>"><i class="dripicons-exit text-muted"></i><?PHP HTML::print(TEXT_NAVBAR_AVATAR_DROPDOWN_LOGOUT); ?></a>
                         </div>
                     </li>
                     <li class="menu-item list-inline-item">
@@ -49,12 +49,12 @@
             <div id="navigation">
                 <ul class="navigation-menu">
                     <li>
-                        <a href="<?PHP DynamicalWeb::getRoute('index', array(), true); ?>">
+                        <a href="<?PHP DynamicalWeb::printRoute('index', array()); ?>">
                             <i class="mdi mdi-home"></i> <?PHP HTML::print(TEXT_NAVBAR_HOME); ?>
                         </a>
                     </li>
                     <li>
-                        <a href="<?PHP DynamicalWeb::getRoute('dashboard', array('action' => 'generate_access_key'), true); ?>">
+                        <a href="<?PHP DynamicalWeb::printRoute('dashboard', array('action' => 'generate_access_key')); ?>">
                             <i class="mdi mdi-refresh"></i> <?PHP HTML::print(TEXT_NAVBAR_GENERATE_ACCESS_KEY); ?>
                         </a>
                     </li>
