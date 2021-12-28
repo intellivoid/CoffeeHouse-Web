@@ -15,12 +15,12 @@
                             </a>
                         </li>
                         <li class="list-inline-item reference-link">
-                            <a href="<?PHP DynamicalWeb::getRoute('tos', array(), true); ?>">
+                            <a href="<?PHP DynamicalWeb::printRoute('tos', array()); ?>">
                                 <small><?PHP HTML::print(TEXT_FOOTER_TERMS_OF_SERVICE); ?></small>
                             </a>
                         </li>
                         <li class="list-inline-item reference-link">
-                            <a href="<?PHP DynamicalWeb::getRoute('privacy', array(), true); ?>">
+                            <a href="<?PHP DynamicalWeb::printRoute('privacy', array()); ?>">
                                 <small><?PHP HTML::print(TEXT_FOOTER_PRIVACY_POLICY); ?></small>
                             </a>
                         </li>
