@@ -4,9 +4,11 @@
     use CoffeeHouse\CoffeeHouse;
     use CoffeeHouse\Exceptions\UserSubscriptionNotFoundException;
     use CoffeeHouse\Objects\UserSubscription;
-    use DynamicalWeb\Actions;
+    use DynamicalWeb\Cookies;
     use DynamicalWeb\DynamicalWeb;
-    use DynamicalWeb\Runtime;
+    use DynamicalWeb\Exceptions\RequestHandlerException;
+    use DynamicalWeb\Exceptions\RouterException;
+    use DynamicalWeb\Exceptions\WebApplicationException;
     use IntellivoidAPI\Abstracts\RateLimitName;
     use IntellivoidAPI\Abstracts\SearchMethods\AccessRecordSearchMethod;
     use IntellivoidAPI\Exceptions\AccessRecordNotFoundException;
@@ -19,11 +21,6 @@
     use IntellivoidSubscriptionManager\Objects\Subscription;
     use IntellivoidSubscriptionManager\Objects\SubscriptionPlan;
     use IntellivoidSubscriptionManager\Utilities\Converter;
-    use sws\sws;
-
-    Runtime::import('CoffeeHouse');
-    Runtime::import('IntellivoidSubscriptionManager');
-    Runtime::import('IntellivoidAPI');
 
     if(WEB_SESSION_ACTIVE)
     {
@@ -59,14 +56,18 @@
         catch (UserSubscriptionNotFoundException $e)
         {
             remove_subscription();
-            Actions::redirect(DynamicalWeb::getRoute('index') . '#pricing');
+            $RequestHandler = DynamicalWeb::activeRequestHandler();
+            $RequestHandler->Redirect = true;
+            $RequestHandler->RedirectLocation = DynamicalWeb::getRoute('index') . '#pricing';
+            $RequestHandler->execute();
             return;
         }
         catch(Exception $e)
         {
-            Actions::redirect(DynamicalWeb::getRoute('service_error', array(
-                'error_type' => 'user_subscription_fetch_failure'
-            )));
+            $RequestHandler = DynamicalWeb::activeRequestHandler();
+            $RequestHandler->Redirect = true;
+            $RequestHandler->RedirectLocation = DynamicalWeb::getRoute('service_error', ['error_type' => 'user_subscription_fetch_failure']);
+            $RequestHandler->execute();
         }
 
         if(isset(DynamicalWeb::$globalObjects['intellivoid_subscription_manager']) == false)
@@ -89,31 +90,25 @@
         catch (SubscriptionNotFoundException $e)
         {
             remove_subscription();
-            Actions::redirect(DynamicalWeb::getRoute('index') . '#pricing');
+            $RequestHandler = DynamicalWeb::activeRequestHandler();
+            $RequestHandler->Redirect = true;
+            $RequestHandler->RedirectLocation = DynamicalWeb::getRoute('index') . '#pricing';
+            $RequestHandler->execute();
             return;
         }
         catch(Exception $e)
         {
-            Actions::redirect(DynamicalWeb::getRoute('service_error', array(
-                'error_type' => 'user_subscription_fetch_failure'
-            )));
+            $RequestHandler = DynamicalWeb::activeRequestHandler();
+            $RequestHandler->Redirect = true;
+            $RequestHandler->RedirectLocation = DynamicalWeb::getRoute('service_error', ['error_type' => 'user_subscription_fetch_failure']);
+            $RequestHandler->execute();
         }
-
-        return;
     }
 
     function check_subscription()
     {
-        try
-        {
-            $ApplicationConfiguration = DynamicalWeb::getConfiguration('coasniffle');
-        }
-        catch (Exception $e)
-        {
-            Actions::redirect(DynamicalWeb::getRoute('service_error', array(
-                'error_type' => 'configuration_read_error'
-            )));
-        }
+        $ApplicationConfiguration = __DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'runtime_scripts' . DIRECTORY_SEPARATOR . 'coasniffle.json';
+        $ApplicationConfiguration = json_decode(file_get_contents($ApplicationConfiguration), true);
 
         if(isset(DynamicalWeb::$globalObjects['coffeehouse']) == false)
         {
@@ -146,17 +141,13 @@
             }
             catch (Exception $e)
             {
-                Actions::redirect(DynamicalWeb::getRoute('service_error', array(
-                    'error_type' => 'find_active_subscription_error'
-                )));
-                return;
+                $RequestHandler = DynamicalWeb::activeRequestHandler();
+                $RequestHandler->Redirect = true;
+                $RequestHandler->RedirectLocation = DynamicalWeb::getRoute('service_error', ['error_type' => 'find_active_subscription_error']);
+                $RequestHandler->execute();
             }
 
-            if(is_null($ActiveSubscription))
-            {
-                return;
-            }
-            else
+            if(is_null($ActiveSubscription) == false)
             {
                 $UserSubscription = register_subscription(
                     $CoffeeHouse, $ActiveSubscription,
@@ -164,8 +155,9 @@
                 );
 
                 set_subscription($UserSubscription);
-                return;
             }
+
+            return;
         }
         else
         {
@@ -189,19 +181,25 @@
                     }
                     catch(Exception $e)
                     {
-                        Actions::redirect(DynamicalWeb::getRoute('service_error', array(
-                            'error_type' => 'us_update_failure::clause(snfe)'
-                        )));
+                        $RequestHandler = DynamicalWeb::activeRequestHandler();
+                        $RequestHandler->Redirect = true;
+                        $RequestHandler->RedirectLocation = DynamicalWeb::getRoute('service_error', ['error_type' => 'us_update_failure::clause(snfe)']);
+                        $RequestHandler->execute();
                     }
+
                     remove_subscription();
-                    Actions::redirect(DynamicalWeb::getRoute('index') . '#pricing');
+                    $RequestHandler = DynamicalWeb::activeRequestHandler();
+                    $RequestHandler->Redirect = true;
+                    $RequestHandler->RedirectLocation = DynamicalWeb::getRoute('index') . '#pricing';
+                    $RequestHandler->execute();
                     return;
                 }
                 catch(Exception $exception)
                 {
-                    Actions::redirect(DynamicalWeb::getRoute('service_error', array(
-                        'error_type' => 'subscription_fetch_failure'
-                    )));
+                    $RequestHandler = DynamicalWeb::activeRequestHandler();
+                    $RequestHandler->Redirect = true;
+                    $RequestHandler->RedirectLocation = DynamicalWeb::getRoute('service_error', ['error_type' => 'subscription_fetch_failure']);
+                    $RequestHandler->execute();
                 }
             }
             else
@@ -212,19 +210,14 @@
                 }
                 catch (Exception $e)
                 {
-                    Actions::redirect(DynamicalWeb::getRoute('service_error', array(
-                        'error_type' => 'find_active_subscription_error'
-                    )));
-                    return;
+                    $RequestHandler = DynamicalWeb::activeRequestHandler();
+                    $RequestHandler->Redirect = true;
+                    $RequestHandler->RedirectLocation = DynamicalWeb::getRoute('service_error', ['error_type' => 'find_active_subscription_error']);
+                    $RequestHandler->execute();
                 }
 
-                if(is_null($ActiveSubscription))
+                if(is_null($ActiveSubscription) == false)
                 {
-                    return;
-                }
-                else
-                {
-
                     $UserSubscription->SubscriptionID = $ActiveSubscription->ID;
                     $UserSubscription = update_existing_subscription(
                         $ApplicationConfiguration['APPLICATION_INTERNAL_ID'], $UserSubscription, $ActiveSubscription
@@ -236,13 +229,16 @@
                     }
                     catch(Exception $e)
                     {
-                        Actions::redirect(DynamicalWeb::getRoute('service_error', array(
-                            'error_type' => 'us_update_failure::clause(snfe)'
-                        )));
+                        $RequestHandler = DynamicalWeb::activeRequestHandler();
+                        $RequestHandler->Redirect = true;
+                        $RequestHandler->RedirectLocation = DynamicalWeb::getRoute('service_error', ['error_type' => 'us_update_failure::clause(snfe)']);
+                        $RequestHandler->execute();
                     }
+
                     set_subscription($UserSubscription);
-                    return;
                 }
+
+                return;
             }
         }
     }
@@ -277,16 +273,18 @@
             }
             catch(Exception $e)
             {
-                Actions::redirect(DynamicalWeb::getRoute('service_error', array(
-                    'error_type' => 'access_record_recreation_failed'
-                )));
+                $RequestHandler = DynamicalWeb::activeRequestHandler();
+                $RequestHandler->Redirect = true;
+                $RequestHandler->RedirectLocation = DynamicalWeb::getRoute('service_error', ['error_type' => 'access_record_recreation_failed']);
+                $RequestHandler->execute();
             }
         }
         catch(Exception $e)
         {
-            Actions::redirect(DynamicalWeb::getRoute('service_error', array(
-                'error_type' => 'access_record_update_clause_failed'
-            )));
+            $RequestHandler = DynamicalWeb::activeRequestHandler();
+            $RequestHandler->Redirect = true;
+            $RequestHandler->RedirectLocation = DynamicalWeb::getRoute('service_error', ['error_type' => 'access_record_update_clause_failed']);
+            $RequestHandler->execute();
         }
 
         $AccessRecord = updateAccessRecord($AccessRecord, $subscription);
@@ -297,9 +295,10 @@
         }
         catch(Exception $e)
         {
-            Actions::redirect(DynamicalWeb::getRoute('service_error', array(
-                'error_type' => 'ar_update_failure'
-            )));
+            $RequestHandler = DynamicalWeb::activeRequestHandler();
+            $RequestHandler->Redirect = true;
+            $RequestHandler->RedirectLocation = DynamicalWeb::getRoute('service_error', ['error_type' => 'ar_update_failure']);
+            $RequestHandler->execute();
         }
 
         $userSubscription->AccessRecordID = $AccessRecord->ID;
@@ -308,30 +307,26 @@
 
     function set_subscription(UserSubscription $userSubscription)
     {
-        /** @var sws $sws */
-        $sws = DynamicalWeb::getMemoryObject('sws');
-
-        $Cookie = $sws->WebManager()->getCookie('ch_session');
+        $Cookie = Cookies::getCookieStorage('ch_session');
         $Cookie->Data['subscription_active'] = true;
         $Cookie->Data['user_subscription_id'] = $userSubscription->SubscriptionID;
+        Cookies::updateCookieStorage($Cookie);
 
-        $sws->CookieManager()->updateCookie($Cookie);
-        Actions::redirect(DynamicalWeb::getRoute('dashboard'));
+        $RequestHandler = DynamicalWeb::activeRequestHandler();
+        $RequestHandler->Redirect = true;
+        $RequestHandler->RedirectLocation = DynamicalWeb::getRoute('dashboard');
+        $RequestHandler->execute();
     }
 
     function remove_subscription()
     {
-        /** @var sws $sws */
-        $sws = DynamicalWeb::getMemoryObject('sws');
-
-        $Cookie = $sws->WebManager()->getCookie('ch_session');
+        $Cookie = Cookies::getCookieStorage('ch_session');
         $Cookie->Data['subscription_active'] = false;
         $Cookie->Data['user_subscription_id'] = 0;
-
-        $sws->CookieManager()->updateCookie($Cookie);
+        Cookies::updateCookieStorage($Cookie);
     }
 
-    function register_subscription(CoffeeHouse $coffeeHouse, Subscription $subscription, int $application_id): UserSubscription
+    function register_subscription(CoffeeHouse $coffeeHouse, Subscription $subscription, int $application_id): ?UserSubscription
     {
         if(isset(DynamicalWeb::$globalObjects['intellivoid_api']) == false)
         {
@@ -353,27 +348,31 @@
         }
         catch (AccessRecordNotFoundException $e)
         {
-            Actions::redirect(DynamicalWeb::getRoute('service_error', array(
-                'error_type' => 'access_record_not_found'
-            )));
+            $RequestHandler = DynamicalWeb::activeRequestHandler();
+            $RequestHandler->Redirect = true;
+            $RequestHandler->RedirectLocation = DynamicalWeb::getRoute('service_error', ['error_type' => 'access_record_not_found']);
+            $RequestHandler->execute();
         }
         catch(Exception $e)
         {
-            Actions::redirect(DynamicalWeb::getRoute('service_error', array(
-                'error_type' => 'create_access_record_error'
-            )));
+            $RequestHandler = DynamicalWeb::activeRequestHandler();
+            $RequestHandler->Redirect = true;
+            $RequestHandler->RedirectLocation = DynamicalWeb::getRoute('service_error', ['error_type' => 'create_access_record_error']);
+            $RequestHandler->execute();
         }
 
         $AccessRecord = updateAccessRecord($AccessRecord, $subscription);
+
         try
         {
             $IntellivoidAPI->getAccessKeyManager()->updateAccessRecord($AccessRecord);
         }
         catch(Exception $e)
         {
-            Actions::redirect(DynamicalWeb::getRoute('service_error', array(
-                'error_type' => 'ar_update_failure'
-            )));
+            $RequestHandler = DynamicalWeb::activeRequestHandler();
+            $RequestHandler->Redirect = true;
+            $RequestHandler->RedirectLocation = DynamicalWeb::getRoute('service_error', ['error_type' => 'ar_update_failure']);
+            $RequestHandler->execute();
         }
 
         try
@@ -384,10 +383,13 @@
         }
         catch(Exception $e)
         {
-            Actions::redirect(DynamicalWeb::getRoute('service_error', array(
-                'error_type' => 'register_user_subscription_error'
-            )));
+            $RequestHandler = DynamicalWeb::activeRequestHandler();
+            $RequestHandler->Redirect = true;
+            $RequestHandler->RedirectLocation = DynamicalWeb::getRoute('service_error', ['error_type' => 'register_user_subscription_error']);
+            $RequestHandler->execute();
         }
+
+        return null;
     }
 
     function updateAccessRecord(AccessRecord $accessRecord, Subscription $subscription): AccessRecord
@@ -407,6 +409,9 @@
      * @param IntellivoidSubscriptionManager $intellivoidSubscriptionManager
      * @param array $applicationConfiguration
      * @return Subscription|null
+     * @throws RouterException
+     * @throws RequestHandlerException
+     * @throws WebApplicationException
      */
     function find_active_subscription(IntellivoidSubscriptionManager $intellivoidSubscriptionManager, array $applicationConfiguration)
     {
@@ -419,9 +424,10 @@
         }
         catch (DatabaseException $e)
         {
-            Actions::redirect(DynamicalWeb::getRoute('service_error', array(
-                'error_type' => 'failure_plan_fetch'
-            )));
+            $RequestHandler = DynamicalWeb::activeRequestHandler();
+            $RequestHandler->Redirect = true;
+            $RequestHandler->RedirectLocation = DynamicalWeb::getRoute('service_error', ['error_type' => 'failure_plan_fetch']);
+            $RequestHandler->execute();
         }
 
         $Subscription = null;
