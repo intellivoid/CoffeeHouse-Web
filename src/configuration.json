@@ -16,11 +16,7 @@
                 "tr": "localization/tr.json",
                 "es": "localization/es.json"
             }
-        },
-        "sessions": {
-            "enabled": true,
-            "configuration_name": "Intellivoid Accounts"
-        },
+        }
         "favicon": null,
         "localization_enabled": true,
         "debugging_mode": false,
