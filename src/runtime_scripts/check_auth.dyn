@@ -1,22 +1,21 @@
 <?php
 
-    use DynamicalWeb\Actions;
-    use DynamicalWeb\DynamicalWeb;
-    use DynamicalWeb\HTML;
-    use DynamicalWeb\Page;
-    use DynamicalWeb\Runtime;
-    use sws\sws;
+    use DynamicalWeb\Cookies;
+    use DynamicalWeb\Exceptions\CookieStorageNotFoundException;
+    use DynamicalWeb\Objects\Cookie;
 
-    Runtime::import('SecuredWebSessions');
-
-    /** @var sws $sws */
-    $sws = DynamicalWeb::setMemoryObject('sws', new sws());
-
-    if($sws->WebManager()->isCookieValid('ch_session') == false)
+    try
     {
-        $Cookie = $sws->CookieManager()->newCookie('ch_session', 86400, false);
-
-        $Cookie->Data = array(
+        // Get the cookie storage
+        $CookieStorage = Cookies::getCookieStorage('ch_session');
+    }
+    catch(CookieStorageNotFoundException $e)
+    {
+        // If not found, create it.
+        $Cookie = new Cookie('ch_session');
+        $Cookie->ExpiryTime = time() + 86400;
+        $CookieStorage = Cookies::createCookieStorage($Cookie, false);
+        $CookieStorage->Data = array(
             'session_active' => false,
             'account_pubid' => null,
             'account_id' => null,
@@ -26,45 +25,18 @@
             'subscription_active' => false,
             'user_subscription_id' => 0,
             'cache' => array(),
-            'cache_refresh' => 0,
+            'cache_refresh' => 0
         );
-
-        $sws->CookieManager()->updateCookie($Cookie);
-        $sws->WebManager()->setCookie($Cookie);
-
-        if($Cookie->Name == null)
-        {
-            print('There was an issue with the security check, Please refresh the page');
-            exit();
-        }
-
-        header('Refresh: ' . 2 . ' URL=' . DynamicalWeb::getRoute('index'));
-        HTML::importScript('loading_splash');
-        exit();
-
+        Cookies::updateCookieStorage($CookieStorage);
     }
 
-    try
-    {
-        $Cookie = $sws->WebManager()->getCookie('ch_session');
-    }
-    catch(Exception $exception)
-    {
-        Page::staticResponse(
-            'CoffeeHouse Error',
-            'Web Sessions Issue',
-            'There was an issue with your Web Session, try clearing your cookies and try again'
-        );
-        exit();
-    }
+    Cookies::updateCookieStorage($CookieStorage);
 
-    DynamicalWeb::setMemoryObject('(cookie)web_session', $Cookie);
-
-    define('WEB_SESSION_ACTIVE', $Cookie->Data['session_active'], false);
-    define('WEB_ACCOUNT_PUBID', $Cookie->Data['account_pubid'], false);
-    define('WEB_ACCOUNT_ID', $Cookie->Data['account_id'], false);
-    define('WEB_ACCOUNT_USERNAME', $Cookie->Data['account_username'], false);
-    define('WEB_ACCESS_TOKEN', $Cookie->Data['access_token'], false);
-    define('WEB_DEMO_SESSION_ID', $Cookie->Data['demo_session_id'], false);
-    define('WEB_SUBSCRIPTION_ACTIVE', $Cookie->Data['subscription_active'], false);
-    define('WEB_USER_SUBSCRIPTION_ID', $Cookie->Data['user_subscription_id'], false);
+    define('WEB_SESSION_ACTIVE', $CookieStorage->Data['session_active']);
+    define('WEB_ACCOUNT_PUBID', $CookieStorage->Data['account_pubid']);
+    define('WEB_ACCOUNT_ID', $CookieStorage->Data['account_id']);
+    define('WEB_ACCOUNT_USERNAME', $CookieStorage->Data['account_username']);
+    define('WEB_ACCESS_TOKEN', $CookieStorage->Data['access_token']);
+    define('WEB_DEMO_SESSION_ID', $CookieStorage->Data['demo_session_id']);
+    define('WEB_SUBSCRIPTION_ACTIVE', CookieStorage->Data['subscription_active']);
+    define('WEB_USER_SUBSCRIPTION_ID', $CookieStorage->Data['user_subscription_id']);
