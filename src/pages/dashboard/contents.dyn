@@ -340,11 +340,6 @@
                                 <h5 class="header-title mb-3">Resource Usage</h5>
                                 <?PHP
                                     generateUsageWidget(
-                                        getCurrentUsage($AccessRecord, "LYDIA_SESSIONS"),
-                                        getAllowedUsage($Subscription, "LYDIA_SESSIONS"),
-                                        TEXT_DATA_TYPE_LYDIA_SESSIONS_CREATED, "#3bc3e9"
-                                    );
-                                    generateUsageWidget(
                                         getCurrentUsage($AccessRecord, "NFW_CHECKS"),
                                         getAllowedUsage($Subscription, "MAX_NSFW_CHECKS"),
                                         TEXT_DATA_TYPE_NSFW_CLASSIFICATIONS, "#ea553d"

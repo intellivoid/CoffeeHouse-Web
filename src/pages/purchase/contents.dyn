@@ -157,18 +157,6 @@
                                                 {
                                                     switch($feature["name"])
                                                     {
-                                                        case "LYDIA_SESSIONS":
-
-                                                            if($feature["value"] == 0) $feature["value"] = TEXT_CONFIGURATION_UNLIMITED_VALUE;
-
-                                                            ?>
-                                                            <tr>
-                                                                <td class="py-1"><?PHP HTML::print(TEXT_LYDIA_SESSIONS_CONFIGURATION); ?></td>
-                                                                <td class="py-1"><?PHP HTML::print($feature["value"]); ?></td>
-                                                            </tr>
-                                                            <?PHP
-                                                            break;
-
                                                         case "MAX_NLP_CHARACTERS":
                                                             ?>
                                                             <tr>

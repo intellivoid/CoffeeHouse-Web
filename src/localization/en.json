@@ -45,8 +45,6 @@
             "DEEPANALYTICS_DATE_SELECTOR": "Date",
             "DEEPANALYTICS_DATA_ALL": "All",
             "DATA_TYPE_REQUESTS": "API Requests",
-            "DATA_TYPE_LYDIA_SESSIONS_CREATED": "Lydia Sessions Created",
-            "DATA_TYPE_LYDIA_THOUGHTS_PROCESSED": "Lydia Thoughts Processed",
             "DATA_TYPE_NSFW_CLASSIFICATIONS": "NSFW Classifications",
             "DATA_TYPE_POS_CHECKS": "Part-Of-Speech Checks",
             "DATA_TYPE_SENTIMENT_CHECKS": "Sentiment Analysis Checks",
@@ -102,19 +100,6 @@
             "CALLBACK_106": "The subscription plan was not found",
             "CALLBACK_107": "The subscription plan is not available"
         },
-        "lydia_demo": {
-            "PAGE_TITLE": "CoffeeHouse - Lydia",
-            "HEADER_DESCRIPTION": "Lydia is a advanced chat bot that actively learns from conversations and is capable of speaking in many languages without having to hard-configure anything about it.",
-            "INPUT_PLACEHOLDER": "What's on your mind?",
-            "GENERIC_USER_SELF": "You",
-            "AUTHENTICATION_REQUIRED_RESPONSE": "As much as i would love to chat with you, i need you to authenticate first! this is to prevent abuse and spam",
-            "AUTHENTICATION_REQUIRED_ACTION": "Click here to authenticate",
-            "GENERIC_ERROR_RESPONSE": "Uh oh... Something went wrong, try refreshing maybe?",
-            "SESSION_ERROR_RESPONSE": "Whoops! There seems to be an issue with our chat session. Try refreshing this page!",
-            "SESSION_EXPIRED_RESPONSE": "Hey! our chat session expired, we can talk again though! Try refreshing this page!",
-            "RELOAD_ACTION": "Reload Page",
-            "INTRODUCTION_MESSAGE": "Hello! Try having a conversation with me!"
-        },
         "privacy": {
             "PAGE_TITLE": "CoffeeHouse - Privacy Policy",
             "PAGE_HEADER": "Privacy Policy"
@@ -123,7 +108,6 @@
             "PAGE_TITLE": "CoffeeHouse - Confirm Purchase",
             "CONFIRM_PURCHASE_TITLE": "Confirm Purchase",
             "DETAILS_DESC": "Review subscription details and start the subscription",
-            "LYDIA_SESSIONS_CONFIGURATION": "Monthly Lydia Sessions",
             "MAX_NLP_CHARACTERS_CONFIGURATION": "Maximum characters for NLP",
             "MAX_GENERALIZATION_SIZE_CONFIGURATION": "Maximum size for generalizations",
             "MAX_NSFW_CHECKS_CONFIGURATION": "Monthly NSFW Image classifications",
@@ -175,7 +159,6 @@
         "landing_navbar": {
             "NAVBAR_HOME": "Home",
             "NAVBAR_PRICING": "Pricing",
-            "NAVBAR_LYDIA_DEMO": "Lydia Demo",
             "NAVBAR_DASHBOARD": "Dashboard",
             "NAVBAR_LOGOUT": "Logout"
         },

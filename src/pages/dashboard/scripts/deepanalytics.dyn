@@ -299,22 +299,6 @@
                 "text" => TEXT_DATA_TYPE_REQUESTS
             ),
 
-            "created_sessions" => array(
-                "monthly" => $CoffeeHouse->getDeepAnalytics()->getMonthlyDataRange(
-                    "coffeehouse_api", "created_sessions", $AccessRecord->ID),
-                "hourly" => $CoffeeHouse->getDeepAnalytics()->getHourlyDataRange(
-                    "coffeehouse_api", "created_sessions", $AccessRecord->ID),
-                "text" => TEXT_DATA_TYPE_LYDIA_SESSIONS_CREATED
-            ),
-
-            "ai_responses" => array(
-                "monthly" => $CoffeeHouse->getDeepAnalytics()->getMonthlyDataRange(
-                    "coffeehouse_api", "ai_responses", $AccessRecord->ID),
-                "hourly" => $CoffeeHouse->getDeepAnalytics()->getHourlyDataRange(
-                    "coffeehouse_api", "ai_responses", $AccessRecord->ID),
-                "text" => TEXT_DATA_TYPE_LYDIA_THOUGHTS_PROCESSED
-            ),
-
             "nsfw_classifications" => array(
                 "monthly" => $CoffeeHouse->getDeepAnalytics()->getMonthlyDataRange(
                     "coffeehouse_api", "nsfw_classifications", $AccessRecord->ID),

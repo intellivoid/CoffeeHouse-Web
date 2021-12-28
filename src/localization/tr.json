@@ -83,19 +83,6 @@
             "CALLBACK_106": "Abonelik planı bulunamadı",
             "CALLBACK_107": "Abonelik planı mevcut değil"
         },
-        "lydia_demo": {
-            "PAGE_TITLE": "CoffeeHouse - Lydia",
-            "HEADER_DESCRIPTION": "Lydia, konuşmaları aktif olarak öğrenen ve bu konuda hiçbir şey yapılandırmak zorunda kalmadan birçok dilde konuşabilen gelişmiş bir sohbet botudur.",
-            "INPUT_PLACEHOLDER": "Aklınızdan ne geçiyor?",
-            "GENERIC_USER_SELF": "Sen",
-            "AUTHENTICATION_REQUIRED_RESPONSE": "Seninle sohbet etmek istediğim kadar, önce kimlik doğrulamanı istiyorum! bu kötüye kullanımı ve spam'ı önlemek içindir",
-            "AUTHENTICATION_REQUIRED_ACTION": "Kimlik doğrulaması için burayı tıklayın",
-            "GENERIC_ERROR_RESPONSE": "Ah ... Bir şeyler ters gitti, Bu sayfayı yenilemeyi deneyin",
-            "SESSION_ERROR_RESPONSE": "Tüh! Sohbet oturumumuzla ilgili bir sorun var gibi görünüyor. Bu sayfayı yenilemeyi deneyin!",
-            "SESSION_EXPIRED_RESPONSE": "Hey! sohbet oturumumuzun süresi doldu, yine konuşabiliriz! Bu sayfayı yenilemeyi deneyin!",
-            "RELOAD_ACTION": "Sayfayı Yenile",
-            "INTRODUCTION_MESSAGE": "Merhaba! Benimle sohbet etmeyi dene!"
-        },
         "privacy": {
             "PAGE_TITLE": "CoffeeHouse - Gizlilik Politikası",
             "PAGE_HEADER": "Gizlilik Politikası"
@@ -144,7 +131,6 @@
         "landing_navbar": {
             "NAVBAR_HOME": "Anasayfa",
             "NAVBAR_PRICING": "Ödeme",
-            "NAVBAR_LYDIA_DEMO": "Lydia Demo",
             "NAVBAR_DASHBOARD": "Panel",
             "NAVBAR_LOGOUT": "Çıkış Yap"
         },

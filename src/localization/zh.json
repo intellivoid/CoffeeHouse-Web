@@ -93,19 +93,6 @@
             "CALLBACK_106": "找不到订阅计划",
             "CALLBACK_107": "订阅计划不可用"
         },
-        "lydia_demo": {
-            "PAGE_TITLE": "CoffeeHouse - Lydia",
-            "HEADER_DESCRIPTION": "莉迪亚（Lydia）是一个高级聊天机器人，可以主动地从对话中学习，并且能够以多种语言讲话，而无需对其进行任何硬配置。",
-            "INPUT_PLACEHOLDER": "你在想什么？",
-            "GENERIC_USER_SELF": "您",
-            "AUTHENTICATION_REQUIRED_RESPONSE": "我很想和您聊天，我需要您先进行身份验证！ 这是为了防止滥用和垃圾邮件",
-            "AUTHENTICATION_REQUIRED_ACTION": "点击此处进行身份验证",
-            "GENERIC_ERROR_RESPONSE": "嗯...出了点问题，也许尝试刷新一下？",
-            "SESSION_ERROR_RESPONSE": "哎呀！ 我们的聊天会话似乎存在问题。 尝试刷新此页面！",
-            "SESSION_EXPIRED_RESPONSE": "嘿! 我们的聊天会话已过期，但是我们可以再次交谈！ 尝试刷新此页面！",
-            "RELOAD_ACTION": "重新载入页面",
-            "INTRODUCTION_MESSAGE": "你好！ 尝试与我对话！"
-        },
         "privacy": {
             "PAGE_TITLE": "CoffeeHouse - 隐私政策",
             "PAGE_HEADER": "隐私政策"
@@ -154,7 +141,6 @@
         "landing_navbar": {
             "NAVBAR_HOME": "家",
             "NAVBAR_PRICING": "价钱",
-            "NAVBAR_LYDIA_DEMO": "莉迪亚（Lydia）演示",
             "NAVBAR_DASHBOARD": "仪表板",
             "NAVBAR_LOGOUT": "登出"
         },

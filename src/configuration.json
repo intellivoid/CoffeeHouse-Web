@@ -40,7 +40,6 @@
         {"method": ["GET", "POST"], "path": "service_error", "page": "service_error", "params": []},
         {"method": ["GET", "POST"], "path": "terms", "page": "tos", "params": []},
         {"method": ["GET", "POST"], "path": "privacy", "page": "privacy", "params": []},
-        {"method": ["GET", "POST"], "path": "demo/lydia", "page": "lydia_demo", "params": []},
         {"method": ["GET", "POST"], "path": "confirm_purchase", "page": "purchase", "params": []},
         {"method": ["GET", "POST"], "path": "dashboard", "page": "dashboard", "params": []}
     ]

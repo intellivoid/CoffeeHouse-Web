@@ -83,19 +83,6 @@
             "CALLBACK_106": "El plan de subscripción no fue encontrado",
             "CALLBACK_107": "El plan de subscripción no está disponible"
         },
-        "lydia_demo": {
-            "PAGE_TITLE": "CoffeeHouse - Lydia",
-            "HEADER_DESCRIPTION": "Lydia es un chatbot avanzado que aprende activamente de las conversaciones y es capaz de hablar en diversos idiomas sin necesidad de una configuración extensiva.",
-            "INPUT_PLACEHOLDER": "¿Qué hay en vuestra mente?",
-            "GENERIC_USER_SELF": "Tú",
-            "AUTHENTICATION_REQUIRED_RESPONSE": "¡Me encantaría conversar contigo! Pero primero, necesito que te autentiques. Esta medida es para prevenir spam y abuso",
-            "AUTHENTICATION_REQUIRED_ACTION": "Haz click aquí para autenticarte",
-            "GENERIC_ERROR_RESPONSE": "Uh oh... Algo salió mal. Deberias intentar refrescar la página.",
-            "SESSION_ERROR_RESPONSE": "Whoops! Parece que ha ocurrido un problema con nuestra sesión de chat. ¡Intenta refrescar la página!",
-            "SESSION_EXPIRED_RESPONSE": "¡Hey!, nuestra sesión de chat ha expirado. Aunque... Podemos hablar de nuevo :D. ¡Intenta refrescando esta página!",
-            "RELOAD_ACTION": "Refrescar página",
-            "INTRODUCTION_MESSAGE": "Hola, intenta tener una conversación conmigo!"
-        },
         "privacy": {
             "PAGE_TITLE": "CoffeeHouse - Política de privacidad",
             "PAGE_HEADER": "Política de Privacidad"
@@ -144,7 +131,6 @@
         "landing_navbar": {
             "NAVBAR_HOME": "Inicio",
             "NAVBAR_PRICING": "Precios",
-            "NAVBAR_LYDIA_DEMO": "Demo de Lydia",
             "NAVBAR_DASHBOARD": "Dashboard",
             "NAVBAR_LOGOUT": "Cerrar Sesión"
         },
