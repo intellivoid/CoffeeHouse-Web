@@ -92,7 +92,6 @@
         "pages/dashboard/scripts/callbacks.dyn",
         "pages/dashboard/scripts/deepanalytics.dyn",
         "scripts/authenticate_coa.dyn",
-        "scripts/loading_splash.dyn",
         "scripts/require_auth.dyn",
         "scripts/alert.dyn",
         "scripts/check_subscription.dyn",
