@@ -1,8 +1,6 @@
 <?php
     use DynamicalWeb\DynamicalWeb;
     use DynamicalWeb\HTML;
-    use DynamicalWeb\Page;
-    use DynamicalWeb\Runtime;
     use IntellivoidSubscriptionManager\Exceptions\SubscriptionPlanNotFoundException;
     use IntellivoidSubscriptionManager\IntellivoidSubscriptionManager;
 
@@ -15,7 +13,6 @@
     }
 
     HTML::importScript('check_subscription');
-    Runtime::import('IntellivoidSubscriptionManager');
 
     $IntellivoidSubscriptionManager = new IntellivoidSubscriptionManager();
     $ApplicationConfiguration = DynamicalWeb::getConfiguration('coasniffle');
@@ -28,18 +25,12 @@
     }
     catch (SubscriptionPlanNotFoundException $e)
     {
-        Page::staticResponse(
-            "Configuration Error", "Intellivoid Accounts Error",
-            "The subscription plan for 'FREE' is not configured properly"
-        );
+        print("The subscription plan for 'FREE' is not configured properly");
         exit();
     }
     catch(Exception $e)
     {
-        Page::staticResponse(
-            "Configuration Error", "Intellivoid Accounts Error",
-            "The subscription plan for 'FREE' raised an unknown error"
-        );
+        print("The subscription plan for 'FREE' raised an unknown error");
         exit();
     }
 
@@ -51,18 +42,12 @@
     }
     catch (SubscriptionPlanNotFoundException $e)
     {
-        Page::staticResponse(
-            "Configuration Error", "Intellivoid Accounts Error",
-            "The subscription plan for 'BASIC' is not configured properly"
-        );
+        print("The subscription plan for 'BASIC' is not configured properly");
         exit();
     }
     catch(Exception $e)
     {
-        Page::staticResponse(
-            "Configuration Error", "Intellivoid Accounts Error",
-            "The subscription plan for 'BASIC' raised an unknown error"
-        );
+        print("The subscription plan for 'BASIC' raised an unknown error");
         exit();
     }
 
@@ -74,18 +59,12 @@
     }
     catch (SubscriptionPlanNotFoundException $e)
     {
-        Page::staticResponse(
-            "Configuration Error", "Intellivoid Accounts Error",
-            "The subscription plan for 'ENTERPRISE' is not configured properly"
-        );
+        print("The subscription plan for 'ENTERPRISE' is not configured properly");
         exit();
     }
     catch(Exception $e)
     {
-        Page::staticResponse(
-            "Configuration Error", "Intellivoid Accounts Error",
-            "The subscription plan for 'ENTERPRISE' raised an unknown error"
-        );
+        print("The subscription plan for 'ENTERPRISE' raised an unknown error");
         exit();
     }
 
@@ -127,7 +106,6 @@
 <html lang="<?PHP HTML::print(DYNAMICAL_SELECTED_LOCALIZATION_ISO_CODE); ?>">
     <head>
         <?PHP HTML::importSection('landing_headers'); ?>
-        <link href="/assets/css/loader.css" rel="stylesheet">
         <title><?PHP HTML::print(TEXT_PAGE_TITLE); ?></title>
     </head>
     <body data-spy="scroll" data-target="#ch-navbar" data-offset="20">
@@ -144,7 +122,7 @@
                     <div class="col-md-8 offset-md-2 text-white text-center">
                         <h1 class="home-title animated slow fadeInLeft"><?PHP HTML::print(TEXT_INTRODUCTION_TITLE); ?></h1>
                         <p class="mt-4 home-subtitle animated slow fadeInRight"><?PHP HTML::print(TEXT_INTRODUCTION_DESCRIPTION); ?></p>
-                        <img src="/assets/images/lydia_showcase.svg" alt="<?PHP HTML::print(TEXT_INTRODUCTION_IMAGE_ALT); ?>" class="img-fluid mt-4 animated slower fadeIn">
+                        <img src="<?PHP DynamicalWeb::printAssetRoute('primary_assets', '/images/lydia_showcase.svg'); ?>" alt="<?PHP HTML::print(TEXT_INTRODUCTION_IMAGE_ALT); ?>" class="img-fluid mt-4 animated slower fadeIn">
                     </div>
                 </div>
             </div>
