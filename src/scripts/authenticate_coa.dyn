@@ -7,13 +7,8 @@
     use COASniffle\Exceptions\UnsupportedAuthMethodException;
     use CoffeeHouse\Abstracts\UserSubscriptionSearchMethod;
     use CoffeeHouse\Exceptions\UserSubscriptionNotFoundException;
-    use DynamicalWeb\Actions;
+    use DynamicalWeb\Cookies;
     use DynamicalWeb\DynamicalWeb;
-    use DynamicalWeb\Runtime;
-    use sws\sws;
-
-    Runtime::import('CoffeeHouse');
-    Runtime::import('IntellivoidSubscriptionManager');
 
     if(WEB_SESSION_ACTIVE == false)
     {
@@ -35,39 +30,41 @@
         }
         catch (BadResponseException $e)
         {
-            Actions::redirect(DynamicalWeb::getRoute(
-                'index', array('callback' => '101')
-            ));
+            $RequestHandler = DynamicalWeb::activeRequestHandler();
+            $RequestHandler->Redirect = true;
+            $RequestHandler->RedirectLocation = DynamicalWeb::getRoute('index', ['callback' => '101']);
+            $RequestHandler->execute();
         }
         catch (CoaAuthenticationException $e)
         {
-            Actions::redirect(DynamicalWeb::getRoute(
-                'index', array('callback' => '102', 'coa_error' => (string)$e->getCode())
-            ));
+            $RequestHandler = DynamicalWeb::activeRequestHandler();
+            $RequestHandler->Redirect = true;
+            $RequestHandler->RedirectLocation = DynamicalWeb::getRoute('index', ['callback' => '102', 'coa_error' => (string)$e->getCode()]);
+            $RequestHandler->execute();
         }
         catch (RequestFailedException $e)
         {
-            Actions::redirect(DynamicalWeb::getRoute(
-                'index', array('callback' => '103')
-            ));
+            $RequestHandler = DynamicalWeb::activeRequestHandler();
+            $RequestHandler->Redirect = true;
+            $RequestHandler->RedirectLocation = DynamicalWeb::getRoute('index', ['callback' => '103']);
+            $RequestHandler->execute();
         }
         catch (UnsupportedAuthMethodException $e)
         {
-            Actions::redirect(DynamicalWeb::getRoute(
-                'index', array('callback' => '104')
-            ));
+            $RequestHandler = DynamicalWeb::activeRequestHandler();
+            $RequestHandler->Redirect = true;
+            $RequestHandler->RedirectLocation = DynamicalWeb::getRoute('index', ['callback' => '104']);
+            $RequestHandler->execute();
         }
         catch(Exception $e)
         {
-            Actions::redirect(DynamicalWeb::getRoute(
-                'index', array('callback' => '100')
-            ));
+            $RequestHandler = DynamicalWeb::activeRequestHandler();
+            $RequestHandler->Redirect = true;
+            $RequestHandler->RedirectLocation = DynamicalWeb::getRoute('index', ['callback' => '100']);
+            $RequestHandler->execute();
         }
 
-        /** @var sws $sws */
-        $sws = DynamicalWeb::getMemoryObject('sws');
-
-        $Cookie = $sws->WebManager()->getCookie('ch_session');
+        $Cookie = Cookies::getCookieStorage('ch_session');
         $Cookie->Data['session_active'] = true;
         $Cookie->Data['account_pubid'] = $UserInformation->PublicID;
         $Cookie->Data['account_id'] = $UserInformation->Tag;
@@ -79,7 +76,6 @@
         {
             $Cookie->Data['cache_refresh'] = 0;
         }
-
 
         try
         {
@@ -97,14 +93,13 @@
         }
         catch(Exception $e)
         {
-            Actions::redirect(DynamicalWeb::getRoute(
-                'index', array('callback' => '100')
-            ));
+            $RequestHandler = DynamicalWeb::activeRequestHandler();
+            $RequestHandler->Redirect = true;
+            $RequestHandler->RedirectLocation = DynamicalWeb::getRoute('index', ['callback' => '100']);
+            $RequestHandler->execute();
         }
 
-        $sws->CookieManager()->updateCookie($Cookie);
-        $sws->WebManager()->setCookie($Cookie);
-
+        Cookies::updateCookieStorage($Cookie);
         $Redirect = "None";
 
         if(isset($_GET['redirect']))
@@ -114,29 +109,29 @@
 
         switch($Redirect)
         {
-            case 'lydia_demo':
-                Actions::redirect(DynamicalWeb::getRoute(
-                    'lydia_demo', array()
-                ));
-                break;
-
             case 'confirm_purchase':
                 if(isset($_GET['plan']))
                 {
-                    Actions::redirect(DynamicalWeb::getRoute(
-                        'purchase', array('plan' => $_GET['plan'])
-                    ));
+                    $RequestHandler = DynamicalWeb::activeRequestHandler();
+                    $RequestHandler->Redirect = true;
+                    $RequestHandler->RedirectLocation = DynamicalWeb::getRoute('purchase', ['plan' => $_GET['plan']]);
+                    $RequestHandler->execute();
                 }
                 break;
 
             case 'dashboard':
-                Actions::redirect(DynamicalWeb::getRoute(
-                    'dashboard', array()
-                ));
+                $RequestHandler = DynamicalWeb::activeRequestHandler();
+                $RequestHandler->Redirect = true;
+                $RequestHandler->RedirectLocation = DynamicalWeb::getRoute('dashboard');
+                $RequestHandler->execute();
+                break;
+
+            case 'lydia_demo':
+            default:
+                $RequestHandler = DynamicalWeb::activeRequestHandler();
+                $RequestHandler->Redirect = true;
+                $RequestHandler->RedirectLocation = DynamicalWeb::getRoute('index');
+                $RequestHandler->execute();
                 break;
         }
-
-        Actions::redirect(DynamicalWeb::getRoute(
-            'index'
-        ));
     }
