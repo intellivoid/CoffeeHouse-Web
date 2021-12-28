@@ -3,17 +3,13 @@
     use COASniffle\Abstracts\ApplicationType;
     use COASniffle\COASniffle;
     use DynamicalWeb\DynamicalWeb;
-    use DynamicalWeb\Runtime;
-
-    Runtime::import('COASniffle');
 
     /**
      * This script defines the COA Application and registers the constructed objects into
      * DynamicalWeb Memory Objects, this is a runtime script that is executed before anything
      */
-
     $COASniffle = new COASniffle();
-    $ApplicationConfiguration = DynamicalWeb::getConfiguration('coasniffle');
+    $ApplicationConfiguration = json_decode(file_get_contents(__DIR__ . DIRECTORY_SEPARATOR . 'coasniffle.json'), true);
 
     $COASniffle->defineApplication(
         $ApplicationConfiguration['PUBLIC_APPLICATION_ID'],
