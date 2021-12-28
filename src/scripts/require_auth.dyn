@@ -16,6 +16,9 @@
             $RedirectURL = $Protocol . $_SERVER['HTTP_HOST'] . DynamicalWeb::getRoute('index', $params);
             $AuthenticationURL = $COASniffle->getCOA()->getAuthenticationURL($RedirectURL);
 
-            Actions::redirect($AuthenticationURL);
+            $RequestHandler = DynamicalWeb::activeRequestHandler();
+            $RequestHandler->Redirect = true;
+            $RequestHandler->RedirectLocation = $AuthenticationURL;
+            $RequestHandler->execute();
         }
     }
