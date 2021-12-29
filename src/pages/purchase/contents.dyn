@@ -6,7 +6,6 @@
     use COASniffle\Exceptions\RequestFailedException;
     use COASniffle\Exceptions\UnsupportedAuthMethodException;
     use COASniffle\Objects\SubscriptionPurchaseResults;
-    use DynamicalWeb\Actions;
     use DynamicalWeb\DynamicalWeb;
     use DynamicalWeb\HTML;
 
@@ -14,7 +13,10 @@
 
     if(WEB_SUBSCRIPTION_ACTIVE)
     {
-        Actions::redirect(DynamicalWeb::getRoute("dashboard"));
+        $RequestHandler = DynamicalWeb::activeRequestHandler();
+        $RequestHandler->Redirect = true;
+        $RequestHandler->RedirectLocation = DynamicalWeb::getRoute("dashboard");
+        $RequestHandler->execute();
     }
 
     /** @var COASniffle $COASniffle */
@@ -23,7 +25,10 @@
 
     if(isset($_GET["plan"]) == false)
     {
-        Actions::redirect(DynamicalWeb::getRoute("api"));
+        $RequestHandler = DynamicalWeb::activeRequestHandler();
+        $RequestHandler->Redirect = true;
+        $RequestHandler->RedirectLocation = DynamicalWeb::getRoute("index");
+        $RequestHandler->execute();
     }
 
     try
@@ -50,71 +55,77 @@
     }
     catch (BadResponseException $e)
     {
-        Actions::redirect(DynamicalWeb::getRoute(
-            "index", array("callback" => "101")
-        ));
+        $RequestHandler = DynamicalWeb::activeRequestHandler();
+        $RequestHandler->Redirect = true;
+        $RequestHandler->RedirectLocation = DynamicalWeb::getRoute("index", ['callback' => '101']);
+        $RequestHandler->execute();
     }
     catch (CoaAuthenticationException $e)
     {
         switch($e->getCode())
         {
             case 43:
-                Actions::redirect(DynamicalWeb::getRoute("index", array(
-                    "callback" => "106"
-                )));
+                $RequestHandler = DynamicalWeb::activeRequestHandler();
+                $RequestHandler->Redirect = true;
+                $RequestHandler->RedirectLocation = DynamicalWeb::getRoute("index", ['callback' => '106']);
+                $RequestHandler->execute();
                 break;
 
             case 44:
-                Actions::redirect(DynamicalWeb::getRoute("purchase", array(
-                    "plan" => $_GET["plan"],
-                    "callback" => "100"
-                )));
+                $RequestHandler = DynamicalWeb::activeRequestHandler();
+                $RequestHandler->Redirect = true;
+                $RequestHandler->RedirectLocation = DynamicalWeb::getRoute("purchase", ['callback' => '100', 'plan' => $_GET['plan']]);
+                $RequestHandler->execute();
                 break;
 
             case 45:
-                Actions::redirect(DynamicalWeb::getRoute("index", array(
-                    "callback" => "107"
-                )));
+                $RequestHandler = DynamicalWeb::activeRequestHandler();
+                $RequestHandler->Redirect = true;
+                $RequestHandler->RedirectLocation = DynamicalWeb::getRoute("index", ['callback' => '107']);
+                $RequestHandler->execute();
                 break;
 
             case 46:
-                Actions::redirect(DynamicalWeb::getRoute("purchase", array(
-                    "plan" => $_GET["plan"],
-                    "callback" => "101"
-                )));
+                $RequestHandler = DynamicalWeb::activeRequestHandler();
+                $RequestHandler->Redirect = true;
+                $RequestHandler->RedirectLocation = DynamicalWeb::getRoute("purchase", ['callback' => '101', 'plan' => $_GET['plan']]);
+                $RequestHandler->execute();
                 break;
 
             case 47:
-                Actions::redirect(DynamicalWeb::getRoute("purchase", array(
-                    "plan" => $_GET["plan"],
-                    "callback" => "102"
-                )));
+                $RequestHandler = DynamicalWeb::activeRequestHandler();
+                $RequestHandler->Redirect = true;
+                $RequestHandler->RedirectLocation = DynamicalWeb::getRoute("purchase", ['callback' => '102', 'plan' => $_GET['plan']]);
+                $RequestHandler->execute();
                 break;
 
             case 48:
-                Actions::redirect(DynamicalWeb::getRoute("purchase", array(
-                    "plan" => $_GET["plan"],
-                    "callback" => "103"
-                )));
+                $RequestHandler = DynamicalWeb::activeRequestHandler();
+                $RequestHandler->Redirect = true;
+                $RequestHandler->RedirectLocation = DynamicalWeb::getRoute("purchase", ['callback' => '103', 'plan' => $_GET['plan']]);
+                $RequestHandler->execute();
                 break;
 
             default:
-                Actions::redirect(DynamicalWeb::getRoute(
-                    "index", array("callback" => "102", "coa_error" => (string)$e->getCode())
-                ));
+                $RequestHandler = DynamicalWeb::activeRequestHandler();
+                $RequestHandler->Redirect = true;
+                $RequestHandler->RedirectLocation = DynamicalWeb::getRoute("index", ['callback' => '102', 'coa_error' => (string)$e->getCode()]);
+                $RequestHandler->execute();
         }
     }
     catch (RequestFailedException $e)
     {
-        Actions::redirect(DynamicalWeb::getRoute(
-            "index", array("callback" => "103")
-        ));
+        $RequestHandler = DynamicalWeb::activeRequestHandler();
+        $RequestHandler->Redirect = true;
+        $RequestHandler->RedirectLocation = DynamicalWeb::getRoute("index", ['callback' => '103']);
+        $RequestHandler->execute();
     }
     catch (UnsupportedAuthMethodException $e)
     {
-        Actions::redirect(DynamicalWeb::getRoute(
-            "index", array("callback" => "104")
-        ));
+        $RequestHandler = DynamicalWeb::activeRequestHandler();
+        $RequestHandler->Redirect = true;
+        $RequestHandler->RedirectLocation = DynamicalWeb::getRoute("index", ['callback' => '104']);
+        $RequestHandler->execute();
     }
 
     HTML::importScript("alert");
@@ -123,7 +134,6 @@
 <html lang="<?PHP HTML::print(DYNAMICAL_SELECTED_LOCALIZATION_ISO_CODE); ?>">
     <head>
         <?PHP HTML::importSection("landing_headers"); ?>
-        <link href="/assets/css/loader.css" rel="stylesheet">
         <title><?PHP HTML::print(TEXT_PAGE_TITLE); ?></title>
     </head>
 
