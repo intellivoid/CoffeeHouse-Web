@@ -30,8 +30,6 @@
         }
         catch (BadResponseException $e)
         {
-            var_dump($e);
-            die();
             $RequestHandler = DynamicalWeb::activeRequestHandler();
             $RequestHandler->Redirect = true;
             $RequestHandler->RedirectLocation = DynamicalWeb::getRoute('index', ['callback' => '101']);
