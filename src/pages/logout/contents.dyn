@@ -1,17 +1,17 @@
 <?php
 
+    use DynamicalWeb\Cookies;
     use DynamicalWeb\DynamicalWeb;
-    use sws\sws;
 
     if(WEB_SESSION_ACTIVE == false)
     {
-        header('Location: /');
-        exit();
+        $RequestHandler = DynamicalWeb::activeRequestHandler();
+        $RequestHandler->Redirect = true;
+        $RequestHandler->RedirectLocation = DynamicalWeb::getRoute('index');
+        $RequestHandler->execute();
     }
 
-    /** @var sws $sws */
-    $sws = DynamicalWeb::getMemoryObject('sws');
-    $Cookie = $sws->WebManager()->getCookie('ch_session');
+    $Cookie = Cookies::getCookieStorage('ch_session');
 
     $Cookie->Data['cache_refresh'] = 0;
     $Cookie->Data['session_active'] = false;
@@ -21,7 +21,9 @@
     $Cookie->Data['account_username'] = null;
     $Cookie->Data['demo_session_id'] = 0;
 
-    $sws->CookieManager()->updateCookie($Cookie);
+    Cookies::updateCookieStorage($Cookie);
 
-    header('Location: /');
-    exit();
+    $RequestHandler = DynamicalWeb::activeRequestHandler();
+    $RequestHandler->Redirect = true;
+    $RequestHandler->RedirectLocation = DynamicalWeb::getRoute('index');
+    $RequestHandler->execute();
