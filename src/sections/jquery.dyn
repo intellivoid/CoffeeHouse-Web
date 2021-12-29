@@ -1,8 +1,11 @@
-<script src="/assets/js/jquery.min.js"></script>
-<script src="/assets/js/bootstrap.bundle.min.js"></script>
-<script src="/assets/js/modernizr.min.js"></script>
-<script src="/assets/js/waves.js"></script>
-<script src="/assets/js/jquery.slimscroll.js"></script>
-<script src="/assets/js/jquery.nicescroll.js"></script>
-<script src="/assets/js/jquery.scrollTo.min.js"></script>
-<script src="/assets/js/app.js"></script>
+<?php
+    use DynamicalWeb\DynamicalWeb;
+?>
+<script src="<?PHP DynamicalWeb::printAssetRoute('primary_assets', '/js/jquery.min.js'); ?>"></script>
+<script src="<?PHP DynamicalWeb::printAssetRoute('primary_assets', '/js/bootstrap.bundle.min.js'); ?>"></script>
+<script src="<?PHP DynamicalWeb::printAssetRoute('primary_assets', '/js/modernizr.min.js'); ?>"></script>
+<script src="<?PHP DynamicalWeb::printAssetRoute('primary_assets', '/js/waves.js'); ?>"></script>
+<script src="<?PHP DynamicalWeb::printAssetRoute('primary_assets', '/js/jquery.slimscroll.js'); ?>"></script>
+<script src="<?PHP DynamicalWeb::printAssetRoute('primary_assets', '/js/jquery.nicescroll.js'); ?>"></script>
+<script src="<?PHP DynamicalWeb::printAssetRoute('primary_assets', '/js/jquery.scrollTo.min.js'); ?>"></script>
+<script src="<?PHP DynamicalWeb::printAssetRoute('primary_assets', '/js/app.js'); ?>"></script>
