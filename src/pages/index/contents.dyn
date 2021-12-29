@@ -15,7 +15,8 @@
     HTML::importScript('check_subscription');
 
     $IntellivoidSubscriptionManager = new IntellivoidSubscriptionManager();
-    $ApplicationConfiguration = DynamicalWeb::getConfiguration('coasniffle');
+    $ApplicationConfiguration = __DIR__ . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'runtime_scripts' . DIRECTORY_SEPARATOR . 'coasniffle.json';
+    $ApplicationConfiguration = json_decode(file_get_contents($ApplicationConfiguration), true);
 
     try
     {

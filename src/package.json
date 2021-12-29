@@ -37,6 +37,18 @@
                 "version": "latest",
                 "source": "default@github/intellivoid/COASniffle",
                 "required": true
+            },
+            {
+                "package": "net.intellivoid.coffeehouse",
+                "version": "latest",
+                "source": "default@github/intellivoid/CoffeeHouse",
+                "required": true
+            },
+            {
+                "package": "net.intellivoid.api",
+                "version": "latest",
+                "source": "default@github/intellivoid/Intellivoid-API",
+                "required": true
             }
         ],
         "configuration": {

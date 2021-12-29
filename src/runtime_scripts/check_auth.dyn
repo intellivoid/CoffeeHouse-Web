@@ -38,5 +38,5 @@
     define('WEB_ACCOUNT_USERNAME', $CookieStorage->Data['account_username']);
     define('WEB_ACCESS_TOKEN', $CookieStorage->Data['access_token']);
     define('WEB_DEMO_SESSION_ID', $CookieStorage->Data['demo_session_id']);
-    define('WEB_SUBSCRIPTION_ACTIVE', CookieStorage->Data['subscription_active']);
+    define('WEB_SUBSCRIPTION_ACTIVE', $CookieStorage->Data['subscription_active']);
     define('WEB_USER_SUBSCRIPTION_ID', $CookieStorage->Data['user_subscription_id']);

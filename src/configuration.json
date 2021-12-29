@@ -16,7 +16,7 @@
                 "tr": "localization/tr.json",
                 "es": "localization/es.json"
             }
-        }
+        },
         "favicon": null,
         "localization_enabled": true,
         "debugging_mode": false,
@@ -32,7 +32,7 @@
         {"event": "pre_page_load", "script": "runtime_scripts/check_auth.dyn"}
     ],
     "web_assets": [
-        {"type": "ppm", "name": "primary_assets", "source": "net.intellivoid.coffeehouse_web==latest", "path": "assets"}
+        {"type": "ppm", "name": "primary_assets", "source": "net.intellivoid.coffeehouse_template==latest", "path": "assets"}
     ],
     "router": [
         {"method": ["GET", "POST"], "path": "", "page": "index", "params": []},
