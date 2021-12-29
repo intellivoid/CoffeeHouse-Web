@@ -3,11 +3,8 @@
     use CoffeeHouse\Abstracts\UserSubscriptionSearchMethod;
     use CoffeeHouse\CoffeeHouse;
     use CoffeeHouse\Exceptions\UserSubscriptionNotFoundException;
-    use DynamicalWeb\Actions;
     use DynamicalWeb\DynamicalWeb;
     use DynamicalWeb\HTML;
-    use DynamicalWeb\Javascript;
-    use DynamicalWeb\Runtime;
     use IntellivoidAPI\Abstracts\SearchMethods\AccessRecordSearchMethod;
     use IntellivoidAPI\Exceptions\AccessRecordNotFoundException;
     use IntellivoidAPI\IntellivoidAPI;
@@ -19,10 +16,6 @@
     use IntellivoidSubscriptionManager\IntellivoidSubscriptionManager;
     use IntellivoidSubscriptionManager\Objects\Subscription;
     use IntellivoidSubscriptionManager\Objects\Subscription\Feature;
-
-    Runtime::import('CoffeeHouse');
-    Runtime::import('IntellivoidSubscriptionManager');
-    Runtime::import('IntellivoidAPI');
 
     HTML::importScript('require_auth');
     HTML::importScript('check_subscription');
@@ -39,7 +32,10 @@
 
     if(WEB_SUBSCRIPTION_ACTIVE == false)
     {
-        Actions::redirect(DynamicalWeb::getRoute('index') . '#pricing');
+        $RequestHandler = DynamicalWeb::activeRequestHandler();
+        $RequestHandler->Redirect = true;
+        $RequestHandler->RedirectLocation = DynamicalWeb::getRoute('index') . '#pricing';
+        $RequestHandler->execute();
     }
 
     // DASHBOARD LOGIC
@@ -84,17 +80,23 @@
     }
     catch (UserSubscriptionNotFoundException $e)
     {
-        Actions::redirect(DynamicalWeb::getRoute('service_error', array(
-            'error_type' => 'rd_us_not_found'
-        )));
+        $RequestHandler = DynamicalWeb::activeRequestHandler();
+        $RequestHandler->Redirect = true;
+        $RequestHandler->RedirectLocation = DynamicalWeb::getRoute('service_error', [
+                'error_type' => 'rd_us_not_found'
+        ]);
+        $RequestHandler->execute();
     }
     catch(Exception $e)
     {
-        Actions::redirect(DynamicalWeb::getRoute('service_error', array(
+        $RequestHandler = DynamicalWeb::activeRequestHandler();
+        $RequestHandler->Redirect = true;
+        $RequestHandler->RedirectLocation = DynamicalWeb::getRoute('service_error', [
             'error_type' => 'rd_us_cluster_error'
-        )));
-    }
+        ]);
+        $RequestHandler->execute();
 
+    }
 
     try
     {
@@ -108,21 +110,30 @@
     }
     catch (SubscriptionNotFoundException $e)
     {
-        Actions::redirect(DynamicalWeb::getRoute('service_error', array(
+        $RequestHandler = DynamicalWeb::activeRequestHandler();
+        $RequestHandler->Redirect = true;
+        $RequestHandler->RedirectLocation = DynamicalWeb::getRoute('service_error', [
             'error_type' => 'rd_s_not_found'
-        )));
+        ]);
+        $RequestHandler->execute();
     }
     catch (SubscriptionPlanNotFoundException $e)
     {
-        Actions::redirect(DynamicalWeb::getRoute('service_error', array(
+        $RequestHandler = DynamicalWeb::activeRequestHandler();
+        $RequestHandler->Redirect = true;
+        $RequestHandler->RedirectLocation = DynamicalWeb::getRoute('service_error', [
             'error_type' => 'rd_sp_not_found'
-        )));
+        ]);
+        $RequestHandler->execute();
     }
     catch(Exception $e)
     {
-        Actions::redirect(DynamicalWeb::getRoute('service_error', array(
+        $RequestHandler = DynamicalWeb::activeRequestHandler();
+        $RequestHandler->Redirect = true;
+        $RequestHandler->RedirectLocation = DynamicalWeb::getRoute('service_error', [
             'error_type' => 'rd_s_cluster_error'
-        )));
+        ]);
+        $RequestHandler->execute();
     }
 
     try
@@ -134,45 +145,21 @@
     }
     catch (AccessRecordNotFoundException $e)
     {
-        Actions::redirect(DynamicalWeb::getRoute('service_error', array(
+        $RequestHandler = DynamicalWeb::activeRequestHandler();
+        $RequestHandler->Redirect = true;
+        $RequestHandler->RedirectLocation = DynamicalWeb::getRoute('service_error', [
             'error_type' => 'rd_ar_not_found'
-        )));
+        ]);
+        $RequestHandler->execute();
     }
     catch(Exception $e)
     {
-        Actions::redirect(DynamicalWeb::getRoute('service_error', array(
+        $RequestHandler = DynamicalWeb::activeRequestHandler();
+        $RequestHandler->Redirect = true;
+        $RequestHandler->RedirectLocation = DynamicalWeb::getRoute('service_error', [
             'error_type' => 'rd_ar_cluster_error'
-        )));
-    }
-
-    $ConfiguredLydiaSessions = "Unknown";
-    $UsedLydiaSessions = "Unknown";
-
-    /** @var Feature $feature */
-    /** @noinspection PhpUndefinedVariableInspection */
-    foreach($Subscription->Properties->Features as $feature)
-    {
-        switch($feature->Name)
-        {
-            case 'LYDIA_SESSIONS':
-                $ConfiguredLydiaSessions = (int)$feature->Value;
-                break;
-        }
-    }
-
-
-    if(isset($AccessRecord->Variables['LYDIA_SESSIONS']))
-    {
-        $UsedLydiaSessions = (int)$AccessRecord->Variables['LYDIA_SESSIONS'];
-
-        if($ConfiguredLydiaSessions > 0)
-        {
-            if($UsedLydiaSessions > $ConfiguredLydiaSessions)
-            {
-                $UsedLydiaSessions = $ConfiguredLydiaSessions;
-            }
-        }
-
+        ]);
+        $RequestHandler->execute();
     }
 
     DynamicalWeb::setMemoryObject('subscription_plan', $SubscriptionPlan);
@@ -191,8 +178,12 @@
         /** @noinspection PhpUnhandledExceptionInspection */
         $Subscription = us_update_subscription($Subscription);
 
-        Actions::redirect(DynamicalWeb::getRoute("dashboard", ["callback" => "102"]));
-        exit();
+        $RequestHandler = DynamicalWeb::activeRequestHandler();
+        $RequestHandler->Redirect = true;
+        $RequestHandler->RedirectLocation = DynamicalWeb::getRoute('dashboard', [
+            'callback' => '102'
+        ]);
+        $RequestHandler->execute();
     }
 
     /**
@@ -239,7 +230,7 @@
 <html lang="<?PHP HTML::print(DYNAMICAL_SELECTED_LOCALIZATION_ISO_CODE); ?>">
     <head>
         <?PHP HTML::importSection('header'); ?>
-        <link rel="stylesheet" href="/assets/vendors/morris/morris.css">
+        <link rel="stylesheet" href="<?PHP DynamicalWeb::printAssetRoute('primary_assets', '/vendors/morris/morris.css'); ?>">
         <title><?PHP HTML::print(TEXT_PAGE_TITLE); ?></title>
     </head>
     <body>
@@ -330,7 +321,7 @@
                                     <label for="api_key"><?PHP HTML::print(TEXT_ACCESS_KEY_CARD_TITLE); ?></label>
                                     <input class="form-control" type="text" value="<?PHP HTML::print($AccessRecord->AccessKey); ?>" id="api_key" name="api_key" readonly>
                                 </div>
-                                <button class="btn btn-info btn-xs btn-block" onclick="location.href='<?PHP DynamicalWeb::getRoute('dashboard', array('action' => 'generate_access_key'), true); ?>';">
+                                <button class="btn btn-info btn-xs btn-block" onclick="location.href='<?PHP DynamicalWeb::printRoute('dashboard', array('action' => 'generate_access_key')); ?>';">
                                     <i class="mdi mdi-reload pr-2"></i> <?PHP  HTML::print(TEXT_GENERATE_NEW_ACCESS_KEY_BUTTON); ?>
                                 </button>
                             </div>
@@ -394,12 +385,12 @@
         <?PHP HTML::importSection('footer'); ?>
     </body>
     <?PHP HTML::importSection('jquery'); ?>
-    <script src="/assets/vendors/morris/morris.min.js"></script>
-    <script src="/assets/vendors/raphael/raphael-min.js"></script>
-    <?PHP Javascript::importScript('rpage'); ?>
-    <?PHP Javascript::importScript('deepanalytics'); ?>
-    <?PHP Javascript::importScript('excanvas'); ?>
-    <?PHP Javascript::importScript('knobbet'); ?>
-    <?PHP Javascript::importScript('peity'); ?>
-    <?PHP Javascript::importScript('dashboard'); ?>
+    <script src="<?PHP DynamicalWeb::printAssetRoute('primary_assets', '/vendors/morris/morris.min.js'); ?>"></script>
+    <script src="<?PHP DynamicalWeb::printAssetRoute('primary_assets', '/vendors/raphael/raphael-min.js'); ?>"></script>
+    <?PHP HTML::importJavascript('rpage'); ?>
+    <?PHP HTML::importJavascript('deepanalytics'); ?>
+    <?PHP HTML::importJavascript('excanvas'); ?>
+    <?PHP HTML::importJavascript('knobbet'); ?>
+    <?PHP HTML::importJavascript('peity'); ?>
+    <?PHP HTML::importJavascript('dashboard'); ?>
 </html>

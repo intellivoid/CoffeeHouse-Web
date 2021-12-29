@@ -2,12 +2,12 @@
 
     use DynamicalWeb\DynamicalWeb;
     use IntellivoidSubscriptionManager\Abstracts\SearchMethods\SubscriptionPlanSearchMethod;
-use IntellivoidSubscriptionManager\Exceptions\DatabaseException;
-use IntellivoidSubscriptionManager\Exceptions\InvalidSearchMethodException;
-use IntellivoidSubscriptionManager\Exceptions\SubscriptionPlanNotFoundException;
-use IntellivoidSubscriptionManager\IntellivoidSubscriptionManager;
+    use IntellivoidSubscriptionManager\Exceptions\DatabaseException;
+    use IntellivoidSubscriptionManager\Exceptions\InvalidSearchMethodException;
+    use IntellivoidSubscriptionManager\Exceptions\SubscriptionPlanNotFoundException;
+    use IntellivoidSubscriptionManager\IntellivoidSubscriptionManager;
     use IntellivoidSubscriptionManager\Objects\Subscription;
-use IntellivoidSubscriptionManager\Utilities\Converter;
+    use IntellivoidSubscriptionManager\Utilities\Converter;
 
     /**
      * Checks if an update is required

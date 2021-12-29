@@ -7,7 +7,7 @@
      *
      * @param int $input
      * @param int $total
-     * @return int
+     * @return float
      */
     function calculatePercentage(int $input, int $total): float
     {

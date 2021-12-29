@@ -3,7 +3,6 @@
     use CoffeeHouse\Abstracts\UserSubscriptionSearchMethod;
     use CoffeeHouse\CoffeeHouse;
     use CoffeeHouse\Exceptions\UserSubscriptionNotFoundException;
-    use DynamicalWeb\Actions;
     use DynamicalWeb\DynamicalWeb;
     use IntellivoidAPI\Abstracts\SearchMethods\AccessRecordSearchMethod;
     use IntellivoidAPI\Exceptions\AccessRecordNotFoundException;
@@ -20,16 +19,18 @@
                 try
                 {
                     generate_access_key();
-                    Actions::redirect(DynamicalWeb::getRoute('dashboard', array('callback' => '101')));
-                    exit();
+                    $RequestHandler = DynamicalWeb::activeRequestHandler();
+                    $RequestHandler->Redirect = true;
+                    $RequestHandler->RedirectLocation = DynamicalWeb::getRoute("dashboard", ['callback' => '101']);
+                    $RequestHandler->execute();
                 }
                 catch(Exception $exception)
                 {
-                    Actions::redirect(DynamicalWeb::getRoute('dashboard', array('callback' => '100')));
-                    exit();
+                    $RequestHandler = DynamicalWeb::activeRequestHandler();
+                    $RequestHandler->Redirect = true;
+                    $RequestHandler->RedirectLocation = DynamicalWeb::getRoute("dashboard", ['callback' => '100']);
+                    $RequestHandler->execute();
                 }
-
-                break;
         }
     }
 

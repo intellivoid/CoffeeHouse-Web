@@ -1,13 +1,26 @@
 <?php
 
-
     use CoffeeHouse\CoffeeHouse;
     use DeepAnalytics\Exceptions\DataNotFoundException;
     use DeepAnalytics\Objects\Date;
     use DeepAnalytics\Utilities;
+    use DynamicalWeb\Abstracts\ResourceSource;
     use DynamicalWeb\DynamicalWeb;
-    use DynamicalWeb\Response;
     use IntellivoidAPI\Objects\AccessRecord;
+
+    if(function_exists('returnJsonResponse') == false)
+    {
+        function returnJsonResponse(array $payload)
+        {
+            $response = json_encode($payload, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE);
+            $RequestHandler = DynamicalWeb::activeRequestHandler();
+            $RequestHandler->ResponseContentType = 'application/json';
+            $RequestHandler->ResourceSource = ResourceSource::Memory;
+            $RequestHandler->Source = $response;
+            DynamicalWeb::activeRequestHandler($RequestHandler);
+            $RequestHandler->execute();
+        }
+    }
 
     if(isset($_GET['action']))
     {
@@ -38,7 +51,7 @@
      */
     function da_get_locale()
     {
-        $Results = array(
+        returnJsonResponse([
             'status' => true,
             'payload' => array(
                 'DEEPANALYTICS_NO_DATA_ERROR' => TEXT_DEEPANALYTICS_NO_DATA_ERROR,
@@ -49,17 +62,13 @@
                 'DEEPANALYTICS_DATE_SELECTOR' => TEXT_DEEPANALYTICS_DATE_SELECTOR,
                 'DEEPANALYTICS_DATA_ALL' => TEXT_DEEPANALYTICS_DATA_ALL
             )
-        );
-
-        Response::setResponseType("application/json");
-        print(json_encode($Results, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE));
-        Response::finishRequest();
-        exit(0);
+        ]);
     }
 
     /**
      * Fetches the data from the DeepAnalytics database
      *
+     * @param string $source
      * @param string $name
      * @param CoffeeHouse $coffeeHouse
      * @param AccessRecord $accessRecord
@@ -97,50 +106,34 @@
      * Returns the hourly data which is used to be rendered in the linechart
      *
      * @noinspection DuplicatedCode
-     * @noinspection PhpNoReturnAttributeCanBeAddedInspection
      */
     function da_get_hourly_data()
     {
         if(isset($_POST['year']) == false)
         {
-            $Results = array(
+            returnJsonResponse(array(
                 'status' => false,
                 'error_code' => 10,
                 'message' => 'Missing parameter \'year\''
-            );
-
-            Response::setResponseType("application/json");
-            print(json_encode($Results, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE));
-            Response::finishRequest();
-            exit(0);
+            ));
         }
 
         if(isset($_POST['month']) == false)
         {
-            $Results = array(
+            returnJsonResponse(array(
                 'status' => false,
                 'error_code' => 11,
                 'message' => 'Missing parameter \'month\''
-            );
-
-            Response::setResponseType("application/json");
-            print(json_encode($Results, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE));
-            Response::finishRequest();
-            exit(0);
+            ));
         }
 
         if(isset($_POST['day']) == false)
         {
-            $Results = array(
+            returnJsonResponse(array(
                 'status' => false,
                 'error_code' => 12,
                 'message' => 'Missing parameter \'day\''
-            );
-
-            Response::setResponseType("application/json");
-            print(json_encode($Results, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE));
-            Response::finishRequest();
-            exit(0);
+            ));
         }
 
         /** @var CoffeeHouse $CoffeeHouse */
@@ -167,15 +160,10 @@
         $Results["language_checks"] = db_hourly_data_fetch("coffeehouse_api", "language_checks", $CoffeeHouse, $AccessRecord, $SelectedDate);
         $Results["ner_checks"] = db_hourly_data_fetch("coffeehouse_api", "ner_checks", $CoffeeHouse, $AccessRecord, $SelectedDate);
 
-        $Results = array(
+        returnJsonResponse(array(
             'status' => true,
             'results' => $Results
-        );
-
-        Response::setResponseType("application/json");
-        print(json_encode($Results, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE));
-        Response::finishRequest();
-        exit(0);
+        ));
     }
 
     /**
@@ -218,7 +206,6 @@
 
     /**
      * Returns the monthly data that's used to render the linechart
-     * @noinspection PhpNoReturnAttributeCanBeAddedInspection
      */
     function da_get_monthly_data()
     {
@@ -267,15 +254,10 @@
         $AnalyticalResults["language_checks"] = db_monthly_data_fetch("coffeehouse_api", "language_checks", $CoffeeHouse, $AccessRecord);
         $AnalyticalResults["ner_checks"] = db_monthly_data_fetch("coffeehouse_api", "ner_checks", $CoffeeHouse, $AccessRecord);
 
-        $Results = array(
+        returnJsonResponse(array(
             "status" => true,
             "results" => $AnalyticalResults
-        );
-
-        Response::setResponseType("application/json");
-        print(json_encode($Results, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE));
-        Response::finishRequest();
-        exit(0);
+        ));
     }
 
     /**
@@ -356,8 +338,5 @@
             )
         );
 
-        Response::setResponseType("application/json");
-        print(json_encode($Results, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE));
-        Response::finishRequest();
-        exit(0);
+        returnJsonResponse($Results);
     }
