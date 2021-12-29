@@ -48,8 +48,6 @@
     },
     "components": [],
     "files": [
-        "css/generic.css.dyn",
-        "markdown/privacy/en.md",
         "sections/footer.dyn",
         "sections/jquery.dyn",
         "sections/landing_headers.dyn",
